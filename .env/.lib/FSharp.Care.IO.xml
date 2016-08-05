@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>FSharp.Care.IO</name></assembly>
+<members>
+<member name="M:FSharp.Care.IO.FileIO.cleanFileName(System.String)">
+<summary>
+ Removes all characters not allowed in a filename
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.FileIO.setWorkingDirectory(System.String)">
+<summary>
+ Set the current working directory
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.FileIO.combinePaths(System.String,System.String)">
+<summary>
+ Combines two path strings
+</summary>
+</member>
+<member name="P:FSharp.Care.IO.FileIO.directorySeparator">
+<summary>
+ The directory separator string. On most systems / or \
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.FileIO.appendFileNamesIfNotNull(System.Collections.Generic.IEnumerable{System.String},System.Text.StringBuilder)">
+<summary>
+ Appends all notnull fileNames
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.FileIO.appendStringIfValueIsNotNullOrEmpty(System.String)">
+<summary>
+ Appends a text if the value is not null or empty
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.FileIO.appendStringIfValueIsNotNull``1(``0)">
+<summary>
+ Appends a text if the value is not null
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.FileIO.appendIfNotNull``1(``0,System.String)">
+<summary>
+ Appends a text if the value is not null
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.FileIO.appendIfFalse(System.Boolean)">
+<summary>
+ Appends a text if the predicate is false
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.FileIO.appendIfTrue(System.Boolean,System.String,System.Text.StringBuilder)">
+<summary>
+ Appends a text if the predicate is true
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.FileIO.append(System.String,System.Text.StringBuilder)">
+<summary>
+ Appends a text
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.FileIO.convertTextToWindowsLineBreaks(System.String)">
+<summary>
+ Converts the given text from linux or mac linebreaks to windows line breaks
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.FileIO.replaceFile(System.String,System.Collections.Generic.IEnumerable{System.String})">
+<summary>
+ Replaces the file with the given string
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.FileIO.writeStringToFile(System.Boolean,System.String,System.String)">
+<summary>
+ Writes a single string to a file
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.FileIO.writeToFile(System.Boolean,System.String,System.Collections.Generic.IEnumerable{System.String})">
+<summary>
+ Writes a file line by line
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.FileIO.readFileGZip(System.String)">
+<summary>
+ Reads a gZip file line by line without creating a tempory file
+ Alternatively use FileEnumerator
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.FileIO.FileEnumerator(System.String)">
+<summary>
+ This function builds an IEnumerable object that enumerates
+ lines of the given file on-demand     
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.FileIO.readFile(System.String)">
+<summary>
+ Reads a file line by line
+ Alternatively use FileEnumerator
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.FileIO.readFileAsString(System.String)">
+<summary>
+ Reads a file as one text
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.FileIO.allFilesExist(System.Collections.Generic.IEnumerable{System.String})">
+<summary>
+ Checks if all given files exists
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.FileIO.checkFileExists(System.String)">
+<summary>
+ Checks if the file exists on disk.
+</summary>
+</member>
+<member name="P:FSharp.Care.IO.FileIO.currentDirectory">
+<summary>
+ Gets the current directory
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.FileIO.filesInDir(System.IO.DirectoryInfo)">
+<summary>
+ Gets all files in the directory
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.FileIO.subDirectories(System.IO.DirectoryInfo)">
+<summary>
+ Gets all subdirectories
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.FileIO.getFullName(System.String)">
+<summary>
+ Converts a file to it&apos;s full file system name
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.FileIO.fileSystemInfo(System.String)">
+<summary>
+ Creates a FileInfo or a DirectoryInfo for the given path
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.FileIO.fileInfo(System.String)">
+<summary>
+ Creates a FileInfo for the given path
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.FileIO.directoryInfo(System.String)">
+<summary>
+ Creates a DirectoryInfo for the given path
+</summary>
+</member>
+<member name="T:FSharp.Care.IO.FileIO">
+<summary>
+ A module to facilitate interaction with files and directories 
+ The code is take from Fsharpx project and slightly modified
+ Special thanks to the original authors under (https://github.com/fsprojects/fsharpx)
+</summary>
+</member>
+<member name="P:FSharp.Care.IO.SchemaReader.RecordSchemaReader`1.GetSchema">
+<summary>
+ Returns Schema as an array of SchemaItems
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.SchemaReader.RecordSchemaReader`1.Convert(Microsoft.FSharp.Collections.FSharpMap{FSharp.Care.IO.SchemaReader.Index,System.String})">
+<summary>
+ Converts a input value map into the record type
+</summary>
+</member>
+<member name="T:FSharp.Care.IO.SchemaReader.RecordSchemaReader`1">
+
+</member>
+<member name="T:FSharp.Care.IO.SchemaReader.SchemaValues">
+
+</member>
+<member name="T:FSharp.Care.IO.SchemaReader.SchemaItem">
+<summary>
+ Represents a field description for obj generation
+</summary>
+</member>
+<member name="T:FSharp.Care.IO.SchemaReader.Converter">
+<summary>
+ Function alias to converter function
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.SchemaReader.getSchema``1(Microsoft.FSharp.Core.FSharpFunc{System.Type,FSharp.Care.IO.SchemaReader.Converter},System.Boolean,System.Reflection.PropertyInfo[])">
+<summary>
+ Returns Schema as an array of SchemaItems 
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.SchemaReader.tryGetCustomAttribute``1(System.Boolean,System.Reflection.PropertyInfo)">
+<summary>
+ Returns given attribute from property info as optional 
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.SchemaReader.createSchemaItem(System.Int32,System.String,FSharp.Care.IO.SchemaReader.FieldIndex,FSharp.Care.IO.SchemaReader.Converter)">
+<summary>
+ Creates a SchemaItem record type
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.SchemaReader.Csv.CsvReader`1.ReadLine(Microsoft.FSharp.Collections.FSharpMap{FSharp.Care.IO.SchemaReader.Index,System.Int32},System.Char,System.String)">
+<summary>
+ Converts a seperated string according to the schema
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.SchemaReader.Csv.CsvReader`1.ReadFile(System.String,System.Char,System.String,Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.Int32})">
+<summary>
+ Reads in a file and returns typed rows in a sequence according to the schema
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.SchemaReader.Csv.CsvReader`1.ReadFile(System.String,System.Char,System.Boolean,Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.Int32})">
+<summary>
+ Reads in a file and returns typed rows in a sequence according to the schema
+</summary>
+</member>
+<member name="T:FSharp.Care.IO.SchemaReader.Csv.CsvReader`1">
+
+</member>
+<member name="T:FSharp.Care.IO.SchemaReader.Attribute.IgnoreAttribute">
+<summary>
+ An attribute to be added to fields of a schema record type to indicate that it should be ignored
+</summary>
+</member>
+<member name="T:FSharp.Care.IO.SchemaReader.Attribute.ConverterAttribute">
+<summary>
+ Abstract class of converter attribute
+ Implemenation can be used to convert from field type/s to obj
+</summary>
+</member>
+<member name="T:FSharp.Care.IO.SchemaReader.Attribute.FieldAttribute">
+<summary>
+ An attribute to be added to fields of a schema record type to indicate the
+ column used in the data format for the schema as index
+</summary>
+</member>
+<member name="T:FSharp.Care.IO.SchemaReader.Attribute">
+<summary>
+| t when t = typeof&lt;float[]&gt;         -&gt; Converter.Collection (fun (strs:seq&lt;string&gt;) -&gt; (strs |&gt; Seq.map (fun s -&gt; Strings.tryParseFloatDefault nan s) |&gt; Seq.toArray ) |&gt; box )
+ Attributes to be added to fields of a schema record
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.SeqIO.Seq.writeOrAppend``1(System.String,System.Collections.Generic.IEnumerable{``0})">
+<summary>
+ Writes a sequence to file path (creates a new file or appends file)
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.SeqIO.Seq.write``1(System.String,System.Collections.Generic.IEnumerable{``0})">
+<summary>
+ Writes a sequence to file path
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.SeqIO.Seq.toCSV``1(System.String,System.Boolean,System.Collections.Generic.IEnumerable{``0})">
+<summary>
+ Convertes a generic sequence to a sequence of seperated string
+ use write afterwards to save to file
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.SeqIO.Seq.fromFileWithSeq(System.Char,System.String)">
+<summary>
+ This function builds an IEnumerable object that enumerates the file 
+ and splits lines of the given file on-demand 
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.SeqIO.Seq.fromFileWithCsvSchema``1(System.String,System.Char,System.Boolean,Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{FSharp.Care.IO.SchemaReader.Csv.SchemaMode})">
+<summary>
+ Reads a file following a given type record schema 
+ Uses SchemaReader.Csv.CsvReader&lt;&apos;schema&gt;()
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.SeqIO.Seq.fromFile(System.String)">
+<summary>
+ Reads a file line by line
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.Web.WebServer.start(System.String,System.String,System.Int32)">
+<summary>
+ Starts a minimal loxal webservice    
+</summary>
+</member>
+</members>
+</doc>

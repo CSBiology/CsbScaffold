@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>FSharp.Care</name></assembly>
+<members>
+<member name="M:FSharp.Care.Collections.Array.[]`1.TryFindDefault``2(``0[],``1[],``1,System.Int32)">
+<summary>
+ Look up an element in an array by index, returning a value if the index is in the domain of the array and default value if not
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array.centeredWindow``1(System.Int32,``0[])">
+<summary>
+ Returns an array of sliding windows of data drawn from the source array.
+ Each window contains the n elements surrounding the current element.
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array.tryFindDefault``1(``0[],``0,System.Int32)">
+<summary>
+ Look up an element in an array by index, returning a value if the index is in the domain of the array and default value if not
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array.shuffleFisherYates``1(``0[])">
+<summary>
+ Shuffels the input array (method: Fisher-Yates)
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array.stackVertical``1(``0[][])">
+<summary>
+ Stacks an array of arrays vertivaly
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array.stackHorizontal``1(``0[][])">
+<summary>
+ Stacks an array of arrays horizontaly
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array2D.shuffle``1(``0[0:,0:])">
+<summary>
+ Shuffels the input Array2D (method: Fisher-Yates)
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array2D.shuffleRowWise``1(``0[0:,0:])">
+<summary>
+ Shuffels each row of the input Array2D separately  (method: Fisher-Yates)
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array2D.shuffleColumnWise``1(``0[0:,0:])">
+<summary>
+ Shuffels each column of the input Array2D separately  (method: Fisher-Yates)
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array2D.transpose``1(``0[0:,0:])">
+<summary>
+ Transpose the array
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array2D.ofLongColumnArray``1(``0[],System.Int32,System.Int32)">
+<summary>
+ Creates a Array2D out of a column array [a1;b1;c1;a2;b2;c2;...]
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array2D.toLongColumnArray``1(``0[0:,0:])">
+<summary>
+ concate the columns of an Array2D into a long column array
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array2D.ofJaggedArray``1(``0[][])">
+<summary>
+ Converts a jagged array (twodimensional) into a array2D
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array2D.toJaggedArray``1(``0[0:,0:])">
+<summary>
+ Converts a array2D to jagged array
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array2D.toArray``1(``0[0:,0:])">
+<summary>
+ Converts a array2D with one row to array
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array2D.empty``1">
+<summary>
+ Create an empty array2D
+</summary>
+</member>
+<member name="T:FSharp.Care.Collections.Dict">
+<summary>
+ Read-only view of the dictionary called dict
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Dictionary.merge``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IDictionary{``0,``1},Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,Microsoft.FSharp.Core.FSharpFunc{``1,``1}}})">
+<summary>
+ Merge two Dictionaries
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Dictionary.tryFind``2(``0,System.Collections.Generic.IDictionary{``0,``1})">
+ <summary>Lookup an element in the dictionary, returning a <c>Some</c> value if the element is in the domain 
+ of the dictionary and <c>None</c> if not.</summary>
+ <param name="key">The input key.</param>
+ <returns>The mapped value, or None if the key is not in the dictionary.</returns>
+</member>
+<member name="M:FSharp.Care.Collections.Dictionary.remove``2(``0,System.Collections.Generic.IDictionary{``0,``1})">
+ <summary>Removes an element from the domain of the dictionary. No exception is raised if the element is not present.</summary>
+ <param name="key">The input key.</param>
+ <returns>The resulting dictionary.</returns>
+</member>
+<member name="M:FSharp.Care.Collections.Dictionary.Item``2(``0,System.Collections.Generic.IDictionary{``0,``1})">
+ <summary>Lookup an element in the dictionary. Raise <c>KeyNotFoundException</c> if no binding
+ exists in the dictionary.</summary>
+ <param name="key">The input key.</param>
+ <exception cref="System.Collections.Generic.KeyNotFoundException">Thrown when the key is not found.</exception>
+ <returns>The value mapped to the key.</returns>
+</member>
+<member name="M:FSharp.Care.Collections.Dictionary.Count``2(System.Collections.Generic.IDictionary{``0,``1})">
+ <summary>The number of bindings in the dictionary.</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Dictionary.containsKey``2(``0,System.Collections.Generic.IDictionary{``0,``1})">
+ <summary>Tests if an element is in the domain of the dictionary.</summary>
+ <param name="key">The input key.</param>
+ <returns>True if the dictionary contains the given key.</returns>
+</member>
+<member name="M:FSharp.Care.Collections.Dictionary.isEmpty``2(System.Collections.Generic.IDictionary{``0,``1})">
+ <summary>Returns true if there are no bindings in the dictionary.</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Dictionary.addOrUpdateInPlaceBy``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``0,``0}},``1,``0,System.Collections.Generic.IDictionary{``1,``0})">
+ <summary>Returns the dictionary with the binding added to the given dictionary.
+ If a binding with the given key already exists in the input dictionary, the existing binding is replaced by the result of the given function.</summary>
+ <param name="f">The function to aggregate old value and new value.</param>
+ <param name="key">The input key.</param>    
+ <returns>The dictionary with change in place.</returns>
+</member>
+<member name="M:FSharp.Care.Collections.Dictionary.addOrUpdateInPlace``2(``0,``1,System.Collections.Generic.IDictionary{``0,``1})">
+ <summary>Returns the dictionary with the binding added to the given dictionary.
+ If a binding with the given key already exists in the input dictionary, the existing binding is replaced by the new binding in the result dictionary.</summary>
+ <param name="key">The input key.</param>
+ <returns>The dictionary with change in place.</returns>
+</member>
+<member name="M:FSharp.Care.Collections.Dictionary.addInPlace``2(``0,``1,System.Collections.Generic.IDictionary{``0,``1})">
+ <summary>Returns the dictionary with the binding added to the given dictionary.
+ If a binding with the given key already exists in the input dictionary, System.ArgumentException is thrown.</summary>
+ <param name="key">The input key.</param>
+ <returns>The dictionary with change in place.</returns>
+</member>
+<member name="M:FSharp.Care.Collections.Dictionary.ofArray``2(System.Tuple{``0,``1}[])">
+ <summary>Builds a dictionary that contains the bindings of the given array.</summary>
+ <param name="elements">The input array of key/value pairs.</param>
+ <returns>The resulting dictionary.</returns> 
+</member>
+<member name="M:FSharp.Care.Collections.Dictionary.ofSeq``2(System.Collections.Generic.IEnumerable{System.Tuple{``0,``1}})">
+ <summary>Builds a dictionary that contains the bindings of the given IEnumerable.</summary>
+ <param name="elements">The input sequence of key/value pairs.</param>
+ <returns>The resulting dictionary.</returns> 
+</member>
+<member name="M:FSharp.Care.Collections.Dictionary.ofList``2(Microsoft.FSharp.Collections.FSharpList{System.Tuple{``0,``1}})">
+ <summary>Builds a dictionary that contains the bindings of the given list.</summary>
+ <param name="elements">The input list of key/value pairs.</param>
+ <returns>The resulting dictionary.</returns> 
+</member>
+<member name="M:FSharp.Care.Collections.Dictionary.ofMap``2(Microsoft.FSharp.Collections.FSharpMap{``0,``1})">
+ <summary>Builds a dictionary that contains the bindings of the given map.</summary>
+ <param name="elements">The input map.</param>
+ <returns>The resulting dictionary.</returns> 
+</member>
+<member name="M:FSharp.Care.Collections.Dictionary.toList``2(System.Collections.Generic.IDictionary{``0,``1})">
+ <summary>Returns a new dictionary made from the given bindings.</summary>
+ <param name="elements">The input list of key/value pairs.</param>
+ <returns>The resulting dictionary.</returns>  
+</member>
+<member name="M:FSharp.Care.Collections.Dictionary.toArray``2(System.Collections.Generic.IDictionary{``0,``1})">
+ <summary>Returns a new dictionary made from the given bindings.</summary>
+ <param name="elements">The input array of key/value pairs.</param>
+ <returns>The resulting dictionary.</returns>  
+</member>
+<member name="M:FSharp.Care.Collections.Dictionary.toSeq``2(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}})">
+ <summary>Views the collection as an enumerable sequence of pairs.
+ The sequence will be ordered by the keys of the dictionary.</summary>
+ <param name="table">The input dictionary.</param>
+ <returns>The sequence of key/value pairs.</returns>   
+</member>
+<member name="T:FSharp.Care.Collections.Dictionary">
+<summary>
+ .Net Dictionary
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.FsharpMapExtensions.Map`2.TryFindDefault``2(Microsoft.FSharp.Collections.FSharpMap{``0,``1},``1,``0)">
+<summary>
+ Look up an element in a map, returning a value if the element is in the domain of the map and default value if not
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.JaggedArray.shuffle``1(``0[][])">
+<summary>
+ Shuffels a jagged array (method: Fisher-Yates)
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.JaggedArray.shuffleRowWise``1(``0[][])">
+<summary>
+ Shuffels each row of a jagged array separately  (method: Fisher-Yates)
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.JaggedArray.shuffleColumnWise``1(``0[][])">
+<summary>
+ Shuffels each column of a jagged array separately  (method: Fisher-Yates)
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.List.insertAt``1(System.Int32,``0,Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+ Inserts an element into a list at a given index
+ (Not recommended list opperation)
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.List.removeAt``1(System.Int32,Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+ Removes an element from a list at a given index
+ (Not recommended list opperation)
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.List.applyEachPairwiseWith``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``0,``1}},Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+ Applies function f two each unique compination of items in list 
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.List.applyEachPairwise``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``0,``1}},Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+ Applies function f two each unique compination of items in list 
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.List.groupEquals``1(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``0,System.Boolean}},Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+ Groups elements in list that are b function f
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.List.cut``1(Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+ Cuts a list into two parts
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.List.cutAfterN``1(System.Int32,Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+ Cuts a list after N and returns both parts
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Map.tryFindDefault``2(Microsoft.FSharp.Collections.FSharpMap{``0,``1},``1,``0)">
+<summary>
+ Look up an element in a map, returning a value if the element is in the domain of the map and default value if not
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Map.compose``2(System.Collections.Generic.IEnumerable{System.Tuple{``0,``1}})">
+<summary>
+ Compose a seq of key*value pairs with dublicate keys
+ to a key*value list
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Map.merge``2(Microsoft.FSharp.Collections.FSharpMap{``0,``1},Microsoft.FSharp.Collections.FSharpMap{``0,``1},Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{System.Tuple{``1,``1},``1}})">
+<summary>
+ Merge two maps of the same type 
+ f is the function how to handel key conflicts
+</summary>
+</member>
+<member name="T:FSharp.Care.Collections.MultiMap.MultiMap`2">
+<summary>
+ Type abreviation for Map&lt;&apos;key,&apos;value list&gt;
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.MultiMap.ofSeq``2(System.Collections.Generic.IEnumerable{System.Tuple{``0,``1}})">
+<summary>
+ Compose a seq of key*value pairs with dublicate keys to a key*value list
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.MultiMap.tryFind``2(``0,Microsoft.FSharp.Collections.FSharpMap{``0,``1})">
+<summary>
+ Lookup anb element in the map, returning a Some value list if the value is in the domain of the MultiMap else None
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.MultiMap.add``2(``0,``1,Microsoft.FSharp.Collections.FSharpMap{``0,Microsoft.FSharp.Collections.FSharpList{``1}})">
+<summary>
+ Returns a new MultiMap with binding added
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.MultiMap.emptyMultiMap``2">
+<summary>
+ Empty formula
+</summary>
+</member>
+<member name="T:FSharp.Care.Collections.MultiMap">
+<summary>
+ A MultiMap is a special case of a map where value is a list of values
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Seq.unzip3``3(System.Collections.Generic.IEnumerable{System.Tuple{``0,``1,``2}})">
+<summary>
+ Splits a sequence of triples into three sequences
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Seq.unzip``2(System.Collections.Generic.IEnumerable{System.Tuple{``0,``1}})">
+<summary>
+ Splits a sequence of pairs into two sequences
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Seq.headOrDefault``1(``0,System.Collections.Generic.IEnumerable{``0})">
+<summary>
+ Returns head of a seq or default value if seq is empty
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Seq.tryHead``1(System.Collections.Generic.IEnumerable{``0})">
+<summary>
+ Returns head of a seq as option or None if seq is empty
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Seq.countIf``1(Microsoft.FSharp.Core.FSharpFunc{``0,System.Boolean},System.Collections.Generic.IEnumerable{``0})">
+<summary>
+ Iterates over elements of the input sequence and increase the counter
+ if the function returens true
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Seq.groupsOfAtMost``1(System.Int32,System.Collections.Generic.IEnumerable{``0})">
+<summary>
+ Break sequence into n-element subsequences
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Seq.groupWhen``1(Microsoft.FSharp.Core.FSharpFunc{``0,System.Boolean},System.Collections.Generic.IEnumerable{``0})">
+<summary>
+ Iterates over elements of the input sequence and groups adjacent elements.
+ A new group is started when the specified predicate holds about the element
+ of the sequence (and at the beginning of the iteration).
+
+ For example: 
+    Seq.groupWhen isOdd [3;3;2;4;1;2] = seq [[3]; [3; 2; 4]; [1; 2]]
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Seq.groupAfter``1(Microsoft.FSharp.Core.FSharpFunc{``0,System.Boolean},System.Collections.Generic.IEnumerable{``0})">
+<summary>
+ Iterates over the elements of the input sequence and groups adjacent
+ elements. A new group is started after the specified predicate holds 
+ about the element of the sequence (and at the beginning of the iteration).
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Seq.sortByDesc``2(Microsoft.FSharp.Core.FSharpFunc{``0,``1},System.Collections.Generic.IEnumerable{``0})">
+<summary>
+ Sorts sequence in descending order
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Seq.initRepeatValues``1(System.Int32,System.Collections.Generic.IEnumerable{``0})">
+<summary>
+ Initialie a sequence of length and repeted values (like R! repeat: but swapped input)
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Seq.initRepeatValue``1(System.Int32,``0)">
+<summary>
+ Initialie a sequence of length and repeted value (like R! repeat : but swapped input)
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Seq.Double.existsNaN(System.Collections.Generic.IEnumerable{System.Double})">
+<summary>
+ Returns true if sequence contains nan
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Seq.Double.seqInitStepWidth(System.Double,System.Double,System.Double)">
+<summary>
+ Generates sequence given step width (like R! seq)
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Seq.Double.seqInit(System.Double,System.Double,System.Double)">
+<summary>
+ Generates sequence (like R! seq.int)
+</summary>
+</member>
+<member name="T:FSharp.Care.Collections.Seq.Double">
+<summary>
+ Seq module extensions specialized for seq&lt;float&gt;
+</summary>
+</member>
+<member name="T:FSharp.Care.Collections.Tree.GenericNode`2">
+<summary>
+ Generic tree node containing member list and child map
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Tree.contains``2(Microsoft.FSharp.Collections.FSharpList{``0},``1,FSharp.Care.Collections.Tree.GenericNode{``0,``1})">
+<summary>
+ Contains 
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Tree.createTree``2(Microsoft.FSharp.Collections.FSharpList{System.Tuple{Microsoft.FSharp.Collections.FSharpList{``0},``1}})">
+<summary>
+ Create tree out of keyPath*item list 
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Tree.add``2(Microsoft.FSharp.Collections.FSharpList{``0},``1,FSharp.Care.Collections.Tree.GenericNode{``0,``1})">
+<summary>
+ Add item to tree having keyPath as list of keys
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Tree.empty``2">
+<summary>
+ Generic tree node empty
+</summary>
+</member>
+<member name="P:FSharp.Care.Colors.Color.B">
+<summary>
+ The blue component value of this Color structure.
+</summary>
+</member>
+<member name="P:FSharp.Care.Colors.Color.G">
+<summary>
+ The green component value of this Color structure.
+</summary>
+</member>
+<member name="P:FSharp.Care.Colors.Color.R">
+<summary>
+ The red component value of this Color structure.
+</summary>
+</member>
+<member name="P:FSharp.Care.Colors.Color.A">
+<summary>
+ The alpha component value of this Color structure.
+</summary>
+</member>
+<member name="T:FSharp.Care.Colors.Color">
+<summary>
+ Color structure
+</summary>
+</member>
+<member name="T:FSharp.Care.Colors.ColorComponent">
+<summary>
+ Color component ARGB
+</summary>
+</member>
+<member name="M:FSharp.Care.Colors.toString(FSharp.Care.Colors.Color)">
+<summary>
+ Converts this Color structure to a human-readable string.
+</summary>
+</member>
+<member name="M:FSharp.Care.Colors.fromWebColor(System.String)">
+<summary>
+ Gets color from web color (#FFFFFF)
+</summary>
+</member>
+<member name="M:FSharp.Care.Colors.toWebColor(FSharp.Care.Colors.Color)">
+<summary>
+ Gets the web color representataion (#FFFFFF)
+</summary>
+</member>
+<member name="M:FSharp.Care.Colors.fromHex(System.String)">
+<summary>
+ Gets color from hex representataion (FFFFFF) or (0xFFFFFF)
+</summary>
+</member>
+<member name="M:FSharp.Care.Colors.toHex(System.Boolean,FSharp.Care.Colors.Color)">
+<summary>
+ Gets the hex representataion (FFFFFF) of a color (with valid prefix &quot;0xFFFFFF&quot;)
+</summary>
+</member>
+<member name="M:FSharp.Care.Colors.toArgb(FSharp.Care.Colors.Color)">
+<summary>
+ Gets the 32-bit ARGB value of this Color structure.
+</summary>
+</member>
+<member name="M:FSharp.Care.Colors.getSaturation(FSharp.Care.Colors.Color)">
+<summary>
+ Gets the hue-saturation-brightness (HSB) saturation value for this Color structure.
+</summary>
+</member>
+<member name="M:FSharp.Care.Colors.getHue(FSharp.Care.Colors.Color)">
+<summary>
+ Gets the hue-saturation-brightness (HSB) hue value, in degrees, for this Color structure.
+</summary>
+</member>
+<member name="M:FSharp.Care.Colors.fromRgb(System.Int32,System.Int32,System.Int32)">
+<summary>
+ Creates a Color structure from the specified color values (red, green, and blue).
+ The alpha value is implicitly 255 (fully opaque). 
+</summary>
+</member>
+<member name="M:FSharp.Care.Colors.fromArgb(System.Int32,System.Int32,System.Int32,System.Int32)">
+<summary>
+ Creates a Color structure from the four ARGB component (alpha, red, green, and blue) values.
+</summary>
+</member>
+<member name="T:FSharp.Care.Colors.Table.Office">
+<summary>
+ Color palette from Microsoft office 2016
+</summary>
+</member>
+<member name="T:FSharp.Care.Colors">
+<summary>
+ Represents an ARGB (alpha, red, green, blue) color
+</summary>
+</member>
+<member name="P:FSharp.Care.Guid.create">
+<summary>
+ Creates a new unique Syste.Guid
+</summary>
+</member>
+<member name="M:FSharp.Care.Guid.ofString(System.String)">
+<summary>
+ Parse a string to a System.Guid
+</summary>
+</member>
+<member name="P:FSharp.Care.Guid.empty">
+<summary>
+ Empty System.Guid
+</summary>
+</member>
+<member name="T:FSharp.Care.Guid">
+<summary>
+ Wrapper to use System Guid
+</summary>
+</member>
+<member name="M:FSharp.Care.Interop.ofFunc``2(System.Func{``0,``1},``0)">
+<summary>
+ Converts System.Func to an fsharp function
+</summary>
+</member>
+<member name="M:FSharp.Care.Interop.toFunc``2(Microsoft.FSharp.Core.FSharpFunc{``0,``1})">
+<summary>
+ Converts an fsharp function to a System.Func
+</summary>
+</member>
+<member name="T:FSharp.Care.Interop">
+<summary>
+ Module for facilitated .net interop erability
+</summary>
+</member>
+<member name="M:FSharp.Care.Math.round(System.Int32,System.Double)">
+<summary>
+ Rounds a double-precision floating-point value to a specified number of fractional digits.  
+</summary>
+</member>
+<member name="M:FSharp.Care.Math.square``2(``0)">
+<summary>
+ Returns x squared (x^2)
+</summary>
+</member>
+<member name="M:FSharp.Care.Math.revLog2(System.Double)">
+<summary>
+ Returns the reverted log2 (2^x)
+</summary>
+</member>
+<member name="M:FSharp.Care.Math.log2(System.Double)">
+<summary>
+ Returns the logarithm of x to base 2
+</summary>
+</member>
+<member name="M:FSharp.Care.Math.Complex.fromComplex(System.Numerics.Complex)">
+<summary>
+ Retruns real * imaginary (System.Numerics.Complex)
+</summary>
+</member>
+<member name="M:FSharp.Care.Math.Complex.fromComplexReal(System.Numerics.Complex)">
+<summary>
+ Retruns real part of a complex number (System.Numerics.Complex)
+</summary>
+</member>
+<member name="M:FSharp.Care.Math.Complex.toComplexFromReal``1(``0)">
+<summary>
+ Creates a complex number from only the real part (System.Numerics.Complex)
+</summary>
+</member>
+<member name="M:FSharp.Care.Math.Complex.toComplex``2(``0,``1)">
+<summary>
+ Creates a complex number (System.Numerics.Complex)
+</summary>
+</member>
+<member name="T:FSharp.Care.Math.Complex">
+<summary>
+ Helper for System.Numerics.Complex
+</summary>
+</member>
+<member name="M:FSharp.Care.Memoization.memoizeP``2(Microsoft.FSharp.Core.FSharpFunc{``0,``1})">
+<summary>
+ Memoizes the return value of function f (thread-safe)
+</summary>
+</member>
+<member name="M:FSharp.Care.Memoization.memoize``2(Microsoft.FSharp.Core.FSharpFunc{``0,``1})">
+<summary>
+ Memoizes the return value of function f (Attenetion: not thread-safe)
+</summary>
+</member>
+<member name="T:FSharp.Care.Memoization">
+<summary>
+ Memoization pattern
+</summary>
+</member>
+<member name="M:FSharp.Care.NumericLiteralG.FromInt32``2(System.Int32)">
+<summary>
+Generic from int
+</summary>
+</member>
+<member name="M:FSharp.Care.NumericLiteralG.FromOne``1">
+<summary>
+Generic One
+</summary>
+</member>
+<member name="M:FSharp.Care.NumericLiteralG.FromZero``1">
+<summary>
+Generic Zero
+</summary>
+</member>
+<member name="T:FSharp.Care.NumericLiteralG">
+<summary>
+ Numerics literals wrapper for LanguagePrimitives 
+</summary>
+</member>
+<member name="T:FSharp.Care.Regex.RegexOptions">
+<summary>
+ Provides enumerated values to use to set regular expressions options
+</summary>
+</member>
+<member name="M:FSharp.Care.Regex.|RegexGroupValues|_|(System.String,System.String)">
+<summary>
+ Returns the matching group values of all occurences of the pattern
+</summary>
+</member>
+<member name="M:FSharp.Care.Regex.|RegexValues|_|(System.String,System.String)">
+<summary>
+ Returns the matching values of all occurences of the pattern
+</summary>
+</member>
+<member name="M:FSharp.Care.Regex.|RegexValue|_|(System.String,System.String)">
+<summary>
+ Returns the matching values the first occurence of the pattern 
+</summary>
+</member>
+<member name="M:FSharp.Care.Regex.|RegexGroups|_|(System.String,System.String)">
+<summary>
+ Returns the matching group of all occurences of the pattern
+</summary>
+</member>
+<member name="M:FSharp.Care.Regex.tryEitherParse``1(Microsoft.FSharp.Core.FSharpFunc{System.String,``0},System.String)">
+<summary>
+ Try to parse str with pattern returns Either monoid. On success f is applied on result string.
+</summary>
+</member>
+<member name="M:FSharp.Care.Regex.|RegexMatchValue|_|(System.Text.RegularExpressions.Regex,System.String)">
+<summary>
+ Returns the first occurencing match of the pattern 
+</summary>
+</member>
+<member name="M:FSharp.Care.Regex.createRegex(FSharp.Care.Regex.RegexOptions,System.String)">
+<summary>
+ Creates a regex 
+</summary>
+</member>
+<member name="T:FSharp.Care.Regex">
+<summary>
+ Regex module for functional use of regular expressions
+</summary>
+</member>
+<member name="M:FSharp.Care.String.inferType(System.Collections.Generic.IEnumerable{System.String})">
+<summary>
+ Checks whether all values of the sequence can be inferred to a special type
+</summary>
+</member>
+<member name="M:FSharp.Care.String.isFloat(System.String)">
+<summary>
+ Checks whether the string is a float
+</summary>
+</member>
+<member name="M:FSharp.Care.String.isInt64(System.String)">
+<summary>
+ Checks whether the string is an int64
+</summary>
+</member>
+<member name="M:FSharp.Care.String.isInt(System.String)">
+<summary>
+ Checks whether the string is an int32
+</summary>
+</member>
+<member name="M:FSharp.Care.String.isBool(System.String)">
+<summary>
+ Checks whether the string is a boolean value
+</summary>
+</member>
+<member name="M:FSharp.Care.String.tryParseCharDefault(System.Char,System.String)">
+<summary>
+ Try to parse char else return default value    
+</summary>
+</member>
+<member name="M:FSharp.Care.String.tryParseGuidDefault(System.Guid,System.String)">
+<summary>
+ Try to parse GUID else return default value    
+</summary>
+</member>
+<member name="M:FSharp.Care.String.tryParseFloatDefault(System.Double,System.String)">
+<summary>
+ Try to parse float else return default value    
+</summary>
+</member>
+<member name="M:FSharp.Care.String.tryParseInt64Default(System.Int64,System.String)">
+<summary>
+ Try to parse int64 else return default value    
+</summary>
+</member>
+<member name="M:FSharp.Care.String.tryParseIntDefault(System.Int32,System.String)">
+<summary>
+ Try to parse int else return default value    
+</summary>
+</member>
+<member name="M:FSharp.Care.String.tryParseBoolDefault(System.Boolean,System.String)">
+<summary>
+ Try to parse bool else return default value    
+</summary>
+</member>
+<member name="M:FSharp.Care.String.niceName(System.String)">
+<summary>
+ Turns a string into a nice PascalCase identifier
+</summary>
+</member>
+<member name="M:FSharp.Care.String.implode(System.Collections.Generic.IEnumerable{System.Char})">
+<summary>
+ Converts a list of characters into a string.
+</summary>
+</member>
+<member name="M:FSharp.Care.String.isNullOrEmpty(System.String)">
+<summary>
+ Returns if the string is null or empty
+</summary>
+</member>
+<member name="M:FSharp.Care.String.joinWords(Microsoft.FSharp.Collections.FSharpList{System.String})">
+<summary>
+ Folds the string list by seperating entries with a single space
+</summary>
+</member>
+<member name="M:FSharp.Care.String.toWords(System.String)">
+<summary>
+ Splits a string based on whitespace (spaces, tabs, and newlines)
+</summary>
+</member>
+<member name="M:FSharp.Care.String.joinLines(Microsoft.FSharp.Collections.FSharpList{System.String})">
+<summary>
+ Creates newline seperated string from the string list
+</summary>
+</member>
+<member name="M:FSharp.Care.String.toLines(System.String)">
+<summary>
+ Splits a string based on newlines 
+</summary>
+</member>
+<member name="M:FSharp.Care.String.splitBy(Microsoft.FSharp.Core.FSharpFunc{System.Char,System.Boolean},System.String)">
+<summary>
+ Returns a sequence of strings split by the predicate    
+</summary>
+</member>
+<member name="M:FSharp.Care.String.fromCharArray(System.Char[])">
+<summary>
+ Converts an array of characters to a string
+</summary>
+</member>
+<member name="M:FSharp.Care.String.toCharArray(System.String)">
+<summary>
+ Converts an string to a array of characters
+</summary>
+</member>
+<member name="M:FSharp.Care.String.separatedBy(System.String,System.Collections.Generic.IEnumerable{System.String})">
+<summary>
+ Converts a sequence of strings to a single string separated with the delimiters
+</summary>
+</member>
+<member name="M:FSharp.Care.String.subString(System.Int32,System.Int32,System.String)">
+<summary>
+ Retrieves a substring. The substring starts at a specified character position and has a specified length.
+</summary>
+</member>
+<member name="M:FSharp.Care.String.split(System.Char,System.String)">
+<summary>
+ Splits the given string at the given delimiter
+</summary>
+</member>
+<member name="M:FSharp.Care.String.contains(System.String,System.String)">
+<summary>
+ Returns a value indicating whether the specified substring occurs within this string
+</summary>
+</member>
+<member name="M:FSharp.Care.String.replace(System.String,System.String,System.String)">
+<summary>
+ Replaces the given &quot;replacement&quot; for every occurence of the pattern in the given text 
+</summary>
+</member>
+<member name="M:FSharp.Care.String.startsWith(System.String,System.String)">
+<summary>
+ Checks whether the given text starts with the given prefix
+</summary>
+</member>
+</members>
+</doc>

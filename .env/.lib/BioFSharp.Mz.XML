@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>BioFSharp.Mz</name></assembly>
+<members>
+<member name="M:BioFSharp.Mz.SQLiteQuery.prepareSelectSearchDbParams(System.Data.SQLite.SQLiteConnection)">
+<summary>
+ Prepares statement to select all SearchDbParams entries by ID
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SQLiteQuery.prepareSelectModsequenceBySequence(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<summary>
+ Prepares statement to select a ModSequence entry by Sequence
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SQLiteQuery.prepareSelectModsequenceByMassRange(System.Data.SQLite.SQLiteConnection,System.Int64,System.Int64)">
+<summary>
+ Prepares statement to select a ModSequence entry by Massrange (Between selected Mass -/+ the selected toleranceWidth
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SQLiteQuery.prepareSelectModsequenceByMass(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<summary>
+ Prepares statement to select a ModSequence entry by Mass
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SQLiteQuery.prepareSelectModsequenceByPepSequenceID(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<summary>
+ Prepares statement to select a ModSequence entry by PepSequenceID
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SQLiteQuery.prepareSelectPepSequenceBySequence(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<summary>
+ Prepares statement to select a PepSequence entry by PepSequence - Version without try.. with pattern to enhance the Select performance
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SQLiteQuery.prepareSelectPepSequenceBySequence'(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<summary>
+ Prepares statement to select a PepSequence entry by PepSequence 
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SQLiteQuery.prepareSelectCleavageIndexByPepSequenceID(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<summary>
+ Prepares statement to select a CleavageIndex entry PepSequenceID 
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SQLiteQuery.prepareSelectCleavageIndexByProteinID(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<summary>
+ Prepares statement to select a CleavageIndex entry ProteinID 
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SQLiteQuery.prepareSelectProteinBySequence(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<summary>
+ Prepares statement to select a Protein entry by Sequence     
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SQLiteQuery.prepareSelectProteinByAccession(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<summary>
+ Prepares statement to select a Protein entry by Accession     
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SQLiteQuery.prepareSelectProteinByID(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<summary>
+ Prepares statement to select a Protein entry by ID        
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SQLiteQuery.prepareSelectSearchDbParamsbyParams(System.Data.SQLite.SQLiteConnection)">
+<summary>
+ Prepares statement to select all SearchDbParams entries by FastaPath, Protease MissedCleavages, MaxMass, IsotopicLabel, MassMode, FixedMods, VariableMods
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SQLiteQuery.prepareInsertSearchDbParams(System.Data.SQLite.SQLiteConnection)">
+<summary>
+ Prepares statement to insert a SearchDBParams entry
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SQLiteQuery.prepareInsertModSequence(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<summary>
+ Prepares statement to insert a ModSequence entry
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SQLiteQuery.prepareInsertPepSequence(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<summary>
+ Prepares statement to insert a PepSequence entry
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SQLiteQuery.prepareInsertCleavageIndex(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<summary>
+ Prepares statement to insert a CleavageIndex entry
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SQLiteQuery.prepareInsertProtein(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<summary>
+ Prepares statement to insert a Protein entry
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SQLiteQuery.createTableModSequence(System.Data.SQLite.SQLiteConnection)">
+<summary>
+ Creates Table ModSequence
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SQLiteQuery.createTablePepSequence(System.Data.SQLite.SQLiteConnection)">
+<summary>
+ Creates Table PepSequence
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SQLiteQuery.createTableCleavageIndex(System.Data.SQLite.SQLiteConnection)">
+<summary>
+ Creates Table CleavageIndex
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SQLiteQuery.createTableProtein(System.Data.SQLite.SQLiteConnection)">
+<summary>
+ Creates Table Protein
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SQLiteQuery.createTableSearchDbParams(System.Data.SQLite.SQLiteConnection)">
+<summary>
+ Creates Table SearchDbParams
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.initializeDatabase(BioFSharp.Mz.SearchDB.SearchDbParams)">
+<summary>
+Creates DB and inserts Tables
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.createVariableModAAL(Microsoft.FSharp.Core.FSharpFunc{BioFSharp.AminoAcids.AminoAcid,Microsoft.FSharp.Core.FSharpOption{Microsoft.FSharp.Collections.FSharpList{BioFSharp.ModificationInfo.Modification}}},System.Boolean,BioFSharp.AminoAcids.AminoAcid)">
+<summary>
+First match: checks if input AminoAcid is modified
+Second match: returns a (bool*modifiedAminoAcid) list containing all variable modified AminoAcids and the AminoAcid that was given as the function input
+The boolean value &quot;false&quot; is used to state that the Modification is fixed, the value &quot;true&quot; marks the Modification as variable 
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.createFixedModAA(Microsoft.FSharp.Core.FSharpFunc{BioFSharp.AminoAcids.AminoAcid,Microsoft.FSharp.Core.FSharpOption{Microsoft.FSharp.Collections.FSharpList{BioFSharp.ModificationInfo.Modification}}},BioFSharp.AminoAcids.AminoAcid)">
+<summary>
+Returns modified or unmodified AminoAcid depending on the matching expression
+The boolean value &quot;false&quot; is used to state that the Modification is fixed
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.createXmodMap(Microsoft.FSharp.Collections.FSharpList{BioFSharp.Mz.SearchDB.SearchModification})">
+<summary>
+Würde ich später in das XmodModul auslagern
+Generates a Map with SearchModification.Name as key and the XModCode as a value.
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.createAAModTLOfSearchModL(Microsoft.FSharp.Collections.FSharpList{BioFSharp.AminoAcids.AminoAcid},Microsoft.FSharp.Collections.FSharpList{BioFSharp.Mz.SearchDB.SearchModification})">
+<summary>
+Generates list of modified AminoAcids based on a list of Searchmodifications
+</summary>
+</member>
+<member name="P:BioFSharp.Mz.SearchDB.listOfAA">
+<summary>
+needed as input if element of SearchModSite is of UnionCase | Any
+</summary>
+</member>
+</members>
+</doc>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>BioFSharp.IO</name></assembly>
+<members>
+<member name="P:BioFSharp.IO.AgilentRaw.AgilentDataRaw.IsWellAboveBG_red">
+
+</member>
+<member name="P:BioFSharp.IO.AgilentRaw.AgilentDataRaw.IsWellAboveBG_green">
+
+</member>
+<member name="P:BioFSharp.IO.AgilentRaw.AgilentDataRaw.BGSubSigError_red">
+
+</member>
+<member name="P:BioFSharp.IO.AgilentRaw.AgilentDataRaw.BGSubSigError_green">
+
+</member>
+<member name="P:BioFSharp.IO.AgilentRaw.AgilentDataRaw.BGSubSignal_red">
+
+</member>
+<member name="P:BioFSharp.IO.AgilentRaw.AgilentDataRaw.BGSubSignal_green">
+
+</member>
+<member name="P:BioFSharp.IO.AgilentRaw.AgilentDataRaw.IsSaturated_red">
+
+</member>
+<member name="P:BioFSharp.IO.AgilentRaw.AgilentDataRaw.IsSaturated_green">
+
+</member>
+<member name="P:BioFSharp.IO.AgilentRaw.AgilentDataRaw.BGMedianSignal_red">
+
+</member>
+<member name="P:BioFSharp.IO.AgilentRaw.AgilentDataRaw.BGMedianSignal_green">
+
+</member>
+<member name="P:BioFSharp.IO.AgilentRaw.AgilentDataRaw.BGMeanSignal_red">
+
+</member>
+<member name="P:BioFSharp.IO.AgilentRaw.AgilentDataRaw.BGMeanSignal_green">
+
+</member>
+<member name="P:BioFSharp.IO.AgilentRaw.AgilentDataRaw.MedianSignal_red">
+
+</member>
+<member name="P:BioFSharp.IO.AgilentRaw.AgilentDataRaw.MeanSignal_red">
+
+</member>
+<member name="P:BioFSharp.IO.AgilentRaw.AgilentDataRaw.MeanSignal_green">
+<summary>
+ Mean raw signal calculated from the intensities of all inlier pixels that represents the feature (after outlier pixel rejection). Also called the foreground signal.
+</summary>
+</member>
+<member name="P:BioFSharp.IO.AgilentRaw.AgilentDataRaw.ProcessedSigError_red">
+
+</member>
+<member name="P:BioFSharp.IO.AgilentRaw.AgilentDataRaw.ProcessedSigError_green">
+
+</member>
+<member name="P:BioFSharp.IO.AgilentRaw.AgilentDataRaw.ProcessedSignal_red">
+
+</member>
+<member name="P:BioFSharp.IO.AgilentRaw.AgilentDataRaw.ProcessedSignal_green">
+
+</member>
+<member name="P:BioFSharp.IO.AgilentRaw.AgilentDataRaw.IsFound_red">
+
+</member>
+<member name="P:BioFSharp.IO.AgilentRaw.AgilentDataRaw.IsFound_green">
+
+</member>
+<member name="P:BioFSharp.IO.AgilentRaw.AgilentDataRaw.PositionY">
+
+</member>
+<member name="P:BioFSharp.IO.AgilentRaw.AgilentDataRaw.PositionX">
+
+</member>
+<member name="P:BioFSharp.IO.AgilentRaw.AgilentDataRaw.ProbeName">
+
+</member>
+<member name="P:BioFSharp.IO.AgilentRaw.AgilentDataRaw.ControlType">
+<summary>
+ Feature control type
+</summary>
+</member>
+<member name="P:BioFSharp.IO.AgilentRaw.AgilentDataRaw.ProbeUID">
+
+</member>
+<member name="P:BioFSharp.IO.AgilentRaw.AgilentDataRaw.Col">
+<summary>
+ Feature location : column
+</summary>
+</member>
+<member name="P:BioFSharp.IO.AgilentRaw.AgilentDataRaw.Row">
+<summary>
+  Feature location : row
+</summary>
+</member>
+<member name="P:BioFSharp.IO.AgilentRaw.AgilentDataRaw.FeatureNum">
+<summary>
+ Feature number
+</summary>
+</member>
+<member name="T:BioFSharp.IO.AgilentRaw.AgilentDataRaw">
+<summary>
+ Record type representing microarray Agilent raw data item 
+</summary>
+</member>
+<member name="T:BioFSharp.IO.AgilentRaw.ProbeMapping">
+<summary>
+ Record type representing microarray probe mapping
+</summary>
+</member>
+<member name="M:BioFSharp.IO.AgilentRaw.readAgilentDataRaw(System.String)">
+<summary>
+ Reads agilent raw data from file
+</summary>
+</member>
+<member name="M:BioFSharp.IO.AgilentRaw.probeMappingReader(System.Char,System.Boolean,System.String)">
+<summary>
+ Reads probe mapping. Map: probe name -&gt; gene name 
+</summary>
+</member>
+<member name="M:BioFSharp.IO.BlastNCBI.BlastWrapper.makeblastdb(System.String,System.Collections.Generic.IEnumerable{BioFSharp.IO.BlastNCBI.Parameters.MakeDbParams})">
+
+</member>
+<member name="M:BioFSharp.IO.BlastNCBI.BlastWrapper.blastP(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{BioFSharp.IO.BlastNCBI.Parameters.BlastParams})">
+
+</member>
+<member name="T:BioFSharp.IO.FastA.FastaItem`1">
+<summary>
+ Fasta item contains header and sequence
+</summary>
+</member>
+<member name="M:BioFSharp.IO.FastA.write``1(Microsoft.FSharp.Core.FSharpFunc{``0,System.Char},System.String,System.Collections.Generic.IEnumerable{BioFSharp.IO.FastA.FastaItem{System.Collections.Generic.IEnumerable{``0}}})">
+<summary>
+ Writes FastaItem to file. Converter determines type of sequence by converting seq&lt;char&gt; -&gt; type
+</summary>
+</member>
+<member name="M:BioFSharp.IO.FastA.fromGzipFile``1(Microsoft.FSharp.Core.FSharpFunc{System.Collections.Generic.IEnumerable{System.Char},``0},System.String)">
+<summary>
+ Reads FastaItem from gzFile. Converter determines type of sequence by converting seq&lt;char&gt; -&gt; type
+</summary>
+</member>
+<member name="M:BioFSharp.IO.FastA.fromFile``1(Microsoft.FSharp.Core.FSharpFunc{System.Collections.Generic.IEnumerable{System.Char},``0},System.String)">
+<summary>
+ Reads FastaItem from file. Converter determines type of sequence by converting seq&lt;char&gt; -&gt; type
+</summary>
+</member>
+<member name="M:BioFSharp.IO.FastA.fromFileEnumerator``1(Microsoft.FSharp.Core.FSharpFunc{System.Collections.Generic.IEnumerable{System.Char},``0},System.Collections.Generic.IEnumerable{System.String})">
+<summary>
+ Reads FastaItem from file. Converter determines type of sequence by converting seq&lt;char&gt; -&gt; type
+</summary>
+</member>
+<member name="M:BioFSharp.IO.FastA.createFastaItem``1(System.String,``0)">
+<summary>
+ Creates with header line and sequence.
+</summary>
+</member>
+<member name="T:BioFSharp.IO.Mgf.MgfEntry">
+<summary>
+ Represents 
+</summary>
+</member>
+<member name="M:BioFSharp.IO.Mgf.mgfToString(BioFSharp.IO.Mgf.MgfEntry)">
+<summary>
+ Converts a MgfEntry to string.
+ Use Seq.write to write to file. 
+</summary>
+</member>
+<member name="M:BioFSharp.IO.Mgf.readMgf(System.String)">
+<summary>
+ Reads an mgf file into a collection of MgfEntries
+</summary>
+</member>
+<member name="M:BioFSharp.IO.Mgf.tryParseTitle(System.String)">
+<summary>
+ Returns the retention time and precursor intensity from &apos;mgf-title&apos; string. Returns None if title does not contain the information
+</summary>
+</member>
+<member name="M:BioFSharp.IO.Mgf.tryGetTitle(BioFSharp.IO.Mgf.MgfEntry)">
+<summary>
+ Returns the title string of a &apos;mgf-entry&apos;. Returns None if the information can&apos;t be optained
+</summary>
+</member>
+<member name="M:BioFSharp.IO.Mgf.tryGetPrecursorCharges(BioFSharp.IO.Mgf.MgfEntry)">
+<summary>
+ Returns the precursor mass. Returns None if the information can&apos;t be optained
+</summary>
+</member>
+<member name="M:BioFSharp.IO.Mgf.tryParseCharge(System.String)">
+<summary>
+ Returns the posible charge/charges in a list. Returns None if the information can&apos;t be optained
+</summary>
+</member>
+<member name="M:BioFSharp.IO.Mgf.tryGetPrecursorMass(BioFSharp.IO.Mgf.MgfEntry)">
+<summary>
+ Returns the precursor mass. Returns None if the information can&apos;t be optained
+</summary>
+</member>
+<member name="T:BioFSharp.IO.Mgf">
+<summary>
+ Mgf &lt;http://www.matrixscience.com/help/data_file_help.html&gt;`_ is a simple
+ human-readable format for MS/MS data. It allows storing MS/MS peak lists and
+ exprimental parameters.
+</summary>
+</member>
+<member name="T:BioFSharp.IO.Obo.OboTerm">
+<summary>
+ obo term record type
+</summary>
+</member>
+<member name="M:BioFSharp.IO.Obo.parseOboTerms(System.Collections.Generic.IEnumerable{System.String})">
+<summary>
+ Parse Obo Terms [Term] from seq&lt;string&gt;
+</summary>
+</member>
+<member name="M:BioFSharp.IO.Obo.parseSingleOboTerm(System.Collections.Generic.IEnumerator{System.String},System.String,System.String,System.String,System.String,System.String,Microsoft.FSharp.Collections.FSharpList{System.String},Microsoft.FSharp.Collections.FSharpList{System.String},Microsoft.FSharp.Collections.FSharpList{System.String},System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,Microsoft.FSharp.Collections.FSharpList{System.String},Microsoft.FSharp.Collections.FSharpList{System.String},Microsoft.FSharp.Collections.FSharpList{System.String},Microsoft.FSharp.Collections.FSharpList{System.String},System.String)">
+<summary>
+ Parses a [term] item in a recusive function
+</summary>
+</member>
+<member name="M:BioFSharp.IO.Obo.createOboTerm(System.String,System.String,System.String,System.String,System.String,Microsoft.FSharp.Collections.FSharpList{System.String},Microsoft.FSharp.Collections.FSharpList{System.String},Microsoft.FSharp.Collections.FSharpList{System.String},System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,Microsoft.FSharp.Collections.FSharpList{System.String},Microsoft.FSharp.Collections.FSharpList{System.String},Microsoft.FSharp.Collections.FSharpList{System.String},Microsoft.FSharp.Collections.FSharpList{System.String},System.String)">
+<summary>
+ Creates an obo term record
+</summary>
+</member>
+<member name="T:BioFSharp.IO.Obo">
+<summary>
+ Module to parse obo files to AdjacencyGraph
+</summary>
+</member>
+</members>
+</doc>

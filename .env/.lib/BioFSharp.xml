@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>BioFSharp</name></assembly>
+<members>
+<member name="T:BioFSharp.IBioItem">
+<summary>
+Marker interface for BioItem base.
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Ter">
+<summary>
+ *  *Termination
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Gap">
+<summary>
+ -  *Gap 
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Asx">
+<summary>
+ B  *Asparagine/aspartic acid
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Glx">
+<summary>
+ Z  *Glutamine/glutamic acid
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Xle">
+<summary>
+ J  *Leucine/Isoleucine
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Xaa">
+<summary>
+ X  *Unspecified
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Tyr">
+<summary>
+ Y  *Tyrosine
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Trp">
+<summary>
+ W  *Tryptophan
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Val">
+<summary>
+ V  *Valine
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Sel">
+<summary>
+ U  *Selenocysteine
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Thr">
+<summary>
+ T  *Threonine
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Ser">
+<summary>
+ S  *Serine
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Arg">
+<summary>
+ R  *Arginine
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Gln">
+<summary>
+ Q  *Glutamine
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Pro">
+<summary>
+ P  *Proline
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Pyl">
+<summary>
+ O  *Pyrrolysine
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Asn">
+<summary>
+ N  *Asparagine
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Met">
+<summary>
+ M  *Methionine
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Leu">
+<summary>
+ L  *Leucine
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Lys">
+<summary>
+ K  *Lysine
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Ile">
+<summary>
+ I  *Isoleucine
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.His">
+<summary>
+ H  *Histidine
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Gly">
+<summary>
+ G  *Glycine
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Phe">
+<summary>
+ F  *Glutamic Acid
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Glu">
+<summary>
+ E  *Glutamic Acid
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Asp">
+<summary>
+ D  *Aspartic Acid
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Cys">
+<summary>
+ C  *Cysteine
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Ala">
+<summary>
+ A  *Alanin
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid">
+<summary>
+ Amino acid Codes
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcids.averageMass">
+<summary>
+ Returns the average mass of AminoAcid (without H20)
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcids.monoisoMass">
+<summary>
+ Returns the monoisotopic mass of AminoAcid (without H20)
+</summary>
+</member>
+<member name="M:BioFSharp.AminoAcids.symbol(BioFSharp.AminoAcids.AminoAcid)">
+<summary>
+ Returns the symbol of AminoAcid       
+</summary>
+</member>
+<member name="M:BioFSharp.AminoAcids.name(BioFSharp.AminoAcids.AminoAcid)">
+<summary>
+ Returns the name of AminoAcid
+</summary>
+</member>
+<member name="T:BioFSharp.BioID.CreId">
+<summary>
+ NCBI Reference Sequence Database
+</summary>
+</member>
+<member name="T:BioFSharp.BioID.RefSeqId">
+<summary>
+ NCBI Reference Sequence Database
+</summary>
+</member>
+<member name="P:BioFSharp.BioID.parseCreId">
+<summary>
+ Parse NCBI RefSeqId (Reference Sequence Database identifier) EXAMPLE: &apos;NC_003070.9&apos;.
+ Returns Failure string in case of no match.
+</summary>
+</member>
+<member name="P:BioFSharp.BioID.parseRefSeqId">
+<summary>
+ Parse NCBI RefSeqId (Reference Sequence Database identifier) EXAMPLE: &apos;NC_003070.9&apos;.
+ Returns Failure string in case of no match.
+</summary>
+</member>
+<member name="M:BioFSharp.BioItem.formula``1(``0)">
+<summary>
+ Returns then byteCode of the bio item
+</summary>
+</member>
+<member name="M:BioFSharp.BioItem.symbol``1(``0)">
+<summary>
+ Returns then symbol of the bio item
+</summary>
+</member>
+<member name="T:BioFSharp.BioItem">
+<summary>
+ Basic functions on IBioItems interface
+</summary>
+</member>
+<member name="T:BioFSharp.Elements.Element">
+<summary>
+ Discriminant union type of Mono-,Di-,Tri- and Multi-isotopic elements   
+</summary>
+</member>
+<member name="T:BioFSharp.Elements.MultiIsotopic">
+<summary>
+ Multi-isotopic elements consist of more than three isotopes
+</summary>
+</member>
+<member name="T:BioFSharp.Elements.TriIsotopic">
+<summary>
+ Tri-isotopic elements consist of three isotopes
+</summary>
+</member>
+<member name="T:BioFSharp.Elements.DiIsotopic">
+<summary>
+ Di-isotopic elements consist of two isotopes
+</summary>
+</member>
+<member name="T:BioFSharp.Elements.MonoIsotopic">
+<summary>
+ Mono-isotopic elements consist of one isotope
+</summary>
+</member>
+<member name="M:BioFSharp.Elements.getMainIsotope(BioFSharp.Elements.Element)">
+<summary>
+ Returns the main isotop of an Element
+</summary>
+</member>
+<member name="M:BioFSharp.Elements.createMulti(System.String,BioFSharp.Isotopes.Isotope,System.Double,BioFSharp.Isotopes.Isotope,System.Double,BioFSharp.Isotopes.Isotope,System.Double,BioFSharp.Isotopes.Isotope[])">
+<summary>
+ Create a multi-isotopic element
+</summary>
+</member>
+<member name="M:BioFSharp.Elements.createTri(System.String,BioFSharp.Isotopes.Isotope,System.Double,BioFSharp.Isotopes.Isotope,System.Double,BioFSharp.Isotopes.Isotope,System.Double)">
+<summary>
+ Create a three-isotopic element
+</summary>
+</member>
+<member name="M:BioFSharp.Elements.calcRootsTri(System.Double,System.Double,System.Double)">
+<summary>
+ Calculates roots of tri-isotopic elements
+</summary>
+</member>
+<member name="M:BioFSharp.Elements.createDi(System.String,BioFSharp.Isotopes.Isotope,System.Double,BioFSharp.Isotopes.Isotope,System.Double)">
+<summary>
+ Create a di-isotopic element
+</summary>
+</member>
+<member name="M:BioFSharp.Elements.createMono(System.String,BioFSharp.Isotopes.Isotope,System.Double)">
+<summary>
+ Create a mono-isotopic element
+</summary>
+</member>
+<member name="M:BioFSharp.Elements.Table.ElementAsObject(System.String)">
+<summary>
+ Returns element object according to element symbol string
+</summary>
+</member>
+<member name="T:BioFSharp.Formula.Formula">
+<summary>
+ Type abreviation for Map&lt;Elements.Element,float&gt;
+</summary>
+</member>
+<member name="M:BioFSharp.Formula.parseFormulaString(System.String)">
+<summary>
+ Parse formula string and returns formula type
+</summary>
+</member>
+<member name="M:BioFSharp.Formula.lableNumberOfElement(System.Collections.Generic.Dictionary{BioFSharp.Elements.Element,System.Double},BioFSharp.Elements.Element,BioFSharp.Elements.Element,System.Double)">
+<summary>
+ Lables a given number of elements of a certain kind within a formula
+</summary>
+</member>
+<member name="M:BioFSharp.Formula.lableElement(System.Collections.Generic.Dictionary{BioFSharp.Elements.Element,System.Double},BioFSharp.Elements.Element,BioFSharp.Elements.Element)">
+<summary>
+ Lables all elements of a certain kind within a formula
+</summary>
+</member>
+<member name="M:BioFSharp.Formula.monoisoMass(System.Collections.Generic.Dictionary{BioFSharp.Elements.Element,System.Double})">
+<summary>
+ Returns monoisotopic mass of sum formula
+</summary>
+</member>
+<member name="M:BioFSharp.Formula.averageMass(System.Collections.Generic.Dictionary{BioFSharp.Elements.Element,System.Double})">
+<summary>
+ substract two formula
+ Returns average mass of sum formula
+</summary>
+</member>
+<member name="M:BioFSharp.Formula.substract(System.Collections.Generic.Dictionary{BioFSharp.Elements.Element,System.Double},System.Collections.Generic.Dictionary{BioFSharp.Elements.Element,System.Double})">
+<summary>
+ adds two formula
+ substract two formula
+</summary>
+</member>
+<member name="M:BioFSharp.Formula.addElement(BioFSharp.Elements.Element,System.Collections.Generic.Dictionary{BioFSharp.Elements.Element,System.Double})">
+<summary>
+ adds one element to a Formula 
+</summary>
+</member>
+<member name="M:BioFSharp.Formula.add(System.Collections.Generic.Dictionary{BioFSharp.Elements.Element,System.Double},System.Collections.Generic.Dictionary{BioFSharp.Elements.Element,System.Double})">
+<summary>
+ adds two formula
+</summary>
+</member>
+<member name="M:BioFSharp.Formula.toString(System.Collections.Generic.Dictionary{BioFSharp.Elements.Element,System.Double})">
+<summary>
+ Returns Formula as string
+</summary>
+</member>
+<member name="P:BioFSharp.Formula.emptyFormula">
+<summary>
+ Empty formula
+</summary>
+</member>
+<member name="M:BioFSharp.ModificationInfo.toString(BioFSharp.ModificationInfo.Modification)">
+<summary>
+ Returns modification name as string
+</summary>
+</member>
+<member name="T:BioFSharp.Nucleotides.Nucleotide.N">
+<summary>
+ N : A or G or U or C.
+</summary>
+</member>
+<member name="T:BioFSharp.Nucleotides.Nucleotide.V">
+<summary>
+ V : G or V or A = not T/U
+</summary>
+</member>
+<member name="T:BioFSharp.Nucleotides.Nucleotide.H">
+<summary>
+ H : A or C or U = not G
+</summary>
+</member>
+<member name="T:BioFSharp.Nucleotides.Nucleotide.D">
+<summary>
+ D : G or A or U = not C
+</summary>
+</member>
+<member name="T:BioFSharp.Nucleotides.Nucleotide.B">
+<summary>
+ B : G or U or C = not A
+</summary>
+</member>
+<member name="T:BioFSharp.Nucleotides.Nucleotide.W">
+<summary>
+ W : A or U = Weak base pair 
+</summary>
+</member>
+<member name="T:BioFSharp.Nucleotides.Nucleotide.S">
+<summary>
+ S : G or C = Strong base pair
+</summary>
+</member>
+<member name="T:BioFSharp.Nucleotides.Nucleotide.M">
+<summary>
+ M : A or C = aMino
+</summary>
+</member>
+<member name="T:BioFSharp.Nucleotides.Nucleotide.K">
+<summary>
+ K : G or U = Keto
+</summary>
+</member>
+<member name="T:BioFSharp.Nucleotides.Nucleotide.Y">
+<summary>
+ Y : U/T or C = pYrimidine
+</summary>
+</member>
+<member name="T:BioFSharp.Nucleotides.Nucleotide.R">
+<summary>
+ R : G or A = puRine
+</summary>
+</member>
+<member name="T:BioFSharp.Nucleotides.Nucleotide.Ter">
+<summary>
+ * : Terminator
+</summary>
+</member>
+<member name="T:BioFSharp.Nucleotides.Nucleotide.Gap">
+<summary>
+ - : Gap
+</summary>
+</member>
+<member name="T:BioFSharp.Nucleotides.Nucleotide.I">
+<summary>
+ I : Inosine   (only RNA)
+</summary>
+</member>
+<member name="T:BioFSharp.Nucleotides.Nucleotide.U">
+<summary>
+ U : Uracil    (only RNA)
+</summary>
+</member>
+<member name="T:BioFSharp.Nucleotides.Nucleotide.C">
+<summary>
+ C : Cytosine
+</summary>
+</member>
+<member name="T:BioFSharp.Nucleotides.Nucleotide.G">
+<summary>
+ G : Guanine
+</summary>
+</member>
+<member name="T:BioFSharp.Nucleotides.Nucleotide.T">
+<summary>
+ T : Thymidine (only DNA)
+</summary>
+</member>
+<member name="T:BioFSharp.Nucleotides.Nucleotide.A">
+<summary>
+ A : Adenine
+</summary>
+</member>
+<member name="P:BioFSharp.Nucleotides.Nucleotide.isTerminator">
+<summary>
+ A : Adenine
+ T : Thymidine (only DNA)
+ G : Guanine
+ C : Cytosine
+ U : Uracil    (only RNA)
+ I : Inosine   (only RNA)
+ - : Gap
+ * : Terminator
+ R : G or A = puRine
+ Y : U/T or C = pYrimidine
+ K : G or U = Keto
+ M : A or C = aMino
+ S : G or C = Strong base pair
+ W : A or U = Weak base pair 
+ B : G or U or C = not A
+ D : G or A or U = not C
+ H : A or C or U = not G
+ V : G or V or A = not T/U
+ N : A or G or U or C.
+</summary>
+</member>
+<member name="P:BioFSharp.Nucleotides.Nucleotide.Formula">
+<summary>
+ A : Adenine
+ T : Thymidine (only DNA)
+ G : Guanine
+ C : Cytosine
+ U : Uracil    (only RNA)
+ I : Inosine   (only RNA)
+ - : Gap
+ * : Terminator
+ R : G or A = puRine
+ Y : U/T or C = pYrimidine
+ K : G or U = Keto
+ M : A or C = aMino
+ S : G or C = Strong base pair
+ W : A or U = Weak base pair 
+ B : G or U or C = not A
+ D : G or A or U = not C
+ H : A or C or U = not G
+ V : G or V or A = not T/U
+ N : A or G or U or C.
+</summary>
+</member>
+<member name="T:BioFSharp.Nucleotides.Nucleotide">
+<summary>
+ Nucleotide Codes
+</summary>
+</member>
+<member name="M:BioFSharp.Nucleotides.lookupBytes(BioFSharp.Nucleotides.Nucleotide,BioFSharp.Nucleotides.Nucleotide,BioFSharp.Nucleotides.Nucleotide)">
+ <summary>
+ Lookup an amino acid based on a triplet of nucleotides. U U U for instance
+ will result in Phenylalanine.  If the values cannot be
+ found in the lookup table, <c>false</c> will be returned.
+ </summary>
+ <param name="n1">The first character.</param>
+ <param name="n2">The second character.</param>
+ <param name="n3">The third character.</param>
+ <returns>True/False if the value exists</returns>
+</member>
+<member name="P:BioFSharp.Nucleotides.AmbiguousCodonMap">
+<summary>
+ Codon to AminoAcid 
+</summary>
+</member>
+<member name="P:BioFSharp.Nucleotides.CodonMap">
+<summary>
+ Codon to AminoAcid 
+</summary>
+</member>
+<member name="M:BioFSharp.Nucleotides.replaceUbyT(BioFSharp.Nucleotides.Nucleotide)">
+<summary>
+ Replace uracil (U) by thymidine (T). For example, the sequence &quot;ATUGC&quot; is converted to &quot;ATTGC&quot;.
+</summary>
+</member>
+<member name="M:BioFSharp.Nucleotides.replaceTbyU(BioFSharp.Nucleotides.Nucleotide)">
+<summary>
+ Replace thymidine (T) by uracil (U). For example, the sequence &quot;ATUGC&quot; is converted to &quot;AUUGC&quot;.
+</summary>
+</member>
+<member name="M:BioFSharp.Nucleotides.antiparallel(BioFSharp.Nucleotides.Nucleotide)">
+<summary>
+ Create the antiparallel DNA or RNA strand. For example, the sequence &quot;ATGC&quot; is converted to &quot;GCAT&quot;. &quot;Antiparallel&quot; combines the two functions &quot;Complement&quot; and &quot;Inverse&quot;.
+</summary>
+</member>
+<member name="M:BioFSharp.Nucleotides.inverse(BioFSharp.Nucleotides.Nucleotide)">
+<summary>
+ Create the inverse DNA or RNA strand. For example, the sequence &quot;ATGC&quot; is converted to &quot;CGTA&quot;
+</summary>
+</member>
+<member name="M:BioFSharp.Nucleotides.complement(BioFSharp.Nucleotides.Nucleotide)">
+<summary>
+ Create the complement DNA or RNA strand. For example, the sequence &quot;ATGC&quot; is converted to &quot;TACG&quot;
+</summary>
+</member>
+<member name="M:BioFSharp.Nucleotides.Properties.symbol(BioFSharp.Nucleotides.Nucleotide)">
+<summary>
+ A : Adenine
+ T : Thymidine (only DNA)
+ G : Guanine
+ C : Cytosine
+ U : Uracil    (only RNA)
+ I : Inosine   (only RNA)
+ - : Gap
+ * : Terminator
+ R : G or A = puRine
+ Y : U/T or C = pYrimidine
+ K : G or U = Keto
+ M : A or C = aMino
+ S : G or C = Strong base pair
+ W : A or U = Weak base pair 
+ B : G or U or C = not A
+ D : G or A or U = not C
+ H : A or C or U = not G
+ V : G or V or A = not T/U
+ N : A or G or U or C.
+</summary>
+</member>
+<member name="M:BioFSharp.Nucleotides.Properties.name(BioFSharp.Nucleotides.Nucleotide)">
+<summary>
+ A : Adenine
+ T : Thymidine (only DNA)
+ G : Guanine
+ C : Cytosine
+ U : Uracil    (only RNA)
+ I : Inosine   (only RNA)
+ - : Gap
+ * : Terminator
+ R : G or A = puRine
+ Y : U/T or C = pYrimidine
+ K : G or U = Keto
+ M : A or C = aMino
+ S : G or C = Strong base pair
+ W : A or U = Weak base pair 
+ B : G or U or C = not A
+ D : G or A or U = not C
+ H : A or C or U = not G
+ V : G or V or A = not T/U
+ N : A or G or U or C.
+</summary>
+</member>
+<member name="T:BioFSharp.Nucleotides.Properties">
+<summary>
+ Properties of a nucleatide like formula, name, symbole, but also Physicochemical features
+</summary>
+</member>
+<member name="P:BioFSharp.PhysicalConstants.AU">
+ <summary>
+ Astronomical Unit (radius of the Earth's orbit). Units cm
+ </summary>
+</member>
+<member name="P:BioFSharp.PhysicalConstants.SOLARFLUX">
+ <summary>
+ Solar Flux. Units erg/cm^2-sec
+ </summary>
+</member>
+<member name="P:BioFSharp.PhysicalConstants.SOLARLUM">
+ <summary>
+ Solar Luminosity. Units erg/sec
+ </summary>
+</member>
+<member name="P:BioFSharp.PhysicalConstants.SOLARRADIUS">
+ <summary>
+ Solar Radius. Units cm
+ </summary>
+</member>
+<member name="P:BioFSharp.PhysicalConstants.SOLARMASS">
+ <summary>
+ Solar Mass. Units g 
+ </summary>
+</member>
+<member name="P:BioFSharp.PhysicalConstants.GRAVACC">
+ <summary>
+ Gravitational Acceleration at the Earths surface. Units cm/sec^2 
+ </summary>
+</member>
+<member name="P:BioFSharp.PhysicalConstants.GASCONSTANT">
+ <summary>
+ Gas Constant. Units erg/deg-mol 
+ </summary>
+</member>
+<member name="P:BioFSharp.PhysicalConstants.AVOGADRO">
+ <summary>
+ Avogadro Number. Units  1/mol 
+ </summary>
+</member>
+<member name="P:BioFSharp.PhysicalConstants.STEFANBOLTZ">
+ <summary>
+ Stefan-Boltzman Constant. Units erg/cm^2-sec-deg^4 
+ </summary>
+</member>
+<member name="P:BioFSharp.PhysicalConstants.LIGHTSPEED">
+ <summary>
+ Speed of Light in a Vacuum. Units cm/sec 
+ </summary>
+</member>
+<member name="P:BioFSharp.PhysicalConstants.PLANCK">
+ <summary>
+ Planck constant. Units erg-sec 
+ </summary>
+</member>
+<member name="P:BioFSharp.PhysicalConstants.GRAV">
+ <summary>
+ Gravitational Constant. Units dyne-cm^2/g^2
+ </summary>
+</member>
+<member name="P:BioFSharp.PhysicalConstants.PMASS">
+ <summary>
+ Proton Mass. Units g 
+ </summary>
+</member>
+<member name="P:BioFSharp.PhysicalConstants.EMASS">
+ <summary>
+ Electron Mass. Units g 
+ </summary>
+</member>
+<member name="P:BioFSharp.PhysicalConstants.ECHARGE">
+ <summary>
+ Elementary Charge. Units statcoulomb 
+ </summary>
+</member>
+<member name="P:BioFSharp.PhysicalConstants.BOLTZMAN">
+ <summary>
+ Boltzman Constant. Units erg/deg(K) 
+ </summary>
+</member>
+</members>
+</doc>
