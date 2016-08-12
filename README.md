@@ -23,4 +23,5 @@ projectName:
 _______________
 to install type:
 cd .env
+
 .\\.paket\paket.exe
