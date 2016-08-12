@@ -1,3 +1,4 @@
+//#I __SOURCE_DIRECTORY__
 // Include MathNet.Numerics
 #r ".lib/MathNet.Numerics.dll"
 #r ".lib/MathNet.Numerics.FSharp.dll"
@@ -21,6 +22,6 @@
 // Include FSharp.Plotly
 #r "packages/FSharp.Plotly/lib/net40/FSharp.Plotly.dll"
 
-// Include Deedle
-#load "packages/Deedle/Deedle.fsx"
-#load ".aux/DeedleExtensions.fsx"
+//// Include Deedle (no #load allowed when working with intellisence)
+//#load "packages/Deedle/Deedle.fsx"
+//#load ".aux/DeedleExtensions.fsx"

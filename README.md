@@ -21,7 +21,9 @@ projectName:
 * scripts      : (e.g. .fsx files)
 
 
-install
-...
+to install type:
+________________
+
 cd .env
+
 .\.paket\paket.exe
