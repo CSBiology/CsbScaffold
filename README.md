@@ -20,10 +20,8 @@ projectName:
 * results      : Results that are produces during data processing
 * scripts      : (e.g. .fsx files)
 
-
+_______________
 to install type:
-________________
-
 cd .env
 
-.\.paket\paket.exe
+.\\.paket\paket.exe
