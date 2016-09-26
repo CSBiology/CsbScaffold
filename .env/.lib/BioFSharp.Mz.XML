@@ -2,153 +2,456 @@
 <doc>
 <assembly><name>BioFSharp.Mz</name></assembly>
 <members>
-<member name="M:BioFSharp.Mz.SQLiteQuery.prepareSelectSearchDbParams(System.Data.SQLite.SQLiteConnection)">
+<member name="P:BioFSharp.Mz.ChargeState.ChargeDetermParams.DeltaMinIntensity">
 <summary>
- Prepares statement to select all SearchDbParams entries by ID
+ RelativeToPriorPeak
 </summary>
 </member>
-<member name="M:BioFSharp.Mz.SQLiteQuery.prepareSelectModsequenceBySequence(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<member name="P:BioFSharp.Mz.ChargeState.ChargeDetermParams.MinIntensity">
 <summary>
- Prepares statement to select a ModSequence entry by Sequence
+ RelativeToStartPeak
 </summary>
 </member>
-<member name="M:BioFSharp.Mz.SQLiteQuery.prepareSelectModsequenceByMassRange(System.Data.SQLite.SQLiteConnection,System.Int64,System.Int64)">
+<member name="P:BioFSharp.Mz.ChargeState.ChargeDetermParams.Width">
 <summary>
- Prepares statement to select a ModSequence entry by Massrange (Between selected Mass -/+ the selected toleranceWidth
+TODO: learn from Data
 </summary>
 </member>
-<member name="M:BioFSharp.Mz.SQLiteQuery.prepareSelectModsequenceByMass(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<member name="P:BioFSharp.Mz.ChargeState.ChargeDetermParams.ExpectedMaximumCharge">
 <summary>
- Prepares statement to select a ModSequence entry by Mass
+TODO: learn from Data
 </summary>
 </member>
-<member name="M:BioFSharp.Mz.SQLiteQuery.prepareSelectModsequenceByPepSequenceID(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<member name="M:BioFSharp.Mz.ChargeState.removeSubSetsOfBestHit(Microsoft.FSharp.Collections.FSharpList{BioFSharp.Mz.ChargeState.TestedItem{BioFSharp.Mz.ChargeState.AssignedCharge}})">
 <summary>
- Prepares statement to select a ModSequence entry by PepSequenceID
+ Returns a List of tested AssignedCharges. This Function eliminates all
 </summary>
 </member>
-<member name="M:BioFSharp.Mz.SQLiteQuery.prepareSelectPepSequenceBySequence(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<member name="M:BioFSharp.Mz.ChargeState.peakPosStdDevBy(Microsoft.FSharp.Collections.FSharpList{BioFSharp.Mz.ChargeState.AssignedCharge})">
 <summary>
- Prepares statement to select a PepSequence entry by PepSequence - Version without try.. with pattern to enhance the Select performance
+ Returns the StandardDeviation of the PeakDistances
 </summary>
 </member>
-<member name="M:BioFSharp.Mz.SQLiteQuery.prepareSelectPepSequenceBySequence'(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<member name="M:BioFSharp.Mz.ChargeState.putativePrecursorChargeStatesBy(BioFSharp.Mz.ChargeState.ChargeDetermParams,System.Double[],System.Double[],System.Double)">
 <summary>
- Prepares statement to select a PepSequence entry by PepSequence 
+ Returns list of putative precursorChargeStates along with Properties used for evaluation.
 </summary>
 </member>
-<member name="M:BioFSharp.Mz.SQLiteQuery.prepareSelectCleavageIndexByPepSequenceID(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<member name="M:BioFSharp.Mz.ChargeState.empiricalPValueOf``3(Microsoft.FSharp.Core.FSharpFunc{System.Tuple{``0,``1},``2[]},``0,``1,``2)">
 <summary>
- Prepares statement to select a CleavageIndex entry PepSequenceID 
+stdv 0.01516580549
+ Returns the empirically determined PValue. The PValue is the quotient of simulated mzChargeDeviations lower than the mzChargeDeviation
+ observed divided by their total number
 </summary>
 </member>
-<member name="M:BioFSharp.Mz.SQLiteQuery.prepareSelectCleavageIndexByProteinID(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<member name="M:BioFSharp.Mz.ChargeState.initMzDevOfRndSpec(System.Random,BioFSharp.Mz.ChargeState.ChargeDetermParams,System.Double)">
 <summary>
- Prepares statement to select a CleavageIndex entry ProteinID 
+ Returns Function to generate random spectra and to calculate their mzChargeDeviations.   
 </summary>
 </member>
-<member name="M:BioFSharp.Mz.SQLiteQuery.prepareSelectProteinBySequence(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<member name="M:BioFSharp.Mz.ChargeState.mzDevOfRndSpec(System.Random,BioFSharp.Mz.ChargeState.ChargeDetermParams,System.Double,System.Int32,System.Double)">
 <summary>
- Prepares statement to select a Protein entry by Sequence     
+ Creates a user defined amount of random spectra of defined length. Returns the mzChargeDeviation of each simulated Spectrum
 </summary>
 </member>
-<member name="M:BioFSharp.Mz.SQLiteQuery.prepareSelectProteinByAccession(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<member name="M:BioFSharp.Mz.ChargeState.rndMzIntensityEntityCollectionBy(System.Random,System.Double,System.Int32,System.Double,System.Int32)">
 <summary>
- Prepares statement to select a Protein entry by Accession     
+ Creates a random MzIntensityEntityCollection  
 </summary>
 </member>
-<member name="M:BioFSharp.Mz.SQLiteQuery.prepareSelectProteinByID(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<member name="M:BioFSharp.Mz.ChargeState.interPeakDistanceBy(System.Double,System.Double)">
 <summary>
- Prepares statement to select a Protein entry by ID        
+ Returns a possible InterPeakDistance by a given charge state. The retrieved distance follows a normaldistribution
+ centered around the theoretical interPeakDistance. The standardDeviation is dependent on the used mass spectrometer
 </summary>
 </member>
-<member name="M:BioFSharp.Mz.SQLiteQuery.prepareSelectSearchDbParamsbyParams(System.Data.SQLite.SQLiteConnection)">
+<member name="M:BioFSharp.Mz.ChargeState.rndIntBetween(System.Random,System.Int32,System.Int32)">
 <summary>
- Prepares statement to select all SearchDbParams entries by FastaPath, Protease MissedCleavages, MaxMass, IsotopicLabel, MassMode, FixedMods, VariableMods
+ Returns a random integer between a lower and a upper Value
 </summary>
 </member>
-<member name="M:BioFSharp.Mz.SQLiteQuery.prepareInsertSearchDbParams(System.Data.SQLite.SQLiteConnection)">
+<member name="M:BioFSharp.Mz.ChargeState.getScore(System.Int32,System.Int32,System.Double)">
 <summary>
- Prepares statement to insert a SearchDBParams entry
+ Returns a empirically determined Score to achieve a Ranking of SubSets. The optimal weighting of the parameters was
+ determined via Linear Discriminant Analysis.  
 </summary>
 </member>
-<member name="M:BioFSharp.Mz.SQLiteQuery.prepareInsertModSequence(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<member name="M:BioFSharp.Mz.ChargeState.mzChargeDeviationBy(System.Collections.Generic.IEnumerable{System.Double},System.Double)">
 <summary>
- Prepares statement to insert a ModSequence entry
+ Returns the MZChargeDeviation based on the theoreticalInterIsotopeDistance as a Measure for central tendency
+ at a given ChargeState. 
 </summary>
 </member>
-<member name="M:BioFSharp.Mz.SQLiteQuery.prepareInsertPepSequence(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<member name="M:BioFSharp.Mz.ChargeState.getChargeBy(BioFSharp.Mz.ChargeState.ChargeDetermParams,System.Double)">
 <summary>
- Prepares statement to insert a PepSequence entry
+ Returns a charge state based on a given meanOfInterPeakDistances. The list of possible charge states is defined by
+ the user.  
 </summary>
 </member>
-<member name="M:BioFSharp.Mz.SQLiteQuery.prepareInsertCleavageIndex(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<member name="M:BioFSharp.Mz.ChargeState.mzDistancesOf``1(Microsoft.FSharp.Collections.FSharpList{``0})">
 <summary>
- Prepares statement to insert a CleavageIndex entry
+ Calculates the mzDistances of a List of MzIntensityPeaks
 </summary>
 </member>
-<member name="M:BioFSharp.Mz.SQLiteQuery.prepareInsertProtein(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<member name="M:BioFSharp.Mz.ChargeState.powerSetOf(BioFSharp.Mz.ChargeState.PutativeIsotopeCluster)">
 <summary>
- Prepares statement to insert a Protein entry
+ Creates the PowerSet of a given Collection of MZIntensityPeaks. Adds a StartPeak with the relative Position 0 and the 
+ relative Intensity 1 to each subSet. 
 </summary>
 </member>
-<member name="M:BioFSharp.Mz.SQLiteQuery.createTableModSequence(System.Data.SQLite.SQLiteConnection)">
+<member name="M:BioFSharp.Mz.ChargeState.getRelPeakPosInWindowBy``1(System.Double[],System.Double[],System.Double,System.Double,System.Double,``0,System.Int32)">
 <summary>
- Creates Table ModSequence
+ Returns a Collection of MZIntensityPeaks, The Collection starts with the first Element on the right side of the startIdx. 
+ and ends either with the last element of the mzIntensityArray or when the MzDistance to the highest Peak exceeds 
+ the given windowwidth.   
 </summary>
 </member>
-<member name="M:BioFSharp.Mz.SQLiteQuery.createTablePepSequence(System.Data.SQLite.SQLiteConnection)">
+<member name="M:BioFSharp.Mz.ChargeState.idxOfHighestPeakBy(System.Double[],System.Double[],System.Double)">
 <summary>
- Creates Table PepSequence
+ Returns Index of the highestPeak flanking a given mzValue
 </summary>
 </member>
-<member name="M:BioFSharp.Mz.SQLiteQuery.createTableCleavageIndex(System.Data.SQLite.SQLiteConnection)">
+<member name="M:BioFSharp.Mz.Fragmentation.BioList.abcSeriesAmmoniaLoss(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},Microsoft.FSharp.Collections.FSharpList{BioFSharp.AminoAcids.AminoAcid})">
+ <summary>
+   Computes uncharged mass series of a-,b-,c- ions
+   with neutral ammonia loss
+ </summary>
+
+ <param name="aal"> List of aminoacids </param>
+ <remarks> Result is uncharged use <c>Mass.toMZ</c> </remarks>
+ <returns> Uncharged mass series of a-,b-,c- ions with neutral ammonia loss </returns>   
+</member>
+<member name="M:BioFSharp.Mz.Fragmentation.BioList.xyzSeriesWaterLoss(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},Microsoft.FSharp.Collections.FSharpList{BioFSharp.AminoAcids.AminoAcid})">
+ <summary>
+   Computes uncharged mass series of x-,y-,z- ions
+   with neutral water loss
+ </summary>
+
+ <param name="aal"> List of aminoacids </param>
+ <remarks> Result is uncharged use <c>Mass.toMZ</c> </remarks>
+ <returns> Uncharged mass series of x-,y-,z- ions with neutral water loss </returns>   
+</member>
+<member name="M:BioFSharp.Mz.Fragmentation.BioList.xyzSeries(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},Microsoft.FSharp.Collections.FSharpList{BioFSharp.AminoAcids.AminoAcid})">
+ <summary>
+   Computes uncharged mass series of x-,y-,z- ions
+ </summary>
+
+ <param name="aal"> List of aminoacids </param>
+ <remarks> Result is uncharged use <c>Mass.toMZ</c> </remarks>
+ <returns> Uncharged mass series of x-,y-,z- ions </returns>   
+</member>
+<member name="M:BioFSharp.Mz.Fragmentation.BioList.abcSeries(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},Microsoft.FSharp.Collections.FSharpList{BioFSharp.AminoAcids.AminoAcid})">
+ <summary>
+   Computes uncharged mass series of a-,b-,c- ions
+ </summary>
+
+ <param name="aal">list of aminoacids </param>
+ <remarks>result is uncharged use <c>Mass.toMZ</c></remarks>
+ <returns>uncharged mass series of a-,b-,c- ions</returns>   
+</member>
+<member name="M:BioFSharp.Mz.PeakArray.peaksToNearestUnitDaltonBin``1(``0[],System.Int32,System.Int32)">
 <summary>
- Creates Table CleavageIndex
+ Bins peaks to their nearest 1 Da bin
 </summary>
 </member>
-<member name="M:BioFSharp.Mz.SQLiteQuery.createTableProtein(System.Data.SQLite.SQLiteConnection)">
+<member name="M:BioFSharp.Mz.PeakArray.binToUpperIntergerMass``1(``0[],System.Int32,System.Int32)">
 <summary>
- Creates Table Protein
+ Bins peaks to their next upper 1 Da bin
 </summary>
 </member>
-<member name="M:BioFSharp.Mz.SQLiteQuery.createTableSearchDbParams(System.Data.SQLite.SQLiteConnection)">
+<member name="M:BioFSharp.Mz.SearchDB.getSDBParamsBy(System.String)">
 <summary>
- Creates Table SearchDbParams
+ Returns SearchDbParams of a existing database by filePath
 </summary>
 </member>
-<member name="M:BioFSharp.Mz.SearchDB.initializeDatabase(BioFSharp.Mz.SearchDB.SearchDbParams)">
+<member name="M:BioFSharp.Mz.SearchDB.getPeptideLookUpBy(BioFSharp.Mz.SearchDB.SearchDbParams)">
 <summary>
-Creates DB and inserts Tables
+ Returns a LookUpResult list 
 </summary>
 </member>
-<member name="M:BioFSharp.Mz.SearchDB.createVariableModAAL(Microsoft.FSharp.Core.FSharpFunc{BioFSharp.AminoAcids.AminoAcid,Microsoft.FSharp.Core.FSharpOption{Microsoft.FSharp.Collections.FSharpList{BioFSharp.ModificationInfo.Modification}}},System.Boolean,BioFSharp.AminoAcids.AminoAcid)">
+<member name="M:BioFSharp.Mz.SearchDB.getPeptideLookUpFromFileBy(BioFSharp.Mz.SearchDB.SearchDbParams)">
 <summary>
-First match: checks if input AminoAcid is modified
-Second match: returns a (bool*modifiedAminoAcid) list containing all variable modified AminoAcids and the AminoAcid that was given as the function input
-The boolean value &quot;false&quot; is used to state that the Modification is fixed, the value &quot;true&quot; marks the Modification as variable 
+ Returns a LookUpResult list
 </summary>
 </member>
-<member name="M:BioFSharp.Mz.SearchDB.createFixedModAA(Microsoft.FSharp.Core.FSharpFunc{BioFSharp.AminoAcids.AminoAcid,Microsoft.FSharp.Core.FSharpOption{Microsoft.FSharp.Collections.FSharpList{BioFSharp.ModificationInfo.Modification}}},BioFSharp.AminoAcids.AminoAcid)">
+<member name="M:BioFSharp.Mz.SearchDB.createLookUpResultBy``2(Microsoft.FSharp.Collections.FSharpMap{System.String,BioFSharp.Mz.SearchDB.SearchModification},BioFSharp.Mz.SearchDB.SearchDbParams,``0,System.Int32,System.Double,``1,System.String,System.Int32)">
 <summary>
-Returns modified or unmodified AminoAcid depending on the matching expression
-The boolean value &quot;false&quot; is used to state that the Modification is fixed
+ Creates a LookUpResult out of a entry in the ModSequence table
 </summary>
 </member>
-<member name="M:BioFSharp.Mz.SearchDB.createXmodMap(Microsoft.FSharp.Collections.FSharpList{BioFSharp.Mz.SearchDB.SearchModification})">
+<member name="M:BioFSharp.Mz.SearchDB.createPeptideWithMass``1(``0,System.Double)">
 <summary>
-Würde ich später in das XmodModul auslagern
-Generates a Map with SearchModification.Name as key and the XModCode as a value.
-</summary>
-</member>
-<member name="M:BioFSharp.Mz.SearchDB.createAAModTLOfSearchModL(Microsoft.FSharp.Collections.FSharpList{BioFSharp.AminoAcids.AminoAcid},Microsoft.FSharp.Collections.FSharpList{BioFSharp.Mz.SearchDB.SearchModification})">
-<summary>
-Generates list of modified AminoAcids based on a list of Searchmodifications
+ Creates PeptideWithMass record
 </summary>
 </member>
 <member name="P:BioFSharp.Mz.SearchDB.listOfAA">
 <summary>
 needed as input if element of SearchModSite is of UnionCase | Any
+</summary>
+</member>
+<member name="T:BioFSharp.Mz.SearchDB.ModCombinator.AminoAcidWithFlag">
+<summary>
+ Flag indicates if potential modification is fixed
+</summary>
+</member>
+<member name="T:BioFSharp.Mz.SearchDB.ModCombinator.ModLookUpFunc">
+<summary>
+ Type abreviation
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.ModCombinator.combineToModString(BioFSharp.Mz.SearchDB.ModCombinator.ModLookUp,System.Int32,Microsoft.FSharp.Core.FSharpFunc{BioFSharp.IBioItem,System.Double},Microsoft.FSharp.Collections.FSharpList{BioFSharp.AminoAcids.AminoAcid})">
+<summary>
+ Returns a list of all possible modified petide sequences and its masses according to the given modification-lookUp.
+ The peptide sequence representation is ModString.
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.ModCombinator.ToModStringBy(Microsoft.FSharp.Core.FSharpFunc{System.String,Microsoft.FSharp.Core.FSharpOption{System.String}},BioFSharp.AminoAcids.AminoAcid)">
+<summary>
+ Returns a ModString representation. 
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.ModCombinator.combine``1(BioFSharp.Mz.SearchDB.ModCombinator.ModLookUp,System.Int32,Microsoft.FSharp.Core.FSharpFunc{BioFSharp.IBioItem,System.Double},Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{BioFSharp.AminoAcids.AminoAcid,``0}},``0,Microsoft.FSharp.Collections.FSharpList{BioFSharp.AminoAcids.AminoAcid})">
+<summary>
+ Returns a list of all possible modified petide sequences and its masses according to the given modification-lookUp.
+ It uses the given bioitem -&gt; mass function and a function to aggregate the sequence.
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.ModCombinator.setVarModByLookUp(Microsoft.FSharp.Core.FSharpFunc{BioFSharp.AminoAcids.AminoAcid,Microsoft.FSharp.Core.FSharpOption{Microsoft.FSharp.Collections.FSharpList{BioFSharp.ModificationInfo.Modification}}},BioFSharp.Mz.SearchDB.ModCombinator.AminoAcidWithFlag)">
+<summary>
+Returns modified or unmodified AminoAcid depending on the matching expression in a AminoAcidWithFlag struct
+The boolean value &quot;false&quot; is used to state that the Modification is fixed    
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.ModCombinator.setFixModByLookUp(Microsoft.FSharp.Core.FSharpFunc{BioFSharp.AminoAcids.AminoAcid,Microsoft.FSharp.Core.FSharpOption{Microsoft.FSharp.Collections.FSharpList{BioFSharp.ModificationInfo.Modification}}},BioFSharp.Mz.SearchDB.ModCombinator.AminoAcidWithFlag)">
+<summary>
+Returns modified or unmodified AminoAcid depending on the matching expression in a AminoAcidWithFlag struct
+The boolean value &quot;false&quot; is used to state that the Modification is fixed    
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.ModCombinator.modLookUpOf(BioFSharp.Mz.SearchDB.SearchDbParams)">
+<summary>
+ Returns the ModLookup according to given SearchDbParams
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.ModCombinator.convertSearchModification(Microsoft.FSharp.Collections.FSharpList{BioFSharp.AminoAcids.AminoAcid},BioFSharp.Mz.SearchDB.SearchModification)">
+<summary>
+ Returns a list of all possible modified AminoAcids given the particular Searchmodification
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.Db.bulkInsert(System.Data.SQLite.SQLiteConnection,System.Collections.Generic.IEnumerable{BioFSharp.Mz.SearchDB.ProteinContainer})">
+<summary>
+ Bulk insert for a sequence of ProteinContainers
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.Db.initDB(System.String)">
+<summary>
+ Create a new file instance of the DB schema. Deletes already existing instance.
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.Db.isExistsBy(BioFSharp.Mz.SearchDB.SearchDbParams)">
+<summary>
+ Returns true if a db exists with the same parameter content
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.Db.xModToSearchMod(System.Data.SQLite.SQLiteConnection,BioFSharp.Mz.SearchDB.SearchDbParams)">
+<summary>
+ Builds xModToSearchMod Map from DB by given SearchDbParams
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.Db.selectSdbParamsby(System.Data.SQLite.SQLiteConnection,BioFSharp.Mz.SearchDB.SearchDbParams)">
+<summary>
+ Select SearchDbParams entry from DB by given SearchDbParams
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.Db.insertSdbParams(System.Data.SQLite.SQLiteConnection,BioFSharp.Mz.SearchDB.SearchDbParams)">
+<summary>
+ Inserts SearchDbParams into DB
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.Db.getJsonStringOf``1(``0)">
+<summary>
+ Returns a comma seperated string of given search modification list
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.Db.getNameOf(BioFSharp.Mz.SearchDB.SearchDbParams)">
+<summary>
+ Returns the database name given the SearchDbParams
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.Db.SQLiteQuery.prepareSelectModsequenceBySequence(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<summary>
+ Prepares statement to select a ModSequence entry by Sequence
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.Db.SQLiteQuery.prepareSelectModsequenceByMassRange(System.Data.SQLite.SQLiteConnection,System.Int64,System.Int64)">
+<summary>
+ Prepares statement to select a ModSequence entry by Massrange (Between selected Mass -/+ the selected toleranceWidth
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.Db.SQLiteQuery.prepareSelectModsequenceByMass(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<summary>
+ Prepares statement to select a ModSequence entry by Mass
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.Db.SQLiteQuery.prepareSelectModsequenceByPepSequenceID(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<summary>
+ Prepares statement to select a ModSequence entry by PepSequenceID
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.Db.SQLiteQuery.prepareSelectPepSequenceBySequence(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<summary>
+ Prepares statement to select a PepSequence entry by PepSequence - Version without try.. with pattern to enhance the Select performance
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.Db.SQLiteQuery.prepareSelectPepSequenceBySequence'(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<summary>
+ Prepares statement to select a PepSequence entry by PepSequence 
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.Db.SQLiteQuery.prepareSelectCleavageIndexByPepSequenceID(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<summary>
+ Prepares statement to select a CleavageIndex entry PepSequenceID 
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.Db.SQLiteQuery.prepareSelectCleavageIndexByProteinID(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<summary>
+ Prepares statement to select a CleavageIndex entry ProteinID 
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.Db.SQLiteQuery.prepareSelectProteinBySequence(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<summary>
+ Prepares statement to select a Protein entry by Sequence     
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.Db.SQLiteQuery.prepareSelectProteinByAccession(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<summary>
+ Prepares statement to select a Protein entry by Accession     
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.Db.SQLiteQuery.prepareSelectProteinByID(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<summary>
+ Prepares statement to select a Protein entry by ID        
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.Db.SQLiteQuery.prepareSelectSearchModsbyParams(System.Data.SQLite.SQLiteConnection)">
+<summary>
+ Prepares statement to select all SearchModifications by SearchDbParams
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.Db.SQLiteQuery.prepareSelectSearchDbParamsbyParams(System.Data.SQLite.SQLiteConnection)">
+<summary>
+ Prepares statement to select all SearchDbParams entries by FastaPath, Protease, MinmissedCleavages, MaxmissedCleavages, MaxMass, MinPepLength, MaxPepLength, IsotopicLabel, MassMode, FixedMods, VariableMods, VarModsThreshold
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.Db.SQLiteQuery.selectSearchDbParams(System.Data.SQLite.SQLiteConnection)">
+<summary>
+ Prepares statement to select all SearchDbParams 
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.Db.SQLiteQuery.prepareInsertSearchDbParams(System.Data.SQLite.SQLiteConnection)">
+<summary>
+ Prepares statement to insert a SearchDBParams entry
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.Db.SQLiteQuery.prepareInsertModSequence(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<summary>
+ Prepares statement to insert a ModSequence entry
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.Db.SQLiteQuery.prepareInsertPepSequence(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<summary>
+ Prepares statement to insert a PepSequence entry
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.Db.SQLiteQuery.prepareInsertCleavageIndex(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<summary>
+ Prepares statement to insert a CleavageIndex entry
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.Db.SQLiteQuery.prepareInsertProtein(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+<summary>
+ Prepares statement to insert a Protein entry
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.Db.SQLiteQuery.createTableModSequence(System.Data.SQLite.SQLiteConnection)">
+<summary>
+ Creates Table ModSequence
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.Db.SQLiteQuery.createTablePepSequence(System.Data.SQLite.SQLiteConnection)">
+<summary>
+ Creates Table PepSequence
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.Db.SQLiteQuery.createTableCleavageIndex(System.Data.SQLite.SQLiteConnection)">
+<summary>
+ Creates Table CleavageIndex
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.Db.SQLiteQuery.createTableProtein(System.Data.SQLite.SQLiteConnection)">
+<summary>
+ Creates Table Protein
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.Db.SQLiteQuery.createTableSearchDbParams(System.Data.SQLite.SQLiteConnection)">
+<summary>
+ Creates Table SearchDbParams
+</summary>
+</member>
+<member name="T:BioFSharp.Mz.SearchDB.Db.SQLiteQuery">
+<summary>
+  Prepared statements via Closure
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SequestLike.calcDeltaCN(Microsoft.FSharp.Collections.FSharpList{BioFSharp.Mz.SequestLike.SequestLikeScore})">
+<summary>
+ Calculates sequest-like deltaCN score
+  (Xcorr(top hit) - Xcorr(n)) ÷ Xcorr(top hit). Thus, the deltaCn for the top hit is
+  (Xcorr(top hit) - Xcorr(top hit)) ÷ Xcorr(top hit) = 0.
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SequestLike.spectrumToIntensityArrayMinusAutoCorrelation``1(System.Int32,System.Int32,``0[])">
+<summary>
+ Measured spectrum to sequest-like normalized intensity array
+ minus auto-correlation (delay 75 -&gt; like in original sequest algorithm)
+ ! Uses 10 as number of windows for window normalization (like in original sequest algorithm)    
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SequestLike.spectrumToNormalizedIntensityArray``1(System.Int32,System.Int32,``0[])">
+<summary>
+ Measured spectrum to sequest-like normalized intensity array
+ ! Uses 10 as number of windows for window normalization (like in original sequest algorithm)    
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SequestLike.peptideToNormalizedIntensityArray(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},System.Int32,System.Int32,System.Double,System.Collections.Generic.IEnumerable{BioFSharp.AminoAcids.AminoAcid})">
+<summary>
+ Amino acid sequence (peptide) to sequest-like predicted intensity array
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SequestLike.windowNormalizeIntensities(System.Double[],System.Int32)">
+<summary>
+ normalize the intensities within a window to maximum of the window
+ Attention shortens the array  (cuts)
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SignalDetection.Wavelet.upperIdxBy(System.Double[],System.Double,System.Double)">
+<summary>
+ Returns a Index that accesses the mzData Array at a position determined by a precursorMz at the upper end of a given windowwidth 
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SignalDetection.Wavelet.lowerIdxBy(System.Double[],System.Double,System.Double)">
+<summary>
+ Returns a Index that accesses the mzData Array at a position determined by a precursorMz at the lower end of a given windowwidth 
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SignalDetection.Wavelet.windowToCentroid(System.Double[],System.Double[],System.Int32,System.Int32)">
+<summary>
+ Returns mzIntensityArray consisting of centroided Peaks. 
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SignalDetection.Wavelet.toCentroid(System.Double[],System.Double[])">
+<summary>
+ Returns a MzIntensityArray that containing the spectral centroids of the input spectra. 
 </summary>
 </member>
 </members>

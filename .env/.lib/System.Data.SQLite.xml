@@ -1093,9 +1093,24 @@
             A standard SQLite return code.
             </returns>
         </member>
+        <member name="M:System.Data.SQLite.SQLiteBase.SetConfigurationOption(System.Data.SQLite.SQLiteConfigDbOpsEnum,System.Boolean)">
+            <summary>
+            Enables or disables a configuration option for the database.
+            connection.
+            </summary>
+            <param name="option">
+            The database configuration option to enable or disable.
+            </param>
+            <param name="bOnOff">
+            True to enable loading of extensions, false to disable.
+            </param>
+            <returns>
+            A standard SQLite return code.
+            </returns>
+        </member>
         <member name="M:System.Data.SQLite.SQLiteBase.SetLoadExtension(System.Boolean)">
             <summary>
-            Enables or disabled extension loading by SQLite.
+            Enables or disables extension loading by SQLite.
             </summary>
             <param name="bOnOff">
             True to enable loading of extensions, false to disable.
@@ -1600,9 +1615,24 @@
             A standard SQLite return code.
             </returns>
         </member>
+        <member name="M:System.Data.SQLite.SQLite3.SetConfigurationOption(System.Data.SQLite.SQLiteConfigDbOpsEnum,System.Boolean)">
+            <summary>
+            Enables or disables a configuration option for the database.
+            connection.
+            </summary>
+            <param name="option">
+            The database configuration option to enable or disable.
+            </param>
+            <param name="bOnOff">
+            True to enable loading of extensions, false to disable.
+            </param>
+            <returns>
+            A standard SQLite return code.
+            </returns>
+        </member>
         <member name="M:System.Data.SQLite.SQLite3.SetLoadExtension(System.Boolean)">
             <summary>
-            Enables or disabled extension loading by SQLite.
+            Enables or disables extension loading by SQLite.
             </summary>
             <param name="bOnOff">
             True to enable loading of extensions, false to disable.
@@ -2137,6 +2167,11 @@
             associated with the <see cref="T:System.Data.DbType"/> value.
             </summary>
         </member>
+        <member name="F:System.Data.SQLite.SQLiteConnectionFlags.NoVerifyTypeAffinity">
+            <summary>
+            When returning column values, skip verifying their affinity.
+            </summary>
+        </member>
         <member name="F:System.Data.SQLite.SQLiteConnectionFlags.BindAndGetAllAsText">
             <summary>
             When binding parameter values or returning column values, always
@@ -2191,6 +2226,152 @@
         <member name="F:System.Data.SQLite.SQLiteConnectionFlags.DefaultAndLogAll">
             <summary>
             The default extra flags for new connections with all logging enabled.
+            </summary>
+        </member>
+        <member name="T:System.Data.SQLite.SQLiteConfigDbOpsEnum">
+            <summary>
+            These are the supported configuration verbs for use with the native
+            SQLite library.  They are used with the
+            <see cref="M:System.Data.SQLite.SQLiteConnection.SetConfigurationOption(System.Data.SQLite.SQLiteConfigDbOpsEnum,System.Boolean)"/> method.
+            </summary>
+        </member>
+        <member name="F:System.Data.SQLite.SQLiteConfigDbOpsEnum.SQLITE_DBCONFIG_NONE">
+            <summary>
+            This value represents an unknown (or invalid) option, do not use it.
+            </summary>
+        </member>
+        <member name="F:System.Data.SQLite.SQLiteConfigDbOpsEnum.SQLITE_DBCONFIG_LOOKASIDE">
+            <summary>
+            This option is not currently supported by System.Data.SQLite.  It
+            may be supported in the future.
+            </summary>
+        </member>
+        <member name="F:System.Data.SQLite.SQLiteConfigDbOpsEnum.SQLITE_DBCONFIG_ENABLE_FKEY">
+            <summary>
+            This option is used to enable or disable the enforcement of
+            foreign key constraints.
+            </summary>
+        </member>
+        <member name="F:System.Data.SQLite.SQLiteConfigDbOpsEnum.SQLITE_DBCONFIG_ENABLE_TRIGGER">
+            <summary>
+            This option is used to enable or disable triggers.
+            </summary>
+        </member>
+        <member name="F:System.Data.SQLite.SQLiteConfigDbOpsEnum.SQLITE_DBCONFIG_ENABLE_FTS3_TOKENIZER">
+            <summary>
+            This option is used to enable or disable the two-argument version
+            of the fts3_tokenizer() function which is part of the FTS3 full-text
+            search engine extension.
+            </summary>
+        </member>
+        <member name="F:System.Data.SQLite.SQLiteConfigDbOpsEnum.SQLITE_DBCONFIG_ENABLE_LOAD_EXTENSION">
+            <summary>
+            This option is used to enable or disable the loading of extensions.
+            </summary>
+        </member>
+        <member name="T:System.Data.SQLite.SQLiteBlob">
+            <summary>
+            Represents a single SQL blob in SQLite.
+            </summary>
+        </member>
+        <member name="F:System.Data.SQLite.SQLiteBlob._sql">
+            <summary>
+            The underlying SQLite object this blob is bound to.
+            </summary>
+        </member>
+        <member name="F:System.Data.SQLite.SQLiteBlob._sqlite_blob">
+            <summary>
+            The actual blob handle.
+            </summary>
+        </member>
+        <member name="M:System.Data.SQLite.SQLiteBlob.#ctor(System.Data.SQLite.SQLiteBase,System.Data.SQLite.SQLiteBlobHandle)">
+            <summary>
+            Initializes the blob.
+            </summary>
+            <param name="sqlbase">The base SQLite object.</param>
+            <param name="blob">The blob handle.</param>
+        </member>
+        <member name="M:System.Data.SQLite.SQLiteBlob.CheckOpen">
+            <summary>
+            Throws an exception if the blob object does not appear to be open.
+            </summary>
+        </member>
+        <member name="M:System.Data.SQLite.SQLiteBlob.VerifyParameters(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Throws an exception if an invalid read/write parameter is detected.
+            </summary>
+            <param name="buffer">
+            When reading, this array will be populated with the bytes read from
+            the underlying database blob.  When writing, this array contains new
+            values for the specified portion of the underlying database blob.
+            </param>
+            <param name="count">
+            The number of bytes to read or write.
+            </param>
+            <param name="offset">
+            The byte offset, relative to the start of the underlying database
+            blob, where the read or write operation will begin.
+            </param>
+        </member>
+        <member name="M:System.Data.SQLite.SQLiteBlob.Reopen(System.Int64)">
+            <summary>
+            Retargets this object to an underlying database blob for a
+            different row; the database, table, and column remain exactly
+            the same.  If this operation fails for any reason, this blob
+            object is automatically disposed.
+            </summary>
+            <param name="rowId">
+            The integer identifier for the new row.
+            </param>
+        </member>
+        <member name="M:System.Data.SQLite.SQLiteBlob.GetCount">
+            <summary>
+            Queries the total number of bytes for the underlying database blob.
+            </summary>
+            <returns>
+            The total number of bytes for the underlying database blob.
+            </returns>
+        </member>
+        <member name="M:System.Data.SQLite.SQLiteBlob.Read(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Reads data from the underlying database blob.
+            </summary>
+            <param name="buffer">
+            This array will be populated with the bytes read from the
+            underlying database blob.
+            </param>
+            <param name="count">
+            The number of bytes to read.
+            </param>
+            <param name="offset">
+            The byte offset, relative to the start of the underlying
+            database blob, where the read operation will begin.
+            </param>
+        </member>
+        <member name="M:System.Data.SQLite.SQLiteBlob.Write(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Writes data into the underlying database blob.
+            </summary>
+            <param name="buffer">
+            This array contains the new values for the specified portion of
+            the underlying database blob.
+            </param>
+            <param name="count">
+            The number of bytes to write.
+            </param>
+            <param name="offset">
+            The byte offset, relative to the start of the underlying
+            database blob, where the write operation will begin.
+            </param>
+        </member>
+        <member name="M:System.Data.SQLite.SQLiteBlob.Close">
+            <summary>
+            Closes the blob, freeing the associated resources.
+            </summary>
+        </member>
+        <member name="M:System.Data.SQLite.SQLiteBlob.Dispose">
+            <summary>
+            Disposes and finalizes the blob.
             </summary>
         </member>
         <member name="T:System.Data.SQLite.SQLiteCommand">
@@ -2713,7 +2894,8 @@
             <summary>
             This class represents a single value to be returned
             from the <see cref="T:System.Data.SQLite.SQLiteDataReader"/> class via
-            its <see cref="M:System.Data.SQLite.SQLiteDataReader.GetBoolean(System.Int32)"/>,
+            its <see cref="M:System.Data.SQLite.SQLiteDataReader.GetBlob(System.Int32,System.Boolean)"/>,
+            <see cref="M:System.Data.SQLite.SQLiteDataReader.GetBoolean(System.Int32)"/>,
             <see cref="M:System.Data.SQLite.SQLiteDataReader.GetByte(System.Int32)"/>,
             <see cref="M:System.Data.SQLite.SQLiteDataReader.GetBytes(System.Int32,System.Int64,System.Byte[],System.Int32,System.Int32)"/>,
             <see cref="M:System.Data.SQLite.SQLiteDataReader.GetChar(System.Int32)"/>,
@@ -2734,6 +2916,13 @@
             If the value to be returned from the <see cref="T:System.Data.SQLite.SQLiteDataReader"/>
             method is unsuitable (e.g. null with a value type), an exception will
             be thrown.
+            </summary>
+        </member>
+        <member name="F:System.Data.SQLite.SQLiteDataReaderValue.BlobValue">
+            <summary>
+            The value to be returned from the
+            <see cref="M:System.Data.SQLite.SQLiteDataReader.GetBlob(System.Int32,System.Boolean)"/> method -OR- null to
+            indicate an error.
             </summary>
         </member>
         <member name="F:System.Data.SQLite.SQLiteDataReaderValue.BooleanValue">
@@ -2835,6 +3024,43 @@
             <summary>
             The value to be returned from the
             <see cref="M:System.Data.SQLite.SQLiteDataReader.GetValue(System.Int32)"/> method.
+            </summary>
+        </member>
+        <member name="T:System.Data.SQLite.SQLiteReadEventArgs">
+            <summary>
+            This class represents the parameters that are provided
+            to the <see cref="T:System.Data.SQLite.SQLiteDataReader"/> methods, with
+            the exception of the column index (provided separately).
+            </summary>
+        </member>
+        <member name="T:System.Data.SQLite.SQLiteReadBlobEventArgs">
+            <summary>
+            This class represents the parameters that are provided to
+            the <see cref="M:System.Data.SQLite.SQLiteDataReader.GetBlob(System.Int32,System.Boolean)"/> method, with
+            the exception of the column index (provided separately).
+            </summary>
+        </member>
+        <member name="F:System.Data.SQLite.SQLiteReadBlobEventArgs.readOnly">
+            <summary>
+            Provides the underlying storage for the
+            <see cref="P:System.Data.SQLite.SQLiteReadBlobEventArgs.ReadOnly"/> property.
+            </summary>
+        </member>
+        <member name="M:System.Data.SQLite.SQLiteReadBlobEventArgs.#ctor(System.Boolean)">
+            <summary>
+            Constructs an instance of this class to pass into a user-defined
+            callback associated with the <see cref="M:System.Data.SQLite.SQLiteDataReader.GetBlob(System.Int32,System.Boolean)"/>
+            method.
+            </summary>
+            <param name="readOnly">
+            The value that was originally specified for the "readOnly"
+            parameter to the <see cref="M:System.Data.SQLite.SQLiteDataReader.GetBlob(System.Int32,System.Boolean)"/> method.
+            </param>
+        </member>
+        <member name="P:System.Data.SQLite.SQLiteReadBlobEventArgs.ReadOnly">
+            <summary>
+            The value that was originally specified for the "readOnly"
+            parameter to the <see cref="M:System.Data.SQLite.SQLiteDataReader.GetBlob(System.Int32,System.Boolean)"/> method.
             </summary>
         </member>
         <member name="T:System.Data.SQLite.SQLiteReadArrayEventArgs">
@@ -2967,6 +3193,7 @@
         <member name="T:System.Data.SQLite.SQLiteReadValueEventArgs">
             <summary>
             This class represents the parameters and return values for the
+            <see cref="M:System.Data.SQLite.SQLiteDataReader.GetBlob(System.Int32,System.Boolean)"/>,
             <see cref="M:System.Data.SQLite.SQLiteDataReader.GetBoolean(System.Int32)"/>,
             <see cref="M:System.Data.SQLite.SQLiteDataReader.GetByte(System.Int32)"/>,
             <see cref="M:System.Data.SQLite.SQLiteDataReader.GetBytes(System.Int32,System.Int64,System.Byte[],System.Int32,System.Int32)"/>,
@@ -2990,10 +3217,10 @@
             <see cref="P:System.Data.SQLite.SQLiteReadValueEventArgs.MethodName"/> property.
             </summary>
         </member>
-        <member name="F:System.Data.SQLite.SQLiteReadValueEventArgs.arrayEventArgs">
+        <member name="F:System.Data.SQLite.SQLiteReadValueEventArgs.extraEventArgs">
             <summary>
             Provides the underlying storage for the
-            <see cref="P:System.Data.SQLite.SQLiteReadValueEventArgs.ArrayEventArgs"/> property.
+            <see cref="P:System.Data.SQLite.SQLiteReadValueEventArgs.ExtraEventArgs"/> property.
             </summary>
         </member>
         <member name="F:System.Data.SQLite.SQLiteReadValueEventArgs.value">
@@ -3002,21 +3229,23 @@
             <see cref="P:System.Data.SQLite.SQLiteReadValueEventArgs.Value"/> property.
             </summary>
         </member>
-        <member name="M:System.Data.SQLite.SQLiteReadValueEventArgs.#ctor(System.String,System.Data.SQLite.SQLiteReadArrayEventArgs,System.Data.SQLite.SQLiteDataReaderValue)">
+        <member name="M:System.Data.SQLite.SQLiteReadValueEventArgs.#ctor(System.String,System.Data.SQLite.SQLiteReadEventArgs,System.Data.SQLite.SQLiteDataReaderValue)">
             <summary>
             Constructs a new instance of this class.  Depending on the method
-            being called, the <paramref name="arrayEventArgs"/> and/or
+            being called, the <paramref name="extraEventArgs"/> and/or
             <paramref name="value"/> parameters may be null.
             </summary>
             <param name="methodName">
             The name of the <see cref="T:System.Data.SQLite.SQLiteDataReader"/> method that was
             responsible for invoking this callback.
             </param>
-            <param name="arrayEventArgs">
+            <param name="extraEventArgs">
             If the <see cref="M:System.Data.SQLite.SQLiteDataReader.GetBytes(System.Int32,System.Int64,System.Byte[],System.Int32,System.Int32)"/> or
             <see cref="M:System.Data.SQLite.SQLiteDataReader.GetChars(System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)"/> method is being called,
             this object will contain the array related parameters for that
-            method.
+            method.  If the <see cref="M:System.Data.SQLite.SQLiteDataReader.GetBlob(System.Int32,System.Boolean)"/> method is
+            being called, this object will contain the blob related parameters
+            for that method.
             </param>
             <param name="value">
             This may be used by the callback to set the return value for the
@@ -3029,12 +3258,14 @@
             responsible for invoking this callback.
             </summary>
         </member>
-        <member name="P:System.Data.SQLite.SQLiteReadValueEventArgs.ArrayEventArgs">
+        <member name="P:System.Data.SQLite.SQLiteReadValueEventArgs.ExtraEventArgs">
             <summary>
             If the <see cref="M:System.Data.SQLite.SQLiteDataReader.GetBytes(System.Int32,System.Int64,System.Byte[],System.Int32,System.Int32)"/> or
             <see cref="M:System.Data.SQLite.SQLiteDataReader.GetChars(System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)"/> method is being called,
             this object will contain the array related parameters for that
-            method.
+            method.  If the <see cref="M:System.Data.SQLite.SQLiteDataReader.GetBlob(System.Int32,System.Boolean)"/> method is
+            being called, this object will contain the blob related parameters
+            for that method.
             </summary>
         </member>
         <member name="P:System.Data.SQLite.SQLiteReadValueEventArgs.Value">
@@ -3730,6 +3961,12 @@
             The extra connection flags to be used for all opened connections.
             </summary>
         </member>
+        <member name="F:System.Data.SQLite.SQLiteConnection._lastConnectionInOpen">
+            <summary>
+            The <see cref="T:System.Data.SQLite.SQLiteConnection"/> instance (for this thread) that
+            had the most recent call to <see cref="M:System.Data.SQLite.SQLiteConnection.Open"/>.
+            </summary>
+        </member>
         <member name="F:System.Data.SQLite.SQLiteConnection._connectionState">
             <summary>
             State of the current connection
@@ -3975,7 +4212,7 @@
             The total number of per-connection settings cleared.
             </returns>
         </member>
-        <member name="M:System.Data.SQLite.SQLiteConnection.TryGetCachedSetting(System.String,System.String,System.Object@)">
+        <member name="M:System.Data.SQLite.SQLiteConnection.TryGetCachedSetting(System.String,System.Object,System.Object@)">
             <summary>
             Queries and returns the value of the specified setting, using the
             cached setting names and values for this connection, when available.
@@ -4174,6 +4411,31 @@
             within the connection string.
             </returns>
         </member>
+        <member name="M:System.Data.SQLite.SQLiteConnection.ParseConnectionString(System.Data.SQLite.SQLiteConnection,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Parses a connection string into component parts using the custom
+            connection string parser.  An exception may be thrown if the syntax
+            of the connection string is incorrect.
+            </summary>
+            <param name="connection">
+            The connection that will be using the parsed connection string.
+            </param>
+            <param name="connectionString">
+            The connection string to parse.
+            </param>
+            <param name="parseViaFramework">
+            Non-zero to parse the connection string using the algorithm provided
+            by the framework itself.  This is not applicable when running on the
+            .NET Compact Framework.
+            </param>
+            <param name="allowNameOnly">
+            Non-zero if names are allowed without values.
+            </param>
+            <returns>
+            The list of key/value pairs corresponding to the parameters specified
+            within the connection string.
+            </returns>
+        </member>
         <member name="M:System.Data.SQLite.SQLiteConnection.Dispose">
             <summary>
             Disposes and finalizes the connection, if applicable.
@@ -4315,6 +4577,17 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:System.Data.SQLite.SQLiteConnection.ShouldUseLegacyConnectionStringParser(System.Data.SQLite.SQLiteConnection)">
+            <summary>
+            Determines if the legacy connection string parser should be used.
+            </summary>
+            <param name="connection">
+            The connection that will be using the parsed connection string.
+            </param>
+            <returns>
+            Non-zero if the legacy connection string parser should be used.
+            </returns>
+        </member>
         <member name="M:System.Data.SQLite.SQLiteConnection.ParseConnectionString(System.String,System.Boolean)">
             <summary>
             Parses a connection string into component parts using the custom
@@ -4332,7 +4605,27 @@
             within the connection string.
             </returns>
         </member>
-        <member name="M:System.Data.SQLite.SQLiteConnection.ParseConnectionStringViaFramework(System.String,System.Boolean)">
+        <member name="M:System.Data.SQLite.SQLiteConnection.ParseConnectionString(System.Data.SQLite.SQLiteConnection,System.String,System.Boolean)">
+            <summary>
+            Parses a connection string into component parts using the custom
+            connection string parser.  An exception may be thrown if the syntax
+            of the connection string is incorrect.
+            </summary>
+            <param name="connection">
+            The connection that will be using the parsed connection string.
+            </param>
+            <param name="connectionString">
+            The connection string to parse.
+            </param>
+            <param name="allowNameOnly">
+            Non-zero if names are allowed without values.
+            </param>
+            <returns>
+            The list of key/value pairs corresponding to the parameters specified
+            within the connection string.
+            </returns>
+        </member>
+        <member name="M:System.Data.SQLite.SQLiteConnection.ParseConnectionStringViaFramework(System.Data.SQLite.SQLiteConnection,System.String,System.Boolean)">
             <summary>
             Parses a connection string using the built-in (i.e. framework provided)
             connection string parser class and returns the key/value pairs.  An
@@ -4341,6 +4634,9 @@
             connection string parser is always used instead because the framework
             provided one is unavailable there.
             </summary>
+            <param name="connection">
+            The connection that will be using the parsed connection string.
+            </param>
             <param name="connectionString">
             The connection string to parse.
             </param>
@@ -4392,6 +4688,17 @@
             <returns>
             Non-zero upon success; zero on failure.
             </returns>
+        </member>
+        <member name="M:System.Data.SQLite.SQLiteConnection.SetConfigurationOption(System.Data.SQLite.SQLiteConfigDbOpsEnum,System.Boolean)">
+            <summary>
+            Enables or disables a configuration option for the database.
+            </summary>
+            <param name="option">
+            The database configuration option to enable or disable.
+            </param>
+            <param name="enable">
+            True to enable loading of extensions, false to disable.
+            </param>
         </member>
         <member name="M:System.Data.SQLite.SQLiteConnection.EnableExtensions(System.Boolean)">
             <summary>
@@ -4597,6 +4904,27 @@
             </summary>
             <param name="value">Non-zero to enable memory usage tracking, zero otherwise.</param>
             <returns>A standard SQLite return code (i.e. zero for success and non-zero for failure).</returns>
+        </member>
+        <member name="M:System.Data.SQLite.SQLiteConnection.TryGetLastCachedSetting(System.String,System.Object,System.Object@)">
+            <summary>
+            Queries and returns the value of the specified setting, using the
+            cached setting names and values for the last connection that used
+            by the <see cref="M:System.Data.SQLite.SQLiteConnection.Open"/> method, when available.
+            </summary>
+            <param name="name">
+            The name of the setting.
+            </param>
+            <param name="default">
+            The value to be returned if the setting has not been set explicitly
+            or cannot be determined.
+            </param>
+            <param name="value">
+            The value of the cached setting is stored here if found; otherwise,
+            the value of <paramref name="default"/> is stored here.
+            </param>
+            <returns>
+            Non-zero if the cached setting was found; otherwise, zero.
+            </returns>
         </member>
         <member name="M:System.Data.SQLite.SQLiteConnection.Shutdown">
             <summary>
@@ -6869,7 +7197,7 @@
              <param name="i">The index of the column to type-check</param>
              <param name="typ">The type we want to get out of the column</param>
         </member>
-        <member name="M:System.Data.SQLite.SQLiteDataReader.InvokeReadValueCallback(System.Int32,System.Data.SQLite.SQLiteReadValueEventArgs,System.Boolean@)">
+        <member name="M:System.Data.SQLite.SQLiteDataReader.InvokeReadValueCallback(System.Int32,System.Data.SQLite.SQLiteReadEventArgs,System.Boolean@)">
             <summary>
             Invokes the data reader value callback configured for the database
             type name associated with the specified column.  If no data reader
@@ -6886,6 +7214,33 @@
             skipped.  If this is set to non-zero and the necessary return value
             is unavailable or unsuitable, an exception will be thrown.
             </param>
+        </member>
+        <member name="M:System.Data.SQLite.SQLiteDataReader.GetRowId(System.Int32)">
+            <summary>
+            Attempts to query the integer identifier for the current row.  This
+            will not work for tables that were created WITHOUT ROWID -OR- if the
+            query does not include the "rowid" column or one of its aliases -OR-
+            if the <see cref="T:System.Data.SQLite.SQLiteDataReader"/> was not created with the
+            <see cref="F:System.Data.CommandBehavior.KeyInfo"/> flag.
+            </summary>
+            <returns>
+            The integer identifier for the current row -OR- null if it could not
+            be determined.
+            </returns>
+        </member>
+        <member name="M:System.Data.SQLite.SQLiteDataReader.GetBlob(System.Int32,System.Boolean)">
+            <summary>
+            Retrieves the column as a <see cref="T:System.Data.SQLite.SQLiteBlob"/> object.
+            This will not work for tables that were created WITHOUT ROWID
+            -OR- if the query does not include the "rowid" column or one
+            of its aliases -OR- if the <see cref="T:System.Data.SQLite.SQLiteDataReader"/> was
+            not created with the <see cref="F:System.Data.CommandBehavior.KeyInfo"/> flag.
+            </summary>
+            <param name="i">The index of the column.</param>
+            <param name="readOnly">
+            Non-zero to open the blob object for read-only access.
+            </param>
+            <returns>A new <see cref="T:System.Data.SQLite.SQLiteBlob"/> object.</returns>
         </member>
         <member name="M:System.Data.SQLite.SQLiteDataReader.GetBoolean(System.Int32)">
             <summary>
@@ -8773,6 +9128,11 @@
             Used to support CommandBehavior.KeyInfo
             </summary>
         </member>
+        <member name="T:System.Data.SQLite.SQLiteKeyReader.RowIdInfo">
+            <summary>
+            Used to keep track of the per-table RowId column metadata.
+            </summary>
+        </member>
         <member name="T:System.Data.SQLite.SQLiteKeyReader.KeyQuery">
             <summary>
             A single sub-query for a given table/database.
@@ -9948,6 +10308,32 @@
             or does not exist.
             </returns>
         </member>
+        <member name="M:System.Data.SQLite.UnsafeNativeMethods.GetSettingValueViaXmlConfigFile(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Queries and returns the value of the specified setting, using the
+            specified XML configuration file.
+            </summary>
+            <param name="fileName">
+            The name of the XML configuration file to read.
+            </param>
+            <param name="name">
+            The name of the setting.
+            </param>
+            <param name="default">
+            The value to be returned if the setting has not been set explicitly
+            or cannot be determined.
+            </param>
+            <param name="expand">
+            Non-zero to expand any environment variable references contained in
+            the setting value to be returned.  This has no effect on the .NET
+            Compact Framework.
+            </param>
+            <returns>
+            The value of the setting -OR- the default value specified by
+            <paramref name="default" /> if it has not been set explicitly or
+            cannot be determined.
+            </returns>
+        </member>
         <member name="M:System.Data.SQLite.UnsafeNativeMethods.GetSettingValue(System.String,System.String)">
             <summary>
             Queries and returns the value of the specified setting, using the XML
@@ -10167,14 +10553,20 @@
         <member name="M:System.Data.SQLite.ISQLiteNativeModule.xCreate(System.IntPtr,System.IntPtr,System.Int32,System.IntPtr,System.IntPtr@,System.IntPtr@)">
             <summary>
             <para><code>
-              int (*xCreate)(sqlite3 *db, void *pAux,
-                           int argc, char **argv,
-                           sqlite3_vtab **ppVTab,
-                           char **pzErr);
+            int (*xCreate)(sqlite3 *db, void *pAux,
+                         int argc, char **argv,
+                         sqlite3_vtab **ppVTab,
+                         char **pzErr);
             </code></para>
             <para>
-            This method is called to create a new instance of a virtual table 
-            in response to a CREATE VIRTUAL TABLE statement. 
+            The xCreate method is called to create a new instance of a virtual table 
+            in response to a CREATE VIRTUAL TABLE statement.
+            If the xCreate method is the same pointer as the xConnect method, then the
+            virtual table is an eponymous virtual table.
+            If the xCreate method is omitted (if it is a NULL pointer) then the virtual 
+            table is an eponymous-only virtual table.
+            </para>
+            <para>
             The db parameter is a pointer to the SQLite database connection that 
             is executing the CREATE VIRTUAL TABLE statement. 
             The pAux argument is the copy of the client data pointer that was the 
@@ -10205,7 +10597,7 @@
             The sqlite3_declare_vtab() API has the following prototype:
             </para>
             <para><code>
-                int sqlite3_declare_vtab(sqlite3 *db, const char *zCreateTable)
+            int sqlite3_declare_vtab(sqlite3 *db, const char *zCreateTable)
             </code></para>
             <para>
             The first argument to sqlite3_declare_vtab() must be the same 
@@ -10263,17 +10655,17 @@
             <![CDATA[<ul>]]>
             <![CDATA[<li>]]> Hidden columns are not listed in the dataset returned by 
                  "PRAGMA table_info",
-            <![CDATA[<li>]]> Hidden columns are not included in the expansion of a "*"
+            <![CDATA[</li>]]><![CDATA[<li>]]> Hidden columns are not included in the expansion of a "*"
                  expression in the result set of a SELECT, and
-            <![CDATA[<li>]]> Hidden columns are not included in the implicit column-list 
+            <![CDATA[</li>]]><![CDATA[<li>]]> Hidden columns are not included in the implicit column-list 
                  used by an INSERT statement that lacks an explicit column-list. 
-            <![CDATA[</ul>]]>
+            <![CDATA[</li>]]><![CDATA[</ul>]]>
             </para>
             <para>
             For example, if the following SQL is passed to sqlite3_declare_vtab():
             </para>
             <para><code>
-               CREATE TABLE x(a HIDDEN VARCHAR(12), b INTEGER, c INTEGER Hidden);
+            CREATE TABLE x(a HIDDEN VARCHAR(12), b INTEGER, c INTEGER Hidden);
             </code></para>
             <para>
             Then the virtual table would be created with two hidden columns,
@@ -10328,6 +10720,30 @@
             unconstrained.  However, an error results if there are more arguments
             than there are hidden columns in the virtual table.
             </para>
+            <para>
+            Beginning with SQLite version 3.14.0, the CREATE TABLE statement that
+            is passed into sqlite3_declare_vtab() may contain a WITHOUT ROWID clause.
+            This is useful for cases where the virtual table rows 
+            cannot easily be mapped into unique integers.  A CREATE TABLE
+            statement that includes WITHOUT ROWID must define one or more columns as
+            the PRIMARY KEY.  Every column of the PRIMARY KEY must individually be
+            NOT NULL and all columns for each row must be collectively unique.
+            </para>
+            <para>
+            Note that SQLite does not enforce the PRIMARY KEY for a WITHOUT ROWID
+            virtual table.  Enforcement is the responsibility of the underlying
+            virtual table implementation.  But SQLite does assume that the PRIMARY KEY
+            constraint is valid - that the identified columns really are UNIQUE and
+            NOT NULL - and it uses that assumption to optimize queries against the
+            virtual table.
+            </para>
+            <para>
+            The rowid column is not accessible on a
+            WITHOUT ROWID virtual table (of course).  Furthermore, since the
+            xUpdate method depends on having a valid rowid, the xUpdate method 
+            must be NULL for a WITHOUT ROWID virtual table.  That in turn means that
+            WITHOUT ROWID virtual tables must be read-only.
+            </para>
             </summary>
             <param name="pDb">
             The native database connection handle.
@@ -10360,10 +10776,10 @@
         <member name="M:System.Data.SQLite.ISQLiteNativeModule.xConnect(System.IntPtr,System.IntPtr,System.Int32,System.IntPtr,System.IntPtr@,System.IntPtr@)">
             <summary>
             <para><code>
-              int (*xConnect)(sqlite3*, void *pAux,
-                           int argc, char **argv,
-                           sqlite3_vtab **ppVTab,
-                           char **pzErr);
+            int (*xConnect)(sqlite3*, void *pAux,
+                         int argc, char **argv,
+                         sqlite3_vtab **ppVTab,
+                         char **pzErr);
             </code></para>
             <para>
             The xConnect method is very similar to xCreate. 
@@ -10454,7 +10870,7 @@
             The xBestIndex method has a prototype like this:
             </para>
             <para><code>
-              int (*xBestIndex)(sqlite3_vtab *pVTab, sqlite3_index_info*);
+            int (*xBestIndex)(sqlite3_vtab *pVTab, sqlite3_index_info*);
             </code></para>
             <para>
             The SQLite core communicates with the xBestIndex method by filling 
@@ -10464,37 +10880,37 @@
             forms the reply. The sqlite3_index_info structure looks like this:
             </para>
             <para><code>
-              struct sqlite3_index_info {
-                /* Inputs */
-                const int nConstraint;     /* Number of entries in aConstraint */
-                const struct sqlite3_index_constraint {
-                   int iColumn;              /* Column constrained.  -1 for ROWID */
-                   unsigned char op;         /* Constraint operator */
-                   unsigned char usable;     /* True if this constraint is usable */
-                   int iTermOffset;          /* Used internally - xBestIndex should ignore */
-                } *const aConstraint;      /* Table of WHERE clause constraints */
-                const int nOrderBy;        /* Number of terms in the ORDER BY clause */
-                const struct sqlite3_index_orderby {
-                   int iColumn;              /* Column number */
-                   unsigned char desc;       /* True for DESC.  False for ASC. */
-                } *const aOrderBy;         /* The ORDER BY clause */
-                /* Outputs */
-                struct sqlite3_index_constraint_usage {
-                  int argvIndex;           /* if &gt;0, constraint is part of argv to xFilter */
-                  unsigned char omit;      /* Do not code a test for this constraint */
-                } *const aConstraintUsage;
-                int idxNum;                /* Number used to identify the index */
-                char *idxStr;              /* String, possibly obtained from sqlite3_malloc */
-                int needToFreeIdxStr;      /* Free idxStr using sqlite3_free() if true */
-                int orderByConsumed;       /* True if output is already ordered */
-                double estimatedCost;      /* Estimated cost of using this index */
-                <![CDATA[<b>]]>/* Fields below are only available in SQLite 3.8.2 and later */<![CDATA[</b>]]>
-                sqlite3_int64 estimatedRows;    /* Estimated number of rows returned */
-                <![CDATA[<b>]]>/* Fields below are only available in SQLite 3.9.0 and later */<![CDATA[</b>]]>
-                int idxFlags;              /* Mask of SQLITE_INDEX_SCAN_* flags */
-                <![CDATA[<b>]]>/* Fields below are only available in SQLite 3.10.0 and later */<![CDATA[</b>]]>
-                sqlite3_uint64 colUsed;    /* Input: Mask of columns used by statement */
-              };
+            struct sqlite3_index_info {
+              /* Inputs */
+              const int nConstraint;     /* Number of entries in aConstraint */
+              const struct sqlite3_index_constraint {
+                 int iColumn;              /* Column constrained.  -1 for ROWID */
+                 unsigned char op;         /* Constraint operator */
+                 unsigned char usable;     /* True if this constraint is usable */
+                 int iTermOffset;          /* Used internally - xBestIndex should ignore */
+              } *const aConstraint;      /* Table of WHERE clause constraints */
+              const int nOrderBy;        /* Number of terms in the ORDER BY clause */
+              const struct sqlite3_index_orderby {
+                 int iColumn;              /* Column number */
+                 unsigned char desc;       /* True for DESC.  False for ASC. */
+              } *const aOrderBy;         /* The ORDER BY clause */
+              /* Outputs */
+              struct sqlite3_index_constraint_usage {
+                int argvIndex;           /* if >0, constraint is part of argv to xFilter */
+                unsigned char omit;      /* Do not code a test for this constraint */
+              } *const aConstraintUsage;
+              int idxNum;                /* Number used to identify the index */
+              char *idxStr;              /* String, possibly obtained from sqlite3_malloc */
+              int needToFreeIdxStr;      /* Free idxStr using sqlite3_free() if true */
+              int orderByConsumed;       /* True if output is already ordered */
+              double estimatedCost;      /* Estimated cost of using this index */
+              <![CDATA[<b>]]>/* Fields below are only available in SQLite 3.8.2 and later */<![CDATA[</b>]]>
+              sqlite3_int64 estimatedRows;    /* Estimated number of rows returned */
+              <![CDATA[<b>]]>/* Fields below are only available in SQLite 3.9.0 and later */<![CDATA[</b>]]>
+              int idxFlags;              /* Mask of SQLITE_INDEX_SCAN_* flags */
+              <![CDATA[<b>]]>/* Fields below are only available in SQLite 3.10.0 and later */<![CDATA[</b>]]>
+              sqlite3_uint64 colUsed;    /* Input: Mask of columns used by statement */
+            };
             </code></para>
             <para>
             Note the warnings on the "estimatedRows", "idxFlags", and colUsed fields.
@@ -10510,16 +10926,16 @@
             In addition, there are some defined constants:
             </para>
             <para><code>
-              #define SQLITE_INDEX_CONSTRAINT_EQ      2
-              #define SQLITE_INDEX_CONSTRAINT_GT      4
-              #define SQLITE_INDEX_CONSTRAINT_LE      8
-              #define SQLITE_INDEX_CONSTRAINT_LT     16
-              #define SQLITE_INDEX_CONSTRAINT_GE     32
-              #define SQLITE_INDEX_CONSTRAINT_MATCH  64
-              #define SQLITE_INDEX_CONSTRAINT_LIKE   65     /* 3.10.0 and later only */
-              #define SQLITE_INDEX_CONSTRAINT_GLOB   66     /* 3.10.0 and later only */
-              #define SQLITE_INDEX_CONSTRAINT_REGEXP 67     /* 3.10.0 and later only */
-              #define SQLITE_INDEX_SCAN_UNIQUE        1     /* Scan visits at most 1 row */
+            #define SQLITE_INDEX_CONSTRAINT_EQ      2
+            #define SQLITE_INDEX_CONSTRAINT_GT      4
+            #define SQLITE_INDEX_CONSTRAINT_LE      8
+            #define SQLITE_INDEX_CONSTRAINT_LT     16
+            #define SQLITE_INDEX_CONSTRAINT_GE     32
+            #define SQLITE_INDEX_CONSTRAINT_MATCH  64
+            #define SQLITE_INDEX_CONSTRAINT_LIKE   65     /* 3.10.0 and later only */
+            #define SQLITE_INDEX_CONSTRAINT_GLOB   66     /* 3.10.0 and later only */
+            #define SQLITE_INDEX_CONSTRAINT_REGEXP 67     /* 3.10.0 and later only */
+            #define SQLITE_INDEX_SCAN_UNIQUE        1     /* Scan visits at most 1 row */
             </code></para>
             <para>
             The SQLite core calls the xBestIndex method when it is compiling a query
@@ -10585,7 +11001,7 @@
             if the WHERE clause contained a term like this:
             </para>
             <para><code>
-                 a = 5
+            a = 5
             </code></para>
             <para>
             Then one of the constraints would be on the "a" column with 
@@ -10597,15 +11013,15 @@
             like this:
             </para>
             <para><code>
-                 x BETWEEN 10 AND 100 AND 999&gt;y
+            x BETWEEN 10 AND 100 AND 999&gt;y
             </code></para>
             <para>
             The query optimizer might translate this into three separate constraints:
             </para>
             <para><code>
-                 x &gt;= 10
-                 x &lt;= 100
-                 y &lt; 999
+            x &gt;= 10
+            x &lt;= 100
+            y &lt; 999
             </code></para>
             <para>
             For each constraint, the aConstraint[].iColumn field indicates which 
@@ -10735,7 +11151,7 @@
         <member name="M:System.Data.SQLite.ISQLiteNativeModule.xDisconnect(System.IntPtr)">
             <summary>
             <para><code>
-              int (*xDisconnect)(sqlite3_vtab *pVTab);
+            int (*xDisconnect)(sqlite3_vtab *pVTab);
             </code></para>
             <para>
             This method releases a connection to a virtual table. 
@@ -10765,7 +11181,7 @@
         <member name="M:System.Data.SQLite.ISQLiteNativeModule.xDestroy(System.IntPtr)">
             <summary>
             <para><code>
-              int (*xDestroy)(sqlite3_vtab *pVTab);
+            int (*xDestroy)(sqlite3_vtab *pVTab);
             </code></para>
             <para>
             This method releases a connection to a virtual table, just like 
@@ -10793,7 +11209,7 @@
         <member name="M:System.Data.SQLite.ISQLiteNativeModule.xOpen(System.IntPtr,System.IntPtr@)">
             <summary>
             <para><code>
-              int (*xOpen)(sqlite3_vtab *pVTab, sqlite3_vtab_cursor **ppCursor);
+            int (*xOpen)(sqlite3_vtab *pVTab, sqlite3_vtab_cursor **ppCursor);
             </code></para>
             <para>
             The xOpen method creates a new cursor used for accessing (read and/or
@@ -10839,7 +11255,7 @@
         <member name="M:System.Data.SQLite.ISQLiteNativeModule.xClose(System.IntPtr)">
             <summary>
             <para><code>
-              int (*xClose)(sqlite3_vtab_cursor*);
+            int (*xClose)(sqlite3_vtab_cursor*);
             </code></para>
             <para>
             The xClose method closes a cursor previously opened by 
@@ -10867,8 +11283,8 @@
         <member name="M:System.Data.SQLite.ISQLiteNativeModule.xFilter(System.IntPtr,System.Int32,System.IntPtr,System.Int32,System.IntPtr)">
             <summary>
             <para><code>
-              int (*xFilter)(sqlite3_vtab_cursor*, int idxNum, const char *idxStr,
-                            int argc, sqlite3_value **argv);
+            int (*xFilter)(sqlite3_vtab_cursor*, int idxNum, const char *idxStr,
+                          int argc, sqlite3_value **argv);
             </code></para>
             <para>
             This method begins a search of a virtual table. 
@@ -10927,7 +11343,7 @@
         <member name="M:System.Data.SQLite.ISQLiteNativeModule.xNext(System.IntPtr)">
             <summary>
             <para><code>
-              int (*xNext)(sqlite3_vtab_cursor*);
+            int (*xNext)(sqlite3_vtab_cursor*);
             </code></para>
             <para>
             The xNext method advances a virtual table cursor
@@ -10956,7 +11372,7 @@
         <member name="M:System.Data.SQLite.ISQLiteNativeModule.xEof(System.IntPtr)">
             <summary>
             <para><code>
-              int (*xEof)(sqlite3_vtab_cursor*);
+            int (*xEof)(sqlite3_vtab_cursor*);
             </code></para>
             <para>
             The xEof method must return false (zero) if the specified cursor 
@@ -10978,7 +11394,7 @@
         <member name="M:System.Data.SQLite.ISQLiteNativeModule.xColumn(System.IntPtr,System.IntPtr,System.Int32)">
             <summary>
             <para><code>
-              int (*xColumn)(sqlite3_vtab_cursor*, sqlite3_context*, int N);
+            int (*xColumn)(sqlite3_vtab_cursor*, sqlite3_context*, int N);
             </code></para>
             <para>
             The SQLite core invokes this method in order to find the value for 
@@ -10990,16 +11406,16 @@
             <para>
             <![CDATA[<ul>]]>
             <![CDATA[<li>]]> sqlite3_result_blob()
-            <![CDATA[<li>]]> sqlite3_result_double()
-            <![CDATA[<li>]]> sqlite3_result_int()
-            <![CDATA[<li>]]> sqlite3_result_int64()
-            <![CDATA[<li>]]> sqlite3_result_null()
-            <![CDATA[<li>]]> sqlite3_result_text()
-            <![CDATA[<li>]]> sqlite3_result_text16()
-            <![CDATA[<li>]]> sqlite3_result_text16le()
-            <![CDATA[<li>]]> sqlite3_result_text16be()
-            <![CDATA[<li>]]> sqlite3_result_zeroblob()
-            <![CDATA[</ul>]]>
+            <![CDATA[</li>]]><![CDATA[<li>]]> sqlite3_result_double()
+            <![CDATA[</li>]]><![CDATA[<li>]]> sqlite3_result_int()
+            <![CDATA[</li>]]><![CDATA[<li>]]> sqlite3_result_int64()
+            <![CDATA[</li>]]><![CDATA[<li>]]> sqlite3_result_null()
+            <![CDATA[</li>]]><![CDATA[<li>]]> sqlite3_result_text()
+            <![CDATA[</li>]]><![CDATA[<li>]]> sqlite3_result_text16()
+            <![CDATA[</li>]]><![CDATA[<li>]]> sqlite3_result_text16le()
+            <![CDATA[</li>]]><![CDATA[<li>]]> sqlite3_result_text16be()
+            <![CDATA[</li>]]><![CDATA[<li>]]> sqlite3_result_zeroblob()
+            <![CDATA[</li>]]><![CDATA[</ul>]]>
             </para>
             <para>
             If the xColumn method implementation calls none of the functions above,
@@ -11033,7 +11449,7 @@
         <member name="M:System.Data.SQLite.ISQLiteNativeModule.xRowId(System.IntPtr,System.Int64@)">
             <summary>
             <para><code>
-              int (*xRowid)(sqlite3_vtab_cursor *pCur, sqlite_int64 *pRowid);
+            int (*xRowid)(sqlite3_vtab_cursor *pCur, sqlite_int64 *pRowid);
             </code></para>
             <para>
             A successful invocation of this method will cause *pRowid to be
@@ -11060,12 +11476,12 @@
         <member name="M:System.Data.SQLite.ISQLiteNativeModule.xUpdate(System.IntPtr,System.Int32,System.IntPtr,System.Int64@)">
             <summary>
             <para><code>
-              int (*xUpdate)(
-                sqlite3_vtab *pVTab,
-                int argc,
-                sqlite3_value **argv,
-                sqlite_int64 *pRowid
-              );
+            int (*xUpdate)(
+              sqlite3_vtab *pVTab,
+              int argc,
+              sqlite3_value **argv,
+              sqlite_int64 *pRowid
+            );
             </code></para>
             <para>
             All changes to a virtual table are made using the xUpdate method.
@@ -11114,22 +11530,22 @@
             <para><code>
             <![CDATA[<dl>]]>
             <![CDATA[<dt>]]><![CDATA[<b>]]>argc = 1<![CDATA[</b>]]>
-            <![CDATA[<dd>]]>The single row with rowid equal to argv[0] is deleted. No insert occurs.
-            <![CDATA[<dt>]]><![CDATA[<b>]]>argc &gt; 1 <![CDATA[<br>]]> argv[0] = NULL<![CDATA[</b>]]>
-            <![CDATA[<dd>]]>A new row is inserted with a rowid argv[1] and column values in
+            <![CDATA[</dt>]]><![CDATA[<dd>]]>The single row with rowid equal to argv[0] is deleted. No insert occurs.
+            <![CDATA[</dd>]]><![CDATA[<dt>]]><![CDATA[<b>]]>argc &gt; 1 <![CDATA[<br>]]> argv[0] = NULL<![CDATA[</br>]]><![CDATA[</b>]]>
+            <![CDATA[</dt>]]><![CDATA[<dd>]]>A new row is inserted with a rowid argv[1] and column values in
                    argv[2] and following.  If argv[1] is an SQL NULL,
                    the a new unique rowid is generated automatically.
-            <![CDATA[<dt>]]><![CDATA[<b>]]>argc &gt; 1 <![CDATA[<br>]]> argv[0] &#8800; NULL <![CDATA[<br>]]> argv[0] = argv[1]<![CDATA[</b>]]>
-            <![CDATA[<dd>]]>The row with rowid argv[0] is updated with new values 
+            <![CDATA[</dd>]]><![CDATA[<dt>]]><![CDATA[<b>]]>argc &gt; 1 <![CDATA[<br>]]> argv[0] &#8800; NULL <![CDATA[</br>]]><![CDATA[<br>]]> argv[0] = argv[1]<![CDATA[</br>]]><![CDATA[</b>]]>
+            <![CDATA[</dt>]]><![CDATA[<dd>]]>The row with rowid argv[0] is updated with new values 
                    in argv[2] and following parameters.
-            <![CDATA[<dt>]]><![CDATA[<b>]]>argc &gt; 1 <![CDATA[<br>]]> argv[0] &#8800; NULL <![CDATA[<br>]]> argv[0] &#8800; argv[1]<![CDATA[</b>]]>
-            <![CDATA[<dd>]]> The row with rowid argv[0] is updated with rowid argv[1] 
+            <![CDATA[</dd>]]><![CDATA[<dt>]]><![CDATA[<b>]]>argc &gt; 1 <![CDATA[<br>]]> argv[0] &#8800; NULL <![CDATA[</br>]]><![CDATA[<br>]]> argv[0] &#8800; argv[1]<![CDATA[</br>]]><![CDATA[</b>]]>
+            <![CDATA[</dt>]]><![CDATA[<dd>]]> The row with rowid argv[0] is updated with rowid argv[1] 
             and new values in argv[2] and following parameters. This will occur 
             when an SQL statement updates a rowid, as in the statement:
             <para><code>
                UPDATE table SET rowid=rowid+1 WHERE ...; 
             </code></para>
-            <![CDATA[</dl>]]>
+            <![CDATA[</dd>]]><![CDATA[</dl>]]>
             </code></para>
             <para>
             The xUpdate method must return SQLITE_OK if and only if it is
@@ -11181,7 +11597,7 @@
         <member name="M:System.Data.SQLite.ISQLiteNativeModule.xBegin(System.IntPtr)">
             <summary>
             <para><code>
-              int (*xBegin)(sqlite3_vtab *pVTab);
+            int (*xBegin)(sqlite3_vtab *pVTab);
             </code></para>
             <para>
             This method begins a transaction on a virtual table.
@@ -11208,7 +11624,7 @@
         <member name="M:System.Data.SQLite.ISQLiteNativeModule.xSync(System.IntPtr)">
             <summary>
             <para><code>
-              int (*xSync)(sqlite3_vtab *pVTab);
+            int (*xSync)(sqlite3_vtab *pVTab);
             </code></para>
             <para>
             This method signals the start of a two-phase commit on a virtual
@@ -11234,7 +11650,7 @@
         <member name="M:System.Data.SQLite.ISQLiteNativeModule.xCommit(System.IntPtr)">
             <summary>
             <para><code>
-              int (*xCommit)(sqlite3_vtab *pVTab);
+            int (*xCommit)(sqlite3_vtab *pVTab);
             </code></para>
             <para>
             This method causes a virtual table transaction to commit.
@@ -11256,7 +11672,7 @@
         <member name="M:System.Data.SQLite.ISQLiteNativeModule.xRollback(System.IntPtr)">
             <summary>
             <para><code>
-              int (*xRollback)(sqlite3_vtab *pVTab);
+            int (*xRollback)(sqlite3_vtab *pVTab);
             </code></para>
             <para>
             This method causes a virtual table transaction to rollback.
@@ -11277,13 +11693,13 @@
         <member name="M:System.Data.SQLite.ISQLiteNativeModule.xFindFunction(System.IntPtr,System.Int32,System.IntPtr,System.Data.SQLite.SQLiteCallback@,System.IntPtr@)">
             <summary>
             <para><code>
-              int (*xFindFunction)(
-                sqlite3_vtab *pVtab,
-                int nArg,
-                const char *zName,
-                void (**pxFunc)(sqlite3_context*,int,sqlite3_value**),
-                void **ppArg
-              );
+            int (*xFindFunction)(
+              sqlite3_vtab *pVtab,
+              int nArg,
+              const char *zName,
+              void (**pxFunc)(sqlite3_context*,int,sqlite3_value**),
+              void **ppArg
+            );
             </code></para>
             <para>
             This method is called during sqlite3_prepare() to give the virtual
@@ -11337,7 +11753,7 @@
         <member name="M:System.Data.SQLite.ISQLiteNativeModule.xRename(System.IntPtr,System.IntPtr)">
             <summary>
             <para><code>
-              int (*xRename)(sqlite3_vtab *pVtab, const char *zNew);
+            int (*xRename)(sqlite3_vtab *pVtab, const char *zNew);
             </code></para>
             <para>
             This method provides notification that the virtual table implementation
@@ -11363,9 +11779,9 @@
         <member name="M:System.Data.SQLite.ISQLiteNativeModule.xSavepoint(System.IntPtr,System.Int32)">
             <summary>
             <para><code>
-              int (*xSavepoint)(sqlite3_vtab *pVtab, int);
-              int (*xRelease)(sqlite3_vtab *pVtab, int);
-              int (*xRollbackTo)(sqlite3_vtab *pVtab, int);
+            int (*xSavepoint)(sqlite3_vtab *pVtab, int);
+            int (*xRelease)(sqlite3_vtab *pVtab, int);
+            int (*xRollbackTo)(sqlite3_vtab *pVtab, int);
             </code></para>
             <para>
             These methods provide the virtual table implementation an opportunity to
@@ -11404,9 +11820,9 @@
         <member name="M:System.Data.SQLite.ISQLiteNativeModule.xRelease(System.IntPtr,System.Int32)">
             <summary>
             <para><code>
-              int (*xSavepoint)(sqlite3_vtab *pVtab, int);
-              int (*xRelease)(sqlite3_vtab *pVtab, int);
-              int (*xRollbackTo)(sqlite3_vtab *pVtab, int);
+            int (*xSavepoint)(sqlite3_vtab *pVtab, int);
+            int (*xRelease)(sqlite3_vtab *pVtab, int);
+            int (*xRollbackTo)(sqlite3_vtab *pVtab, int);
             </code></para>
             <para>
             These methods provide the virtual table implementation an opportunity to
@@ -11446,9 +11862,9 @@
         <member name="M:System.Data.SQLite.ISQLiteNativeModule.xRollbackTo(System.IntPtr,System.Int32)">
             <summary>
             <para><code>
-              int (*xSavepoint)(sqlite3_vtab *pVtab, int);
-              int (*xRelease)(sqlite3_vtab *pVtab, int);
-              int (*xRollbackTo)(sqlite3_vtab *pVtab, int);
+            int (*xSavepoint)(sqlite3_vtab *pVtab, int);
+            int (*xRelease)(sqlite3_vtab *pVtab, int);
+            int (*xRollbackTo)(sqlite3_vtab *pVtab, int);
             </code></para>
             <para>
             These methods provide the virtual table implementation an opportunity to
@@ -11797,6 +12213,21 @@
         <member name="F:System.Data.SQLite.SQLiteIndexConstraintOp.Match">
             <summary>
             This value represents the MATCH operator.
+            </summary>
+        </member>
+        <member name="F:System.Data.SQLite.SQLiteIndexConstraintOp.Like">
+            <summary>
+            This value represents the LIKE operator.
+            </summary>
+        </member>
+        <member name="F:System.Data.SQLite.SQLiteIndexConstraintOp.Glob">
+            <summary>
+            This value represents the GLOB operator.
+            </summary>
+        </member>
+        <member name="F:System.Data.SQLite.SQLiteIndexConstraintOp.Regexp">
+            <summary>
+            This value represents the REGEXP operator.
             </summary>
         </member>
         <member name="T:System.Data.SQLite.SQLiteIndexFlags">

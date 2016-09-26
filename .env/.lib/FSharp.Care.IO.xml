@@ -100,12 +100,82 @@
  Reads a file as one text
 </summary>
 </member>
+<member name="M:FSharp.Care.IO.FileIO.DeleteFiles(System.Collections.Generic.IEnumerable{System.String})">
+<summary>
+ Deletes the given files.
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.FileIO.DeleteFile(System.String)">
+<summary>
+ Deletes a file if it exists.
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.FileIO.CreateFile(System.String)">
+<summary>
+ Creates a file if it does not exist.
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.FileIO.CreateDir(System.String)">
+<summary>
+ Creates a directory if it does not exist.
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.FileIO.isValidPath(System.String)">
+<summary>
+ Detects whether the given path does not contains invalid characters.
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.FileIO.isFile(System.String)">
+<summary>
+ Detects whether the given path is a file.
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.FileIO.isDirectory(System.String)">
+<summary>
+ Detects whether the given path is a directory.
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.FileIO.ensureDirectory(System.String)">
+<summary>
+ Checks if the given directory exists. If not then this functions creates the directory.
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.FileIO.ensureDirExists(System.IO.DirectoryInfo)">
+<summary>
+ Ensure that directory chain exists. Create necessary directories if necessary.
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.FileIO.directoryExists(System.String)">
+<summary>
+ Checks if the directory exists on disk.
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.FileIO.isInFolder(System.IO.DirectoryInfo,System.IO.FileInfo)">
+<summary>
+ Checks if the file is in a subfolder of the dir.
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.FileIO.isSubfolderOf(System.IO.DirectoryInfo,System.IO.DirectoryInfo)">
+<summary>
+ Checks if dir1 is a subfolder of dir2. If dir1 equals dir2 the function returns also true.
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.FileIO.normalizeFileName(System.String)">
+<summary>
+ Normalizes a filename.
+</summary>
+</member>
 <member name="M:FSharp.Care.IO.FileIO.allFilesExist(System.Collections.Generic.IEnumerable{System.String})">
 <summary>
  Checks if all given files exists
 </summary>
 </member>
 <member name="M:FSharp.Care.IO.FileIO.checkFileExists(System.String)">
+<summary>
+ Checks if the file exists on disk.
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.FileIO.fileExists(System.String)">
 <summary>
  Checks if the file exists on disk.
 </summary>
@@ -150,6 +220,36 @@
  A module to facilitate interaction with files and directories 
  The code is take from Fsharpx project and slightly modified
  Special thanks to the original authors under (https://github.com/fsprojects/fsharpx)
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.PathFileName.normalizeFileName(System.String)">
+<summary>
+ Normalizes a filename towards plattform specific directory separator char. Removes the directory separator char at the end.
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.PathFileName.|FileInfoNameSections|(System.IO.FileInfo)">
+<summary>
+ Active Pattern for determining FileInfoNameSections.
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.PathFileName.|FileInfoFullName|(System.IO.FileInfo)">
+<summary>
+ Active Pattern for determining file name.
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.PathFileName.|EndsWith|_|(System.String,System.String)">
+<summary>
+ Active Pattern for determining file extension.
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.PathFileName.|File|Directory|(System.IO.FileSystemInfo)">
+<summary>
+ Active pattern which discriminates between files and directories.
+</summary>
+</member>
+<member name="T:FSharp.Care.IO.PathFileName">
+<summary>
+ Performs operations on String instances that contain file or directory path information. These operations are performed in a cross-platform manner.
 </summary>
 </member>
 <member name="P:FSharp.Care.IO.SchemaReader.RecordSchemaReader`1.GetSchema">

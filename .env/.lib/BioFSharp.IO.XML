@@ -191,6 +191,11 @@
  Returns the posible charge/charges in a list. Returns None if the information can&apos;t be optained
 </summary>
 </member>
+<member name="M:BioFSharp.IO.Mgf.tryGetPrecursorMZ(BioFSharp.IO.Mgf.MgfEntry)">
+<summary>
+ Returns the precursor mz. Returns None if the information can&apos;t be optained
+</summary>
+</member>
 <member name="M:BioFSharp.IO.Mgf.tryGetPrecursorMass(BioFSharp.IO.Mgf.MgfEntry)">
 <summary>
  Returns the precursor mass. Returns None if the information can&apos;t be optained
