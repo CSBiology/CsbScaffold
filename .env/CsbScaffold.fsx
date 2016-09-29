@@ -2,7 +2,10 @@
 // Include MathNet.Numerics
 #r ".lib/MathNet.Numerics.dll"
 #r ".lib/MathNet.Numerics.FSharp.dll"
-   
+
+// Include Newtonsoft
+#r ".lib/Newtonsoft.Json.dll"
+
 // Include FSharp.Care and IO
 #r ".lib/FSharp.Care.dll"
 #r ".lib/FSharp.Care.IO.dll"
@@ -12,6 +15,13 @@
 #r ".lib/BioFSharp.IO.dll"
 #r ".lib/BioFSharp.Stats.dll"
 #r ".lib/BioFSharp.Mz.dll"
+
+// Include MzLite and FsMzLite  
+#r ".lib/MzLite.dll"
+#r ".lib/MzLite.SQL.dll"
+#r ".lib/MzLite.Wiff.dll"
+#r ".lib/MzLite.Processing.dll"
+#r ".lib/FsMzLite.dll"
 
 // Include Accord
 #r "packages/Accord/lib/net45/Accord.dll"
