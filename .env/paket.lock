@@ -1,19 +1,19 @@
 NUGET
   remote: https://www.nuget.org/api/v2
   specs:
-    Accord (3.0.2)
-    Accord.MachineLearning (3.0.2)
-      Accord (>= 3.0.2)
-      Accord.Math (>= 3.0.2)
-      Accord.Statistics (>= 3.0.2)
-    Accord.Math (3.0.2)
-      Accord (>= 3.0.2)
-    Accord.Statistics (3.0.2)
-      Accord (>= 3.0.2)
-      Accord.Math (>= 3.0.2)
+    Accord (3.3)
+    Accord.MachineLearning (3.3)
+      Accord (>= 3.3)
+      Accord.Math (>= 3.3)
+      Accord.Statistics (>= 3.3)
+    Accord.Math (3.3)
+      Accord (>= 3.3)
+    Accord.Statistics (3.3)
+      Accord (>= 3.3)
+      Accord.Math (>= 3.3)
     Deedle (1.2.5)
     FSharp.Core (4.0.0.1)
-    FSharp.Plotly (1.0.1)
+    FSharp.Plotly (1.0.2)
       FSharp.Core
       Newtonsoft.Json
     Microsoft.CSharp (4.0.1) - framework: >= netstandard10
