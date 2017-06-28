@@ -1,0 +1,994 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>FSharp.Plotly</name></assembly>
+<members>
+<member name="M:FSharp.Plotly.Annotation.init(Microsoft.FSharp.Core.FSharpFunc{FSharp.Plotly.Annotation,FSharp.Plotly.Annotation})">
+<summary>
+ Init Annotation type
+</summary>
+</member>
+<member name="T:FSharp.Plotly.Annotation">
+<summary>
+ Margin 
+</summary>
+</member>
+<member name="T:FSharp.Plotly.Bins">
+<summary>
+ Bin type inherits from dynamic object
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.Surface``6(System.Collections.Generic.IEnumerable{``0},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``2}},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``3}},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{``4},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Colorscale},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{``5})">
+<summary>
+ Uses points, line or both depending on the mode to represent 3d-data points
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.StackedColumn``4(System.Collections.Generic.IEnumerable{System.Tuple{``0,``1}},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``3}},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.TextPosition},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Font},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Marker})">
+<summary>
+ Displays series of column chart type as stacked columns.
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.StackedColumn``4(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``3}},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.TextPosition},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Font},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Marker})">
+<summary>
+ Displays series of column chart type as stacked columns.
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.StackedBar``4(System.Collections.Generic.IEnumerable{System.Tuple{``0,``1}},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``3}},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.TextPosition},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Font},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Marker})">
+<summary>
+ Displays series of tcolumn chart type as stacked bars.
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.StackedBar``4(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``3}},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.TextPosition},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Font},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Marker})">
+<summary>
+ Displays series of tcolumn chart type as stacked bars.
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.SplineArea``6(System.Collections.Generic.IEnumerable{System.Tuple{``0,``1}},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Symbol},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``3}},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.TextPosition},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Font},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.DrawingStyle},Microsoft.FSharp.Core.FSharpOption{``4},Microsoft.FSharp.Core.FSharpOption{``5})">
+<summary>
+ Emphasizes the degree of change over time and shows the relationship of the parts to a whole.
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.SplineArea``6(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Symbol},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``3}},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.TextPosition},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Font},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.DrawingStyle},Microsoft.FSharp.Core.FSharpOption{``4},Microsoft.FSharp.Core.FSharpOption{``5})">
+<summary>
+ Emphasizes the degree of change over time and shows the relationship of the parts to a whole.
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.Spline``6(System.Collections.Generic.IEnumerable{System.Tuple{``0,``1}},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Symbol},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``3}},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.TextPosition},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Font},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.DrawingStyle},Microsoft.FSharp.Core.FSharpOption{``4},Microsoft.FSharp.Core.FSharpOption{``5})">
+<summary>
+ A Line chart that plots a fitted curve through each data point in a series.
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.Spline``6(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Symbol},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``3}},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.TextPosition},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Font},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.DrawingStyle},Microsoft.FSharp.Core.FSharpOption{``4},Microsoft.FSharp.Core.FSharpOption{``5})">
+<summary>
+ A Line chart that plots a fitted curve through each data point in a series.
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.Scatter3d``6(System.Collections.Generic.IEnumerable{System.Tuple{``0,``1,``2}},FSharp.Plotly.StyleParam.Mode,Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Symbol},Microsoft.FSharp.Core.FSharpOption{``3},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``4}},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.TextPosition},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Font},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.DrawingStyle},Microsoft.FSharp.Core.FSharpOption{``5})">
+<summary>
+ Uses points, line or both depending on the mode to represent 3d-data points
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.Scatter3d``6(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1},System.Collections.Generic.IEnumerable{``2},FSharp.Plotly.StyleParam.Mode,Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Symbol},Microsoft.FSharp.Core.FSharpOption{``3},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``4}},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.TextPosition},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Font},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.DrawingStyle},Microsoft.FSharp.Core.FSharpOption{``5})">
+<summary>
+ Uses points, line or both depending on the mode to represent 3d-data points
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.Scatter``5(System.Collections.Generic.IEnumerable{System.Tuple{``0,``1}},FSharp.Plotly.StyleParam.Mode,Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Symbol},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``3}},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.TextPosition},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Font},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.DrawingStyle},Microsoft.FSharp.Core.FSharpOption{``4})">
+<summary>
+ Uses points, line or both depending on the mode to represent data points
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.Scatter``5(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1},FSharp.Plotly.StyleParam.Mode,Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Symbol},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``3}},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.TextPosition},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Font},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.DrawingStyle},Microsoft.FSharp.Core.FSharpOption{``4})">
+<summary>
+ Uses points, line or both depending on the mode to represent data points
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.Range``5(System.Collections.Generic.IEnumerable{System.Tuple{``0,``1}},System.Collections.Generic.IEnumerable{``2},System.Collections.Generic.IEnumerable{``3},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``4}},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.TextPosition},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Font})">
+<summary>
+ Displays a range of data by plotting two Y values per data point, with each Y value being drawn as a line 
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.Range``5(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1},System.Collections.Generic.IEnumerable{``2},System.Collections.Generic.IEnumerable{``3},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``4}},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.TextPosition},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Font})">
+<summary>
+ Displays a range of data by plotting two Y values per data point, with each Y value being drawn as a line 
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.Polar``5(System.Collections.Generic.IEnumerable{System.Tuple{``0,``1}},FSharp.Plotly.StyleParam.Mode,Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Symbol},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``3}},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.TextPosition},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Font},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.DrawingStyle},Microsoft.FSharp.Core.FSharpOption{``4})">
+<summary>
+ Uses points, line or both depending on the mode to represent data points in a polar chart
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.Polar``5(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1},FSharp.Plotly.StyleParam.Mode,Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Symbol},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``3}},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.TextPosition},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Font},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.DrawingStyle},Microsoft.FSharp.Core.FSharpOption{``4})">
+<summary>
+ Uses points, line or both depending on the mode to represent data points in a polar chart
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.Point``4(System.Collections.Generic.IEnumerable{System.Tuple{``0,``1}},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Symbol},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``3}},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.TextPosition},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Font})">
+<summary>
+ Uses points to represent data points
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.Point``4(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Symbol},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``3}},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.TextPosition},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Font})">
+<summary>
+ Uses points to represent data points
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.Pie``4(System.Collections.Generic.IEnumerable{System.Tuple{``0,``1}},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.TextPosition},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Font},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{``3},Microsoft.FSharp.Core.FSharpOption{System.Double})">
+<summary>
+ Shows how proportions of data, shown as pie-shaped pieces, contribute to the data.
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.Pie``4(``0,Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``1}},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.TextPosition},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Font},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{``3},Microsoft.FSharp.Core.FSharpOption{System.Double})">
+<summary>
+ Shows how proportions of data, shown as pie-shaped pieces, contribute to the data.
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.Mesh3d``9(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1},System.Collections.Generic.IEnumerable{``2},``3,Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{``4},Microsoft.FSharp.Core.FSharpOption{``5},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``6}},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.TextPosition},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Font},Microsoft.FSharp.Core.FSharpOption{``7},Microsoft.FSharp.Core.FSharpOption{``8})">
+<summary>
+ Uses points, line or both depending on the mode to represent 3d-data points
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.Line``6(System.Collections.Generic.IEnumerable{System.Tuple{``0,``1}},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Symbol},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``3}},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.TextPosition},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Font},Microsoft.FSharp.Core.FSharpOption{``4},Microsoft.FSharp.Core.FSharpOption{``5})">
+<summary>
+ Uses lines to represent data points
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.Line``6(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Symbol},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``3}},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.TextPosition},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Font},Microsoft.FSharp.Core.FSharpOption{``4},Microsoft.FSharp.Core.FSharpOption{``5})">
+<summary>
+ Uses lines to represent data points
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.Histogram2dContour``16(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``2}},Microsoft.FSharp.Core.FSharpOption{``4},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Colorscale},Microsoft.FSharp.Core.FSharpOption{``5},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Line},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.SmoothAlg},Microsoft.FSharp.Core.FSharpOption{``6},Microsoft.FSharp.Core.FSharpOption{``7},Microsoft.FSharp.Core.FSharpOption{``8},Microsoft.FSharp.Core.FSharpOption{``9},Microsoft.FSharp.Core.FSharpOption{``10},Microsoft.FSharp.Core.FSharpOption{``11},Microsoft.FSharp.Core.FSharpOption{``12},Microsoft.FSharp.Core.FSharpOption{``13},Microsoft.FSharp.Core.FSharpOption{``14},Microsoft.FSharp.Core.FSharpOption{``15})">
+<summary>
+ Computes the bi-dimensional histogram of two data samples and auto-determines the bin size.
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.Histogram2d``16(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``2}},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{``4},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Colorscale},Microsoft.FSharp.Core.FSharpOption{``5},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.SmoothAlg},Microsoft.FSharp.Core.FSharpOption{``6},Microsoft.FSharp.Core.FSharpOption{``7},Microsoft.FSharp.Core.FSharpOption{``8},Microsoft.FSharp.Core.FSharpOption{``9},Microsoft.FSharp.Core.FSharpOption{``10},Microsoft.FSharp.Core.FSharpOption{``11},Microsoft.FSharp.Core.FSharpOption{``12},Microsoft.FSharp.Core.FSharpOption{``13},Microsoft.FSharp.Core.FSharpOption{``14},Microsoft.FSharp.Core.FSharpOption{``15})">
+<summary>
+ Computes the bi-dimensional histogram of two data samples and auto-determines the bin size.
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.Histogram``4(System.Collections.Generic.IEnumerable{``0},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Orientation},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{``1},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.HistNorm},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.HistNorm},Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Bins},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Bins},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{``3})">
+<summary>
+ Computes a histogram with auto-determined the bin size.
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.Heatmap``8(System.Collections.Generic.IEnumerable{``0},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``2}},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``3}},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Colorscale},Microsoft.FSharp.Core.FSharpOption{``4},Microsoft.FSharp.Core.FSharpOption{``5},Microsoft.FSharp.Core.FSharpOption{``6},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.SmoothAlg},Microsoft.FSharp.Core.FSharpOption{``7})">
+<summary>
+ Shows a graphical representation of a 3-dimensional surface by plotting constant z slices, called contours, on a 2-dimensional format.
+ That is, given a value for z, lines are drawn for connecting the (x,y) coordinates where that z value occurs.
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.Doughnut``4(System.Collections.Generic.IEnumerable{System.Tuple{``0,``1}},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.TextPosition},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Font},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{``3},Microsoft.FSharp.Core.FSharpOption{System.Double})">
+<summary>
+ Shows how proportions of data, shown as pie-shaped pieces, contribute to the data as a whole.
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.Doughnut``4(``0,Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``1}},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.TextPosition},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Font},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{``3},Microsoft.FSharp.Core.FSharpOption{System.Double})">
+<summary>
+ Shows how proportions of data, shown as pie-shaped pieces, contribute to the data as a whole.
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.Contour``6(System.Collections.Generic.IEnumerable{``0},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``2}},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``3}},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Colorscale},Microsoft.FSharp.Core.FSharpOption{``4},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.SmoothAlg},Microsoft.FSharp.Core.FSharpOption{``5})">
+<summary>
+ Shows a graphical representation of data where the individual values contained in a matrix are represented as colors.
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.Column``4(System.Collections.Generic.IEnumerable{System.Tuple{``0,``1}},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``3}},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.TextPosition},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Font},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Marker})">
+<summary>
+ Illustrates comparisons among individual items
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.Column``4(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``3}},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.TextPosition},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Font},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Marker})">
+<summary>
+ Illustrates comparisons among individual items
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.Bubble``5(System.Collections.Generic.IEnumerable{System.Tuple{``0,``1,``2}},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Symbol},Microsoft.FSharp.Core.FSharpOption{``3},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``4}},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.TextPosition},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Font})">
+<summary>
+ A variation of the Point chart type, where the data points are replaced by bubbles of different sizes.
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.Bubble``5(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1},System.Collections.Generic.IEnumerable{``2},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Symbol},Microsoft.FSharp.Core.FSharpOption{``3},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``4}},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.TextPosition},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Font})">
+<summary>
+ A variation of the Point chart type, where the data points are replaced by bubbles of different sizes.
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.BoxPlot``7(System.Collections.Generic.IEnumerable{System.Tuple{``0,``1}},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{``3},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{``4},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Boxpoints},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.BoxMean},Microsoft.FSharp.Core.FSharpOption{``5},Microsoft.FSharp.Core.FSharpOption{``6},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Orientation})">
+<summary>
+ Displays the distribution of data based on the five number summary: minimum, first quartile, median, third quartile, and maximum.       
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.BoxPlot``7(Microsoft.FSharp.Core.FSharpOption{``0},Microsoft.FSharp.Core.FSharpOption{``1},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{``3},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{``4},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Boxpoints},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.BoxMean},Microsoft.FSharp.Core.FSharpOption{``5},Microsoft.FSharp.Core.FSharpOption{``6},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Orientation})">
+<summary>
+ Displays the distribution of data based on the five number summary: minimum, first quartile, median, third quartile, and maximum.            
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.Bar``4(System.Collections.Generic.IEnumerable{System.Tuple{``0,``1}},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``3}},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.TextPosition},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Font},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Marker})">
+<summary>
+ Illustrates comparisons among individual items
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.Bar``4(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``3}},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.TextPosition},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Font},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Marker})">
+<summary>
+ Illustrates comparisons among individual items
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.Area``5(System.Collections.Generic.IEnumerable{System.Tuple{``0,``1}},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Symbol},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``3}},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.TextPosition},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Font},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.DrawingStyle},Microsoft.FSharp.Core.FSharpOption{``4})">
+<summary>
+ Emphasizes the degree of change over time and shows the relationship of the parts to a whole.
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Chart.Area``5(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Symbol},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``3}},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.TextPosition},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Font},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.DrawingStyle},Microsoft.FSharp.Core.FSharpOption{``4})">
+<summary>
+ Emphasizes the degree of change over time and shows the relationship of the parts to a whole.
+</summary>
+</member>
+<member name="T:FSharp.Plotly.Chart">
+<summary>
+ Provides a set of static methods for creating charts.
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Colorbar.style``40(Microsoft.FSharp.Core.FSharpOption{``0},Microsoft.FSharp.Core.FSharpOption{``1},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{``3},Microsoft.FSharp.Core.FSharpOption{``4},Microsoft.FSharp.Core.FSharpOption{``5},Microsoft.FSharp.Core.FSharpOption{``6},Microsoft.FSharp.Core.FSharpOption{``7},Microsoft.FSharp.Core.FSharpOption{``8},Microsoft.FSharp.Core.FSharpOption{``9},Microsoft.FSharp.Core.FSharpOption{``10},Microsoft.FSharp.Core.FSharpOption{``11},Microsoft.FSharp.Core.FSharpOption{``12},Microsoft.FSharp.Core.FSharpOption{``13},Microsoft.FSharp.Core.FSharpOption{``14},Microsoft.FSharp.Core.FSharpOption{``15},Microsoft.FSharp.Core.FSharpOption{``16},Microsoft.FSharp.Core.FSharpOption{``17},Microsoft.FSharp.Core.FSharpOption{``18},Microsoft.FSharp.Core.FSharpOption{``19},Microsoft.FSharp.Core.FSharpOption{``20},Microsoft.FSharp.Core.FSharpOption{``21},Microsoft.FSharp.Core.FSharpOption{``22},Microsoft.FSharp.Core.FSharpOption{``23},Microsoft.FSharp.Core.FSharpOption{``24},Microsoft.FSharp.Core.FSharpOption{``25},Microsoft.FSharp.Core.FSharpOption{``26},Microsoft.FSharp.Core.FSharpOption{``27},Microsoft.FSharp.Core.FSharpOption{``28},Microsoft.FSharp.Core.FSharpOption{``29},Microsoft.FSharp.Core.FSharpOption{``30},Microsoft.FSharp.Core.FSharpOption{``31},Microsoft.FSharp.Core.FSharpOption{``32},Microsoft.FSharp.Core.FSharpOption{``33},Microsoft.FSharp.Core.FSharpOption{``34},Microsoft.FSharp.Core.FSharpOption{``35},Microsoft.FSharp.Core.FSharpOption{``36},Microsoft.FSharp.Core.FSharpOption{``37},Microsoft.FSharp.Core.FSharpOption{``38},Microsoft.FSharp.Core.FSharpOption{``39})">
+<summary>
+ Applies the styles to Lighting()
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Colorbar.init``40(Microsoft.FSharp.Core.FSharpOption{``0},Microsoft.FSharp.Core.FSharpOption{``1},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{``3},Microsoft.FSharp.Core.FSharpOption{``4},Microsoft.FSharp.Core.FSharpOption{``5},Microsoft.FSharp.Core.FSharpOption{``6},Microsoft.FSharp.Core.FSharpOption{``7},Microsoft.FSharp.Core.FSharpOption{``8},Microsoft.FSharp.Core.FSharpOption{``9},Microsoft.FSharp.Core.FSharpOption{``10},Microsoft.FSharp.Core.FSharpOption{``11},Microsoft.FSharp.Core.FSharpOption{``12},Microsoft.FSharp.Core.FSharpOption{``13},Microsoft.FSharp.Core.FSharpOption{``14},Microsoft.FSharp.Core.FSharpOption{``15},Microsoft.FSharp.Core.FSharpOption{``16},Microsoft.FSharp.Core.FSharpOption{``17},Microsoft.FSharp.Core.FSharpOption{``18},Microsoft.FSharp.Core.FSharpOption{``19},Microsoft.FSharp.Core.FSharpOption{``20},Microsoft.FSharp.Core.FSharpOption{``21},Microsoft.FSharp.Core.FSharpOption{``22},Microsoft.FSharp.Core.FSharpOption{``23},Microsoft.FSharp.Core.FSharpOption{``24},Microsoft.FSharp.Core.FSharpOption{``25},Microsoft.FSharp.Core.FSharpOption{``26},Microsoft.FSharp.Core.FSharpOption{``27},Microsoft.FSharp.Core.FSharpOption{``28},Microsoft.FSharp.Core.FSharpOption{``29},Microsoft.FSharp.Core.FSharpOption{``30},Microsoft.FSharp.Core.FSharpOption{``31},Microsoft.FSharp.Core.FSharpOption{``32},Microsoft.FSharp.Core.FSharpOption{``33},Microsoft.FSharp.Core.FSharpOption{``34},Microsoft.FSharp.Core.FSharpOption{``35},Microsoft.FSharp.Core.FSharpOption{``36},Microsoft.FSharp.Core.FSharpOption{``37},Microsoft.FSharp.Core.FSharpOption{``38},Microsoft.FSharp.Core.FSharpOption{``39})">
+<summary>
+ Initialized Colorbar object
+</summary>
+</member>
+<member name="T:FSharp.Plotly.Colorbar">
+<summary>
+ Colorbar type inherits from dynamic object
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Contour.init``2(Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{``0},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{``1},Microsoft.FSharp.Core.FSharpOption{System.Int32})">
+<summary>
+ Initialized a Contour object
+</summary>
+</member>
+<member name="T:FSharp.Plotly.Contour">
+<summary>
+ Contour object inherits from dynamic object
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Contours.init(Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Contour},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Contour},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Contour})">
+<summary>
+ Initialized Contours object
+</summary>
+</member>
+<member name="T:FSharp.Plotly.Contours">
+<summary>
+ Contours type inherits from dynamic object
+</summary>
+</member>
+<member name="T:FSharp.Plotly.Cumulative">
+<summary>
+ Cumulative type inherits from dynamic object
+</summary>
+</member>
+<member name="M:FSharp.Plotly.DynamicObj.TryGetValue(System.String)">
+<summary>
+ Gets property value
+</summary>
+</member>
+<member name="M:FSharp.Plotly.DynamicObj.SetValue``1(System.String,``0)">
+<summary>
+ Sets property value, creating a new property if none exists
+</summary>
+</member>
+<member name="M:FSharp.Plotly.DynamicObj.GetProperties(System.Boolean)">
+<summary>
+ Returns and the properties of
+</summary>
+</member>
+<member name="M:FSharp.Plotly.DynamicObj.GetDynamicMemberNames">
+<summary>
+ Return both instance and dynamic names.
+ Important to return both so JSON serialization with Json.NET works.
+</summary>
+</member>
+<member name="M:FSharp.Plotly.DynamicObj.#ctor">
+
+</member>
+<member name="M:FSharp.Plotly.Error.init``14(Microsoft.FSharp.Core.FSharpOption{``0},Microsoft.FSharp.Core.FSharpOption{``1},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{``3},Microsoft.FSharp.Core.FSharpOption{``4},Microsoft.FSharp.Core.FSharpOption{``5},Microsoft.FSharp.Core.FSharpOption{``6},Microsoft.FSharp.Core.FSharpOption{``7},Microsoft.FSharp.Core.FSharpOption{``8},Microsoft.FSharp.Core.FSharpOption{``9},Microsoft.FSharp.Core.FSharpOption{``10},Microsoft.FSharp.Core.FSharpOption{``11},Microsoft.FSharp.Core.FSharpOption{``12},Microsoft.FSharp.Core.FSharpOption{``13})">
+<summary>
+ Init Error type
+</summary>
+</member>
+<member name="T:FSharp.Plotly.Error">
+<summary>
+ Error type inherits from dynamic object
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Font.init``5(Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.FontFamily},Microsoft.FSharp.Core.FSharpOption{``0},Microsoft.FSharp.Core.FSharpOption{``1},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{``3},Microsoft.FSharp.Core.FSharpOption{``4})">
+<summary>
+ Init Font()
+</summary>
+</member>
+<member name="T:FSharp.Plotly.Font">
+<summary>
+ Font type inherits from dynamic object
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Layout.init``12(Microsoft.FSharp.Core.FSharpOption{``0},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Font},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Font},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{``1},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Axis.LinearAxis},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Axis.LinearAxis},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Legend},Microsoft.FSharp.Core.FSharpOption{``3},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Margin},Microsoft.FSharp.Core.FSharpOption{``4},Microsoft.FSharp.Core.FSharpOption{``5},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Hovermode},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Dragmode},Microsoft.FSharp.Core.FSharpOption{``6},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Barmode},Microsoft.FSharp.Core.FSharpOption{``7},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Axis.RadialAxis},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Axis.AngularAxis},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Scene},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Direction},Microsoft.FSharp.Core.FSharpOption{``8},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{FSharp.Plotly.Shape}},Microsoft.FSharp.Core.FSharpOption{``9},Microsoft.FSharp.Core.FSharpOption{``10},Microsoft.FSharp.Core.FSharpOption{``11})">
+<summary>
+ Init Layout type
+</summary>
+</member>
+<member name="T:FSharp.Plotly.Layout">
+<summary>
+ Layout 
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Legend.init(Microsoft.FSharp.Core.FSharpFunc{FSharp.Plotly.Legend,FSharp.Plotly.Legend})">
+<summary>
+ Init Legend type
+</summary>
+</member>
+<member name="T:FSharp.Plotly.Legend">
+<summary>
+ Legend 
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Line.init``3(Microsoft.FSharp.Core.FSharpOption{``0},Microsoft.FSharp.Core.FSharpOption{``1},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Shape},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.DrawingStyle},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Colorscale})">
+<summary>
+ Initialized Line object
+</summary>
+</member>
+<member name="T:FSharp.Plotly.Line">
+<summary>
+ Line type inherits from dynamic object
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Margin.init``6(Microsoft.FSharp.Core.FSharpOption{``0},Microsoft.FSharp.Core.FSharpOption{``1},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{``3},Microsoft.FSharp.Core.FSharpOption{``4},Microsoft.FSharp.Core.FSharpOption{``5})">
+<summary>
+ Init Margin type
+</summary>
+</member>
+<member name="T:FSharp.Plotly.Margin">
+<summary>
+ Margin 
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Marker.init``20(Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{``0},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Symbol},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``1}},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Line},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Colorscale},Microsoft.FSharp.Core.FSharpOption{``3},Microsoft.FSharp.Core.FSharpOption{``4},Microsoft.FSharp.Core.FSharpOption{``5},Microsoft.FSharp.Core.FSharpOption{``6},Microsoft.FSharp.Core.FSharpOption{``7},Microsoft.FSharp.Core.FSharpOption{``8},Microsoft.FSharp.Core.FSharpOption{``9},Microsoft.FSharp.Core.FSharpOption{``10},Microsoft.FSharp.Core.FSharpOption{``11},Microsoft.FSharp.Core.FSharpOption{``12},Microsoft.FSharp.Core.FSharpOption{``13},Microsoft.FSharp.Core.FSharpOption{``14},Microsoft.FSharp.Core.FSharpOption{``15},Microsoft.FSharp.Core.FSharpOption{``16},Microsoft.FSharp.Core.FSharpOption{``17},Microsoft.FSharp.Core.FSharpOption{``18},Microsoft.FSharp.Core.FSharpOption{``19})">
+<summary>
+ Initialized Marker object
+</summary>
+</member>
+<member name="T:FSharp.Plotly.Marker">
+<summary>
+ Marker type inherits from dynamic object
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Projection.init(Microsoft.FSharp.Core.FSharpFunc{FSharp.Plotly.Projection,FSharp.Plotly.Projection})">
+<summary>
+ Initialized Projection object
+</summary>
+</member>
+<member name="T:FSharp.Plotly.Projection">
+<summary>
+ Projection 
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Scene.style``2(Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Axis.LinearAxis},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Axis.LinearAxis},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Axis.LinearAxis},Microsoft.FSharp.Core.FSharpOption{``0},Microsoft.FSharp.Core.FSharpOption{``1})">
+<summary>
+ Applies the styles to Scene()
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Scene.init``2(Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Axis.LinearAxis},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Axis.LinearAxis},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Axis.LinearAxis},Microsoft.FSharp.Core.FSharpOption{``0},Microsoft.FSharp.Core.FSharpOption{``1})">
+<summary>
+ Initialized Scene object
+</summary>
+</member>
+<member name="T:FSharp.Plotly.Scene">
+<summary>
+ Scene 
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Shape.init``9(Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.ShapeType},Microsoft.FSharp.Core.FSharpOption{``0},Microsoft.FSharp.Core.FSharpOption{``1},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{``3},Microsoft.FSharp.Core.FSharpOption{``4},Microsoft.FSharp.Core.FSharpOption{``5},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Line},Microsoft.FSharp.Core.FSharpOption{``6},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Layer},Microsoft.FSharp.Core.FSharpOption{``7},Microsoft.FSharp.Core.FSharpOption{``8})">
+<summary>
+ Init Shape type
+</summary>
+</member>
+<member name="T:FSharp.Plotly.Shape">
+<summary>
+ Shape type inherits from dynamic object
+</summary>
+</member>
+<member name="T:FSharp.Plotly.Trace">
+<summary>
+ Trace type inherits from dynamic object
+</summary>
+</member>
+<member name="T:FSharp.Plotly.Trace3d">
+<summary>
+ Trace type inherits from dynamic object
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Axis.AngularAxis.init(Microsoft.FSharp.Core.FSharpFunc{FSharp.Plotly.Axis.AngularAxis,FSharp.Plotly.Axis.AngularAxis})">
+<summary>
+ Init Angularaxis type
+</summary>
+</member>
+<member name="T:FSharp.Plotly.Axis.AngularAxis">
+<summary>
+ Angularaxis type inherits from dynamic object
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Axis.RadialAxis.init(Microsoft.FSharp.Core.FSharpFunc{FSharp.Plotly.Axis.RadialAxis,FSharp.Plotly.Axis.RadialAxis})">
+<summary>
+ Init Radialaxis type
+</summary>
+</member>
+<member name="T:FSharp.Plotly.Axis.RadialAxis">
+<summary>
+ Radialaxis type inherits from dynamic object
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Axis.LinearAxis.init``38(Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.AxisType},Microsoft.FSharp.Core.FSharpOption{``0},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Font},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.AutoRange},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.RangeMode},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.RangeValues},Microsoft.FSharp.Core.FSharpOption{``1},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.TickMode},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{``3},Microsoft.FSharp.Core.FSharpOption{``4},Microsoft.FSharp.Core.FSharpOption{``5},Microsoft.FSharp.Core.FSharpOption{``6},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.TickOptions},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Mirror},Microsoft.FSharp.Core.FSharpOption{``7},Microsoft.FSharp.Core.FSharpOption{``8},Microsoft.FSharp.Core.FSharpOption{``9},Microsoft.FSharp.Core.FSharpOption{``10},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.Font},Microsoft.FSharp.Core.FSharpOption{``11},Microsoft.FSharp.Core.FSharpOption{``12},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.ShowTickOption},Microsoft.FSharp.Core.FSharpOption{``13},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.ShowTickOption},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.ShowExponent},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.ExponentFormat},Microsoft.FSharp.Core.FSharpOption{``14},Microsoft.FSharp.Core.FSharpOption{``15},Microsoft.FSharp.Core.FSharpOption{``16},Microsoft.FSharp.Core.FSharpOption{``17},Microsoft.FSharp.Core.FSharpOption{``18},Microsoft.FSharp.Core.FSharpOption{``19},Microsoft.FSharp.Core.FSharpOption{``20},Microsoft.FSharp.Core.FSharpOption{``21},Microsoft.FSharp.Core.FSharpOption{``22},Microsoft.FSharp.Core.FSharpOption{``23},Microsoft.FSharp.Core.FSharpOption{``24},Microsoft.FSharp.Core.FSharpOption{``25},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Side},Microsoft.FSharp.Core.FSharpOption{``26},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.RangeValues},Microsoft.FSharp.Core.FSharpOption{``27},Microsoft.FSharp.Core.FSharpOption{``28},Microsoft.FSharp.Core.FSharpOption{``29},Microsoft.FSharp.Core.FSharpOption{``30},Microsoft.FSharp.Core.FSharpOption{``31},Microsoft.FSharp.Core.FSharpOption{``32},Microsoft.FSharp.Core.FSharpOption{``33},Microsoft.FSharp.Core.FSharpOption{``34},Microsoft.FSharp.Core.FSharpOption{``35},Microsoft.FSharp.Core.FSharpOption{``36},Microsoft.FSharp.Core.FSharpOption{``37})">
+<summary>
+ Init LinearAxis type
+</summary>
+</member>
+<member name="T:FSharp.Plotly.Axis.LinearAxis">
+<summary>
+ LinearAxis type inherits from dynamic object
+</summary>
+</member>
+<member name="T:FSharp.Plotly.Axis">
+<summary>
+ Module containing plotly axis 
+</summary>
+</member>
+<member name="M:FSharp.Plotly.ChartExtensions.Chart.Show.Static(FSharp.Plotly.GenericChart.GenericChart)">
+<summary>
+ Show chart in browser            
+</summary>
+</member>
+<member name="M:FSharp.Plotly.ChartExtensions.Chart.SaveHtmlAs.Static(System.String,FSharp.Plotly.GenericChart.GenericChart)">
+<summary>
+ Save chart as html single page
+</summary>
+</member>
+<member name="M:FSharp.Plotly.ChartExtensions.Chart.Combine.Static(System.Collections.Generic.IEnumerable{FSharp.Plotly.GenericChart.GenericChart})">
+<summary>
+ Create a combined chart with the given charts merged   
+</summary>
+</member>
+<member name="M:FSharp.Plotly.ChartExtensions.Chart.withZErrorStyle.Static``6(Microsoft.FSharp.Core.FSharpOption{``0},Microsoft.FSharp.Core.FSharpOption{``1},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{``3},Microsoft.FSharp.Core.FSharpOption{``4},Microsoft.FSharp.Core.FSharpOption{``5})">
+<summary>
+ Apply styling to the zError(s) of the chart as Object
+</summary>
+</member>
+<member name="M:FSharp.Plotly.ChartExtensions.Chart.withZError.Static(FSharp.Plotly.Error)">
+<summary>
+ Apply styling to the zError(s) of the chart as Object
+</summary>
+</member>
+<member name="M:FSharp.Plotly.ChartExtensions.Chart.withYErrorStyle.Static``6(Microsoft.FSharp.Core.FSharpOption{``0},Microsoft.FSharp.Core.FSharpOption{``1},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{``3},Microsoft.FSharp.Core.FSharpOption{``4},Microsoft.FSharp.Core.FSharpOption{``5})">
+<summary>
+ Apply styling to the yError(s) of the chart as Object 
+</summary>
+</member>
+<member name="M:FSharp.Plotly.ChartExtensions.Chart.withYError.Static(FSharp.Plotly.Error)">
+<summary>
+ Apply styling to the yError(s) of the chart as Object 
+</summary>
+</member>
+<member name="M:FSharp.Plotly.ChartExtensions.Chart.withXErrorStyle.Static``6(Microsoft.FSharp.Core.FSharpOption{``0},Microsoft.FSharp.Core.FSharpOption{``1},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{``3},Microsoft.FSharp.Core.FSharpOption{``4},Microsoft.FSharp.Core.FSharpOption{``5})">
+<summary>
+ Apply styling to the xError(s) of the chart as Object
+</summary>
+</member>
+<member name="M:FSharp.Plotly.ChartExtensions.Chart.withXError.Static(FSharp.Plotly.Error)">
+<summary>
+ Apply styling to the xError(s) of the chart as Object
+</summary>
+</member>
+<member name="M:FSharp.Plotly.ChartExtensions.Chart.withLineStyle.Static``3(Microsoft.FSharp.Core.FSharpOption{``0},Microsoft.FSharp.Core.FSharpOption{``1},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Shape},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.DrawingStyle},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Colorscale})">
+<summary>
+ Apply styling to the Line(s) of the chart.
+</summary>
+</member>
+<member name="M:FSharp.Plotly.ChartExtensions.Chart.withLine.Static(FSharp.Plotly.Line)">
+<summary>
+ Apply styling to the Line(s) of the chart as Object.
+</summary>
+</member>
+<member name="M:FSharp.Plotly.ChartExtensions.Chart.withMarkerStyle.Static``1(Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{``0},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Symbol},Microsoft.FSharp.Core.FSharpOption{System.Double})">
+<summary>
+ Apply styling to the Marker(s) of the chart.
+</summary>
+</member>
+<member name="M:FSharp.Plotly.ChartExtensions.Chart.withMarker.Static(FSharp.Plotly.Marker)">
+<summary>
+ Apply styling to the Marker(s) of the chart as Object.
+</summary>
+</member>
+<member name="M:FSharp.Plotly.ChartExtensions.Chart.withTraceName.Static(Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Visible})">
+<summary>
+ Set the name related properties of a trace
+</summary>
+</member>
+<member name="T:FSharp.Plotly.ChartExtensions">
+<summary>
+ Extensions methods for Charts supporting the fluent pipeline style &apos;Chart.WithXYZ(...)&apos;.
+</summary>
+</member>
+<member name="M:FSharp.Plotly.DynObj.ofArray``1(System.Tuple{System.String,``0}[])">
+<summary>
+ New DynamicObj of an array of key value
+</summary>
+</member>
+<member name="M:FSharp.Plotly.DynObj.ofList``1(Microsoft.FSharp.Collections.FSharpList{System.Tuple{System.String,``0}})">
+<summary>
+ New DynamicObj of a list of key value
+</summary>
+</member>
+<member name="M:FSharp.Plotly.DynObj.ofSeq``1(System.Collections.Generic.IEnumerable{System.Tuple{System.String,``0}})">
+<summary>
+ New DynamicObj of a sequence of key value
+</summary>
+</member>
+<member name="M:FSharp.Plotly.DynObj.ofDict(System.Collections.Generic.Dictionary{System.String,System.Object})">
+<summary>
+ New DynamicObj of Dictionary
+</summary>
+</member>
+<member name="M:FSharp.Plotly.GenericChart.ofTraceObjects(Microsoft.FSharp.Collections.FSharpList{FSharp.Plotly.Trace})">
+<summary>
+ Converts from a list of trace objects and a layout object into GenericChart
+</summary>
+</member>
+<member name="M:FSharp.Plotly.GenericChart.ofTraceObject(FSharp.Plotly.Trace)">
+<summary>
+ Converts from a trace object and a layout object into GenericChart    
+</summary>
+</member>
+<member name="M:FSharp.Plotly.GenericChart.existsTrace(Microsoft.FSharp.Core.FSharpFunc{FSharp.Plotly.Trace,System.Boolean},FSharp.Plotly.GenericChart.GenericChart)">
+<summary>
+ Creates a new GenericChart whose traces are the results of applying the given function to each of the trace of the GenericChart.           
+</summary>
+</member>
+<member name="M:FSharp.Plotly.GenericChart.countTrace(FSharp.Plotly.GenericChart.GenericChart)">
+<summary>
+ Returns the number of traces within the GenericChart
+</summary>
+</member>
+<member name="M:FSharp.Plotly.GenericChart.mapiTrace(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{FSharp.Plotly.Trace,FSharp.Plotly.Trace}},FSharp.Plotly.GenericChart.GenericChart)">
+<summary>
+ Creates a new GenericChart whose traces are the results of applying the given function to each of the trace of the GenericChart.
+ The integer index passed to the function indicates the index (from 0) of element being transformed.           
+</summary>
+</member>
+<member name="M:FSharp.Plotly.GenericChart.mapTrace(Microsoft.FSharp.Core.FSharpFunc{FSharp.Plotly.Trace,FSharp.Plotly.Trace},FSharp.Plotly.GenericChart.GenericChart)">
+<summary>
+ Creates a new GenericChart whose traces are the results of applying the given function to each of the trace of the GenericChart.           
+</summary>
+</member>
+<member name="M:FSharp.Plotly.GenericChart.toEmbeddedHTML(FSharp.Plotly.GenericChart.GenericChart)">
+<summary>
+ Converts a GenericChart to it HTML representation and embeds it into a html page
+</summary>
+</member>
+<member name="M:FSharp.Plotly.GenericChart.toChartHtmlWithSize(System.Int32,System.Int32,FSharp.Plotly.GenericChart.GenericChart)">
+<summary>
+ Converts a GenericChart to it HTML representation and set the size of the div 
+</summary>
+</member>
+<member name="M:FSharp.Plotly.GenericChart.toChartHTML(FSharp.Plotly.GenericChart.GenericChart)">
+<summary>
+ Converts a GenericChart to it HTML representation
+</summary>
+</member>
+<member name="T:FSharp.Plotly.GenericChart">
+<summary>
+ Module to represent a GenericChart
+</summary>
+</member>
+<member name="T:FSharp.Plotly.HTML">
+<summary>
+ HTML template for Plotly.js 
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Ligth.Lightposition.style(Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.Int32})">
+<summary>
+ Applies the styles to Lightposition()
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Ligth.Lightposition.init(Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.Int32})">
+<summary>
+ Initialized Lightposition object
+</summary>
+</member>
+<member name="T:FSharp.Plotly.Ligth.Lightposition">
+<summary>
+ Lighting type inherits from dynamic object
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Ligth.Lighting.style(Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Double})">
+<summary>
+ Applies the styles to Lighting()
+ Epsilon for vertex normals calculation avoids math issues arising from degenerate geometry. Default 1e-12.
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Ligth.Lighting.init(Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.Double})">
+<summary>
+ Initialized Lighting object
+ Epsilon for vertex normals calculation avoids math issues arising from degenerate geometry. Default 1e-12.
+</summary>
+</member>
+<member name="T:FSharp.Plotly.Ligth.Lighting">
+<summary>
+ Lighting type inherits from dynamic object
+</summary>
+</member>
+<member name="T:FSharp.Plotly.Ligth">
+<summary>
+ Module containing plotly light modulation for 3d 
+</summary>
+</member>
+<member name="M:FSharp.Plotly.ReflectionHelper.tryUpdatePropertyValue``1(System.Object,Microsoft.FSharp.Quotations.FSharpExpr,Microsoft.FSharp.Core.FSharpFunc{``0,``0})">
+<summary>
+ Updates property value by given function
+</summary>
+</member>
+<member name="M:FSharp.Plotly.ReflectionHelper.tryUpdatePropertyValueFromName``1(System.Object,System.String,Microsoft.FSharp.Core.FSharpFunc{``0,``0})">
+<summary>
+ Updates property value by given function
+</summary>
+</member>
+<member name="M:FSharp.Plotly.ReflectionHelper.tryGetPropertyValueAs``1(System.Object,System.String)">
+<summary>
+ Gets property value as &apos;a option using reflection. Cast to &apos;a
+</summary>
+</member>
+<member name="M:FSharp.Plotly.ReflectionHelper.tryGetPropertyValue(System.Object,System.String)">
+<summary>
+ Gets property value as option using reflection
+</summary>
+</member>
+<member name="M:FSharp.Plotly.ReflectionHelper.trySetPropertyValue(System.Object,System.String,System.Object)">
+<summary>
+ Sets property value using reflection
+</summary>
+</member>
+<member name="M:FSharp.Plotly.ReflectionHelper.tryGetPropertyInfo(System.Object,System.String)">
+<summary>
+ Try to get the PropertyInfo by name using reflection
+</summary>
+</member>
+<member name="M:FSharp.Plotly.ReflectionHelper.tryGetPropertyName(Microsoft.FSharp.Quotations.FSharpExpr)">
+<summary>
+ Returns the proptery name from quotation expression
+</summary>
+</member>
+<member name="M:FSharp.Plotly.ReflectionHelper.optApply``1(Microsoft.FSharp.Core.FSharpOption{Microsoft.FSharp.Core.FSharpFunc{``0,``0}},``0)">
+<summary>
+ Applies Some &apos;applyStyle&apos; to item. If None it returns &apos;item&apos; unchanged.
+</summary>
+</member>
+<member name="M:FSharp.Plotly.ReflectionHelper.optBuildApply``1(Microsoft.FSharp.Core.FSharpFunc{``0,``0},Microsoft.FSharp.Core.FSharpOption{``0})">
+<summary>
+ Applies &apos;applyStyle&apos; to item option. If None it creates a new instance.
+</summary>
+</member>
+<member name="M:FSharp.Plotly.ReflectionHelper.buildApply``1(Microsoft.FSharp.Core.FSharpFunc{``0,``0})">
+<summary>
+ Creates an instance of the Object according to applyStyle and applies the function..
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Seq.unzip3``3(System.Collections.Generic.IEnumerable{System.Tuple{``0,``1,``2}})">
+<summary>
+ Splits a sequence of triples into three sequences
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Seq.unzip``2(System.Collections.Generic.IEnumerable{System.Tuple{``0,``1}})">
+<summary>
+ Splits a sequence of pairs into two sequences
+</summary>
+</member>
+<member name="T:FSharp.Plotly.StyleParam.Calendar">
+<summary>
+ Sets the calendar system to use with `x y z` date data. Default: &quot;gregorian&quot;
+</summary>
+</member>
+<member name="T:FSharp.Plotly.StyleParam.Delaunayaxis">
+<summary>
+ Sets the Delaunay axis, which is the axis that is perpendicular to the surface of the Delaunay triangulation.
+ It has an effect if `i`, `j`, `k` are not provided and `alphahull` is set to indicate Delaunay triangulation. 
+ Default is &quot;z&quot;
+</summary>
+</member>
+<member name="T:FSharp.Plotly.StyleParam.Layer">
+<summary>
+ Specifies whether shapes are drawn below or above traces. Default is Above
+</summary>
+</member>
+<member name="T:FSharp.Plotly.StyleParam.ShapeType">
+<summary>
+ Specifies the shape type to be drawn. If &quot;line&quot;, a line is drawn from (`x0`,`y0`) to (`x1`,`y1`) If &quot;circle&quot;, a circle is drawn from ((`x0`+`x1`)/2, (`y0`+`y1`)/2))
+ with radius (|(`x0`+`x1`)/2 - `x0`|, |(`y0`+`y1`)/2 -`y0`)|) If &quot;rect&quot;, a rectangle is drawn linking (`x0`,`y0`), (`x1`,`y0`), (`x1`,`y1`), (`x0`,`y1`), (`x0`,`y0`)
+ If &quot;path&quot;, draw a custom SVG path using `path`.          
+</summary>
+</member>
+<member name="T:FSharp.Plotly.StyleParam.RangeValues">
+<summary>
+ Defines a Range between min and max value 
+</summary>
+</member>
+<member name="T:FSharp.Plotly.StyleParam.Barmode">
+<summary>
+ For bar and histogram plots only. This sets how multiple bar objects are plotted together. In other words, this defines how bars at the same location
+ appear on the plot. If set to &apos;stack&apos; the bars are stacked on top of one another. If set to &apos;group&apos;, the bars are plotted next to one another, centered 
+ around the shared location. If set to &apos;overlay&apos;, the bars are simply plotted over one another, you may need to set the opacity to see this.
+</summary>
+</member>
+<member name="T:FSharp.Plotly.StyleParam.Dragmode">
+<summary>
+ Sets this figure&apos;s behavior when a user preforms a mouse &apos;drag&apos; in the plot area. When set to &apos;zoom&apos;, a portion of the plot will be highlighted,
+ when the viewer exits the drag, this highlighted section will be zoomed in on. When set to &apos;pan&apos;, data in the plot will move along with the viewers
+ dragging motions. A user can always depress the &apos;shift&apos; key to access the whatever functionality has not been set as the default. In 3D plots, the 
+ default drag mode is &apos;rotate&apos; which rotates the scene.
+</summary>
+</member>
+<member name="T:FSharp.Plotly.StyleParam.Hovermode">
+<summary>
+ Sets this figure&apos;s behavior when a user hovers over it. When set to &apos;x&apos;, all data sharing the same &apos;x&apos; coordinate will be shown on screen
+ with corresponding trace labels. When set to &apos;y&apos; all data sharing the same &apos;y&apos; coordinates will be shown on the screen with corresponding
+ trace labels. When set to &apos;closest&apos;, information about the data point closest to where the viewer is hovering will appear.
+</summary>
+</member>
+<member name="T:FSharp.Plotly.StyleParam.SmoothAlg">
+<summary>
+ Choose between algorithms (&apos;best&apos; or &apos;fast&apos;) to smooth data linked to &apos;z&apos;. The default value is false corresponding to no smoothing.
+</summary>
+</member>
+<member name="T:FSharp.Plotly.StyleParam.HistFunc">
+<summary>
+ Sets the binning function used for this histogram trace. The default value is &apos;count&apos; where the histogram values are computed 
+ by counting the number of values lying inside each bin. With &apos;histfunc&apos; set to &apos;sum&apos;, &apos;avg&apos;, &apos;min&apos; or &apos;max&apos;, the histogram values 
+ are computed using the sum, the average, the minimum or the &apos;maximum&apos; of the values lying inside each bin respectively.
+ default: Count    
+</summary>
+</member>
+<member name="T:FSharp.Plotly.StyleParam.HistNorm">
+<summary>
+ Sets the type of normalization for this histogram trace. By default (&apos;histnorm&apos; set to &apos;&apos;) the height of each bar 
+ displays the frequency of occurrence, i.e., the number of times this value was found in the corresponding bin.
+ If set to &apos;percent&apos;, the height of each bar displays the percentage of total occurrences found within the corresponding bin. 
+ If set to &apos;probability&apos;, the height of each bar displays the probability that an event will fall into the corresponding bin. 
+ If set to &apos;density&apos;, the height of each bar is equal to the number of occurrences in a bin divided by the size of the bin 
+ interval such that summing the area of all bins will yield the total number of occurrences. If set to &apos;probability density&apos;, 
+ the height of each bar is equal to the number of probability that an event will fall into the corresponding bin divided by 
+ the size of the bin interval such that summing the area of all bins will yield 1.
+ default: None  
+</summary>
+</member>
+<member name="T:FSharp.Plotly.StyleParam.Currentbin">
+<summary>
+ Only applies if cumulative is enabled. Sets whether the current bin is included, excluded, or has half of its value included in 
+ the current cumulative value. &quot;include&quot; is the default for compatibility with various other tools, however it introduces
+ a half-bin bias to the results. &quot;exclude&quot; makes the opposite half-bin bias, and &quot;half&quot; removes it.
+</summary>
+</member>
+<member name="T:FSharp.Plotly.StyleParam.CumulativeDirection">
+<summary>
+ Only applies if cumulative is enabled. If &quot;increasing&quot; (default) we sum all prior bins, so the result increases from left to right.
+ If &quot;decreasing&quot; we sum later bins so the result decreases from left to right.  default: &quot;increasing&quot;
+</summary>
+</member>
+<member name="T:FSharp.Plotly.StyleParam.Direction">
+<summary>
+ Specifies the direction at which succeeding sectors follow one another.
+</summary>
+</member>
+<member name="T:FSharp.Plotly.StyleParam.TextInfoPosition">
+<summary>
+ Specifies the location of the `textinfo`.
+</summary>
+</member>
+<member name="T:FSharp.Plotly.StyleParam.TextInfo">
+<summary>
+ Determines which trace information appear on the graph and  on hove (HoverInfo)
+</summary>
+</member>
+<member name="T:FSharp.Plotly.StyleParam.Visible">
+<summary>
+ Determines whether or not this trace is visible. If &quot;legendonly&quot;, the trace is not drawn, but can appear as a legend item (provided that the legend itself is visible).
+</summary>
+</member>
+<member name="T:FSharp.Plotly.StyleParam.CategoryOrder">
+<summary>
+ Specifies the ordering logic for the case of categorical variables. By default, plotly uses &quot;trace&quot;, which specifies the order that is present in the data supplied. Set `categoryorder` to &quot;category ascending&quot; or &quot;category descending&quot; if order should be determined by the alphanumerical order of the category names. Set `categoryorder` to &quot;array&quot; to derive the ordering from the attribute `categoryarray`. 
+ If a category is not found in the `categoryarray` array, the sorting behavior for that attribute will be identical to the &quot;trace&quot; mode. The unspecified categories will follow the categories in `categoryarray`.
+</summary>
+</member>
+<member name="T:FSharp.Plotly.StyleParam.AxisType">
+<summary>
+ Sets the axis type. By default (Auto), plotly attempts to determined the axis type by looking into the data of the traces that referenced the axis in question.
+</summary>
+</member>
+<member name="T:FSharp.Plotly.StyleParam.RangeMode">
+<summary>
+ If &quot;normal&quot;, the range is computed in relation to the extrema of the input data. If &quot;tozero&quot;`, the range extends to 0, regardless of the input data If &quot;nonnegative&quot;, the range is non-negative, regardless of the input data.
+</summary>
+</member>
+<member name="T:FSharp.Plotly.StyleParam.TickOptions">
+<summary>
+ Determines whether ticks are drawn or not. If &quot;&quot;, this axis&apos; ticks are not drawn. If &quot;outside&quot; (&quot;inside&quot;), this axis&apos; are drawn outside (inside) the axis lines.
+</summary>
+</member>
+<member name="T:FSharp.Plotly.StyleParam.TickMode">
+<summary>
+ Sets the tick mode for this axis. If &quot;auto&quot;, the number of ticks is set via `nticks`. If &quot;linear&quot;, the placement of the ticks is determined by a starting position `tick0` and a tick step `dtick` (&quot;linear&quot; is the default value if `tick0` and `dtick` are provided). 
+ If &quot;array&quot;, the placement of the ticks is set via `tickvals` and the tick text is `ticktext`. (&quot;array&quot; is the default value if `tickvals` is provided).
+</summary>
+</member>
+<member name="T:FSharp.Plotly.StyleParam.AutoRange">
+<summary>
+ Determines whether or not the range of this axis is computed in relation to the input data. See `rangemode` for more info. If `range` is provided, then `autorange` is set to &quot;false&quot;.
+</summary>
+</member>
+<member name="T:FSharp.Plotly.StyleParam.Mirror">
+<summary>
+ Determines if the axis lines or/and ticks are mirrored to the opposite side of the plotting area. If &quot;true&quot;, the axis lines are mirrored. 
+ If &quot;ticks&quot;, the axis lines and ticks are mirrored. If &quot;false&quot;, mirroring is disable. If &quot;all&quot;, axis lines are mirrored on all shared-axes subplots. If &quot;allticks&quot;, axis lines and ticks are mirrored on all shared-axes subplots.
+</summary>
+</member>
+<member name="T:FSharp.Plotly.StyleParam.ExponentFormat">
+<summary>
+ Determines a formatting rule for the tick exponents. For example, consider the number 1,000,000,000. If &quot;none&quot;, it appears as 1,000,000,000. If &quot;e&quot;, 1e+9. If &quot;E&quot;, 1E+9. 
+ If &quot;power&quot;, 1x10^9 (with 9 in a super script). If &quot;SI&quot;, 1G. If &quot;B&quot;, 1B.
+</summary>
+</member>
+<member name="T:FSharp.Plotly.StyleParam.ShowExponent">
+<summary>
+ If &quot;all&quot;, all exponents are shown besides their significands. If &quot;first&quot;, only the exponent of the first tick is shown. If &quot;last&quot;, only the exponent of the last tick is shown. If &quot;none&quot;, no exponents appear.
+</summary>
+</member>
+<member name="T:FSharp.Plotly.StyleParam.ShowTickOption">
+<summary>
+ If &quot;all&quot;, all tick labels are displayed with a prefix. If &quot;first&quot;, only the first tick is displayed with a prefix. If &quot;last&quot;, only the last tick is displayed with a suffix. If &quot;none&quot;, tick prefixes are hidden.
+</summary>
+</member>
+<member name="T:FSharp.Plotly.StyleParam.Colorscale">
+<summary>
+ The colorscale must be a collection containing a mapping of a normalized value (between 0.0 and 1.0) to it&apos;s color. At minimum, a mapping for the lowest (0.0) and highest (1.0) values are required. 
+</summary>
+</member>
+<member name="T:FSharp.Plotly.StyleParam.Fill">
+<summary>
+ Sets the area to fill with a solid color. (default: &quot;none&quot; )
+</summary>
+</member>
+<member name="T:FSharp.Plotly.StyleParam.Shape">
+<summary>
+ Determines the line shape. With &quot;spline&quot; the lines are drawn using spline interpolation. The other available values correspond to step-wise line shapes.
+</summary>
+</member>
+<member name="T:FSharp.Plotly.StyleParam.FontFamily">
+<summary>
+ Names of installed font families
+</summary>
+</member>
+<member name="T:FSharp.Plotly.StyleParam.TextPosition">
+<summary>
+ Sets the positions of the `text` elements with respects to the (x,y) coordinates. (default: MiddleCenter)
+</summary>
+</member>
+<member name="T:FSharp.Plotly.StyleParam.DrawingStyle">
+<summary>
+ Dash: Sets the drawing style of the lines segments in this trace.
+ Sets the style of the lines. Set to a dash string type or a dash length in px.
+</summary>
+</member>
+<member name="M:FSharp.Plotly.StyleParam.ModeUtils.showLines(System.Boolean,FSharp.Plotly.StyleParam.Mode)">
+<summary>
+ Takes the current mode and adds the Lines flag
+</summary>
+</member>
+<member name="M:FSharp.Plotly.StyleParam.ModeUtils.showMarker(System.Boolean,FSharp.Plotly.StyleParam.Mode)">
+<summary>
+ Takes the current mode and adds the Markers flag
+</summary>
+</member>
+<member name="M:FSharp.Plotly.StyleParam.ModeUtils.showText(System.Boolean,FSharp.Plotly.StyleParam.Mode)">
+<summary>
+ Takes the current mode and adds the Text flag
+</summary>
+</member>
+<member name="T:FSharp.Plotly.StyleParam.ModeUtils">
+<summary>
+ Functions to manipulate StyleParam Mode
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Trace3dModule.Trace3dStyle.Surface``20(Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``0}},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``2}},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{``3}},Microsoft.FSharp.Core.FSharpOption{``4},Microsoft.FSharp.Core.FSharpOption{``5},Microsoft.FSharp.Core.FSharpOption{``6},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Colorscale},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{``7},Microsoft.FSharp.Core.FSharpOption{``8},Microsoft.FSharp.Core.FSharpOption{``9},Microsoft.FSharp.Core.FSharpOption{``10},Microsoft.FSharp.Core.FSharpOption{``11},Microsoft.FSharp.Core.FSharpOption{``12},Microsoft.FSharp.Core.FSharpOption{``13},Microsoft.FSharp.Core.FSharpOption{``14},Microsoft.FSharp.Core.FSharpOption{``15},Microsoft.FSharp.Core.FSharpOption{``16},Microsoft.FSharp.Core.FSharpOption{``17},Microsoft.FSharp.Core.FSharpOption{``18})">
+<summary>
+ Applies the styles of 3d-surface to TraceObjects 
+</summary>
+</member>
+<member name="T:FSharp.Plotly.Trace3dModule.Trace3dStyle">
+<summary>
+ Functions provide the styling of the Chart objects
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Trace3dModule.initMesh3d(Microsoft.FSharp.Core.FSharpFunc{FSharp.Plotly.Trace3d,FSharp.Plotly.Trace3d})">
+<summary>
+ Init trace for 3d-mesh plot
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Trace3dModule.initSurface(Microsoft.FSharp.Core.FSharpFunc{FSharp.Plotly.Trace3d,FSharp.Plotly.Trace3d})">
+<summary>
+ Init trace for 3d-contour plot
+</summary>
+</member>
+<member name="M:FSharp.Plotly.Trace3dModule.initScatter3d(Microsoft.FSharp.Core.FSharpFunc{FSharp.Plotly.Trace3d,FSharp.Plotly.Trace3d})">
+<summary>
+ Init trace for 3d-scatter plot
+</summary>
+</member>
+<member name="M:FSharp.Plotly.TraceModule.TraceStyle.TraceInfo``1(Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{FSharp.Plotly.StyleParam.Visible},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Double},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.String})">
+<summary>
+ Applies the TraceInfo styles to TraceObjects
+</summary>
+</member>
+<member name="T:FSharp.Plotly.TraceModule.TraceStyle">
+<summary>
+ Functions provide the styling of the Chart objects
+</summary>
+</member>
+<member name="M:FSharp.Plotly.TraceModule.initHistogram2dContour(Microsoft.FSharp.Core.FSharpFunc{FSharp.Plotly.Trace,FSharp.Plotly.Trace})">
+<summary>
+ Init trace for 2d-histogram contour
+</summary>
+</member>
+<member name="M:FSharp.Plotly.TraceModule.initHistogram2d(Microsoft.FSharp.Core.FSharpFunc{FSharp.Plotly.Trace,FSharp.Plotly.Trace})">
+<summary>
+ Init trace for 2d-histogram
+</summary>
+</member>
+<member name="M:FSharp.Plotly.TraceModule.initHistogram(Microsoft.FSharp.Core.FSharpFunc{FSharp.Plotly.Trace,FSharp.Plotly.Trace})">
+<summary>
+ Init trace for histogram
+</summary>
+</member>
+<member name="M:FSharp.Plotly.TraceModule.initWindRose(Microsoft.FSharp.Core.FSharpFunc{FSharp.Plotly.Trace,FSharp.Plotly.Trace})">
+<summary>
+ Init trace for wind rose chart 
+</summary>
+</member>
+<member name="M:FSharp.Plotly.TraceModule.initContour(Microsoft.FSharp.Core.FSharpFunc{FSharp.Plotly.Trace,FSharp.Plotly.Trace})">
+<summary>
+ Init trace for Contour
+</summary>
+</member>
+<member name="M:FSharp.Plotly.TraceModule.initHeatmap(Microsoft.FSharp.Core.FSharpFunc{FSharp.Plotly.Trace,FSharp.Plotly.Trace})">
+<summary>
+ Init trace for Heatmap
+</summary>
+</member>
+<member name="M:FSharp.Plotly.TraceModule.initPie(Microsoft.FSharp.Core.FSharpFunc{FSharp.Plotly.Trace,FSharp.Plotly.Trace})">
+<summary>
+ Init trace for pie chart
+</summary>
+</member>
+<member name="M:FSharp.Plotly.TraceModule.initBoxPlot(Microsoft.FSharp.Core.FSharpFunc{FSharp.Plotly.Trace,FSharp.Plotly.Trace})">
+<summary>
+ Init trace for box plot
+</summary>
+</member>
+<member name="M:FSharp.Plotly.TraceModule.initBar(Microsoft.FSharp.Core.FSharpFunc{FSharp.Plotly.Trace,FSharp.Plotly.Trace})">
+<summary>
+ Init trace for bar chart
+</summary>
+</member>
+<member name="M:FSharp.Plotly.TraceModule.initScatter(Microsoft.FSharp.Core.FSharpFunc{FSharp.Plotly.Trace,FSharp.Plotly.Trace})">
+<summary>
+ Init trace for scatter plot
+</summary>
+</member>
+</members>
+</doc>

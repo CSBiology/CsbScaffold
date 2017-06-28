@@ -120,17 +120,31 @@
 </summary>
 </member>
 <member name="M:BioFSharp.IO.BlastNCBI.BlastWrapper.makeblastdb(System.String,System.Collections.Generic.IEnumerable{BioFSharp.IO.BlastNCBI.Parameters.MakeDbParams})">
-
+<summary>
+Creates a BLAST databse from given source/s
+</summary>
 </member>
 <member name="M:BioFSharp.IO.BlastNCBI.BlastWrapper.blastP(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{BioFSharp.IO.BlastNCBI.Parameters.BlastParams})">
-
+<summary>
+Compares a protein query to a protein database
+</summary>
+</member>
+<member name="M:BioFSharp.IO.BlastNCBI.BlastWrapper.blastN(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{BioFSharp.IO.BlastNCBI.Parameters.BlastParams})">
+<summary>
+Compares a nucleotide query to a nucleotide database
+</summary>
+</member>
+<member name="T:BioFSharp.IO.BlastNCBI.BlastWrapper">
+<summary>
+A Wrapper to perform different BLAST tasks
+</summary>
 </member>
 <member name="T:BioFSharp.IO.FastA.FastaItem`1">
 <summary>
  Fasta item contains header and sequence
 </summary>
 </member>
-<member name="M:BioFSharp.IO.FastA.write``1(Microsoft.FSharp.Core.FSharpFunc{``0,System.Char},System.String,System.Collections.Generic.IEnumerable{BioFSharp.IO.FastA.FastaItem{System.Collections.Generic.IEnumerable{``0}}})">
+<member name="M:BioFSharp.IO.FastA.write``2(Microsoft.FSharp.Core.FSharpFunc{``0,System.Char},System.String,System.Collections.Generic.IEnumerable{BioFSharp.IO.FastA.FastaItem{``1}})">
 <summary>
  Writes FastaItem to file. Converter determines type of sequence by converting seq&lt;char&gt; -&gt; type
 </summary>

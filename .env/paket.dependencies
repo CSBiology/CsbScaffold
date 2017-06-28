@@ -1,6 +1,5 @@
 source https://nuget.org/api/v2
 
 nuget Deedle
-nuget FSharp.Plotly
 nuget Accord.Statistics
 nuget Accord.MachineLearning

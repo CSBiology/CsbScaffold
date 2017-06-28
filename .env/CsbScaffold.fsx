@@ -10,6 +10,9 @@
 #r ".lib/FSharp.Care.dll"
 #r ".lib/FSharp.Care.IO.dll"
 
+// Include FSharp.Stats  
+#r ".lib/FSharp.Stats.dll"
+
 // Include BioFSharp and BioFSharp.Stats   
 #r ".lib/BioFSharp.dll"
 #r ".lib/BioFSharp.IO.dll"
@@ -30,7 +33,9 @@
 
 
 // Include FSharp.Plotly
-#r "packages/FSharp.Plotly/lib/net40/FSharp.Plotly.dll"
+//#r "packages/FSharp.Plotly/lib/net40/FSharp.Plotly.dll"
+#r ".lib/FSharp.Plotly.dll"
+#r ".lib/FSharp.Plotly.WPF.dll"
 
 //// Include Deedle (no #load allowed when working with intellisence)
 //#load "packages/Deedle/Deedle.fsx"

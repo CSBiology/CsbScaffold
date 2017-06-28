@@ -2,6 +2,16 @@
 <doc>
 <assembly><name>FSharp.Care</name></assembly>
 <members>
+<member name="M:FSharp.Care.Collections.ArrayDivvy`1.Iter(Microsoft.FSharp.Core.FSharpFunc{`0,Microsoft.FSharp.Core.Unit})">
+<summary>
+Applies the given function to each element of the divvy array.
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.ArrayDivvy`1.Fold``2(Microsoft.FSharp.Core.FSharpFunc{``1,Microsoft.FSharp.Core.FSharpFunc{`0,``1}},``1)">
+<summary>
+Applies a function to each element of the collection, threading an accumulator argument through the computation.
+</summary>
+</member>
 <member name="M:FSharp.Care.Collections.Array.[]`1.TryFindDefault``2(``0[],``1[],``1,System.Int32)">
 <summary>
  Look up an element in an array by index, returning a value if the index is in the domain of the array and default value if not
@@ -48,9 +58,92 @@
  Shuffels each column of the input Array2D separately  (method: Fisher-Yates)
 </summary>
 </member>
+<member name="M:FSharp.Care.Collections.Array2D.map2``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``0,``1}},``0[0:,0:],``0[0:,0:])">
+<summary>
+ Builds a new array whose elements are the results of applying the given function
+ to the corresponding pairs of elements from the two arrays. 
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array2D.mapInPlaceRowi``1(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,``0}},``0[0:,0:])">
+<summary>
+ Applying the given function to each of the elements of the array and returns the value in place.
+ The integer indices passed to the function indicates the row index of the element being transformed.
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array2D.mapInPlaceColi``1(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,``0}},``0[0:,0:])">
+<summary>
+ Applying the given function to each of the elements of the array and returns the value in place.
+ The integer indices passed to the function indicates the column index of the element being transformed.
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array2D.mapiInPlace``1(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,``0}},``0[0:,0:])">
+<summary>
+ Applying the given function to each of the elements of the array and returns the value in place.
+ The integer indices passed to the function indicates the element being transformed.
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array2D.mapInPlace``1(Microsoft.FSharp.Core.FSharpFunc{``0,``0},``0[0:,0:])">
+<summary>
+ Applying the given function to each of the elements of the array and returns the value in place.
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array2D.mapRowI``2(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,``1}},``0[0:,0:])">
+<summary>
+ Builds a new array whose elements are the results of applying the given function
+ to each of the elements of the array. The integer indices passed to the
+ function indicates the row index of the element being transformed.
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array2D.mapColI``2(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,``1}},``0[0:,0:])">
+<summary>
+ Builds a new array whose elements are the results of applying the given function
+ to each of the elements of the array. The integer indices passed to the
+ function indicates the column index of the element being transformed.
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array2D.foldByRow``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``0}},``0,``1[0:,0:])">
+<summary>
+ Fold all rows into one column array.
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array2D.foldByCol``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``0}},``0,``1[0:,0:])">
+<summary>
+ Fold all columns into one row array.
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array2D.foldRow``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``0}},``0,``1[0:,0:],System.Int32)">
+<summary>
+ Fold one row.
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array2D.foldCol``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``0}},``0,``1[0:,0:],System.Int32)">
+<summary>
+ Fold one column.
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array2D.colCount``1(``0[0:,0:])">
+<summary>
+ Returns the numbers of rows.
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array2D.rowCount``1(``0[0:,0:])">
+<summary>
+ Returns the numbers of rows.
+</summary>
+</member>
 <member name="M:FSharp.Care.Collections.Array2D.transpose``1(``0[0:,0:])">
 <summary>
  Transpose the array
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array2D.indexMaxBy``2(Microsoft.FSharp.Core.FSharpFunc{``0,``1},``0[0:,0:])">
+<summary>
+Returns the index of the element which is the biggest after projection according to the Operators.max operator in the array
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array2D.maxBy``2(Microsoft.FSharp.Core.FSharpFunc{``0,``1},``0[0:,0:])">
+<summary>
+Returns the element of the array which is the biggest after projection according to the Operators.max operator
 </summary>
 </member>
 <member name="M:FSharp.Care.Collections.Array2D.ofLongColumnArray``1(``0[],System.Int32,System.Int32)">
@@ -83,6 +176,31 @@
  Create an empty array2D
 </summary>
 </member>
+<member name="M:FSharp.Care.Collections.ArrayDivvy.filter``1(Microsoft.FSharp.Core.FSharpFunc{``0,System.Boolean},FSharp.Care.Collections.ArrayDivvy{``0})">
+<summary>
+Returns a new collection containing only the elements of the collection for which the given predicate returns true.
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.ArrayDivvy.map``2(Microsoft.FSharp.Core.FSharpFunc{``0,``1},FSharp.Care.Collections.ArrayDivvy{``0})">
+<summary>
+Builds a new divvy array whose elements are the results of applying the given function to each of the elements of the array.
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.ArrayDivvy.count``1(FSharp.Care.Collections.ArrayDivvy{``0})">
+<summary>
+Returns the length of a mutable array segment.
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.ArrayDivvy.fold``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``0}},``0,FSharp.Care.Collections.ArrayDivvy{``1})">
+<summary>
+Applies a function to each element of the collection, threading an accumulator argument through the computation.
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.ArrayDivvy.iter``1(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.Unit},FSharp.Care.Collections.ArrayDivvy{``0})">
+<summary>
+Applies the given function to each element of the divvy array.
+</summary>
+</member>
 <member name="T:FSharp.Care.Collections.Dict">
 <summary>
  Read-only view of the dictionary called dict
@@ -104,14 +222,14 @@
  <param name="key">The input key.</param>
  <returns>The resulting dictionary.</returns>
 </member>
-<member name="M:FSharp.Care.Collections.Dictionary.Item``2(``0,System.Collections.Generic.IDictionary{``0,``1})">
+<member name="M:FSharp.Care.Collections.Dictionary.item``2(``0,System.Collections.Generic.IDictionary{``0,``1})">
  <summary>Lookup an element in the dictionary. Raise <c>KeyNotFoundException</c> if no binding
  exists in the dictionary.</summary>
  <param name="key">The input key.</param>
  <exception cref="System.Collections.Generic.KeyNotFoundException">Thrown when the key is not found.</exception>
  <returns>The value mapped to the key.</returns>
 </member>
-<member name="M:FSharp.Care.Collections.Dictionary.Count``2(System.Collections.Generic.IDictionary{``0,``1})">
+<member name="M:FSharp.Care.Collections.Dictionary.count``2(System.Collections.Generic.IDictionary{``0,``1})">
  <summary>The number of bindings in the dictionary.</summary>
 </member>
 <member name="M:FSharp.Care.Collections.Dictionary.containsKey``2(``0,System.Collections.Generic.IDictionary{``0,``1})">
@@ -157,7 +275,7 @@
  <returns>The resulting dictionary.</returns> 
 </member>
 <member name="M:FSharp.Care.Collections.Dictionary.ofMap``2(Microsoft.FSharp.Collections.FSharpMap{``0,``1})">
- <summary>Builds a dictionary that contains the bindings of the given map.</summary>
+ <summary>Builds a dictionary that contains the bindings of the given dictionary.</summary>
  <param name="elements">The input map.</param>
  <returns>The resulting dictionary.</returns> 
 </member>
@@ -200,6 +318,36 @@
 <member name="M:FSharp.Care.Collections.JaggedArray.shuffleColumnWise``1(``0[][])">
 <summary>
  Shuffels each column of a jagged array separately  (method: Fisher-Yates)
+</summary>
+</member>
+<member name="T:FSharp.Care.Collections.KdTree.KdTree`2">
+<summary>
+ k -dimension tree    
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.KdTree.rangeSearch``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``0,System.Double}},Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{System.Int32,System.Double}},FSharp.Care.Collections.KdTree.KdTree{``1,``0},System.Double,``0)">
+<summary>
+ Searches query coordinates within a given radius
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.KdTree.print``2(FSharp.Care.Collections.KdTree.KdTree{``0,``1})">
+<summary>
+ Prints kd tree
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.KdTree.toList``2(FSharp.Care.Collections.KdTree.KdTree{``0,``1})">
+<summary>
+ Flattens KdTree
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.KdTree.ofArrayBy``3(Microsoft.FSharp.Core.FSharpFunc{``0,``1},Microsoft.FSharp.Core.FSharpFunc{``1,Microsoft.FSharp.Core.FSharpFunc{System.Int32,``2}},System.Int32,``0[])">
+<summary>
+ Create KD Tree from list
+</summary>
+</member>
+<member name="T:FSharp.Care.Collections.KdTree">
+<summary>
+ Module for k -dimension trees  
 </summary>
 </member>
 <member name="M:FSharp.Care.Collections.List.insertAt``1(System.Int32,``0,Microsoft.FSharp.Collections.FSharpList{``0})">
@@ -520,6 +668,21 @@
  Module for facilitated .net interop erability
 </summary>
 </member>
+<member name="M:FSharp.Care.List.permutationsWithRep``1(System.Int32,System.Collections.Generic.IEnumerable{``0})">
+<summary>
+ Permutations with Repetition (order does matter)
+</summary>
+</member>
+<member name="M:FSharp.Care.List.permutations``1(Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+ Return successive r length permutations of elements 
+</summary>
+</member>
+<member name="M:FSharp.Care.List.product(Microsoft.FSharp.Collections.FSharpList{System.Int32},Microsoft.FSharp.Collections.FSharpList{System.Int32})">
+<summary>
+ Carteseian product
+</summary>
+</member>
 <member name="M:FSharp.Care.Math.round(System.Int32,System.Double)">
 <summary>
  Rounds a double-precision floating-point value to a specified number of fractional digits.  
@@ -580,6 +743,21 @@
  Memoization pattern
 </summary>
 </member>
+<member name="M:FSharp.Care.Monads.Either.toOption``2(FSharp.Care.Monads.Either{``0,``1})">
+<summary>
+ Returns success value as optional. In case of failure None.
+</summary>
+</member>
+<member name="M:FSharp.Care.Monads.Either.getOrDefault``1(``0,FSharp.Care.Monads.Either{``0,System.String})">
+<summary>
+ Returns success result or default value
+</summary>
+</member>
+<member name="M:FSharp.Care.Monads.Either.getOrFailwith``1(FSharp.Care.Monads.Either{``0,System.String})">
+<summary>
+ Returns success result or fails with exception.
+</summary>
+</member>
 <member name="M:FSharp.Care.NumericLiteralG.FromInt32``2(System.Int32)">
 <summary>
 Generic from int
@@ -603,6 +781,11 @@ Generic Zero
 <member name="T:FSharp.Care.Regex.RegexOptions">
 <summary>
  Provides enumerated values to use to set regular expressions options
+</summary>
+</member>
+<member name="M:FSharp.Care.Regex.tryEitherMatchReplace``1(Microsoft.FSharp.Core.FSharpFunc{System.String,Microsoft.FSharp.Core.FSharpFunc{System.String,``0}},System.String)">
+<summary>
+ Try to parse source string with pattern returns Either monoid with match and remaining string. On success f is applied on both result string.
 </summary>
 </member>
 <member name="M:FSharp.Care.Regex.|RegexGroupValues|_|(System.String,System.String)">
