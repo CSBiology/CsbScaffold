@@ -2,672 +2,99 @@
 <doc>
 <assembly><name>BioFSharp</name></assembly>
 <members>
+<member name="T:BioFSharp.NcbiParsingType">
+<summary>
+Lexer Tags for parsing BioItems
+</summary>
+</member>
 <member name="T:BioFSharp.IBioItem">
 <summary>
 Marker interface for BioItem base.
 </summary>
 </member>
-<member name="M:BioFSharp.Algorithm.KnuthMorrisPratt.initFind``1(``0[])">
-<summary>
-returns a find function with a set prefix table created from the input
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.KnuthMorrisPratt.find``1(System.Int32[],``0[],``0[])">
-<summary>
-finds the first match of a query pattern in a source using a given prefix table
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.KnuthMorrisPratt.initFindFrom``1(``0[])">
-<summary>
-returns a findFrom function with a set prefix table created from the input
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.KnuthMorrisPratt.findFrom``1(System.Int32[],``0[],System.Int32,``0[])">
-<summary>
-finds the first match of a query pattern in a source starting from a specific position in the source using a given prefix table
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.KnuthMorrisPratt.initFindAll``1(``0[])">
-<summary>
-returns a findAll function with a set prefix table created from the input
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.KnuthMorrisPratt.findAll``1(System.Int32[],``0[],``0[])">
-<summary>
-finds all matches of a query pattern in a source using a given prefix table
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.KnuthMorrisPratt.createPrefixTable``1(``0[])">
-<summary>
-creates a prefix table for a query pattern
-</summary>
-</member>
-<member name="T:BioFSharp.Algorithm.KnuthMorrisPratt">
-<summary>
-A collection of Knuth-Morris-Pratt string matching algorithms
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.RabinKarp.findFromGeneric``2(System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,Microsoft.FSharp.Core.FSharpFunc{``1,``0}}},Microsoft.FSharp.Core.FSharpFunc{``1[],``0},``1[],``1[])">
-<summary>
-takes an updateHash and blockHash function to find the first match of a query pattern in a source starting from a specific position in the source
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.RabinKarp.findAllGeneric``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,Microsoft.FSharp.Core.FSharpFunc{``1,``0}}},Microsoft.FSharp.Core.FSharpFunc{``1[],``0},``1[],``1[])">
-<summary>
-takes an updateHash and blockHash function to find all matches of a query pattern in a source
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.RabinKarp.isMatchAt``1(``0[],``0[],System.Int32)">
-<summary>
-checks if content of pattern and source substring match
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.RabinKarp.CP.find``1(``0[],``0[])">
-<summary>
-find the first match of a query pattern in a source
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.RabinKarp.CP.findFrom``1(System.Int32,``0[],``0[])">
-<summary>
-find the first match of a query pattern in a source starting from a specific position in the source
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.RabinKarp.CP.findAll``1(``0[],``0[])">
-<summary>
-find all matches of a query pattern in a source   
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.RabinKarp.CP.updateHash``2(System.Int32,System.UInt64,``0,``1)">
-<summary>
-updates an existing hashvalue 
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.RabinKarp.CP.blockHash``1(``0[])">
-<summary>
-hashes a pattern
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.RabinKarp.CP.addToHashValue``1(System.UInt64,``0)">
-<summary>
-adds a hashvalue to an existing hashvalue
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.RabinKarp.CP.rotateLeft``1(System.Int32,``0)">
-<summary>
-bitwise cyclic rotation of a 64 bit pattern
-</summary>
-</member>
-<member name="T:BioFSharp.Algorithm.RabinKarp.CP">
-<summary>
-A collection of Rabin-Karp string matching algorithms using the cyclic polynomial (CP) hash
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.RabinKarp.RKStandard.find``1(``0[],``0[])">
-<summary>
-finds the first match of a query pattern in a source
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.RabinKarp.RKStandard.findFrom``1(System.Int32,``0[],``0[])">
-<summary>
-finds the first match of a query pattern in a source starting from a specific position in the source
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.RabinKarp.RKStandard.findAll``1(``0[],``0[])">
-<summary>
-finds all matches of a query pattern in a source
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.RabinKarp.RKStandard.updateHash``2(System.Int32,System.Int32,System.Int32,``0,``1)">
-<summary>
-updates an existing hashvalue 
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.RabinKarp.RKStandard.blockHash``1(System.Int32,``0[])">
-<summary>
-hashes a pattern
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.RabinKarp.RKStandard.addToHash``1(System.Int32,System.Int32,``0)">
-<summary>
-adds a hashvalue to an existing hashvalue
-</summary>
-</member>
-<member name="T:BioFSharp.Algorithm.RabinKarp.RKStandard">
-<summary>
-A collection of Rabin-Karp string matching algorithms using the built-in hash function of f#
-</summary>
-</member>
-<member name="T:BioFSharp.Algorithm.RabinKarp">
-<summary>
-A collection of Rabin-Karp string matching algorithms and hash functions
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.Naive.find``1(``0[],``0[])">
-<summary>
-finds the first match of a query pattern in a source
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.Naive.findFrom``1(System.Int32,``0[],``0[])">
-<summary>
-finds the first match of a query pattern in a source starting from a specific position in the source
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.Naive.findAll``1(``0[],``0[])">
-<summary>
-finds all matches of a query pattern in a source
-</summary>
-</member>
-<member name="T:BioFSharp.Algorithm.Naive">
-<summary>
-A collection of naive string matching algorithms
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithms.DualAlignment.SmithWaterman.smithWaterman``1(BioFSharp.Algorithms.DualAlignment.RunGeneric.Costs{``0},``0[],``0[])">
-<summary>
- Uses the runGeneric function to create a matrix and then aligns the sequences via backtracing
-</summary>
-</member>
-<member name="T:BioFSharp.Algorithms.DualAlignment.SmithWaterman">
-<summary>
- Local alignment algorithm  (AffineGaps)
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithms.DualAlignment.NeedlemanWunsch.needlemanWunsch``1(BioFSharp.Algorithms.DualAlignment.RunGeneric.Costs{``0},``0[],``0[])">
-<summary>
- Uses the runGeneric function to create a matrix and then aligns the sequences via backtracing
-</summary>
-</member>
-<member name="T:BioFSharp.Algorithms.DualAlignment.NeedlemanWunsch">
-<summary>
- Global alignment algorithm. (AffineGaps)
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithms.DualAlignment.RunGeneric.traceBack``1(``0[],``0[],System.Int32,System.Int32,Microsoft.FSharp.Collections.FSharpList{System.Tuple{Microsoft.FSharp.Core.FSharpOption{``0},Microsoft.FSharp.Core.FSharpOption{``0}}},BioFSharp.Algorithms.DualAlignment.RunGeneric.Cell[0:,0:])">
-<summary>
- Creates the alignment out of the matrix and the 2 sequences
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithms.DualAlignment.RunGeneric.runGeneric``1(Microsoft.FSharp.Core.FSharpFunc{BioFSharp.Algorithms.DualAlignment.RunGeneric.Cell[0:,0:],BioFSharp.Algorithms.DualAlignment.RunGeneric.Cell[0:,0:]},``0[],``0[],BioFSharp.Algorithms.DualAlignment.RunGeneric.OperationCosts{``0})">
-<summary>
- Creates an array and fills it with Cells
-</summary>
-</member>
-<member name="T:BioFSharp.Algorithms.DualAlignment.RunGeneric">
-<summary>
- Holds all types and helper-functions. Also includes the function for the matrix creation and the backtrace-function
-</summary>
-</member>
-<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Xle">
-<summary>
- J  *Leucine/Isoleucine
-</summary>
-</member>
-<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Xaa">
-<summary>
- X  *Unspecified
-</summary>
-</member>
-<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Val">
-<summary>
- V  *Valine
-</summary>
-</member>
-<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Tyr">
-<summary>
- Y  *Tyrosine
-</summary>
-</member>
-<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Trp">
-<summary>
- W  *Tryptophan
-</summary>
-</member>
-<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Thr">
-<summary>
- T  *Threonine
-</summary>
-</member>
-<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Ter">
-<summary>
- *  *Termination
-</summary>
-</member>
-<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Ser">
-<summary>
- S  *Serine
-</summary>
-</member>
-<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Sel">
-<summary>
- U  *Selenocysteine
-</summary>
-</member>
-<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Pyl">
-<summary>
- O  *Pyrrolysine   
-</summary>
-</member>
-<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Pro">
-<summary>
- P  *Proline
-</summary>
-</member>
-<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Phe">
-<summary>
- F  *Glutamic Acid
-</summary>
-</member>
-<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Met">
-<summary>
- M  *Methionine
-</summary>
-</member>
-<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Lys">
-<summary>
- K  *Lysine
-</summary>
-</member>
-<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Leu">
-<summary>
- L  *Leucine
-</summary>
-</member>
-<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Ile">
-<summary>
- I  *Isoleucine
-</summary>
-</member>
-<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.His">
-<summary>
- H  *Histidine
-</summary>
-</member>
-<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Gly">
-<summary>
- G  *Glycine
-</summary>
-</member>
-<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Glx">
-<summary>
- Z  *Glutamine/glutamic acid
-</summary>
-</member>
-<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Glu">
-<summary>
- E  *Glutamic Acid
-</summary>
-</member>
-<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Gln">
-<summary>
- Q  *Glutamine
-</summary>
-</member>
-<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Gap">
-<summary>
- -  *Gap 
-</summary>
-</member>
-<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Cys">
-<summary>
- C  *Cysteine
-</summary>
-</member>
-<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Asx">
-<summary>
- B  *Asparagine/aspartic acid
-</summary>
-</member>
-<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Asp">
-<summary>
- D  *Aspartic Acid
-</summary>
-</member>
-<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Asn">
-<summary>
- N  *Asparagine
-</summary>
-</member>
-<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Arg">
-<summary>
- R  *Arginine
-</summary>
-</member>
-<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Ala">
-<summary>
- A  *Alanin
-</summary>
-</member>
-<member name="T:BioFSharp.AminoAcidSymbols.AminoAcidSymbol">
-<summary>
- Symbols of all amino acids (including Gap + Term) 
-</summary>
-</member>
-<member name="P:BioFSharp.AminoAcidSymbols.initAverageMassWithMemP">
-<summary>
- Returns a function to calculate the average mass of a bio item with memoization
-</summary>
-</member>
-<member name="P:BioFSharp.AminoAcidSymbols.initMonoisoMassWithMemP">
-<summary>
- Returns a function to calculate the monoisotopic mass of a bio item with memoization
-</summary>
-</member>
-<member name="M:BioFSharp.AminoAcidSymbols.averageMass(BioFSharp.AminoAcidSymbols.AminoAcidSymbol)">
-<summary>
- Returns the average mass of AminoAcidSymbol (without H20)
-</summary>
-</member>
-<member name="M:BioFSharp.AminoAcidSymbols.monoisoMass(BioFSharp.AminoAcidSymbols.AminoAcidSymbol)">
-<summary>
- Returns the monoisotopic mass of AminoAcidSymbol (without H20)
-</summary>
-</member>
-<member name="M:BioFSharp.AminoAcidSymbols.isGap(BioFSharp.AminoAcidSymbols.AminoAcidSymbol)">
-<summary>
- Returns true if AminoAcidSymbol represents a sequence gap
-</summary>
-</member>
-<member name="M:BioFSharp.AminoAcidSymbols.isTerminator(BioFSharp.AminoAcidSymbols.AminoAcidSymbol)">
-<summary>
- Returns true if AminoAcidSymbol represents a sequence terminator
-</summary>
-</member>
-<member name="M:BioFSharp.AminoAcidSymbols.symbol(BioFSharp.AminoAcidSymbols.AminoAcidSymbol)">
-<summary>
- Returns the symbol of AminoAcidSymbol       
-</summary>
-</member>
-<member name="M:BioFSharp.AminoAcidSymbols.name(BioFSharp.AminoAcidSymbols.AminoAcidSymbol)">
-<summary>
- Returns the name of AminoAcid
-</summary>
-</member>
-<member name="T:BioFSharp.AminoAcids.AminoAcid.Ter">
-<summary>
- *  *Termination
-</summary>
-</member>
-<member name="T:BioFSharp.AminoAcids.AminoAcid.Gap">
-<summary>
- -  *Gap 
-</summary>
-</member>
-<member name="T:BioFSharp.AminoAcids.AminoAcid.Asx">
-<summary>
- B  *Asparagine/aspartic acid
-</summary>
-</member>
-<member name="T:BioFSharp.AminoAcids.AminoAcid.Glx">
-<summary>
- Z  *Glutamine/glutamic acid
-</summary>
-</member>
-<member name="T:BioFSharp.AminoAcids.AminoAcid.Xle">
-<summary>
- J  *Leucine/Isoleucine
-</summary>
-</member>
-<member name="T:BioFSharp.AminoAcids.AminoAcid.Xaa">
-<summary>
- X  *Unspecified
-</summary>
-</member>
-<member name="T:BioFSharp.AminoAcids.AminoAcid.Tyr">
-<summary>
- Y  *Tyrosine
-</summary>
-</member>
-<member name="T:BioFSharp.AminoAcids.AminoAcid.Trp">
-<summary>
- W  *Tryptophan
-</summary>
-</member>
-<member name="T:BioFSharp.AminoAcids.AminoAcid.Val">
-<summary>
- V  *Valine
-</summary>
-</member>
-<member name="T:BioFSharp.AminoAcids.AminoAcid.Sel">
-<summary>
- U  *Selenocysteine
-</summary>
-</member>
-<member name="T:BioFSharp.AminoAcids.AminoAcid.Thr">
-<summary>
- T  *Threonine
-</summary>
-</member>
-<member name="T:BioFSharp.AminoAcids.AminoAcid.Ser">
-<summary>
- S  *Serine
-</summary>
-</member>
-<member name="T:BioFSharp.AminoAcids.AminoAcid.Arg">
-<summary>
- R  *Arginine
-</summary>
-</member>
-<member name="T:BioFSharp.AminoAcids.AminoAcid.Gln">
-<summary>
- Q  *Glutamine
-</summary>
-</member>
-<member name="T:BioFSharp.AminoAcids.AminoAcid.Pro">
-<summary>
- P  *Proline
-</summary>
-</member>
-<member name="T:BioFSharp.AminoAcids.AminoAcid.Pyl">
-<summary>
- O  *Pyrrolysine
-</summary>
-</member>
-<member name="T:BioFSharp.AminoAcids.AminoAcid.Asn">
-<summary>
- N  *Asparagine
-</summary>
-</member>
-<member name="T:BioFSharp.AminoAcids.AminoAcid.Met">
-<summary>
- M  *Methionine
-</summary>
-</member>
-<member name="T:BioFSharp.AminoAcids.AminoAcid.Leu">
-<summary>
- L  *Leucine
-</summary>
-</member>
-<member name="T:BioFSharp.AminoAcids.AminoAcid.Lys">
-<summary>
- K  *Lysine
-</summary>
-</member>
-<member name="T:BioFSharp.AminoAcids.AminoAcid.Ile">
-<summary>
- I  *Isoleucine
-</summary>
-</member>
-<member name="T:BioFSharp.AminoAcids.AminoAcid.His">
-<summary>
- H  *Histidine
-</summary>
-</member>
-<member name="T:BioFSharp.AminoAcids.AminoAcid.Gly">
-<summary>
- G  *Glycine
-</summary>
-</member>
-<member name="T:BioFSharp.AminoAcids.AminoAcid.Phe">
-<summary>
- F  *Glutamic Acid
-</summary>
-</member>
-<member name="T:BioFSharp.AminoAcids.AminoAcid.Glu">
-<summary>
- E  *Glutamic Acid
-</summary>
-</member>
-<member name="T:BioFSharp.AminoAcids.AminoAcid.Asp">
-<summary>
- D  *Aspartic Acid
-</summary>
-</member>
-<member name="T:BioFSharp.AminoAcids.AminoAcid.Cys">
-<summary>
- C  *Cysteine
-</summary>
-</member>
-<member name="T:BioFSharp.AminoAcids.AminoAcid.Ala">
-<summary>
- A  *Alanin
-</summary>
-</member>
-<member name="T:BioFSharp.AminoAcids.AminoAcid">
-<summary>
- Amino acid Codes
-</summary>
-</member>
-<member name="P:BioFSharp.AminoAcids.initAverageMassWithMemP">
-<summary>
- Returns a function to calculate the average mass of a AminoAcid with memoization
-</summary>
-</member>
-<member name="P:BioFSharp.AminoAcids.initMonoisoMassWithMemP">
-<summary>
- Returns a function to calculate the monoisotopic mass of a AminoAcid with memoization
-</summary>
-</member>
-<member name="M:BioFSharp.AminoAcids.averageMass(BioFSharp.AminoAcids.AminoAcid)">
-<summary>
- Returns the average mass of AminoAcid (without H20)
-</summary>
-</member>
-<member name="M:BioFSharp.AminoAcids.monoisoMass(BioFSharp.AminoAcids.AminoAcid)">
-<summary>
- Returns the monoisotopic mass of AminoAcid (without H20)
-</summary>
-</member>
-<member name="M:BioFSharp.AminoAcids.isGap(BioFSharp.AminoAcids.AminoAcid)">
-<summary>
- Returns true if AminoAcid represents a sequence gap
-</summary>
-</member>
-<member name="M:BioFSharp.AminoAcids.isTerminator(BioFSharp.AminoAcids.AminoAcid)">
-<summary>
- Returns true if AminoAcid represents a sequence terminator
-</summary>
-</member>
-<member name="M:BioFSharp.AminoAcids.symbol(BioFSharp.AminoAcids.AminoAcid)">
-<summary>
- Returns the symbol of AminoAcid       
-</summary>
-</member>
-<member name="M:BioFSharp.AminoAcids.name(BioFSharp.AminoAcids.AminoAcid)">
-<summary>
- Returns the name of AminoAcid
-</summary>
-</member>
-<member name="M:BioFSharp.AminoProperties.ofBioArrayRndNorm``1(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.Unit,``0},System.Int32,System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,System.Double},``0[])">
-<summary>
- Returns an array of sliding windows based property averages.
- Each window contains the n elements surrounding the current element
-</summary>
-</member>
-<member name="M:BioFSharp.AminoProperties.ofWindowedBioArray``1(System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,System.Double},``0[])">
-<summary>
- Returns an array of sliding windows based property averages.
- Each window contains the n elements surrounding the current element
-</summary>
-</member>
-<member name="M:BioFSharp.BioArray.initAverageMassWith``1(System.Double)">
-<summary>
- Returns a function to calculate the average mass of the given sequence and initial value (e.g. H2O) !memoization
-</summary>
-</member>
-<member name="M:BioFSharp.BioArray.initMonoisoMassWith``1(System.Double)">
-<summary>
- Returns a function to calculate the monoisotopic mass of the given sequence and initial value (e.g. H2O) !memoization
-</summary>
-</member>
-<member name="M:BioFSharp.BioArray.initAverageMass``1">
-<summary>
- Returns a function to calculate the average mass of the given sequence !memoization
-</summary>
-</member>
-<member name="M:BioFSharp.BioArray.initMonoisoMass``1">
-<summary>
- Returns a function to calculate the monoisotopic mass of the given sequence !memoization
-</summary>
-</member>
-<member name="M:BioFSharp.BioArray.toAverageMassWith``1(System.Double,``0[])">
-<summary>
- Returns average mass of the given sequence and initial value (e.g. H2O) 
-</summary>
-</member>
-<member name="M:BioFSharp.BioArray.toMonoisotopicMassWith``1(System.Double,``0[])">
-<summary>
- Returns monoisotopic mass of the given sequence and initial value (e.g. H2O) 
-</summary>
-</member>
-<member name="M:BioFSharp.BioArray.toAverageMass``1(``0[])">
-<summary>
- Returns average mass of the given sequence
-</summary>
-</member>
-<member name="M:BioFSharp.BioArray.toMonoisotopicMass``1(``0[])">
-<summary>
- Returns monoisotopic mass of the given sequence
-</summary>
-</member>
-<member name="M:BioFSharp.BioArray.toString``1(``0[])">
-<summary>
- Returns string of one-letter-code
-</summary>
-</member>
-<member name="M:BioFSharp.BioArray.isEqual``1(``0[],``0[])">
-<summary>
- Compares the elemens of two biosequence
-</summary>
-</member>
-<member name="M:BioFSharp.BioArray.translate(System.Int32,BioFSharp.Nucleotides.Nucleotide[])">
-<summary>
- translates nucleotide sequence to aminoacid sequence    
-</summary>
-</member>
-<member name="M:BioFSharp.BioArray.transcribeTemplateStrand(BioFSharp.Nucleotides.Nucleotide[])">
-<summary>
- Transcribe a given DNA template strand (3&apos;-----5&apos;)
-</summary>
-</member>
-<member name="M:BioFSharp.BioArray.transcribeCodeingStrand(BioFSharp.Nucleotides.Nucleotide[])">
-<summary>
- Transcribe a given DNA coding strand (5&apos;-----3&apos;)
-</summary>
-</member>
-<member name="M:BioFSharp.BioArray.mapInTriplets``2(Microsoft.FSharp.Core.FSharpFunc{System.Tuple{``0,``0,``0},``1},``0[])">
-<summary>
- Builts a new collection whose elements are the result of applying
- the given function to each triplet of the collection. 
-</summary>
-</member>
-<member name="M:BioFSharp.BioArray.ofNucleotideString``1(``0)">
-<summary>
- Generates nucleotide sequence of one-letter-code raw string
-</summary>
-</member>
-<member name="M:BioFSharp.BioArray.ofNucleotideStringWithOptionConverter``1(Microsoft.FSharp.Core.FSharpFunc{System.Char,Microsoft.FSharp.Core.FSharpOption{BioFSharp.Nucleotides.Nucleotide}},``0)">
-<summary>
- Generates nucleotide sequence of one-letter-code string using given OptionConverter
-</summary>
-</member>
-<member name="M:BioFSharp.BioArray.ofAminoAcidString``1(``0)">
-<summary>
- Generates amino acid sequence of one-letter-code raw string
-</summary>
-</member>
-<member name="M:BioFSharp.BioArray.ofAminoAcidStringWithOptionConverter``1(Microsoft.FSharp.Core.FSharpFunc{System.Char,Microsoft.FSharp.Core.FSharpOption{BioFSharp.AminoAcids.AminoAcid}},``0)">
-<summary>
- Generates amino acid sequence of one-letter-code string using given OptionConverter
+<member name="P:BioFSharp.PhysicalConstants.AU">
+ <summary>
+ Astronomical Unit (radius of the Earth's orbit). Units cm
+ </summary>
+</member>
+<member name="P:BioFSharp.PhysicalConstants.SOLARFLUX">
+ <summary>
+ Solar Flux. Units erg/cm^2-sec
+ </summary>
+</member>
+<member name="P:BioFSharp.PhysicalConstants.SOLARLUM">
+ <summary>
+ Solar Luminosity. Units erg/sec
+ </summary>
+</member>
+<member name="P:BioFSharp.PhysicalConstants.SOLARRADIUS">
+ <summary>
+ Solar Radius. Units cm
+ </summary>
+</member>
+<member name="P:BioFSharp.PhysicalConstants.SOLARMASS">
+ <summary>
+ Solar Mass. Units g 
+ </summary>
+</member>
+<member name="P:BioFSharp.PhysicalConstants.GRAVACC">
+ <summary>
+ Gravitational Acceleration at the Earths surface. Units cm/sec^2 
+ </summary>
+</member>
+<member name="P:BioFSharp.PhysicalConstants.GASCONSTANT">
+ <summary>
+ Gas Constant. Units erg/deg-mol 
+ </summary>
+</member>
+<member name="P:BioFSharp.PhysicalConstants.AVOGADRO">
+ <summary>
+ Avogadro Number. Units  1/mol 
+ </summary>
+</member>
+<member name="P:BioFSharp.PhysicalConstants.STEFANBOLTZ">
+ <summary>
+ Stefan-Boltzman Constant. Units erg/cm^2-sec-deg^4 
+ </summary>
+</member>
+<member name="P:BioFSharp.PhysicalConstants.LIGHTSPEED">
+ <summary>
+ Speed of Light in a Vacuum. Units cm/sec 
+ </summary>
+</member>
+<member name="P:BioFSharp.PhysicalConstants.PLANCK">
+ <summary>
+ Planck constant. Units erg-sec 
+ </summary>
+</member>
+<member name="P:BioFSharp.PhysicalConstants.GRAV">
+ <summary>
+ Gravitational Constant. Units dyne-cm^2/g^2
+ </summary>
+</member>
+<member name="P:BioFSharp.PhysicalConstants.PMASS">
+ <summary>
+ Proton Mass. Units g 
+ </summary>
+</member>
+<member name="P:BioFSharp.PhysicalConstants.EMASS">
+ <summary>
+ Electron Mass. Units g 
+ </summary>
+</member>
+<member name="P:BioFSharp.PhysicalConstants.ECHARGE">
+ <summary>
+ Elementary Charge. Units statcoulomb 
+ </summary>
+</member>
+<member name="P:BioFSharp.PhysicalConstants.BOLTZMAN">
+ <summary>
+ Boltzman Constant. Units erg/deg(K) 
+ </summary>
+</member>
+<member name="T:BioFSharp.PhysicalConstants">
+<summary>
+Collection of physical constants
 </summary>
 </member>
 <member name="T:BioFSharp.BioID.MouseId.MgiId">
@@ -847,313 +274,24 @@ UniProtKB entry isoform sequence: P00750-2
  Returns DisplayId of FastA header. None if none present.
 </summary>
 </member>
-<member name="M:BioFSharp.BioItem.initAverageMassWithMemP``1">
+<member name="T:BioFSharp.Isotopes.Isotope">
 <summary>
- Returns a function to calculate the average mass of a bio item with memoization
+Representation of Isotopes
 </summary>
 </member>
-<member name="M:BioFSharp.BioItem.initMonoisoMassWithMem``1">
+<member name="M:BioFSharp.Isotopes.create(System.String,System.Int32,System.Int32,System.Double,System.Double,System.Double)">
 <summary>
- Returns a function to calculate the monoisotopic mass of a bio item with memoization !Attention! Not thread safe!
+Creates an isotope out of the given information about the isotope
 </summary>
 </member>
-<member name="M:BioFSharp.BioItem.initMonoisoMassWithMemP``1">
+<member name="T:BioFSharp.Isotopes.Table">
 <summary>
- Returns a function to calculate the monoisotopic mass of a bio item with memoization
+Contains the stable isotopes of biologically relevant chemical elements
 </summary>
 </member>
-<member name="M:BioFSharp.BioItem.averageMass``1">
+<member name="T:BioFSharp.Isotopes">
 <summary>
- Returns the average mass of a bio item  (without H20)
-</summary>
-</member>
-<member name="M:BioFSharp.BioItem.monoisoMass``1">
-<summary>
- Returns the monoisotopic mass of a bio item (without H20)
-</summary>
-</member>
-<member name="M:BioFSharp.BioItem.isGap``1(``0)">
-<summary>
- Returns true if the bio item represents a sequence gap
-</summary>
-</member>
-<member name="M:BioFSharp.BioItem.isTerminator``1(``0)">
-<summary>
- Returns true if the bio item represents a sequence terminator
-</summary>
-</member>
-<member name="M:BioFSharp.BioItem.formula``1(``0)">
-<summary>
- Returns then formula of the bio item
-</summary>
-</member>
-<member name="M:BioFSharp.BioItem.symbol``1(``0)">
-<summary>
- Returns then symbol of the bio item
-</summary>
-</member>
-<member name="M:BioFSharp.BioItem.name``1(``0)">
-<summary>
- Returns then display name of the bio item
-</summary>
-</member>
-<member name="T:BioFSharp.BioItem">
-<summary>
- Basic functions on IBioItems interface
-</summary>
-</member>
-<member name="T:BioFSharp.BioItemsConverter.OptionConverter.AminoAcidOptionConverter">
-<summary>
- Type abbreviation for converting char to optional AminoAcid
-</summary>
-</member>
-<member name="T:BioFSharp.BioItemsConverter.OptionConverter.NucleotideOptionConverter">
-<summary>
- Type abbreviation for converting char to optional Nucleotide
-</summary>
-</member>
-<member name="M:BioFSharp.BioItemsConverter.OptionConverter.charToOptionStandardNucleotid(System.Char)">
-<summary>
- Converters char to AminoAcid option by ignoring bad character
-</summary>
-</member>
-<member name="M:BioFSharp.BioItemsConverter.OptionConverter.charToOptionNucleotid(System.Char)">
-<summary>
- Converters char to AminoAcid option by ignoring bad character
-</summary>
-</member>
-<member name="M:BioFSharp.BioItemsConverter.OptionConverter.charToOptionStandardAminoAcid(System.Char)">
-<summary>
- Converters char to AminoAcid option by ignoring bad character and ambiguis code
-</summary>
-</member>
-<member name="M:BioFSharp.BioItemsConverter.OptionConverter.charToOptionAminoAcid(System.Char)">
-<summary>
- Converters char to AminoAcid option by ignoring bad character
-</summary>
-</member>
-<member name="M:BioFSharp.BioList.initAverageMassWith``1(System.Double)">
-<summary>
- Returns a function to calculate the average mass of the given sequence and initial value (e.g. H2O) !memoization
-</summary>
-</member>
-<member name="M:BioFSharp.BioList.initMonoisoMassWith``1(System.Double)">
-<summary>
- Returns a function to calculate the monoisotopic mass of the given sequence and initial value (e.g. H2O) !memoization
-</summary>
-</member>
-<member name="M:BioFSharp.BioList.initAverageMass``1">
-<summary>
- Returns a function to calculate the average mass of the given sequence !memoization
-</summary>
-</member>
-<member name="M:BioFSharp.BioList.initMonoisoMass``1">
-<summary>
- Returns a function to calculate the monoisotopic mass of the given sequence !memoization
-</summary>
-</member>
-<member name="M:BioFSharp.BioList.toAverageMassWith``1(System.Double,Microsoft.FSharp.Collections.FSharpList{``0})">
-<summary>
- Returns average mass of the given sequence and initial value (e.g. H2O) 
-</summary>
-</member>
-<member name="M:BioFSharp.BioList.toMonoisotopicMassWith``1(System.Double,Microsoft.FSharp.Collections.FSharpList{``0})">
-<summary>
- Returns monoisotopic mass of the given sequence and initial value (e.g. H2O) 
-</summary>
-</member>
-<member name="M:BioFSharp.BioList.toAverageMass``1(Microsoft.FSharp.Collections.FSharpList{``0})">
-<summary>
- Returns average mass of the given sequence
-</summary>
-</member>
-<member name="M:BioFSharp.BioList.toMonoisotopicMass``1(Microsoft.FSharp.Collections.FSharpList{``0})">
-<summary>
- Returns monoisotopic mass of the given sequence
-</summary>
-</member>
-<member name="M:BioFSharp.BioList.toFormula``1(Microsoft.FSharp.Collections.FSharpList{``0})">
-<summary>
- Returns formula
-</summary>
-</member>
-<member name="M:BioFSharp.BioList.toString``1(Microsoft.FSharp.Collections.FSharpList{``0})">
-<summary>
- Returns string of one-letter-code
-</summary>
-</member>
-<member name="M:BioFSharp.BioList.isEqual``1(Microsoft.FSharp.Collections.FSharpList{``0},Microsoft.FSharp.Collections.FSharpList{``0})">
-<summary>
- Compares the elemens of two sequence
-</summary>
-</member>
-<member name="M:BioFSharp.BioList.translate(System.Int32,Microsoft.FSharp.Collections.FSharpList{BioFSharp.Nucleotides.Nucleotide})">
-<summary>
- translates nucleotide sequence to aminoacid sequence    
-</summary>
-</member>
-<member name="M:BioFSharp.BioList.transcribeTemplateStrand(Microsoft.FSharp.Collections.FSharpList{BioFSharp.Nucleotides.Nucleotide})">
-<summary>
- Transcribe a given DNA template strand (3&apos;-----5&apos;)
-</summary>
-</member>
-<member name="M:BioFSharp.BioList.transcribeCodeingStrand(Microsoft.FSharp.Collections.FSharpList{BioFSharp.Nucleotides.Nucleotide})">
-<summary>
- Transcribe a given DNA coding strand (5&apos;-----3&apos;)
-</summary>
-</member>
-<member name="M:BioFSharp.BioList.ofNucleotideString``1(``0)">
-<summary>
- Generates nucleotide sequence of one-letter-code raw string
-</summary>
-</member>
-<member name="M:BioFSharp.BioList.ofNucleotideStringWithOptionConverter``1(Microsoft.FSharp.Core.FSharpFunc{System.Char,Microsoft.FSharp.Core.FSharpOption{BioFSharp.Nucleotides.Nucleotide}},``0)">
-<summary>
- Generates nucleotide sequence of one-letter-code string using given OptionConverter
-</summary>
-</member>
-<member name="M:BioFSharp.BioList.ofAminoAcidString``1(``0)">
-<summary>
- Generates amino acid sequence of one-letter-code raw string
-</summary>
-</member>
-<member name="M:BioFSharp.BioList.ofRevModAminoAcidStringWithIsoMod``1(Microsoft.FSharp.Core.FSharpFunc{System.Char,Microsoft.FSharp.Core.FSharpOption{BioFSharp.AminoAcids.AminoAcid}},Microsoft.FSharp.Core.FSharpFunc{``0,BioFSharp.ModificationInfo.Modification},Microsoft.FSharp.Core.FSharpOption{Microsoft.FSharp.Collections.FSharpList{BioFSharp.ModificationInfo.Modification}},Microsoft.FSharp.Collections.FSharpMap{System.String,``0},System.String)">
-<summary>
- Generates amino acid sequence of one-letter-code string containing modified AminoAcids indicated by 2 lowercase digits per modification. 
-</summary>
-</member>
-<member name="M:BioFSharp.BioList.ofRevModAminoAcidString``1(Microsoft.FSharp.Core.FSharpFunc{System.Char,Microsoft.FSharp.Core.FSharpOption{BioFSharp.AminoAcids.AminoAcid}},Microsoft.FSharp.Core.FSharpFunc{``0,BioFSharp.ModificationInfo.Modification},Microsoft.FSharp.Collections.FSharpMap{System.String,``0},System.String)">
-<summary>
- Generates amino acid sequence of one-letter-code string containing modified AminoAcids indicated by 2 lowercase digits per modification. 
-</summary>
-</member>
-<member name="M:BioFSharp.BioList.ofAminoAcidStringWithOptionConverter``1(Microsoft.FSharp.Core.FSharpFunc{System.Char,Microsoft.FSharp.Core.FSharpOption{BioFSharp.AminoAcids.AminoAcid}},``0)">
-<summary>
- Generates amino acid sequence of one-letter-code string using given OptionConverter
-</summary>
-</member>
-<member name="M:BioFSharp.BioSeq.initAverageMassWith``1(System.Double)">
-<summary>
- Returns a function to calculate the average mass of the given sequence and initial value (e.g. H2O) !memoization
-</summary>
-</member>
-<member name="M:BioFSharp.BioSeq.initMonoisoMassWith``1(System.Double)">
-<summary>
- Returns a function to calculate the monoisotopic mass of the given sequence and initial value (e.g. H2O) !memoization
-</summary>
-</member>
-<member name="M:BioFSharp.BioSeq.initAverageMass``1">
-<summary>
- Returns a function to calculate the average mass of the given sequence !memoization
-</summary>
-</member>
-<member name="M:BioFSharp.BioSeq.initMonoisoMass``1">
-<summary>
- Returns a function to calculate the monoisotopic mass of the given sequence !memoization
-</summary>
-</member>
-<member name="M:BioFSharp.BioSeq.toAverageMassWith``1(System.Double,System.Collections.Generic.IEnumerable{``0})">
-<summary>
- Returns average mass of the given sequence and initial value (e.g. H2O) 
-</summary>
-</member>
-<member name="M:BioFSharp.BioSeq.toMonoisotopicMassWith``1(System.Double,System.Collections.Generic.IEnumerable{``0})">
-<summary>
- Returns monoisotopic mass of the given sequence and initial value (e.g. H2O) 
-</summary>
-</member>
-<member name="M:BioFSharp.BioSeq.toAverageMass``1(System.Collections.Generic.IEnumerable{``0})">
-<summary>
- Returns average mass of the given sequence
-</summary>
-</member>
-<member name="M:BioFSharp.BioSeq.toMonoisotopicMass``1(System.Collections.Generic.IEnumerable{``0})">
-<summary>
- Returns monoisotopic mass of the given sequence
-</summary>
-</member>
-<member name="M:BioFSharp.BioSeq.toFormula``1(System.Collections.Generic.IEnumerable{``0})">
-<summary>
- Returns formula
-</summary>
-</member>
-<member name="M:BioFSharp.BioSeq.toString``1(System.Collections.Generic.IEnumerable{``0})">
-<summary>
- Returns string of one-letter-code
-</summary>
-</member>
-<member name="M:BioFSharp.BioSeq.isEqual``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})">
-<summary>
- Compares the elemens of two sequence
-</summary>
-</member>
-<member name="M:BioFSharp.BioSeq.translate(System.Int32,System.Collections.Generic.IEnumerable{BioFSharp.Nucleotides.Nucleotide})">
-<summary>
- translates nucleotide sequence to aminoacid sequence    
-</summary>
-</member>
-<member name="M:BioFSharp.BioSeq.transcribeTemplateStrand(System.Collections.Generic.IEnumerable{BioFSharp.Nucleotides.Nucleotide})">
-<summary>
- Transcribe a given DNA template strand (3&apos;-----5&apos;)
-</summary>
-</member>
-<member name="M:BioFSharp.BioSeq.transcribeCodeingStrand(System.Collections.Generic.IEnumerable{BioFSharp.Nucleotides.Nucleotide})">
-<summary>
- Transcribe a given DNA coding strand (5&apos;-----3&apos;)
-</summary>
-</member>
-<member name="M:BioFSharp.BioSeq.mapInTriplets``2(Microsoft.FSharp.Core.FSharpFunc{System.Tuple{``0,``0,``0},``1},System.Collections.Generic.IEnumerable{``0})">
-<summary>
- Builts a new collection whose elements are the result of applying
- the given function to each triplet of the collection. 
-</summary>
-</member>
-<member name="M:BioFSharp.BioSeq.|Triplet|_|``1(System.Collections.Generic.IEnumerator{``0})">
-<summary>
-Active pattern which returns a base triplet
-</summary>
-</member>
-<member name="M:BioFSharp.BioSeq.ofNucleotideString``1(``0)">
-<summary>
- Generates nucleotide sequence of one-letter-code raw string
-</summary>
-</member>
-<member name="M:BioFSharp.BioSeq.ofNucleotideStringWithOptionConverter``1(Microsoft.FSharp.Core.FSharpFunc{System.Char,Microsoft.FSharp.Core.FSharpOption{BioFSharp.Nucleotides.Nucleotide}},``0)">
-<summary>
- Generates nucleotide sequence of one-letter-code string using given OptionConverter
-</summary>
-</member>
-<member name="M:BioFSharp.BioSeq.ofAminoAcidString``1(``0)">
-<summary>
- Generates amino acid sequence of one-letter-code raw string
-</summary>
-</member>
-<member name="M:BioFSharp.BioSeq.ofAminoAcidStringWithOptionConverter``1(Microsoft.FSharp.Core.FSharpFunc{System.Char,Microsoft.FSharp.Core.FSharpOption{BioFSharp.AminoAcids.AminoAcid}},``0)">
-<summary>
- Generates amino acid sequence of one-letter-code string using given OptionConverter
-</summary>
-</member>
-<member name="M:BioFSharp.Digestion.BioArray.concernMissCleavages(System.Int32,System.Int32,BioFSharp.Digestion.DigestedPeptide[])">
-<summary>
- Takes Array of DigestedPeptides and and returns Array of DigestedPeptides including those resulting of one or more Misscleavage events
-</summary>
-</member>
-<member name="M:BioFSharp.Digestion.BioArray.digest(BioFSharp.Digestion.Protease,System.Int32,BioFSharp.AminoAcids.AminoAcid[])">
-<summary>
- Takes Proteinsequence as input and returns Array of resulting DigestedPeptides
-</summary>
-</member>
-<member name="M:BioFSharp.Digestion.BioArray.motivy``1(System.Int32,System.Int32,``0[])">
-<summary>
- Returns current value,array tuple (current, [|prefix; current; suffix|])
-</summary>
-</member>
-<member name="M:BioFSharp.Digestion.BioSeq.digest(BioFSharp.Digestion.Protease,System.Collections.Generic.IEnumerable{BioFSharp.AminoAcids.AminoAcid})">
-
-</member>
-<member name="M:BioFSharp.Digestion.BioSeq.motivy``1(System.Int32,System.Int32,System.Collections.Generic.IEnumerable{``0})">
-<summary>
- Returns current value,array tuple (current, [|prefix; current; suffix)
+Contains functionality for working with and creating isotopes and list of biologically relevant isotopes
 </summary>
 </member>
 <member name="T:BioFSharp.Elements.Element">
@@ -1221,6 +359,86 @@ Active pattern which returns a base triplet
  Returns element object according to element symbol string
 </summary>
 </member>
+<member name="P:BioFSharp.Elements.Table.Se">
+<summary>
+Selenium  -Attention! Se is Multi-
+</summary>
+</member>
+<member name="P:BioFSharp.Elements.Table.Cu">
+<summary>
+Copper
+</summary>
+</member>
+<member name="P:BioFSharp.Elements.Table.K">
+<summary>
+Potassium
+</summary>
+</member>
+<member name="P:BioFSharp.Elements.Table.S">
+<summary>
+Sulfur
+</summary>
+</member>
+<member name="P:BioFSharp.Elements.Table.P">
+<summary>
+Phosphorus
+</summary>
+</member>
+<member name="P:BioFSharp.Elements.Table.Mg">
+<summary>
+Magnesium
+</summary>
+</member>
+<member name="P:BioFSharp.Elements.Table.Na">
+<summary>
+Sodium
+</summary>
+</member>
+<member name="P:BioFSharp.Elements.Table.O">
+<summary>
+Oxygen
+</summary>
+</member>
+<member name="P:BioFSharp.Elements.Table.N">
+<summary>
+Nitrogen
+</summary>
+</member>
+<member name="P:BioFSharp.Elements.Table.C">
+<summary>
+Carbon
+</summary>
+</member>
+<member name="P:BioFSharp.Elements.Table.H">
+<summary>
+Hydrogen
+</summary>
+</member>
+<member name="P:BioFSharp.Elements.Table.Heavy.N15full">
+<summary>
+Monoisotopic representation of pure N15
+</summary>
+</member>
+<member name="P:BioFSharp.Elements.Table.Heavy.N15">
+<summary>
+Diisotopic representation of nitrogen with abundancy of N14 and N15 swapped
+</summary>
+</member>
+<member name="T:BioFSharp.Elements.Table.Heavy">
+<summary>
+Contains elements with higher proportions of their heavy isotopes
+</summary>
+</member>
+<member name="T:BioFSharp.Elements.Table">
+<summary>
+Contains the biologically relevant, chemical elements represented as a mixture of their stable isotopes
+</summary>
+</member>
+<member name="T:BioFSharp.Elements">
+<summary>
+Contains chemical elements represented as a mixture of their stable isotopes and functionality for building them
+</summary>
+</member>
 <member name="T:BioFSharp.Formula.Formula">
 <summary>
  Type abreviation for Map&lt;Elements.Element,float&gt;
@@ -1248,7 +466,6 @@ Active pattern which returns a base triplet
 </member>
 <member name="M:BioFSharp.Formula.averageMass(Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double})">
 <summary>
- substract two formula
  Returns average mass of sum formula
 </summary>
 </member>
@@ -1309,9 +526,144 @@ Active pattern which returns a base triplet
  A : Adenine
 </summary>
 </member>
-<member name="M:BioFSharp.IsotopicDistribution.ofFormula(System.Int32,Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double})">
+<member name="P:BioFSharp.Formula.Table.Asx">
 <summary>
- Generates the distribution of the isotopic abundancy
+Ambiguity: Asparagine or Asparagic Acid
+</summary>
+</member>
+<member name="P:BioFSharp.Formula.Table.Glx">
+<summary>
+Ambiguity: Glutamine or Glutamic Acid
+</summary>
+</member>
+<member name="P:BioFSharp.Formula.Table.Xle">
+<summary>
+Ambiguity: Leucine or Isoleucine
+</summary>
+</member>
+<member name="P:BioFSharp.Formula.Table.Xaa">
+<summary>
+Ambiguity: Unknown amino acid                                        
+</summary>
+</member>
+<member name="P:BioFSharp.Formula.Table.Tyr">
+<summary>
+Tyrosine
+</summary>
+</member>
+<member name="P:BioFSharp.Formula.Table.Trp">
+<summary>
+Tryptophane
+</summary>
+</member>
+<member name="P:BioFSharp.Formula.Table.Val">
+<summary>
+Valine
+</summary>
+</member>
+<member name="P:BioFSharp.Formula.Table.Sel">
+<summary>
+Selenocysteine
+</summary>
+</member>
+<member name="P:BioFSharp.Formula.Table.Thr">
+<summary>
+Threonine
+</summary>
+</member>
+<member name="P:BioFSharp.Formula.Table.Ser">
+<summary>
+Serine
+</summary>
+</member>
+<member name="P:BioFSharp.Formula.Table.Arg">
+<summary>
+Arginine
+</summary>
+</member>
+<member name="P:BioFSharp.Formula.Table.Gln">
+<summary>
+GLutamine
+</summary>
+</member>
+<member name="P:BioFSharp.Formula.Table.Pro">
+<summary>
+Proline
+</summary>
+</member>
+<member name="P:BioFSharp.Formula.Table.Pyl">
+<summary>
+Pyrrolysine
+</summary>
+</member>
+<member name="P:BioFSharp.Formula.Table.Asn">
+<summary>
+Asparagine
+</summary>
+</member>
+<member name="P:BioFSharp.Formula.Table.Met">
+<summary>
+Methionine
+</summary>
+</member>
+<member name="P:BioFSharp.Formula.Table.Leu">
+<summary>
+Leucine
+</summary>
+</member>
+<member name="P:BioFSharp.Formula.Table.Lys">
+<summary>
+Lysine
+</summary>
+</member>
+<member name="P:BioFSharp.Formula.Table.Ile">
+<summary>
+Isoleucine
+</summary>
+</member>
+<member name="P:BioFSharp.Formula.Table.His">
+<summary>
+Histidine
+</summary>
+</member>
+<member name="P:BioFSharp.Formula.Table.Gly">
+<summary>
+Glycine
+</summary>
+</member>
+<member name="P:BioFSharp.Formula.Table.Phe">
+<summary>
+Phenylalanine
+</summary>
+</member>
+<member name="P:BioFSharp.Formula.Table.Glu">
+<summary>
+Glutamic Acid
+</summary>
+</member>
+<member name="P:BioFSharp.Formula.Table.Asp">
+<summary>
+Asparagic Acid
+</summary>
+</member>
+<member name="P:BioFSharp.Formula.Table.Cys">
+<summary>
+Cysteine
+</summary>
+</member>
+<member name="P:BioFSharp.Formula.Table.Ala">
+<summary>
+Alanine
+</summary>
+</member>
+<member name="T:BioFSharp.Formula.Table">
+<summary>
+Contains formulas for amino acids, nucleotides and biologically relevant anorganic molecules
+</summary>
+</member>
+<member name="T:BioFSharp.Formula">
+<summary>
+Contains functionality for working with molecules as a formula of their elements and formulas of biologically relevant molecules
 </summary>
 </member>
 <member name="M:BioFSharp.Mass.rangePpm(System.Double,System.Double)">
@@ -1357,6 +709,71 @@ Active pattern which returns a base triplet
  Proton Mass. Units u 
  </summary>
 </member>
+<member name="M:BioFSharp.BioItem.initAverageMassWithMemP``1">
+<summary>
+ Returns a function to calculate the average mass of a bio item with memoization
+</summary>
+</member>
+<member name="M:BioFSharp.BioItem.initMonoisoMassWithMem``1">
+<summary>
+ Returns a function to calculate the monoisotopic mass of a bio item with memoization !Attention! Not thread safe!
+</summary>
+</member>
+<member name="M:BioFSharp.BioItem.initMonoisoMassWithMemP``1">
+<summary>
+ Returns a function to calculate the monoisotopic mass of a bio item with memoization
+</summary>
+</member>
+<member name="M:BioFSharp.BioItem.averageMass``1">
+<summary>
+ Returns the average mass of a bio item  (without H20)
+</summary>
+</member>
+<member name="M:BioFSharp.BioItem.monoisoMass``1">
+<summary>
+ Returns the monoisotopic mass of a bio item (without H20)
+</summary>
+</member>
+<member name="M:BioFSharp.BioItem.isGap``1(``0)">
+<summary>
+ Returns true if the bio item represents a sequence gap
+</summary>
+</member>
+<member name="M:BioFSharp.BioItem.isTerminator``1(``0)">
+<summary>
+ Returns true if the bio item represents a sequence terminator
+</summary>
+</member>
+<member name="M:BioFSharp.BioItem.formula``1(``0)">
+<summary>
+ Returns then formula of the bio item
+</summary>
+</member>
+<member name="M:BioFSharp.BioItem.symbol``1(``0)">
+<summary>
+ Returns then symbol of the bio item
+</summary>
+</member>
+<member name="M:BioFSharp.BioItem.name``1(``0)">
+<summary>
+ Returns then display name of the bio item
+</summary>
+</member>
+<member name="T:BioFSharp.BioItem">
+<summary>
+ Basic functions on IBioItems interface
+</summary>
+</member>
+<member name="M:BioFSharp.IsotopicDistribution.ofFormula(System.Int32,Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double})">
+<summary>
+ Generates the distribution of the isotopic abundancy
+</summary>
+</member>
+<member name="T:BioFSharp.IsotopicDistribution">
+<summary>
+Contains functionality for working with isotopic abundancies of molecules
+</summary>
+</member>
 <member name="M:BioFSharp.ModificationInfo.isGap(BioFSharp.ModificationInfo.Modification)">
 <summary>
  Returns true if the modification represents a sequence gap
@@ -1387,6 +804,541 @@ Active pattern which returns a base triplet
  Returns modification name as string
 </summary>
 </member>
+<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.isTerminator">
+<summary>
+Returns true, if AminoAcidSymbol is Terminator, otherwise returns false
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.isGap">
+<summary>
+Returns true, if AminoAcidSymbol is Gap, otherwise returns false
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Xle">
+<summary>
+ J  *Leucine/Isoleucine
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Xaa">
+<summary>
+ X  *Unspecified
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Val">
+<summary>
+ V  *Valine
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Tyr">
+<summary>
+ Y  *Tyrosine
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Trp">
+<summary>
+ W  *Tryptophan
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Thr">
+<summary>
+ T  *Threonine
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Ter">
+<summary>
+ *  *Termination
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Symbol">
+<summary>
+Returns one letter code of AminoAcidSymbol as char
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Ser">
+<summary>
+ S  *Serine
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Sel">
+<summary>
+ U  *Selenocysteine
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Pyl">
+<summary>
+ O  *Pyrrolysine   
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Pro">
+<summary>
+ P  *Proline
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Phe">
+<summary>
+ F  *Glutamic Acid
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Name">
+<summary>
+ Returns the name of AminoAcidSymbol as string
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Met">
+<summary>
+ M  *Methionine
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Lys">
+<summary>
+ K  *Lysine
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Leu">
+<summary>
+ L  *Leucine
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Ile">
+<summary>
+ I  *Isoleucine
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.His">
+<summary>
+ H  *Histidine
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Gly">
+<summary>
+ G  *Glycine
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Glx">
+<summary>
+ Z  *Glutamine/glutamic acid
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Glu">
+<summary>
+ E  *Glutamic Acid
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Gln">
+<summary>
+ Q  *Glutamine
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Gap">
+<summary>
+ -  *Gap 
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Cys">
+<summary>
+ C  *Cysteine
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Asx">
+<summary>
+ B  *Asparagine/aspartic acid
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Asp">
+<summary>
+ D  *Aspartic Acid
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Asn">
+<summary>
+ N  *Asparagine
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Arg">
+<summary>
+ R  *Arginine
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Ala">
+<summary>
+ A  *Alanin
+</summary>
+</member>
+<member name="M:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.ToString">
+<summary>
+Returns one letter code of AminoAcidSymbol as string
+</summary>
+</member>
+<member name="M:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.GetHashCode">
+<summary>
+Returns integer hashcode of AminoAcidSymbol
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcidSymbols.AminoAcidSymbol">
+<summary>
+ Symbols of all amino acids (including Gap + Term) 
+</summary>
+</member>
+<member name="M:BioFSharp.AminoAcidSymbols.isNegCharged(BioFSharp.AminoAcidSymbols.AminoAcidSymbol)">
+<summary>
+ Returns true, if the AminoAcidSymbol has an acidic side chain
+</summary>
+</member>
+<member name="M:BioFSharp.AminoAcidSymbols.isPosCharged(BioFSharp.AminoAcidSymbols.AminoAcidSymbol)">
+<summary>
+ Returns true, if the AminoAcidSymbol has a basic side chain
+</summary>
+</member>
+<member name="M:BioFSharp.AminoAcidSymbols.isCharged(BioFSharp.AminoAcidSymbols.AminoAcidSymbol)">
+<summary>
+ Returns true, if the AminoAcidSymbol has a basic or acidic side chain
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcidSymbols.initAverageMassWithMemP">
+<summary>
+ Returns a function to calculate the average mass of a bio item with memoization
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcidSymbols.initMonoisoMassWithMemP">
+<summary>
+ Returns a function to calculate the monoisotopic mass of a bio item with memoization
+</summary>
+</member>
+<member name="M:BioFSharp.AminoAcidSymbols.averageMass(BioFSharp.AminoAcidSymbols.AminoAcidSymbol)">
+<summary>
+ Returns the average mass of AminoAcidSymbol (without H20)
+</summary>
+</member>
+<member name="M:BioFSharp.AminoAcidSymbols.monoisoMass(BioFSharp.AminoAcidSymbols.AminoAcidSymbol)">
+<summary>
+ Returns the monoisotopic mass of AminoAcidSymbol (without H20)
+</summary>
+</member>
+<member name="M:BioFSharp.AminoAcidSymbols.isGap(BioFSharp.AminoAcidSymbols.AminoAcidSymbol)">
+<summary>
+ Returns true if AminoAcidSymbol represents a sequence gap
+</summary>
+</member>
+<member name="M:BioFSharp.AminoAcidSymbols.isTerminator(BioFSharp.AminoAcidSymbols.AminoAcidSymbol)">
+<summary>
+ Returns true if AminoAcidSymbol represents a sequence terminator
+</summary>
+</member>
+<member name="M:BioFSharp.AminoAcidSymbols.symbol(BioFSharp.AminoAcidSymbols.AminoAcidSymbol)">
+<summary>
+ Returns the symbol of AminoAcidSymbol       
+</summary>
+</member>
+<member name="M:BioFSharp.AminoAcidSymbols.formula(BioFSharp.AminoAcidSymbols.AminoAcidSymbol)">
+<summary>
+Returns AminoAcidSymbol formulas minus H20            
+</summary>
+</member>
+<member name="M:BioFSharp.AminoAcidSymbols.name(BioFSharp.AminoAcidSymbols.AminoAcidSymbol)">
+<summary>
+ Returns the name of AminoAcidSymbol
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcidSymbols.AminoSymbolSetNegCharged">
+<summary>
+Set of all AminoAcidSymbols with acidic sidechain
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcidSymbols.AminoSymbolSetPosCharged">
+<summary>
+Set of all AminoAcidSymbols with basic sidechain
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcidSymbols.AminoSymbolSetGapTer">
+<summary>
+Set containing the Gap and the Terminator AminoAcidSymbols
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcidSymbols.AminoSymbolSetStandard">
+<summary>
+Set of the 20 standard amino acids
+</summary>
+</member>
+<member name="M:BioFSharp.AminoAcidSymbols.aminoAcidSymbol``1(``0)">
+<summary>
+ Maps input to AminoAcidSymbol if possible
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcidSymbols">
+<summary>
+Contains the AminoAcidSymbol type and its according functions. The AminoAcidSymbol type is a lightweight, efficient presentation of amino acids
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.ParsedAminoAcidChar">
+<summary>
+Lexer tags for parsing AminoAcids
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Ter">
+<summary>
+ *  *Termination
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Gap">
+<summary>
+ -  *Gap 
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Asx">
+<summary>
+ B  *Asparagine/aspartic acid
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Glx">
+<summary>
+ Z  *Glutamine/glutamic acid
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Xle">
+<summary>
+ J  *Leucine/Isoleucine
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Xaa">
+<summary>
+ X  *Unspecified
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Tyr">
+<summary>
+ Y  *Tyrosine
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Trp">
+<summary>
+ W  *Tryptophan
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Val">
+<summary>
+ V  *Valine
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Sel">
+<summary>
+ U  *Selenocysteine
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Thr">
+<summary>
+ T  *Threonine
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Ser">
+<summary>
+ S  *Serine
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Arg">
+<summary>
+ R  *Arginine
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Gln">
+<summary>
+ Q  *Glutamine
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Pro">
+<summary>
+ P  *Proline
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Pyl">
+<summary>
+ O  *Pyrrolysine
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Asn">
+<summary>
+ N  *Asparagine
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Met">
+<summary>
+ M  *Methionine
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Leu">
+<summary>
+ L  *Leucine
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Lys">
+<summary>
+ K  *Lysine
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Ile">
+<summary>
+ I  *Isoleucine
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.His">
+<summary>
+ H  *Histidine
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Gly">
+<summary>
+ G  *Glycine
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Phe">
+<summary>
+ F  *Glutamic Acid
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Glu">
+<summary>
+ E  *Glutamic Acid
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Asp">
+<summary>
+ D  *Aspartic Acid
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Cys">
+<summary>
+ C  *Cysteine
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid.Ala">
+<summary>
+ A  *Alanin
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcids.AminoAcid.isTerminator">
+<summary>
+Returns true if the AminoAcid is a Terminator, otherwise returns false
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcids.AminoAcid.isGap">
+<summary>
+Returns true if the AminoAcid is a Gap, otherwise returns false
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcids.AminoAcid.Symbol">
+<summary>
+Returns the one letter code of the AminoAcid as a char
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcids.AminoAcid.Name">
+<summary>
+Returns the name of the AminoAcid and its modifications as a string
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcids.AminoAcid.Formula">
+<summary>
+Returns the full formula of the AminoAcid and its modifications
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids.AminoAcid">
+<summary>
+ Amino acid Codes
+</summary>
+</member>
+<member name="M:BioFSharp.AminoAcids.isNegCharged(BioFSharp.AminoAcids.AminoAcid)">
+<summary>
+ Returns true, if the AminoAcid has an acidic side chain
+</summary>
+</member>
+<member name="M:BioFSharp.AminoAcids.isPosCharged(BioFSharp.AminoAcids.AminoAcid)">
+<summary>
+ Returns true, if the AminoAcid has a basic side chain
+</summary>
+</member>
+<member name="M:BioFSharp.AminoAcids.isCharged(BioFSharp.AminoAcids.AminoAcid)">
+<summary>
+ Returns true, if the AminoAcid has a basic or acidic side chain
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcids.initAverageMassWithMemP">
+<summary>
+ Returns a function to calculate the average mass of a AminoAcid with memoization
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcids.initMonoisoMassWithMemP">
+<summary>
+ Returns a function to calculate the monoisotopic mass of a AminoAcid with memoization
+</summary>
+</member>
+<member name="M:BioFSharp.AminoAcids.averageMass(BioFSharp.AminoAcids.AminoAcid)">
+<summary>
+ Returns the average mass of AminoAcid (without H20)
+</summary>
+</member>
+<member name="M:BioFSharp.AminoAcids.monoisoMass(BioFSharp.AminoAcids.AminoAcid)">
+<summary>
+ Returns the monoisotopic mass of AminoAcid (without H20)
+</summary>
+</member>
+<member name="M:BioFSharp.AminoAcids.isGap(BioFSharp.AminoAcids.AminoAcid)">
+<summary>
+ Returns true if AminoAcid represents a sequence gap
+</summary>
+</member>
+<member name="M:BioFSharp.AminoAcids.isTerminator(BioFSharp.AminoAcids.AminoAcid)">
+<summary>
+ Returns true if AminoAcid represents a sequence terminator
+</summary>
+</member>
+<member name="M:BioFSharp.AminoAcids.symbol(BioFSharp.AminoAcids.AminoAcid)">
+<summary>
+ Returns the symbol of AminoAcid       
+</summary>
+</member>
+<member name="M:BioFSharp.AminoAcids.name(BioFSharp.AminoAcids.AminoAcid)">
+<summary>
+ Returns the name of AminoAcid
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcids.AminoAcidSetNegCharged">
+<summary>
+Set of all AminoAcids with acidic sidechain
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcids.AminoAcidSetPosCharged">
+<summary>
+Set of all AminoAcids with basic sidechain
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcids.AminoAcidSetGapTer">
+<summary>
+Set containing the Gap and the Terminator AminoAcid
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcids.AminoAcidSetAmbiguity">
+<summary>
+Set of all ambiguous codes
+</summary>
+</member>
+<member name="P:BioFSharp.AminoAcids.AminoAcidSetStandard">
+<summary>
+Set of the 20 standard amino acids
+</summary>
+</member>
+<member name="M:BioFSharp.AminoAcids.charToParsedAminoAcidChar(System.Char)">
+<summary>
+Simple Lexer for parsing AminoAcids from chars. The full parser is located in the BioItemsConverter-module
+</summary>
+</member>
+<member name="T:BioFSharp.AminoAcids">
+<summary>
+Contains the AminoAcid type and its according functions. The AminoAcid type is a complex presentation of amino acids, allowing modifications
+</summary>
+</member>
+<member name="T:BioFSharp.Nucleotides.ParsedNucleotideChar">
+<summary>
+Lexer tags for parsing Nucleotides
+</summary>
+</member>
 <member name="T:BioFSharp.Nucleotides.Nucleotide.N">
 <summary>
  N : A or G or U or C.
@@ -1394,7 +1346,7 @@ Active pattern which returns a base triplet
 </member>
 <member name="T:BioFSharp.Nucleotides.Nucleotide.V">
 <summary>
- V : G or V or A = not T/U
+ V : G or C or A = not T/U
 </summary>
 </member>
 <member name="T:BioFSharp.Nucleotides.Nucleotide.H">
@@ -1526,6 +1478,22 @@ Active pattern which returns a base triplet
  H : A or C or U = not G
  V : G or V or A = not T/U
  N : A or G or U or C.
+Returns true, if the nucleotide is a terminator, otherwise returns false
+</summary>
+</member>
+<member name="P:BioFSharp.Nucleotides.Nucleotide.isGap">
+<summary>
+Returns true, if the nucleotide is a gap, otherwise returns false
+</summary>
+</member>
+<member name="P:BioFSharp.Nucleotides.Nucleotide.Symbol">
+<summary>
+Returns the one letter code of the nucleotide as a char
+</summary>
+</member>
+<member name="P:BioFSharp.Nucleotides.Nucleotide.Name">
+<summary>
+Returns the full name of the nucleotide as a string
 </summary>
 </member>
 <member name="P:BioFSharp.Nucleotides.Nucleotide.Formula">
@@ -1549,7 +1517,7 @@ Active pattern which returns a base triplet
  H : A or C or U = not G
  V : G or V or A = not T/U
  N : A or G or U or C.
- Nucleotide formula
+ Returns the formula of the nucleotide
 </summary>
 </member>
 <member name="T:BioFSharp.Nucleotides.Nucleotide">
@@ -1643,85 +1611,889 @@ Active pattern which returns a base triplet
  Create the complement DNA or RNA strand. For example, the sequence &quot;ATGC&quot; is converted to &quot;TACG&quot;
 </summary>
 </member>
-<member name="P:BioFSharp.PhysicalConstants.AU">
- <summary>
- Astronomical Unit (radius of the Earth's orbit). Units cm
- </summary>
+<member name="M:BioFSharp.Nucleotides.charToParsedNucleotideChar(System.Char)">
+<summary>
+Simple Lexer for parsing Nucleotides from chars. The full parser is located in the BioItemsConverter-module
+</summary>
 </member>
-<member name="P:BioFSharp.PhysicalConstants.SOLARFLUX">
- <summary>
- Solar Flux. Units erg/cm^2-sec
- </summary>
+<member name="T:BioFSharp.Nucleotides">
+<summary>
+Contains the Nucleotide type and its according functions.
+</summary>
 </member>
-<member name="P:BioFSharp.PhysicalConstants.SOLARLUM">
- <summary>
- Solar Luminosity. Units erg/sec
- </summary>
+<member name="T:BioFSharp.BioItemsConverter.OptionConverter.AminoAcidOptionConverter">
+<summary>
+ Type abbreviation for converting char to optional AminoAcid
+</summary>
 </member>
-<member name="P:BioFSharp.PhysicalConstants.SOLARRADIUS">
- <summary>
- Solar Radius. Units cm
- </summary>
+<member name="T:BioFSharp.BioItemsConverter.OptionConverter.NucleotideOptionConverter">
+<summary>
+ Type abbreviation for converting char to optional Nucleotide
+</summary>
 </member>
-<member name="P:BioFSharp.PhysicalConstants.SOLARMASS">
- <summary>
- Solar Mass. Units g 
- </summary>
+<member name="M:BioFSharp.BioItemsConverter.OptionConverter.charToOptionStandardNucleotid(System.Char)">
+<summary>
+ Converters char to AminoAcid option by ignoring bad character
+</summary>
 </member>
-<member name="P:BioFSharp.PhysicalConstants.GRAVACC">
- <summary>
- Gravitational Acceleration at the Earths surface. Units cm/sec^2 
- </summary>
+<member name="M:BioFSharp.BioItemsConverter.OptionConverter.charToOptionNucleotid(System.Char)">
+<summary>
+ Converters char to AminoAcid option by ignoring bad character
+</summary>
 </member>
-<member name="P:BioFSharp.PhysicalConstants.GASCONSTANT">
- <summary>
- Gas Constant. Units erg/deg-mol 
- </summary>
+<member name="M:BioFSharp.BioItemsConverter.OptionConverter.charToOptionStandardAminoAcidWithoutGapTer(System.Char)">
+<summary>
+ Converters char to AminoAcid option by ignoring bad character and ambiguis code
+ Ignores Gap and Ter
+</summary>
 </member>
-<member name="P:BioFSharp.PhysicalConstants.AVOGADRO">
- <summary>
- Avogadro Number. Units  1/mol 
- </summary>
+<member name="M:BioFSharp.BioItemsConverter.OptionConverter.charToOptionStandardAminoAcid(System.Char)">
+<summary>
+ Converters char to AminoAcid option by ignoring bad character and ambiguis code        
+</summary>
 </member>
-<member name="P:BioFSharp.PhysicalConstants.STEFANBOLTZ">
- <summary>
- Stefan-Boltzman Constant. Units erg/cm^2-sec-deg^4 
- </summary>
+<member name="M:BioFSharp.BioItemsConverter.OptionConverter.charToOptionAminoAcidWithoutGapTer(System.Char)">
+<summary>
+ Converters char to AminoAcid option by ignoring bad character
+ Ignores Gap and Ter
+</summary>
 </member>
-<member name="P:BioFSharp.PhysicalConstants.LIGHTSPEED">
- <summary>
- Speed of Light in a Vacuum. Units cm/sec 
- </summary>
+<member name="M:BioFSharp.BioItemsConverter.OptionConverter.charToOptionAminoAcid(System.Char)">
+<summary>
+ Converters char to AminoAcid option by ignoring bad character
+</summary>
 </member>
-<member name="P:BioFSharp.PhysicalConstants.PLANCK">
- <summary>
- Planck constant. Units erg-sec 
- </summary>
+<member name="T:BioFSharp.BioItemsConverter.OptionConverter">
+<summary>
+Contains Functionalities for trying to parse Bioitems
+</summary>
 </member>
-<member name="P:BioFSharp.PhysicalConstants.GRAV">
- <summary>
- Gravitational Constant. Units dyne-cm^2/g^2
- </summary>
+<member name="T:BioFSharp.BioItemsConverter">
+<summary>
+Contains Functionalities for parsing Bioitems
+</summary>
 </member>
-<member name="P:BioFSharp.PhysicalConstants.PMASS">
- <summary>
- Proton Mass. Units g 
- </summary>
+<member name="T:BioFSharp.BioSeq.BioSeq`1">
+<summary>
+Sequence of objects using the IBioItem interface
+</summary>
 </member>
-<member name="P:BioFSharp.PhysicalConstants.EMASS">
- <summary>
- Electron Mass. Units g 
- </summary>
+<member name="M:BioFSharp.BioSeq.toCompositionVector``1(System.Collections.Generic.IEnumerable{``0})">
+<summary>
+Creates an array with information about the abundacies of the distinct BioItems by converting the symbol of the BioItem to an integer and incrementing the given integer. To decrease the size of the resulting array by still having a fast performance, all indices are shifted by 65. Therefore to call the abundancy of a given BioItem, use &quot;Resultcompositionvector.[(BioItem.symbol bioitem) - 65]&quot;
+</summary>
 </member>
-<member name="P:BioFSharp.PhysicalConstants.ECHARGE">
- <summary>
- Elementary Charge. Units statcoulomb 
- </summary>
+<member name="M:BioFSharp.BioSeq.initAverageMassWith``1(System.Double)">
+<summary>
+ Returns a function to calculate the average mass of the given sequence and initial value (e.g. H2O) !memoization
+</summary>
 </member>
-<member name="P:BioFSharp.PhysicalConstants.BOLTZMAN">
- <summary>
- Boltzman Constant. Units erg/deg(K) 
- </summary>
+<member name="M:BioFSharp.BioSeq.initMonoisoMassWith``1(System.Double)">
+<summary>
+ Returns a function to calculate the monoisotopic mass of the given sequence and initial value (e.g. H2O) !memoization
+</summary>
+</member>
+<member name="M:BioFSharp.BioSeq.initAverageMass``1">
+<summary>
+ Returns a function to calculate the average mass of the given sequence !memoization
+</summary>
+</member>
+<member name="M:BioFSharp.BioSeq.initMonoisoMass``1">
+<summary>
+ Returns a function to calculate the monoisotopic mass of the given sequence !memoization
+</summary>
+</member>
+<member name="M:BioFSharp.BioSeq.toAverageMassWith``1(System.Double,System.Collections.Generic.IEnumerable{``0})">
+<summary>
+ Returns average mass of the given sequence and initial value (e.g. H2O) 
+</summary>
+</member>
+<member name="M:BioFSharp.BioSeq.toMonoisotopicMassWith``1(System.Double,System.Collections.Generic.IEnumerable{``0})">
+<summary>
+ Returns monoisotopic mass of the given sequence and initial value (e.g. H2O) 
+</summary>
+</member>
+<member name="M:BioFSharp.BioSeq.toAverageMass``1(System.Collections.Generic.IEnumerable{``0})">
+<summary>
+ Returns average mass of the given sequence
+</summary>
+</member>
+<member name="M:BioFSharp.BioSeq.toMonoisotopicMass``1(System.Collections.Generic.IEnumerable{``0})">
+<summary>
+ Returns monoisotopic mass of the given sequence
+</summary>
+</member>
+<member name="M:BioFSharp.BioSeq.toFormula``1(System.Collections.Generic.IEnumerable{``0})">
+<summary>
+ Returns formula
+</summary>
+</member>
+<member name="M:BioFSharp.BioSeq.toString``1(System.Collections.Generic.IEnumerable{``0})">
+<summary>
+ Returns string of one-letter-code
+</summary>
+</member>
+<member name="M:BioFSharp.BioSeq.isEqual``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})">
+<summary>
+ Compares the elemens of two sequence
+</summary>
+</member>
+<member name="M:BioFSharp.BioSeq.translate(System.Int32,System.Collections.Generic.IEnumerable{BioFSharp.Nucleotides.Nucleotide})">
+<summary>
+ translates nucleotide sequence to aminoacid sequence    
+</summary>
+</member>
+<member name="M:BioFSharp.BioSeq.transcribeTemplateStrand(System.Collections.Generic.IEnumerable{BioFSharp.Nucleotides.Nucleotide})">
+<summary>
+ Transcribe a given DNA template strand (3&apos;-----5&apos;)
+</summary>
+</member>
+<member name="M:BioFSharp.BioSeq.transcribeCodeingStrand(System.Collections.Generic.IEnumerable{BioFSharp.Nucleotides.Nucleotide})">
+<summary>
+ Transcribe a given DNA coding strand (5&apos;-----3&apos;)
+</summary>
+</member>
+<member name="M:BioFSharp.BioSeq.mapInTriplets``2(Microsoft.FSharp.Core.FSharpFunc{System.Tuple{``0,``0,``0},``1},System.Collections.Generic.IEnumerable{``0})">
+<summary>
+ Builts a new collection whose elements are the result of applying
+ the given function to each triplet of the collection. 
+</summary>
+</member>
+<member name="M:BioFSharp.BioSeq.|Triplet|_|``1(System.Collections.Generic.IEnumerator{``0})">
+<summary>
+Active pattern which returns a base triplet
+</summary>
+</member>
+<member name="M:BioFSharp.BioSeq.ofNucleotideString``1(``0)">
+<summary>
+ Generates nucleotide sequence of one-letter-code raw string
+</summary>
+</member>
+<member name="M:BioFSharp.BioSeq.ofNucleotideStringWithOptionConverter``1(Microsoft.FSharp.Core.FSharpFunc{System.Char,Microsoft.FSharp.Core.FSharpOption{BioFSharp.Nucleotides.Nucleotide}},``0)">
+<summary>
+ Generates nucleotide sequence of one-letter-code string using given OptionConverter
+</summary>
+</member>
+<member name="M:BioFSharp.BioSeq.ofAminoAcidSymbolString``1(``0)">
+<summary>
+ Generates AminoAcidSymbol sequence of one-letter-code raw string
+</summary>
+</member>
+<member name="M:BioFSharp.BioSeq.ofAminoAcidString``1(``0)">
+<summary>
+ Generates AminoAcid sequence of one-letter-code raw string
+</summary>
+</member>
+<member name="M:BioFSharp.BioSeq.ofAminoAcidStringWithOptionConverter``1(Microsoft.FSharp.Core.FSharpFunc{System.Char,Microsoft.FSharp.Core.FSharpOption{BioFSharp.AminoAcids.AminoAcid}},``0)">
+<summary>
+ Generates AminoAcid sequence of one-letter-code string using given OptionConverter
+</summary>
+</member>
+<member name="T:BioFSharp.BioSeq">
+<summary>
+This module contains the BioSeq type and its according functions. The BioSeq type is a sequence of objects using the IBioItem interface
+</summary>
+</member>
+<member name="T:BioFSharp.BioArray.BioArray`1">
+<summary>
+Array of objects using the IBioItem interface
+</summary>
+</member>
+<member name="M:BioFSharp.BioArray.toCompositionVector``1(``0[])">
+<summary>
+Creates an array with information about the abundacies of the distinct BioItems by converting the symbol of the BioItem to an integer and incrementing the given integer. To decrease the size of the resulting array by still having a fast performance, all indices are shifted by 65. Therefore to call the abundancy of a given BioItem, use &quot;Resultcompositionvector.[(BioItem.symbol bioitem) - 65]&quot;
+</summary>
+</member>
+<member name="M:BioFSharp.BioArray.initAverageMassWith``1(System.Double)">
+<summary>
+ Returns a function to calculate the average mass of the given sequence and initial value (e.g. H2O) !memoization
+</summary>
+</member>
+<member name="M:BioFSharp.BioArray.initMonoisoMassWith``1(System.Double)">
+<summary>
+ Returns a function to calculate the monoisotopic mass of the given sequence and initial value (e.g. H2O) !memoization
+</summary>
+</member>
+<member name="M:BioFSharp.BioArray.initAverageMass``1">
+<summary>
+ Returns a function to calculate the average mass of the given sequence !memoization
+</summary>
+</member>
+<member name="M:BioFSharp.BioArray.initMonoisoMass``1">
+<summary>
+ Returns a function to calculate the monoisotopic mass of the given sequence !memoization
+</summary>
+</member>
+<member name="M:BioFSharp.BioArray.toAverageMassWith``1(System.Double,``0[])">
+<summary>
+ Returns average mass of the given sequence and initial value (e.g. H2O) 
+</summary>
+</member>
+<member name="M:BioFSharp.BioArray.toMonoisotopicMassWith``1(System.Double,``0[])">
+<summary>
+ Returns monoisotopic mass of the given sequence and initial value (e.g. H2O) 
+</summary>
+</member>
+<member name="M:BioFSharp.BioArray.toAverageMass``1(``0[])">
+<summary>
+ Returns average mass of the given sequence
+</summary>
+</member>
+<member name="M:BioFSharp.BioArray.toMonoisotopicMass``1(``0[])">
+<summary>
+ Returns monoisotopic mass of the given sequence
+</summary>
+</member>
+<member name="M:BioFSharp.BioArray.toString``1(``0[])">
+<summary>
+ Returns string of one-letter-code
+</summary>
+</member>
+<member name="M:BioFSharp.BioArray.isEqual``1(``0[],``0[])">
+<summary>
+ Compares the elemens of two biosequence
+</summary>
+</member>
+<member name="M:BioFSharp.BioArray.translate(System.Int32,BioFSharp.Nucleotides.Nucleotide[])">
+<summary>
+ translates nucleotide sequence to aminoacid sequence    
+</summary>
+</member>
+<member name="M:BioFSharp.BioArray.transcribeTemplateStrand(BioFSharp.Nucleotides.Nucleotide[])">
+<summary>
+ Transcribe a given DNA template strand (3&apos;-----5&apos;)
+</summary>
+</member>
+<member name="M:BioFSharp.BioArray.transcribeCodeingStrand(BioFSharp.Nucleotides.Nucleotide[])">
+<summary>
+ Transcribe a given DNA coding strand (5&apos;-----3&apos;)
+</summary>
+</member>
+<member name="M:BioFSharp.BioArray.mapInTriplets``2(Microsoft.FSharp.Core.FSharpFunc{System.Tuple{``0,``0,``0},``1},``0[])">
+<summary>
+ Builts a new collection whose elements are the result of applying
+ the given function to each triplet of the collection. 
+</summary>
+</member>
+<member name="M:BioFSharp.BioArray.ofNucleotideString``1(``0)">
+<summary>
+ Generates nucleotide sequence of one-letter-code raw string
+</summary>
+</member>
+<member name="M:BioFSharp.BioArray.ofNucleotideStringWithOptionConverter``1(Microsoft.FSharp.Core.FSharpFunc{System.Char,Microsoft.FSharp.Core.FSharpOption{BioFSharp.Nucleotides.Nucleotide}},``0)">
+<summary>
+ Generates nucleotide sequence of one-letter-code string using given OptionConverter
+</summary>
+</member>
+<member name="M:BioFSharp.BioArray.ofAminoAcidSymbolString``1(``0)">
+<summary>
+ Generates amino acid symbol sequence of one-letter-code raw string
+</summary>
+</member>
+<member name="M:BioFSharp.BioArray.ofAminoAcidString``1(``0)">
+<summary>
+ Generates amino acid sequence of one-letter-code raw string
+</summary>
+</member>
+<member name="M:BioFSharp.BioArray.ofAminoAcidStringWithOptionConverter``1(Microsoft.FSharp.Core.FSharpFunc{System.Char,Microsoft.FSharp.Core.FSharpOption{BioFSharp.AminoAcids.AminoAcid}},``0)">
+<summary>
+ Generates amino acid sequence of one-letter-code string using given OptionConverter
+</summary>
+</member>
+<member name="T:BioFSharp.BioArray">
+<summary>
+This module contains the BioArray type and its according functions. The BioArray type is an array of objects using the IBioItem interface
+</summary>
+</member>
+<member name="T:BioFSharp.BioList.BioList`1">
+<summary>
+List of objects using the IBioItem interface
+</summary>
+</member>
+<member name="M:BioFSharp.BioList.toCompositionVector``1(Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+Creates an array with information about the abundacies of the distinct BioItems by converting the symbol of the BioItem to an integer and incrementing the given integer. To decrease the size of the resulting array by still having a fast performance, all indices are shifted by 65. Therefore to call the abundancy of a given BioItem, use &quot;Resultcompositionvector.[(BioItem.symbol bioitem) - 65]&quot;
+</summary>
+</member>
+<member name="M:BioFSharp.BioList.initAverageMassWith``1(System.Double)">
+<summary>
+ Returns a function to calculate the average mass of the given sequence and initial value (e.g. H2O) !memoization
+</summary>
+</member>
+<member name="M:BioFSharp.BioList.initMonoisoMassWith``1(System.Double)">
+<summary>
+ Returns a function to calculate the monoisotopic mass of the given sequence and initial value (e.g. H2O) !memoization
+</summary>
+</member>
+<member name="M:BioFSharp.BioList.initAverageMass``1">
+<summary>
+ Returns a function to calculate the average mass of the given sequence !memoization
+</summary>
+</member>
+<member name="M:BioFSharp.BioList.initMonoisoMass``1">
+<summary>
+ Returns a function to calculate the monoisotopic mass of the given sequence !memoization
+</summary>
+</member>
+<member name="M:BioFSharp.BioList.toAverageMassWith``1(System.Double,Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+ Returns average mass of the given sequence and initial value (e.g. H2O) 
+</summary>
+</member>
+<member name="M:BioFSharp.BioList.toMonoisotopicMassWith``1(System.Double,Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+ Returns monoisotopic mass of the given sequence and initial value (e.g. H2O) 
+</summary>
+</member>
+<member name="M:BioFSharp.BioList.toAverageMass``1(Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+ Returns average mass of the given sequence
+</summary>
+</member>
+<member name="M:BioFSharp.BioList.toMonoisotopicMass``1(Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+ Returns monoisotopic mass of the given sequence
+</summary>
+</member>
+<member name="M:BioFSharp.BioList.toFormula``1(Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+ Returns formula
+</summary>
+</member>
+<member name="M:BioFSharp.BioList.toString``1(Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+ Returns string of one-letter-code
+</summary>
+</member>
+<member name="M:BioFSharp.BioList.isEqual``1(Microsoft.FSharp.Collections.FSharpList{``0},Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+ Compares the elemens of two sequence
+</summary>
+</member>
+<member name="M:BioFSharp.BioList.translate(System.Int32,Microsoft.FSharp.Collections.FSharpList{BioFSharp.Nucleotides.Nucleotide})">
+<summary>
+ translates nucleotide sequence to aminoacid sequence    
+</summary>
+</member>
+<member name="M:BioFSharp.BioList.transcribeTemplateStrand(Microsoft.FSharp.Collections.FSharpList{BioFSharp.Nucleotides.Nucleotide})">
+<summary>
+ Transcribe a given DNA template strand (3&apos;-----5&apos;)
+</summary>
+</member>
+<member name="M:BioFSharp.BioList.transcribeCodeingStrand(Microsoft.FSharp.Collections.FSharpList{BioFSharp.Nucleotides.Nucleotide})">
+<summary>
+ Transcribe a given DNA coding strand (5&apos;-----3&apos;)
+</summary>
+</member>
+<member name="M:BioFSharp.BioList.ofNucleotideString``1(``0)">
+<summary>
+ Generates nucleotide sequence of one-letter-code raw string
+</summary>
+</member>
+<member name="M:BioFSharp.BioList.ofNucleotideStringWithOptionConverter``1(Microsoft.FSharp.Core.FSharpFunc{System.Char,Microsoft.FSharp.Core.FSharpOption{BioFSharp.Nucleotides.Nucleotide}},``0)">
+<summary>
+ Generates nucleotide sequence of one-letter-code string using given OptionConverter
+</summary>
+</member>
+<member name="M:BioFSharp.BioList.ofAminoAcidSymbolString``1(``0)">
+<summary>
+ Generates AminoAcidSymbol sequence of one-letter-code raw string
+</summary>
+</member>
+<member name="M:BioFSharp.BioList.ofAminoAcidString``1(``0)">
+<summary>
+ Generates amino acid sequence of one-letter-code raw string
+</summary>
+</member>
+<member name="M:BioFSharp.BioList.ofRevModAminoAcidStringWithIsoMod``1(Microsoft.FSharp.Core.FSharpFunc{System.Char,Microsoft.FSharp.Core.FSharpOption{BioFSharp.AminoAcids.AminoAcid}},Microsoft.FSharp.Core.FSharpFunc{``0,BioFSharp.ModificationInfo.Modification},Microsoft.FSharp.Core.FSharpOption{Microsoft.FSharp.Collections.FSharpList{BioFSharp.ModificationInfo.Modification}},Microsoft.FSharp.Collections.FSharpMap{System.String,``0},System.String)">
+<summary>
+ Generates amino acid sequence of one-letter-code string containing modified AminoAcids indicated by 2 lowercase digits per modification. 
+</summary>
+</member>
+<member name="M:BioFSharp.BioList.ofRevModAminoAcidString``1(Microsoft.FSharp.Core.FSharpFunc{System.Char,Microsoft.FSharp.Core.FSharpOption{BioFSharp.AminoAcids.AminoAcid}},Microsoft.FSharp.Core.FSharpFunc{``0,BioFSharp.ModificationInfo.Modification},Microsoft.FSharp.Collections.FSharpMap{System.String,``0},System.String)">
+<summary>
+ Generates amino acid sequence of one-letter-code string containing modified AminoAcids indicated by 2 lowercase digits per modification. 
+</summary>
+</member>
+<member name="M:BioFSharp.BioList.ofAminoAcidStringWithOptionConverter``1(Microsoft.FSharp.Core.FSharpFunc{System.Char,Microsoft.FSharp.Core.FSharpOption{BioFSharp.AminoAcids.AminoAcid}},``0)">
+<summary>
+ Generates amino acid sequence of one-letter-code string using given OptionConverter
+</summary>
+</member>
+<member name="T:BioFSharp.BioList">
+<summary>
+This module contains the BioList type and its according functions. The BioList type is a List of objects using the IBioItem interface
+</summary>
+</member>
+<member name="T:BioFSharp.AminoProperties.AminoProperty">
+<summary>
+Union case of amino acid properties, referencing the according included information in this library. Use &quot;initGetAminoProperty&quot; function to obtain a simple mapping function
+</summary>
+</member>
+<member name="M:BioFSharp.AminoProperties.ofBioArrayRndNorm``1(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.Unit,``0},System.Int32,System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,System.Double},``0[])">
+<summary>
+ Returns an array of sliding windows based property averages.
+ Each window contains the n elements surrounding the current element
+</summary>
+</member>
+<member name="M:BioFSharp.AminoProperties.ofWindowedBioArray``1(System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,System.Double},``0[])">
+<summary>
+ Returns an array of sliding windows based property averages.
+ Each window contains the n elements surrounding the current element
+</summary>
+</member>
+<member name="M:BioFSharp.AminoProperties.initGetAminoProperty(BioFSharp.AminoProperties.AminoProperty)">
+<summary>
+Returns a simple mapping function for the given amino acid property
+</summary>
+</member>
+<member name="T:BioFSharp.AminoProperties">
+<summary>
+Contains functionalities for obtaining included literary data on key amino acid properties
+</summary>
+</member>
+<member name="M:BioFSharp.IsoelectricPoint.tryFind(Microsoft.FSharp.Core.FSharpFunc{BioFSharp.AminoAcidSymbols.AminoAcidSymbol,System.Double},System.Double,System.Collections.Generic.IEnumerable{BioFSharp.AminoAcidSymbols.AminoAcidSymbol})">
+<summary>
+Finds the pH for which the global charge of the aaSeq is closer to 0 than the given accuracy
+</summary>
+</member>
+<member name="P:BioFSharp.IsoelectricPoint.getpKr">
+<summary>
+Maps AminoAcidSymbol to default pK value of it&apos;s sidechain. Returns 0.0 if sidechain is neither acidic nor basic
+</summary>
+</member>
+<member name="M:BioFSharp.IsoelectricPoint.tryFindRoot(Microsoft.FSharp.Core.FSharpFunc{System.Double,System.Double},System.Double,System.Double,System.Double,System.Int32)">
+<summary>
+Finds the value in an interval for which a given function returns a value close to 0 
+</summary>
+</member>
+<member name="T:BioFSharp.IsoelectricPoint">
+<summary>
+Finding the isoelectric point of peptides
+</summary>
+</member>
+<member name="M:BioFSharp.Digestion.BioArray.concernMissCleavages(System.Int32,System.Int32,BioFSharp.Digestion.DigestedPeptide[])">
+<summary>
+ Takes Array of DigestedPeptides and and returns Array of DigestedPeptides including those resulting of one or more Misscleavage events
+</summary>
+</member>
+<member name="M:BioFSharp.Digestion.BioArray.digest(BioFSharp.Digestion.Protease,System.Int32,BioFSharp.AminoAcids.AminoAcid[])">
+<summary>
+ Takes Proteinsequence as input and returns Array of resulting DigestedPeptides
+</summary>
+</member>
+<member name="M:BioFSharp.Digestion.BioArray.motivy``1(System.Int32,System.Int32,``0[])">
+<summary>
+ Returns current value,array tuple (current, [|prefix; current; suffix|])
+</summary>
+</member>
+<member name="M:BioFSharp.Digestion.BioSeq.digest(BioFSharp.Digestion.Protease,System.Collections.Generic.IEnumerable{BioFSharp.AminoAcids.AminoAcid})">
+
+</member>
+<member name="M:BioFSharp.Digestion.BioSeq.motivy``1(System.Int32,System.Int32,System.Collections.Generic.IEnumerable{``0})">
+<summary>
+ Returns current value,array tuple (current, [|prefix; current; suffix)
+</summary>
+</member>
+<member name="T:BioFSharp.PhylTree.Node`1.Branch">
+<summary>
+Can be internal node or leaf node, depending on wether the list is empty or not. Match accordingly
+</summary>
+</member>
+<member name="T:BioFSharp.PhylTree.Node`1">
+<summary>
+Recursive type representing a phylogenetic tree
+</summary>
+</member>
+<member name="M:BioFSharp.PhylTree.addChildToNodes``1(Microsoft.FSharp.Core.FSharpFunc{BioFSharp.PhylTree.Node{``0},System.Boolean},BioFSharp.PhylTree.Node{``0},BioFSharp.PhylTree.Node{``0})">
+<summary>
+Adds a child Node to the nodes for which the condition returns true
+</summary>
+</member>
+<member name="M:BioFSharp.PhylTree.tryGetNodeBy``1(Microsoft.FSharp.Core.FSharpFunc{BioFSharp.PhylTree.Node{``0},System.Boolean},BioFSharp.PhylTree.Node{``0})">
+<summary>
+Returns the most top level element for which the condition returns true
+</summary>
+</member>
+<member name="M:BioFSharp.PhylTree.countLeafs``1(BioFSharp.PhylTree.Node{``0})">
+<summary>
+ Returns the count of nodes containing no subtrees
+</summary>
+</member>
+<member name="M:BioFSharp.PhylTree.mapFold``3(``0,Microsoft.FSharp.Core.FSharpFunc{BioFSharp.PhylTree.Node{``1},``2},Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``2,``0}},BioFSharp.PhylTree.Node{``1})">
+<summary>
+Iterates through a tree and accumulates a value by applying the folder to it and every mapped node of the tree
+</summary>
+</member>
+<member name="M:BioFSharp.PhylTree.fold``2(``0,Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{BioFSharp.PhylTree.Node{``1},``0}},BioFSharp.PhylTree.Node{``1})">
+<summary>
+Iterates through a tree and accumulates a value by applying the folder to it and every node of the tree
+</summary>
+</member>
+<member name="M:BioFSharp.PhylTree.iter``1(Microsoft.FSharp.Core.FSharpFunc{BioFSharp.PhylTree.Node{``0},Microsoft.FSharp.Core.Unit},BioFSharp.PhylTree.Node{``0})">
+<summary>
+Iterates trough a tree and performs a action on every node
+</summary>
+</member>
+<member name="M:BioFSharp.PhylTree.map``2(Microsoft.FSharp.Core.FSharpFunc{BioFSharp.PhylTree.Node{``0},``1},BioFSharp.PhylTree.Node{``0})">
+<summary>
+Iterates trough a tree and transforms all nodes by applying a mapping function on them
+</summary>
+</member>
+<member name="T:BioFSharp.PhylTree">
+<summary>
+Phyologenetic Tree
+</summary>
+</member>
+<member name="P:BioFSharp.Alignment.Alignment`2.AlignedSequences">
+<summary>
+List of aligned Sequences
+</summary>
+</member>
+<member name="P:BioFSharp.Alignment.Alignment`2.MetaData">
+<summary>
+Additional information for this alignment
+</summary>
+</member>
+<member name="T:BioFSharp.Alignment.Alignment`2">
+<summary>
+General Alignment type used throughout BioFSharp
+</summary>
+</member>
+<member name="T:BioFSharp.Alignment">
+<summary>
+Basic structure and functionality for sequence alignments. Alignment functions can be found in the BioFSharp.Algorithm namespace.
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.BoyerMoore.getGoodSuffixShift``1(System.Int32[],``0[])">
+<summary>
+ Creates an array containing the shiftig values created by using the good suffix heuristics.
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.BoyerMoore.suffixes``1(``0[])">
+<summary>
+ Creates N(j) that is needed for the good suffix rule.
+</summary>
+</member>
+<member name="T:BioFSharp.Algorithm.StringMatching.BoyerMoore">
+<summary>
+A collection of Boyer-Moore string matching algorithms
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.KnuthMorrisPratt.initFind``1(``0[])">
+<summary>
+returns a find function with a set prefix table created from the input
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.KnuthMorrisPratt.find``1(System.Int32[],``0[],``0[])">
+<summary>
+finds the first match of a query pattern in a source using a given prefix table
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.KnuthMorrisPratt.initFindFrom``1(``0[])">
+<summary>
+returns a findFrom function with a set prefix table created from the input
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.KnuthMorrisPratt.findFrom``1(System.Int32[],``0[],System.Int32,``0[])">
+<summary>
+finds the first match of a query pattern in a source starting from a specific position in the source using a given prefix table
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.KnuthMorrisPratt.initFindAll``1(``0[])">
+<summary>
+returns a findAll function with a set prefix table created from the input
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.KnuthMorrisPratt.findAll``1(System.Int32[],``0[],``0[])">
+<summary>
+finds all matches of a query pattern in a source using a given prefix table
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.KnuthMorrisPratt.createPrefixTable``1(``0[])">
+<summary>
+creates a prefix table for a query pattern
+</summary>
+</member>
+<member name="T:BioFSharp.Algorithm.StringMatching.KnuthMorrisPratt">
+<summary>
+A collection of Knuth-Morris-Pratt string matching algorithms
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.RabinKarp.findFromGeneric``2(System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,Microsoft.FSharp.Core.FSharpFunc{``1,``0}}},Microsoft.FSharp.Core.FSharpFunc{``1[],``0},``1[],``1[])">
+<summary>
+takes an updateHash and blockHash function to find the first match of a query pattern in a source starting from a specific position in the source
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.RabinKarp.findAllGeneric``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,Microsoft.FSharp.Core.FSharpFunc{``1,``0}}},Microsoft.FSharp.Core.FSharpFunc{``1[],``0},``1[],``1[])">
+<summary>
+takes an updateHash and blockHash function to find all matches of a query pattern in a source
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.RabinKarp.isMatchAt``1(``0[],``0[],System.Int32)">
+<summary>
+checks if content of pattern and source substring match
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.RabinKarp.CP.find``1(``0[],``0[])">
+<summary>
+find the first match of a query pattern in a source
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.RabinKarp.CP.findFrom``1(System.Int32,``0[],``0[])">
+<summary>
+find the first match of a query pattern in a source starting from a specific position in the source
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.RabinKarp.CP.findAll``1(``0[],``0[])">
+<summary>
+find all matches of a query pattern in a source   
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.RabinKarp.CP.updateHash``2(System.Int32,System.UInt64,``0,``1)">
+<summary>
+updates an existing hashvalue 
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.RabinKarp.CP.blockHash``1(``0[])">
+<summary>
+hashes a pattern
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.RabinKarp.CP.addToHashValue``1(System.UInt64,``0)">
+<summary>
+adds a hashvalue to an existing hashvalue
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.RabinKarp.CP.rotateLeft``1(System.Int32,``0)">
+<summary>
+bitwise cyclic rotation of a 64 bit pattern
+</summary>
+</member>
+<member name="T:BioFSharp.Algorithm.StringMatching.RabinKarp.CP">
+<summary>
+A collection of Rabin-Karp string matching algorithms using the cyclic polynomial (CP) hash
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.RabinKarp.RKStandard.find``1(``0[],``0[])">
+<summary>
+finds the first match of a query pattern in a source
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.RabinKarp.RKStandard.findFrom``1(System.Int32,``0[],``0[])">
+<summary>
+finds the first match of a query pattern in a source starting from a specific position in the source
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.RabinKarp.RKStandard.findAll``1(``0[],``0[])">
+<summary>
+finds all matches of a query pattern in a source
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.RabinKarp.RKStandard.updateHash``2(System.Int32,System.Int32,System.Int32,``0,``1)">
+<summary>
+updates an existing hashvalue 
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.RabinKarp.RKStandard.blockHash``1(System.Int32,``0[])">
+<summary>
+hashes a pattern
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.RabinKarp.RKStandard.addToHash``1(System.Int32,System.Int32,``0)">
+<summary>
+adds a hashvalue to an existing hashvalue
+</summary>
+</member>
+<member name="T:BioFSharp.Algorithm.StringMatching.RabinKarp.RKStandard">
+<summary>
+A collection of Rabin-Karp string matching algorithms using the built-in hash function of f#
+</summary>
+</member>
+<member name="T:BioFSharp.Algorithm.StringMatching.RabinKarp">
+<summary>
+A collection of Rabin-Karp string matching algorithms and hash functions
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.Naive.find``1(``0[],``0[])">
+<summary>
+finds the first match of a query pattern in a source
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.Naive.findFrom``1(System.Int32,``0[],``0[])">
+<summary>
+finds the first match of a query pattern in a source starting from a specific position in the source
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.Naive.findAll``1(``0[],``0[])">
+<summary>
+finds all matches of a query pattern in a source
+</summary>
+</member>
+<member name="T:BioFSharp.Algorithm.StringMatching.Naive">
+<summary>
+A collection of naive string matching algorithms
+</summary>
+</member>
+<member name="T:BioFSharp.Algorithm.StringMatching">
+<summary>
+A collection of different string matching algorithms
+</summary>
+</member>
+<member name="T:BioFSharp.Algorithm.PairwiseAlignment.OperationCosts`1">
+<summary>
+Carries the functions for evaluating the Tracescores
+</summary>
+</member>
+<member name="T:BioFSharp.Algorithm.PairwiseAlignment.Costs`1">
+<summary>
+Carries the costs for gaps and the scoring matrix (Similarity)
+</summary>
+</member>
+<member name="T:BioFSharp.Algorithm.PairwiseAlignment.Score">
+<summary>
+Score of the alignment and the aligned sequences as a tuple
+</summary>
+</member>
+<member name="T:BioFSharp.Algorithm.PairwiseAlignment.Cell">
+<summary>
+3 seperate matrices are used for evaluating the affine gap penalty. This is implemented by having every cell of the matrix carry 3 separate tracescore values
+</summary>
+</member>
+<member name="T:BioFSharp.Algorithm.PairwiseAlignment.TraceScore">
+<summary>
+Represents one element of the matrix, contains direction for backtracing and score
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.PairwiseAlignment.traceBackZeroValue``1(``0,``0[],``0[],System.Int32,System.Int32,Microsoft.FSharp.Collections.FSharpList{``0},Microsoft.FSharp.Collections.FSharpList{``0},BioFSharp.Algorithm.PairwiseAlignment.Cell[0:,0:])">
+<summary>
+ Creates the alignment out of the matrix and the 2 sequences
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.PairwiseAlignment.traceBackOption``1(``0[],``0[],System.Int32,System.Int32,Microsoft.FSharp.Collections.FSharpList{Microsoft.FSharp.Core.FSharpOption{``0}},Microsoft.FSharp.Collections.FSharpList{Microsoft.FSharp.Core.FSharpOption{``0}},BioFSharp.Algorithm.PairwiseAlignment.Cell[0:,0:])">
+<summary>
+ Creates the alignment out of the matrix and the 2 sequences
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.PairwiseAlignment.runGeneric``1(Microsoft.FSharp.Core.FSharpFunc{BioFSharp.Algorithm.PairwiseAlignment.Cell[0:,0:],BioFSharp.Algorithm.PairwiseAlignment.Cell[0:,0:]},``0[],``0[],BioFSharp.Algorithm.PairwiseAlignment.OperationCosts{``0})">
+<summary>
+ Creates an jagged array matrix and fills it with Backtracing Information (Cells)
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.PairwiseAlignment.maxBy2``2(Microsoft.FSharp.Core.FSharpFunc{``0,``1},``0,``0)">
+<summary>
+Evaluates the bigger of two values (x y) after converting them with a function f
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.PairwiseAlignment.createAlignment``1(System.Int32,``0,``0)">
+<summary>
+Merges the alignment score and the aligned sequences
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.PairwiseAlignment.createCell(BioFSharp.Algorithm.PairwiseAlignment.TraceScore,BioFSharp.Algorithm.PairwiseAlignment.TraceScore,BioFSharp.Algorithm.PairwiseAlignment.TraceScore)">
+<summary>
+Uses 3 TraceScores and creates a Cell from them
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.PairwiseAlignment.addFloatToTrace(BioFSharp.Algorithm.PairwiseAlignment.TraceScore,System.Int32)">
+<summary>
+Adds value to score of tracescore element
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.PairwiseAlignment.getTraceScoreValue(BioFSharp.Algorithm.PairwiseAlignment.TraceScore)">
+<summary>
+Get score of matrix element
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.PairwiseAlignment.SmithWaterman.runNucleotide(BioFSharp.Algorithm.PairwiseAlignment.Costs{BioFSharp.Nucleotides.Nucleotide},BioFSharp.Nucleotides.Nucleotide[],BioFSharp.Nucleotides.Nucleotide[])">
+<summary>
+Returns the optimal local alignment of two Nucleotide BioArrays
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.PairwiseAlignment.SmithWaterman.runAminoAcidSymbol(BioFSharp.Algorithm.PairwiseAlignment.Costs{BioFSharp.AminoAcidSymbols.AminoAcidSymbol},BioFSharp.AminoAcidSymbols.AminoAcidSymbol[],BioFSharp.AminoAcidSymbols.AminoAcidSymbol[])">
+<summary>
+Returns the optimal local alignment of two AminoAcidSymbol BioArrays
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.PairwiseAlignment.SmithWaterman.runAminoAcid(BioFSharp.Algorithm.PairwiseAlignment.Costs{BioFSharp.AminoAcids.AminoAcid},BioFSharp.AminoAcids.AminoAcid[],BioFSharp.AminoAcids.AminoAcid[])">
+<summary>
+Returns the optimal local alignment of two AminoAcid BioArrays
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.PairwiseAlignment.SmithWaterman.runGeneric``1(BioFSharp.Algorithm.PairwiseAlignment.Costs{``0},``0[],``0[])">
+<summary>
+Returns the optimal local alignment of two arrays of generic values
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.PairwiseAlignment.SmithWaterman.createCellMatrix``1(BioFSharp.Algorithm.PairwiseAlignment.Costs{``0},``0[],``0[])">
+<summary>
+ Uses the runGeneric function to create a matrix and then aligns the sequences via backtracing
+</summary>
+</member>
+<member name="T:BioFSharp.Algorithm.PairwiseAlignment.SmithWaterman">
+<summary>
+ Local pairwise alignment algorithm  (AffineGaps)
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.PairwiseAlignment.NeedlemanWunsch.runNucleotide(BioFSharp.Algorithm.PairwiseAlignment.Costs{BioFSharp.Nucleotides.Nucleotide},BioFSharp.Nucleotides.Nucleotide[],BioFSharp.Nucleotides.Nucleotide[])">
+<summary>
+Returns the optimal global alignment of two Nucleotide BioArrays
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.PairwiseAlignment.NeedlemanWunsch.runAminoAcidSymbol(BioFSharp.Algorithm.PairwiseAlignment.Costs{BioFSharp.AminoAcidSymbols.AminoAcidSymbol},BioFSharp.AminoAcidSymbols.AminoAcidSymbol[],BioFSharp.AminoAcidSymbols.AminoAcidSymbol[])">
+<summary>
+Returns the optimal global alignment of two AminoAcidSymbol BioArrays
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.PairwiseAlignment.NeedlemanWunsch.runAminoAcid(BioFSharp.Algorithm.PairwiseAlignment.Costs{BioFSharp.AminoAcids.AminoAcid},BioFSharp.AminoAcids.AminoAcid[],BioFSharp.AminoAcids.AminoAcid[])">
+<summary>
+Returns the optimal global alignment of two AminoAcid BioArrays
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.PairwiseAlignment.NeedlemanWunsch.runGeneric``1(BioFSharp.Algorithm.PairwiseAlignment.Costs{``0},``0[],``0[])">
+<summary>
+Returns the optimal global alignment of two arrays of generic values
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.PairwiseAlignment.NeedlemanWunsch.createCellMatrix``1(BioFSharp.Algorithm.PairwiseAlignment.Costs{``0},``0[],``0[])">
+<summary>
+ Uses the runGeneric function to create a matrix and then aligns the sequences via backtracing
+</summary>
+</member>
+<member name="T:BioFSharp.Algorithm.PairwiseAlignment.NeedlemanWunsch">
+<summary>
+ Global pairwise alignment algorithm. (AffineGaps)
+</summary>
+</member>
+<member name="T:BioFSharp.Algorithm.PairwiseAlignment">
+<summary>
+Contains functions for evaluating the best possible alignments for 2 Sequences
+</summary>
+</member>
+<member name="T:BioFSharp.Algorithm.ScoringMatrix.ScoringMatrixNucleotide">
+<summary>
+Union case of implemented nucleotide scoring matrices with the given reference to its place in the library. Use the &quot;getScoringMatrixNucleotide&quot; function to obtain a simple mapping function for every nucleotide pair
+</summary>
+</member>
+<member name="T:BioFSharp.Algorithm.ScoringMatrix.ScoringMatrixAminoAcid">
+<summary>
+Union case of implemented amino acid scoring matrices with the given reference to its place in the library. Use the &quot;getScoringMatrixAminoAcid&quot; function to obtain a simple mapping function for every amino acid pair
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.ScoringMatrix.getScoringMatrixNucleotide(BioFSharp.Algorithm.ScoringMatrix.ScoringMatrixNucleotide)">
+<summary>
+creates a scoring function for nucleotides out of a scoring matrix
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.ScoringMatrix.getScoringMatrixAminoAcid(BioFSharp.Algorithm.ScoringMatrix.ScoringMatrixAminoAcid)">
+<summary>
+creates a scoring function for amino acids out of a scoring matrix
+</summary>
+</member>
+<member name="T:BioFSharp.Algorithm.ScoringMatrix">
+<summary>
+Contains functions for using the included similarity matrices. These assign a score to every pair of aminoacids/nucleotides and therefore rate the probability of their substitution. The Scoring Matrices are generally used for alignments.
+</summary>
 </member>
 </members>
 </doc>

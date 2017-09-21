@@ -2,6 +2,74 @@
 <doc>
 <assembly><name>FSharp.Care.IO</name></assembly>
 <members>
+<member name="F:FSharp.Net.Http.runningOnMono">
+<summary>
+ Are we currently running on Mono?
+ (Mono does not have the issue with encoding slashes in URLs, so we do not need workaround)
+</summary>
+</member>
+<member name="M:FSharp.Net.Http.RequestString``4(System.String,Microsoft.FSharp.Core.FSharpOption{``0},Microsoft.FSharp.Core.FSharpOption{``1},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{FSharp.Net.RequestBody},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{System.Net.CookieContainer},Microsoft.FSharp.Core.FSharpOption{``3})">
+<summary>
+ Download an HTTP web resource from the specified URL synchronously
+ (allows specifying query string parameters and HTTP headers including
+ headers that have to be handled specially - such as Accept, Content-Type &amp; Referer)
+ The body for POST request can be specified either as text or as a list of parameters
+ that will be encoded, and the method will automatically be set if not specified
+</summary>
+</member>
+<member name="M:FSharp.Net.Http.Request``4(System.String,Microsoft.FSharp.Core.FSharpOption{``0},Microsoft.FSharp.Core.FSharpOption{``1},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{FSharp.Net.RequestBody},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{System.Net.CookieContainer},Microsoft.FSharp.Core.FSharpOption{``3})">
+<summary>
+ Download an HTTP web resource from the specified URL synchronously
+ (allows specifying query string parameters and HTTP headers including
+ headers that have to be handled specially - such as Accept, Content-Type &amp; Referer)
+ The body for POST request can be specified either as text or as a list of parameters
+ that will be encoded, and the method will automatically be set if not specified
+</summary>
+</member>
+<member name="M:FSharp.Net.Http.AsyncRequestString``4(System.String,Microsoft.FSharp.Core.FSharpOption{``0},Microsoft.FSharp.Core.FSharpOption{``1},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{FSharp.Net.RequestBody},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{System.Net.CookieContainer},Microsoft.FSharp.Core.FSharpOption{``3})">
+<summary>
+ Download an HTTP web resource from the specified URL asynchronously
+ (allows specifying query string parameters and HTTP headers including
+ headers that have to be handled specially - such as Accept, Content-Type &amp; Referer)
+ The body for POST request can be specified either as text or as a list of parameters
+ that will be encoded, and the method will automatically be set if not specified
+</summary>
+</member>
+<member name="M:FSharp.Net.Http.AsyncRequest``4(System.String,Microsoft.FSharp.Core.FSharpOption{``0},Microsoft.FSharp.Core.FSharpOption{``1},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{FSharp.Net.RequestBody},Microsoft.FSharp.Core.FSharpOption{``2},Microsoft.FSharp.Core.FSharpOption{System.Net.CookieContainer},Microsoft.FSharp.Core.FSharpOption{``3})">
+<summary>
+ Download an HTTP web resource from the specified URL asynchronously
+ (allows specifying query string parameters and HTTP headers including
+ headers that have to be handled specially - such as Accept, Content-Type &amp; Referer)
+ The body for POST request can be specified either as text or as a list of parameters
+ that will be encoded, and the method will automatically be set if not specified
+</summary>
+</member>
+<member name="T:FSharp.Net.Http">
+<summary>
+ Utilities for working with network via HTTP. Includes methods for downloading 
+ resources with specified headers, query parameters and HTTP body
+</summary>
+</member>
+<member name="T:FSharp.Net.HttpResponse">
+<summary>
+ The response returned by an HTTP request
+</summary>
+</member>
+<member name="T:FSharp.Net.ResponseBody">
+<summary>
+ The response body returned by an HTTP request
+</summary>
+</member>
+<member name="T:FSharp.Net.RequestBody">
+<summary>
+ The body to send in an HTTP request
+</summary>
+</member>
+<member name="M:FSharp.Care.IO.Web.WebServer.start(System.String,System.String,System.Int32)">
+<summary>
+ Starts a minimal loxal webservice    
+</summary>
+</member>
 <member name="M:FSharp.Care.IO.FileIO.cleanFileName(System.String)">
 <summary>
  Removes all characters not allowed in a filename
@@ -350,7 +418,7 @@
  use write afterwards to save to file
 </summary>
 </member>
-<member name="M:FSharp.Care.IO.SeqIO.Seq.fromFileWithSeq(System.Char,System.String)">
+<member name="M:FSharp.Care.IO.SeqIO.Seq.fromFileWithSep(System.Char,System.String)">
 <summary>
  This function builds an IEnumerable object that enumerates the file 
  and splits lines of the given file on-demand 
@@ -365,11 +433,6 @@
 <member name="M:FSharp.Care.IO.SeqIO.Seq.fromFile(System.String)">
 <summary>
  Reads a file line by line
-</summary>
-</member>
-<member name="M:FSharp.Care.IO.Web.WebServer.start(System.String,System.String,System.Int32)">
-<summary>
- Starts a minimal loxal webservice    
 </summary>
 </member>
 </members>
