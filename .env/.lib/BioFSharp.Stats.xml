@@ -2,50 +2,1930 @@
 <doc>
 <assembly><name>BioFSharp.Stats</name></assembly>
 <members>
-<member name="T:BioFSharp.Stats.OntologyEnrichment.GseaResult">
+<member name="P:BioFSharp.Stats.Descriptive.Correlation.CorrelationCoefficient.Coefficient">
+<summary>
+ Pearson r
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Correlation.pearsonCorrelationNan(System.Collections.Generic.IEnumerable{System.Double},System.Collections.Generic.IEnumerable{System.Double})">
+<summary>
+ Pearson correlation (nan support by JackKnife leave one out)
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Correlation.pearsonCorrelation(System.Collections.Generic.IEnumerable{System.Double},System.Collections.Generic.IEnumerable{System.Double})">
+<summary>
+ Pearson correlation 
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Correlation.stdFisherHotellingZ(System.Int32)">
+<summary>
+ Standart deviation Fisher-Z transformation for Pearson correlation coefficient
+ after Hotelling (1953) for n&lt; 50
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Correlation.transformFisherHotellingZ(System.Double,System.Double)">
+<summary>
+ Fisher-Z transformation for Pearson correlation coefficient    
+ after Hotelling (1953) for n&lt; 50
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Correlation.stdFisherZ(System.Int32)">
+<summary>
+ Standart deviation Fisher-Z transformation for Pearson correlation coefficient
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Correlation.transformFisherZ(System.Double)">
+<summary>
+ Fisher-Z transformation for Pearson correlation coefficient    
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.EmpiricalPMF.makeMixture(System.Collections.Generic.IEnumerable{Microsoft.FSharp.Collections.FSharpMap{System.Double,System.Double}})">
+<summary>
+ Make a mixture distribution
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.EmpiricalPMF.exp(Microsoft.FSharp.Collections.FSharpMap{System.Double,System.Double})">
+<summary>
+ Exponentiates the probabilities
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.EmpiricalPMF.log(Microsoft.FSharp.Collections.FSharpMap{System.Double,System.Double})">
+<summary>
+ Log transforms the probabilities
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.EmpiricalPMF.var(Microsoft.FSharp.Collections.FSharpMap{System.Double,System.Double})">
+<summary>
+ Computes the variance of a PMF
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.EmpiricalPMF.varAround(System.Double,Microsoft.FSharp.Collections.FSharpMap{System.Double,System.Double})">
+<summary>
+ Computes the variance of a PMF around mu
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.EmpiricalPMF.mean(Microsoft.FSharp.Collections.FSharpMap{System.Double,System.Double})">
+<summary>
+ Computes the mean of a PMF
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.EmpiricalPMF.random(Microsoft.FSharp.Collections.FSharpMap{System.Double,System.Double})">
+<summary>
+ Chooses a random element from this PMF
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.EmpiricalPMF.normalize(System.Double,Microsoft.FSharp.Collections.FSharpMap{System.Double,System.Double})">
+<summary>
+ Normalizes this PMF so the sum of all probabilities equals fraction
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.EmpiricalPMF.add(Microsoft.FSharp.Collections.FSharpMap{System.Double,System.Double},Microsoft.FSharp.Collections.FSharpMap{System.Double,System.Double})">
+<summary>
+ Adds the values in pmfA to pmfB
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.EmpiricalPMF.subtract(Microsoft.FSharp.Collections.FSharpMap{System.Double,System.Double},Microsoft.FSharp.Collections.FSharpMap{System.Double,System.Double})">
+<summary>
+ Subtracts the values pmfA from pmfB
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.EmpiricalPMF.probabilities(Microsoft.FSharp.Collections.FSharpMap{System.Double,System.Double})">
+<summary>
+ Gets an unsorted sequence of probabilities
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.EmpiricalPMF.probabilityAt(Microsoft.FSharp.Collections.FSharpMap{System.Double,System.Double},System.Double)">
+<summary>
+ Gets the probability associated with the value x
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.EmpiricalPMF.getYValues(Microsoft.FSharp.Collections.FSharpMap{System.Double,System.Double})">
+<summary>
+ Returns distinct values from pmf
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.EmpiricalPMF.getValues(Microsoft.FSharp.Collections.FSharpMap{System.Double,System.Double})">
+<summary>
+ Returns values from pmf 
+ Attention: original values have been discretised
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.EmpiricalPMF.getXValues(Microsoft.FSharp.Collections.FSharpMap{System.Double,System.Double})">
+<summary>
+ Returns distinct values from pmf
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.EmpiricalPMF.maxLike(Microsoft.FSharp.Collections.FSharpMap{System.Double,System.Double})">
+<summary>
+ Returns the largest probability in the map.
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.EmpiricalPMF.sum(Microsoft.FSharp.Collections.FSharpMap{System.Double,System.Double})">
+<summary>
+ Returns the total of the probabilities in the map
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.EmpiricalPMF.getZip(Microsoft.FSharp.Collections.FSharpMap{System.Double,System.Double})">
+<summary>
+ Returns: tuple of (sorted value sequence, probability sequence)
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.EmpiricalPMF.ofHistogram``1(Microsoft.FSharp.Collections.FSharpMap{``0,System.Int32})">
+<summary>
+ Creates Pmf of a Histogram (normalize by n)
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.EmpiricalPMF.create(System.Double,System.Collections.Generic.IEnumerable{System.Double})">
+<summary>
+ probability mass function    
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.Descriptive.EmpiricalPMF">
+<summary>
+ Represents a probability mass function (map from values to probabilities).
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Histogram.subtract``1(Microsoft.FSharp.Collections.FSharpMap{``0,System.Int32},Microsoft.FSharp.Collections.FSharpMap{``0,System.Int32})">
+<summary>
+ Subtracts the values histogramA from histogramB
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Histogram.isSubset(Microsoft.FSharp.Collections.FSharpMap{System.Double,System.Int32},Microsoft.FSharp.Collections.FSharpMap{System.Double,System.Int32})">
+<summary>
+ Checks whether the values in this histogram A are a subset of the values in the histogram B
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Histogram.frequencies(Microsoft.FSharp.Collections.FSharpMap{System.Double,System.Int32})">
+<summary>
+ Gets an unsorted sequence of frequencies
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Histogram.frequencyAt(Microsoft.FSharp.Collections.FSharpMap{System.Double,System.Int32},System.Double)">
+<summary>
+ Gets the frequency associated with the value x
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Histogram.maxLike(Microsoft.FSharp.Collections.FSharpMap{System.Double,System.Int32})">
+<summary>
+ Gets the largest frequency in the map.
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Histogram.sum(Microsoft.FSharp.Collections.FSharpMap{System.Double,System.Int32})">
+<summary>
+ Returns the total of the frequencies in the map
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Histogram.getZip(Microsoft.FSharp.Collections.FSharpMap{System.Double,System.Int32})">
+<summary>
+ Returns tuple of (sorted value sequence, frequence sequence)
+</summary>
+</member>
+<member name="P:BioFSharp.Stats.Descriptive.Histogram.numericalHistogram">
+<summary>
+ Synonym for pmf
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Histogram.create(System.Double,System.Collections.Generic.IEnumerable{System.Double})">
+<summary>
+ Creates probability mass function (histogram)    
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Histogram.createGeneric``1(Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+ Given the list [a,b,a,c,b,b], produce a map {a:2, b:3, c:1} which contains the count of each unique item in the list
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.Descriptive.Histogram">
+<summary>
+ Represents a histogram (map from values to integer frequencies).
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Percentiles.ecdf(System.Collections.Generic.IEnumerable{System.Double},System.Collections.Generic.IEnumerable{System.Double})">
+<summary>
+ Calculates empitical cumulative density function (Convinient function)
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Percentiles.qq(System.Collections.Generic.IEnumerable{System.Double},System.Collections.Generic.IEnumerable{System.Double},System.Collections.Generic.IEnumerable{System.Double})">
+<summary>
+ Calculates quantile-qantile pairse of given data at given percentile points
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Percentiles.IQR``1(``0,System.Collections.Generic.IEnumerable{System.Double})">
+<summary>
+ Computes the interquartile range (IQR)
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Percentiles.computePercentiles(MathNet.Numerics.Statistics.QuantileDefinition,System.Collections.Generic.IEnumerable{System.Double},System.Collections.Generic.IEnumerable{System.Double})">
+<summary>
+ Computes percentiles
+ percentiles: Each percentile must be between 0.0 and 1.0 (inclusive)
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Percentiles.computePercentile(MathNet.Numerics.Statistics.QuantileDefinition,System.Double,System.Collections.Generic.IEnumerable{System.Double})">
+<summary>
+ Computes percentile
+ percentile: The percentile must be between 0.0 and 1.0 (inclusive)
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.Descriptive.Percentiles">
+<summary>
+ A Wrapper module for Mathnet Numerics Percentile class
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.QuantileNormalization.quantileNorm``1(System.Collections.Generic.IEnumerable{``0})">
+<summary>
+ Computes the quantile normalization of a given dataset  
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Transform.percentChange(System.Double[])">
+<summary>
+ Calculate percent change
+ % change = (v2 - v1 / v1) * 100
+ (-) decrease (+) increase
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Transform.boxCox(System.Double,System.Double[])">
+<summary>
+ Box Cox transformation is used to convert data so that they are normally distributed
+ Critical part: finding lamda
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Transform.center2Mean(System.Double[])">
+<summary>
+ Centers the data around their mean (xi - mean(x))
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Transform.linearMeanStd(System.Double,System.Double,System.Double[])">
+<summary>
+ Linear transformation to a new mean and standard deviation
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Transform.linearRange(System.Double,System.Double,System.Double[])">
+<summary>
+ Transform all values xi of an array a from space Q = [min(a), max(a)] to value x&apos; in space Q&apos; = [A&apos;, B&apos;] 
+ (where f(A) = B&apos; and f(B) = A&apos;)
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Transform.linearRangeOfValue(System.Double,System.Double,System.Double,System.Double,System.Double)">
+<summary>
+ Transform a value x from space Q = [A, B] to value x&apos; in space Q&apos; = [A&apos;, B&apos;] 
+ (where f(A) = B&apos; and f(B) = A&apos;)
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Transform.Standardization.rank(Microsoft.FSharp.Core.FSharpFunc{System.Collections.Generic.IEnumerable{System.Double},System.Collections.Generic.IEnumerable{BioFSharp.Stats.Rank.RankedValue{System.Double}}},System.Double[])">
+<summary>
+ Z7 = Rank(X)
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Transform.Standardization.bySum(System.Double[])">
+<summary>
+ Z6 = (X - MIN(X)) / (MAX(X) - MIN(X))
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Transform.Standardization.boundedByRange(System.Double,System.Double[])">
+<summary>
+ For non negative numbers bounbded by 0.0 and 1.0
+ Z5 = (X - MIN(X)) / (MAX(X) - MIN(X))
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Transform.Standardization.byRange(System.Double,System.Double[])">
+<summary>
+ Z4 = X / (MAX(X) - MIN(X))
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Transform.Standardization.byMax(System.Double,System.Double[])">
+<summary>
+ Z3 = X / MAX(X)
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Transform.Standardization.byStandardDeviation(System.Double[])">
+<summary>
+ Values are standardized by dividing by standard deviation
+ Z2 = X / sd 
+ mean = mean (x) / sd
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Transform.Standardization.zScore(System.Double[])">
+<summary>
+ Values are standardized to z scores, with a mean of 0 and a standard deviation of 1
+ Z1 = (X - (mean(x)) / sd        
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.Descriptive.Transform.Standardization">
+<summary>
+ Standardization of varables 
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Transform.PropagationOfError.gaussPower(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+<summary>
+ Gaussian propagation of error for z = x^a * y^b 
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Transform.PropagationOfError.gaussProdDiv(System.Double,System.Double,System.Double,System.Double)">
+<summary>
+ Gaussian propagation of error for z = x * y or z = x / y
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Transform.PropagationOfError.gaussSumDif``2(``0,System.Double,``1,System.Double)">
+<summary>
+ Gaussian propagation of error for z = x + y or z = x - y
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Transform.PropagationOfError.linearPower(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+<summary>
+ Linear propagation of error for z = x^a * y^b 
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Transform.PropagationOfError.linearProdDiv(System.Double,System.Double,System.Double,System.Double)">
+<summary>
+ Linear propagation of error for z = x * y or z = x / y
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Transform.PropagationOfError.linearSumDif``2(``0,System.Int32,``1,System.Int32)">
+<summary>
+ Linear propagation of error for z = x + y or z = x - y
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Transform.PropagationOfError.toAbsoluteError``3(``0,``1)">
+<summary>
+ Returns the absulute error
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Transform.PropagationOfError.toRelativeError``3(``0,``1)">
+<summary>
+ Returns the relative error
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.Descriptive.Venn.Venn3n">
+<summary>
+ Venn with 3 Set (a;b;c)
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.Descriptive.Venn.Venn2n">
+<summary>
+ Venn with 2 Set (a;b)
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Venn.toVennCount``2(Microsoft.FSharp.Collections.FSharpMap{System.String,BioFSharp.Stats.Descriptive.Venn.VennSet{``0,``1}})">
+<summary>
+ Converts a generic venn to the count venn
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Venn.ofSetList``1(System.String[],Microsoft.FSharp.Collections.FSharpSet{``0}[])">
+<summary>
+ Generates a generic venn from a list of sets
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Venn.labelToId``1(Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+ Converts from label list to string id
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Venn.ofSetABC``1(Microsoft.FSharp.Collections.FSharpSet{``0},Microsoft.FSharp.Collections.FSharpSet{``0},Microsoft.FSharp.Collections.FSharpSet{``0})">
+<summary>
+ Calculates a Venn out of 3 given Sets
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Venn.createVenn_3n(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+<summary>
+ Creates Venn with 3 Set (a;b;c)
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Venn.ofSetAB``1(Microsoft.FSharp.Collections.FSharpSet{``0},Microsoft.FSharp.Collections.FSharpSet{``0})">
+<summary>
+ Calculates a Venn out of two given Sets
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Descriptive.Venn.createVenn_2n(System.Int32,System.Int32,System.Int32,System.Int32)">
+<summary>
+ Creates Venn with two Set (a;b)
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.Approximation.approx(System.Collections.Generic.IEnumerable{System.Double},System.Collections.Generic.IEnumerable{System.Double},System.Collections.Generic.IEnumerable{System.Double},Microsoft.FSharp.Core.FSharpFunc{System.Collections.Generic.IEnumerable{System.Double},System.Double})">
+<summary>
+ Return a sequence of points which linearly interpolate given data points, or a function performing the linear interpolation.
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.Approximation.regularizeValues(System.Collections.Generic.IEnumerable{System.Double},System.Collections.Generic.IEnumerable{System.Double},Microsoft.FSharp.Core.FSharpFunc{System.Collections.Generic.IEnumerable{System.Double},System.Double})">
+<summary>
+ Regularize (like R! regularize.values) used in approx
+ 1. pairs x -y values 
+ 2. filters nan on both sides and sortby x
+ 3. handels ties by given function
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.Bandwidth.uLSCV(System.Double[],Microsoft.FSharp.Core.FSharpOption{System.Int32})">
+<summary>
+ Least squares cross-validation of bandwidth (unbiased)
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.Bandwidth.nrd0(System.Double[])">
+<summary>
+ Implements Silverman&apos;s ‘rule of thumb’ for choosing the bandwidth of a Gaussian kernel density estimator.
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.Bandwidth.freedmanDiaconis(System.Double[])">
+<summary>
+ Calcultes bandwidth based on the Freedman–Diaconis rule
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.Bandwidth.scottNormal(System.Double[])">
+<summary>
+ Calcultes bandwidth according to Scott&apos;s normal reference rule
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.Bandwidth.forHistogram(System.Collections.Generic.IEnumerable{System.Double})">
+<summary>
+ Simple bandwidth for histogram
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.Bandwidth.fromBinNumber(System.Double,System.Double,System.Double)">
+<summary>
+ Calculates the bandwidth from min max and number of bins
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.Bandwidth.BinNumber.riceRule(System.Double)">
+<summary>
+The Rice Rule is presented as a simple alternative to Sturges&apos;s rule.
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.Bandwidth.BinNumber.sturges(System.Double)">
+<summary>
+ Sturges&apos; formula is derived from a binomial distribution and implicitly assumes an approximately normal distribution.
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.Bandwidth.BinNumber.sqrt(System.Double)">
+<summary>
+ Square-root choice
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.Bandwidth.BinNumber.fromBandwidth(System.Double,System.Double,System.Double)">
+<summary>
+ Compute the number of bins from bandwidth
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.Fitting.Bandwidth.BinNumber">
+<summary>
+ Compute the number of bins for a histogram
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.Fitting.Bandwidth">
+<summary>
+ Bandwidth selectors 
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.Bootstrap.sampleWithOutReplacement``1(System.Random,``0[],System.Int32)">
+<summary>
+ Samples from an array of obj without replacement (without putting back)
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.Bootstrap.sampleWithReplacement``1(System.Random,``0[],System.Int32)">
+<summary>
+ Samples from an array of obj wit replacement (with putting back)
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.CrossValidation.bagging``1(System.Random,Microsoft.FSharp.Core.FSharpFunc{System.Double[],Microsoft.FSharp.Core.FSharpFunc{System.Double[],Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{System.Double,System.Double}}}},System.Double[],System.Double[],System.Int32,``0)">
+<summary>
+ Creates a  classifiers using training sets that are bootstrapped (drawn with replacement)
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.InterPolation.hermite_tangents(System.Double[],System.Double[])">
+<summary>
+ Hermite spline
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.InterPolation.rationalWithoutPoles(System.Double[])">
+<summary>
+ creates a Floater-Hormann barycentric interpolation (rational interpolation without poles)
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.KernelDensityEstimation.Density.DistributionFunction(System.Double)">
+ <summary>
+   Gets the cumulative distribution function (cdf) for
+   this distribution evaluated at point <c>x</c>.
+ </summary>
+ 
+ <param name="x">A single point in the distribution range.</param>
+ 
+ <remarks>
+   The Cumulative Distribution Function (CDF) describes the cumulative
+   probability that a given value or any value smaller than it will occur.
+ </remarks>
+ 
+</member>
+<member name="T:BioFSharp.Stats.Fitting.KernelDensityEstimation.Density">
+<summary>
+ Computes kernel density estimates. Its default method does so with the given kernel and bandwidth for univariate observations.
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.Fitting.KernelDensityEstimation.KernelTyps">
+<summary>
+ Different Kernel types to use in KernelDE.Density
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.Fitting.KernelDensityEstimation">
+<summary>
+ kernel density estimates
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.MissingValue.fillSeriesBy(Microsoft.FSharp.Core.FSharpFunc{System.Collections.Generic.IEnumerable{System.Double},System.Double},MathNet.Numerics.LinearAlgebra.Matrix{System.Double})">
+<summary>
+ Replaces NaNs in matrix by given &apos;impute from row values&apos; function
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.MissingValue.fillByRandomSampling(MathNet.Numerics.LinearAlgebra.Matrix{System.Double})">
+<summary>
+ Eeplaces NaNs in matrix by sampling from a normal distribution over columns    
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.MissingValue.replaceInfinityValues(MathNet.Numerics.LinearAlgebra.Matrix{System.Double})">
+<summary>
+ Replace +Infinity with max value and -Infinity with min value in matrix        
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.MissingValue.DataFilter.exists_minObjectCountsAt``2(System.Int32,Microsoft.FSharp.Collections.FSharpList{System.Int32},System.Collections.Generic.IEnumerable{``0})">
+<summary>
+ Checks if at all given position indices data contain minimal n number of object counts
+ Returns true or false
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.Fitting.MissingValue">
+<summary>
+ Module for missing value imputation
+</summary>
+</member>
+<member name="P:BioFSharp.Stats.Fitting.Regression.SumOfSquares.Count">
+<summary>
+ Count N
+</summary>
+</member>
+<member name="P:BioFSharp.Stats.Fitting.Regression.SumOfSquares.Total">
+<summary>
+ Total sum of squares (SST - total)
+</summary>
+</member>
+<member name="P:BioFSharp.Stats.Fitting.Regression.SumOfSquares.Error">
+<summary>
+ Error sum of squares (SSE - unexplained)
+</summary>
+</member>
+<member name="P:BioFSharp.Stats.Fitting.Regression.SumOfSquares.Regression">
+<summary>
+ Regression sum of squares (SSR - explained) 
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.Fitting.Regression.SumOfSquares">
+<summary>
+ Three sum of squares 
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.Regression.calculateANOVA(System.Int32,Microsoft.FSharp.Core.FSharpFunc{System.Double,System.Double},MathNet.Numerics.LinearAlgebra.Vector{System.Double},MathNet.Numerics.LinearAlgebra.Vector{System.Double})">
+<summary>
+ explained = total - unexplained
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.Regression.calculateSST(Microsoft.FSharp.Core.FSharpFunc{System.Double,System.Double},MathNet.Numerics.LinearAlgebra.Vector{System.Double},MathNet.Numerics.LinearAlgebra.Vector{System.Double})">
+<summary>
+ Calculates SST: sum of squares total
+ also: total sum of squares
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.Regression.calculateSSE(Microsoft.FSharp.Core.FSharpFunc{System.Double,System.Double},MathNet.Numerics.LinearAlgebra.Vector{System.Double},MathNet.Numerics.LinearAlgebra.Vector{System.Double})">
+<summary>
+ Calculates SSE: sum of squares of errors
+ also: unexplained sum of squares    
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.Regression.getResiduals(Microsoft.FSharp.Core.FSharpFunc{System.Double,System.Double},MathNet.Numerics.LinearAlgebra.Vector{System.Double},MathNet.Numerics.LinearAlgebra.Vector{System.Double})">
+<summary>
+ Calculates the residuals
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.Regression.calcBIC(System.Double,System.Double,System.Double)">
+<summary>
+ Calculates Bayesian information criterion (BIC) which is a measure of the relative quality of a regression model for a given set of data
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.Regression.calcAIC(System.Double,System.Double,System.Double)">
+<summary>
+ Calculates Akaike information criterion (AIC) which is a measure of the relative quality of a regression model for a given set of data    
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.Regression.calulcateDeterminationFromValue(System.Collections.Generic.IEnumerable{System.Double},System.Collections.Generic.IEnumerable{System.Double})">
+<summary>
+ Gets the coefficient of determination, as known as the R-Squared (R²)
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.Regression.stDevIntercept(BioFSharp.Stats.Fitting.Regression.SumOfSquares)">
+<summary>
+ Standard deviation of intercept (alpha)
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.Regression.stDevSlope(BioFSharp.Stats.Fitting.Regression.SumOfSquares)">
+<summary>
+ Standard deviation of slope (beta)    
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.Regression.stDevY(BioFSharp.Stats.Fitting.Regression.SumOfSquares)">
+<summary>
+ Standard deviation of y(x) 
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.Regression.calulcateSumOfSquares(Microsoft.FSharp.Core.FSharpFunc{System.Double,System.Double},System.Collections.Generic.IEnumerable{System.Double},System.Collections.Generic.IEnumerable{System.Double})">
+
+</member>
+<member name="M:BioFSharp.Stats.Fitting.Regression.Polynomial.fit(System.Int32,MathNet.Numerics.LinearAlgebra.Vector{System.Double},System.Double)">
+<summary>
+ Fit to x
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.Regression.Polynomial.coefficient(System.Int32,MathNet.Numerics.LinearAlgebra.Vector{System.Double},MathNet.Numerics.LinearAlgebra.Vector{System.Double})">
+<summary>
+ Caclualtes the coefficients for polynomial regression
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.Fitting.Regression.Polynomial">
+<summary>
+ Simple polynomial regression
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.Regression.Linear.fit(MathNet.Numerics.LinearAlgebra.Vector{System.Double},System.Double)">
+<summary>
+ Fit to x
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.Regression.Linear.coefficient(MathNet.Numerics.LinearAlgebra.Vector{System.Double},MathNet.Numerics.LinearAlgebra.Vector{System.Double})">
+<summary>
+ Caclualtes the coefficients for linear regression
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.Regression.Linear.coefficientOfMatrix(MathNet.Numerics.LinearAlgebra.Matrix{System.Double},MathNet.Numerics.LinearAlgebra.Vector{System.Double})">
+<summary>
+ Caclualtes the coefficients for linear regression
+ in the form of [|intercept; slope;|]
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.Regression.Linear.RTO.calculateANOVA(System.Double,MathNet.Numerics.LinearAlgebra.Vector{System.Double},MathNet.Numerics.LinearAlgebra.Vector{System.Double})">
+
+</member>
+<member name="M:BioFSharp.Stats.Fitting.Regression.Linear.RTO.fit(System.Double,System.Double)">
+<summary>
+ Fit to x
+ coefficient is beta only
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.Regression.Linear.RTO.fitFunc(System.Double,System.Double)">
+<summary>
+ Returns the regression function
+ coefficient is beta only
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.Regression.Linear.RTO.coefficient(Microsoft.FSharp.Collections.FSharpList{System.Double},Microsoft.FSharp.Collections.FSharpList{System.Double})">
+<summary>
+ Caclualtes the coefficients for linear regression through the origin 
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.Regression.Linear.RTO.coefficientOfVector(MathNet.Numerics.LinearAlgebra.Vector{System.Double},MathNet.Numerics.LinearAlgebra.Vector{System.Double})">
+<summary>
+ Caclualtes the coefficients for linear regression through the origin 
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.Fitting.Regression.Linear.RTO">
+<summary>
+ Regression through the origin (y : x -&gt; bx)
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.Fitting.Regression.Linear">
+<summary>
+ Simple linear regression y : x -&gt; a + bx
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.Spline.smoothingSpline(System.Tuple{System.Double,System.Double}[],System.Double[])">
+<summary>
+ Creates a smoothing spline through some data. Takes as spline points the x-values given by basispts
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Fitting.Spline.preprocess(System.Tuple{System.Double,System.Double}[])">
+<summary>
+ Some preprocessing of the input data
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.GSEA.GseaResult">
 <summary>
  Represents a gene set enrichment result 
 </summary>
 </member>
-<member name="T:BioFSharp.Stats.OntologyEnrichment.OntologyItem`1">
+<member name="T:BioFSharp.Stats.GSEA.OntologyItem`1">
 <summary>
  Represents an item in an ontology set
 </summary>
 </member>
-<member name="M:BioFSharp.Stats.OntologyEnrichment.CalcOverEnrichment``1(System.Int32,Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.Int32},System.Collections.Generic.IEnumerable{BioFSharp.Stats.OntologyEnrichment.OntologyItem{``0}})">
+<member name="M:BioFSharp.Stats.GSEA.CalcOverEnrichment``1(System.Int32,Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.Int32},System.Collections.Generic.IEnumerable{BioFSharp.Stats.GSEA.OntologyItem{``0}})">
 <summary>
  Calculates functional term enrichment
 </summary>
 </member>
-<member name="M:BioFSharp.Stats.OntologyEnrichment.CalcSimpleOverEnrichment``1(System.Int32,Microsoft.FSharp.Core.FSharpOption{System.Int32},System.Collections.Generic.IEnumerable{BioFSharp.Stats.OntologyEnrichment.OntologyItem{``0}})">
+<member name="M:BioFSharp.Stats.GSEA.CalcSimpleOverEnrichment``1(System.Int32,Microsoft.FSharp.Core.FSharpOption{System.Int32},System.Collections.Generic.IEnumerable{BioFSharp.Stats.GSEA.OntologyItem{``0}})">
 <summary>
  Calculates functional term enrichment
 </summary>
 </member>
-<member name="M:BioFSharp.Stats.OntologyEnrichment.CalcHyperGeoPvalue(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+<member name="M:BioFSharp.Stats.GSEA.CalcHyperGeoPvalue(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
 <summary>
  Calculates p value based on hypergeometric distribution (pValue &lt;= k)
 </summary>
 </member>
-<member name="M:BioFSharp.Stats.OntologyEnrichment.expandOntologyTree``1(System.Collections.Generic.IEnumerable{BioFSharp.Stats.OntologyEnrichment.OntologyItem{``0}})">
+<member name="M:BioFSharp.Stats.GSEA.expandOntologyTree``1(System.Collections.Generic.IEnumerable{BioFSharp.Stats.GSEA.OntologyItem{``0}})">
 <summary>
  Extends leaf OntologyEntries to their full tree
 </summary>
 </member>
-<member name="M:BioFSharp.Stats.OntologyEnrichment.splitMapManOntologyItems``1(System.Char,System.Collections.Generic.IEnumerable{BioFSharp.Stats.OntologyEnrichment.OntologyItem{``0}})">
+<member name="M:BioFSharp.Stats.GSEA.splitMapManOntologyItems``1(System.Char,System.Collections.Generic.IEnumerable{BioFSharp.Stats.GSEA.OntologyItem{``0}})">
 <summary>
  Splites OntologyEntry with conacat TermId
  Attention: Also parses string to int to get rit of 0 - terms
 </summary>
 </member>
-<member name="M:BioFSharp.Stats.OntologyEnrichment.createGseaResult(System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Double)">
+<member name="M:BioFSharp.Stats.GSEA.createGseaResult(System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Double)">
 <summary>
  Creates a gene set enrichment result 
 </summary>
 </member>
-<member name="M:BioFSharp.Stats.OntologyEnrichment.createOntologyItem``1(System.String,System.String,System.Int32,``0)">
+<member name="M:BioFSharp.Stats.GSEA.createOntologyItem``1(System.String,System.String,System.Int32,``0)">
 <summary>
  Creates an item in an ontology set
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.Intervals.Interval`1">
+<summary>
+ Closed interval [Start,End]
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Intervals.liesInInterval``1(``0,BioFSharp.Stats.Intervals.Interval{``0})">
+<summary>
+   Does the given value lie in the interval or not.
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Intervals.getValueAt``2(System.Double,BioFSharp.Stats.Intervals.Interval{``0})">
+<summary>
+ Get the value at a given percentage within (0.0 - 1.0) or outside (&lt; 0.0, &gt; 1.0) of the interval. Rounding to nearest neighbour occurs when needed.
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Intervals.intersect``1(BioFSharp.Stats.Intervals.Interval{``0},BioFSharp.Stats.Intervals.Interval{``0})">
+<summary>
+ Returns the intersection of this interval with another.
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Intervals.isIntersection``1(BioFSharp.Stats.Intervals.Interval{``0},BioFSharp.Stats.Intervals.Interval{``0})">
+<summary>
+ Checking for intersection of both intervals
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Intervals.subtract(BioFSharp.Stats.Intervals.Interval{System.Int32},BioFSharp.Stats.Intervals.Interval{System.Int32})">
+<summary>
+ Subtract a given interval from the other interval.
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Intervals.add(BioFSharp.Stats.Intervals.Interval{System.Int32},BioFSharp.Stats.Intervals.Interval{System.Int32})">
+<summary>
+ Add two given intervals.
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Intervals.toString``1(BioFSharp.Stats.Intervals.Interval{``0})">
+<summary>
+ Returns the interval as a string
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Intervals.trySize``2(BioFSharp.Stats.Intervals.Interval{``0})">
+<summary>
+ Returns the size of an closed interval
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Intervals.ofSize(System.Int32,System.Int32)">
+<summary>
+ Creates closed interval [min,max] by given start and size
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Intervals.create``1(``0,``0)">
+<summary>
+ Creates closed interval [min,max] by given min and max
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.ML.DistanceMetrics.Distance`1">
+<summary>
+ Signiture type for distance functions
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.DistanceMetrics.wagnerFischerLazy(System.String,System.String)">
+<summary>
+ Levenshtein distance between
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.DistanceMetrics.dissimilarity(System.Collections.Generic.IEnumerable{System.Double},System.Collections.Generic.IEnumerable{System.Double})">
+<summary>
+ &quot;Dissimilarity&quot; uses 1. - pearsons correlation coefficient 
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.DistanceMetrics.euclideanNaN(System.Collections.Generic.IEnumerable{System.Double},System.Collections.Generic.IEnumerable{System.Double})">
+<summary>
+ Euclidean distance between 2 vectors (ignores nan)
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.DistanceMetrics.euclidean(System.Collections.Generic.IEnumerable{System.Double},System.Collections.Generic.IEnumerable{System.Double})">
+<summary>
+ Euclidean distance between 2 vectors
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.ML.Impute.MatrixBaseImputation`2">
+<summary>
+ Type definintion for a vector based imputation
+ The imputed values are based on the given whole dataset
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.ML.Impute.VectorBaseImputation`1">
+<summary>
+ Type definintion for a vector based imputation.
+ The imputed values are based only on the given array
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Impute.imputeBy``2(Microsoft.FSharp.Core.FSharpFunc{System.Collections.Generic.IEnumerable{``0[]},Microsoft.FSharp.Core.FSharpFunc{``0[],Microsoft.FSharp.Core.FSharpFunc{System.Int32,``0}}},Microsoft.FSharp.Core.FSharpFunc{``0,System.Boolean},System.Collections.Generic.IEnumerable{``1})">
+<summary>
+ Imputes rows by matrix-based imputation
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Impute.imputeRowWiseBy``2(Microsoft.FSharp.Core.FSharpFunc{System.Collections.Generic.IEnumerable{``0},Microsoft.FSharp.Core.FSharpFunc{System.Int32,``0}},Microsoft.FSharp.Core.FSharpFunc{``0,System.Boolean},System.Collections.Generic.IEnumerable{``1})">
+<summary>
+ Imputes row-wise by vector-based imputation
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Impute.imputeColWiseBy``2(Microsoft.FSharp.Core.FSharpFunc{System.Collections.Generic.IEnumerable{``0},Microsoft.FSharp.Core.FSharpFunc{System.Int32,``0}},Microsoft.FSharp.Core.FSharpFunc{``0,System.Boolean},System.Collections.Generic.IEnumerable{``1})">
+<summary>
+ Imputes column-wise by vector-based imputation
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Impute.kNearestImpute(System.Int32,System.Collections.Generic.IEnumerable{System.Double[]},System.Double[],System.Int32)">
+<summary>
+ Imputation by k-nearest neighbour
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Impute.normal(System.Collections.Generic.IEnumerable{System.Double},System.Int32)">
+<summary>
+ Imputation by sampling from a gausian normal distribution based on the input vector
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Impute.rnd``1(System.Random,System.Collections.Generic.IEnumerable{``0},System.Int32)">
+<summary>
+ Imputation by random sampling from the input vector
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.ML.Impute">
+<summary>
+ Module for data imputation and missing value filtering
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Unsupervised.ClusterNumber.calcAIC(System.Int32,Microsoft.FSharp.Core.FSharpFunc{System.Int32,BioFSharp.Stats.ML.Unsupervised.IterativeClustering.KClusteringResult{System.Double[]}},System.Int32)">
+<summary>
+ Akaike Information Criterion (AIC)
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Unsupervised.ClusterNumber.k_ruleOfThumb``1(System.Collections.Generic.IEnumerable{``0})">
+<summary>
+ Simple estimator for number of cluster (k) // can be used as the upper bound for other methods
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Unsupervised.GapStatistics.dispersion``1(Microsoft.FSharp.Core.FSharpFunc{``0[],Microsoft.FSharp.Core.FSharpFunc{System.Int32,System.Double}},``0[],System.Int32)">
+<summary>
+ Not used.
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.ML.Unsupervised.HierarchicalClustering.DistanceCaching`1">
+<summary>
+ Class for chaching already calculated distances to speed up cluster build
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Unsupervised.HierarchicalClustering.printHClust``1(BioFSharp.Stats.ML.Unsupervised.HierarchicalClustering.Cluster{``0})">
+<summary>
+ Converts clusters into string seq
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Unsupervised.HierarchicalClustering.cutHClust``1(System.Int32,BioFSharp.Stats.ML.Unsupervised.HierarchicalClustering.Cluster{``0})">
+<summary>
+ Cuts a tree, as resulting from hclust, into several groups by specifying the desired number(s).
+ If the desired number is odd the function cut the cluster with maximal distance
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Unsupervised.HierarchicalClustering.flattenHClust``1(BioFSharp.Stats.ML.Unsupervised.HierarchicalClustering.Cluster{``0})">
+<summary>
+ Returns a flatten list containing Leafs
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Unsupervised.HierarchicalClustering.getClusterMemberLabels``1(BioFSharp.Stats.ML.Unsupervised.HierarchicalClustering.Cluster{``0})">
+<summary>
+ Returns 
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Unsupervised.HierarchicalClustering.generate``1(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``0,System.Double}},Microsoft.FSharp.Core.FSharpFunc{System.Tuple{System.Int32,System.Int32,System.Int32},Microsoft.FSharp.Core.FSharpFunc{System.Double,Microsoft.FSharp.Core.FSharpFunc{System.Double,Microsoft.FSharp.Core.FSharpFunc{System.Double,System.Double}}}},System.Collections.Generic.IEnumerable{``0})">
+<summary>
+ Builds a hierarchy of clusters of data containing cluster labels
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.ML.Unsupervised.HierarchicalClustering.Linker.LancWilliamsLinker">
+<summary>
+ Signiture type for Lance and Williams Linker functions
+ D(A u B,C) = alpa1 d(A,C) +  alpa2 d(B,C) + beta d(A,B) + gamma |d(A,C) - d(BC))|
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Unsupervised.HierarchicalClustering.Linker.wardLwLinker(System.Int32,System.Int32,System.Int32,System.Double,System.Double,System.Double)">
+<summary>
+ Ward linkage criterion (UPGMA)
+ Calculates the 
+ d(A u B, C)
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Unsupervised.HierarchicalClustering.Linker.centroidLwLinker(System.Int32,System.Int32,System.Int32,System.Double,System.Double,System.Double)">
+<summary>
+ Centroid linkage criterion (UPGMA)
+ Calculates the 
+ d(A u B, C)
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Unsupervised.HierarchicalClustering.Linker.upgmaLwLinker(System.Int32,System.Int32,System.Int32,System.Double,System.Double,System.Double)">
+<summary>
+ Unweighted Group Average linkage criterion (UPGMA)
+ Calculates the 
+ d(A u B, C)
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Unsupervised.HierarchicalClustering.Linker.weightedGroupAverageLwLinker(System.Int32,System.Int32,System.Int32,System.Double,System.Double,System.Double)">
+<summary>
+ Weighted Group Average linkage criterion
+ Calculates the 
+ d(A u B, C)
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Unsupervised.HierarchicalClustering.Linker.medianLwLinker(System.Int32,System.Int32,System.Int32,System.Double,System.Double,System.Double)">
+<summary>
+ Median linkage criterion
+ Calculates the 
+ d(A u B, C)
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Unsupervised.HierarchicalClustering.Linker.completeLwLinker(System.Int32,System.Int32,System.Int32,System.Double,System.Double,System.Double)">
+<summary>
+ Complete linkage criterion
+ Calculates the 
+ d(A u B, C)
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Unsupervised.HierarchicalClustering.Linker.singleLwLinker(System.Int32,System.Int32,System.Int32,System.Double,System.Double,System.Double)">
+<summary>
+ Single linkage criterion
+ Calculates the minimal distance between all elements of a cluster
+ d(A u B, C)
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.ML.Unsupervised.HierarchicalClustering.Linker">
+<summary>
+ The linkage criterion determines the distance between sets of observations as a function of the pairwise distances between observations
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.ML.Unsupervised.HierarchicalClustering">
+<summary>
+ Agglomerative hierarchical clustering
+</summary>
+</member>
+<member name="P:BioFSharp.Stats.ML.Unsupervised.IterativeClustering.KClusteringResult`1.DistanceMetric">
+<summary>
+ Used distance metric
+</summary>
+</member>
+<member name="P:BioFSharp.Stats.ML.Unsupervised.IterativeClustering.KClusteringResult`1.ClosestDistances">
+<summary>
+ Indices and Distances to closest centroid
+</summary>
+</member>
+<member name="P:BioFSharp.Stats.ML.Unsupervised.IterativeClustering.KClusteringResult`1.Classifier">
+<summary>
+ Classifier function returns cluster index and data point
+</summary>
+</member>
+<member name="P:BioFSharp.Stats.ML.Unsupervised.IterativeClustering.KClusteringResult`1.Centroids">
+<summary>
+ Centroids with index and data
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.ML.Unsupervised.IterativeClustering.KClusteringResult`1">
+<summary>
+ Result of a kmeans clustering
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Unsupervised.IterativeClustering.DispersionOfClusterResult``1(BioFSharp.Stats.ML.Unsupervised.IterativeClustering.KClusteringResult{``0})">
+<summary>
+ Calculates the average squared distance from the data points
+ to the cluster centroid (also refered to as error)
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Unsupervised.IterativeClustering.Dispersion``1(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``0,System.Double}},Microsoft.FSharp.Collections.FSharpList{``0},System.Collections.Generic.IEnumerable{``0})">
+<summary>
+ Calculates the average squared distance from the data points
+ to the cluster centroid (also refered to as error)
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Unsupervised.IterativeClustering.nearestDistance``1(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``0,System.Double}},``0[],``0)">
+<summary>
+ Calculates the distance from the data point to the centroid 
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Unsupervised.IterativeClustering.createKClusteringResult``1(System.Tuple{System.Int32,``0}[],Microsoft.FSharp.Core.FSharpFunc{``0,System.Tuple{System.Int32,``0}},System.Tuple{System.Int32,System.Double}[],Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``0,System.Double}})">
+<summary>
+ Creates a k-clustering  result
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.ML.Unsupervised.PCA.AdjustmentFactory">
+<summary>
+ AdjustmentFactorygiven,given a dataset, 
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.ML.Unsupervised.PCA.Component">
+<summary>
+ Represents a principle component 
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Unsupervised.PCA.zipScree(BioFSharp.Stats.ML.Unsupervised.PCA.Component[])">
+<summary>
+ Returns xy-coordinates for scree plot in a tuple (component number vs. EigenValue)    
+ Scree plot: represents the ability of PCs to explain de variation in data
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Unsupervised.PCA.importanceOfTransformed``1(``0)">
+<summary>
+ Calculates the squared cosine of a component with an observation
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Unsupervised.PCA.contributionOfTransformed``1(``0)">
+<summary>
+ Contribution of an observation to a component
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Unsupervised.PCA.revert``1(Microsoft.FSharp.Core.FSharpFunc{BioFSharp.Stats.ML.Unsupervised.PCA.AdjustmentDirection,Microsoft.FSharp.Core.FSharpFunc{MathNet.Numerics.LinearAlgebra.Matrix{System.Double},MathNet.Numerics.LinearAlgebra.Matrix{System.Double}}},BioFSharp.Stats.ML.Unsupervised.PCA.Component[],``0)">
+<summary>
+   Reverts a set of projected data into it&apos;s original form. Complete reverse
+   transformation is only possible if all components are present, and, if the
+   data has been standardized, the original standard deviation and means of
+   the original matrix are known.
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Unsupervised.PCA.transform``1(Microsoft.FSharp.Core.FSharpFunc{BioFSharp.Stats.ML.Unsupervised.PCA.AdjustmentDirection,Microsoft.FSharp.Core.FSharpFunc{MathNet.Numerics.LinearAlgebra.Matrix{System.Double},MathNet.Numerics.LinearAlgebra.Matrix{System.Double}}},BioFSharp.Stats.ML.Unsupervised.PCA.Component[],``0)">
+<summary>
+ Projects a given matrix into principal component space (projections or factor scores)
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Unsupervised.PCA.getCommunality(BioFSharp.Stats.ML.Unsupervised.PCA.Component[])">
+<summary>
+ Returns communality
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Unsupervised.PCA.getFeatureMatrixOfComponents(BioFSharp.Stats.ML.Unsupervised.PCA.Component[])">
+<summary>
+ Returns feature matrix (eigenvector matrix) from components
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Unsupervised.PCA.compute``1(Microsoft.FSharp.Core.FSharpFunc{BioFSharp.Stats.ML.Unsupervised.PCA.AdjustmentDirection,Microsoft.FSharp.Core.FSharpFunc{MathNet.Numerics.LinearAlgebra.Matrix{System.Double},MathNet.Numerics.LinearAlgebra.Matrix{System.Double}}},``0)">
+<summary>
+ Computes a principal componant analysis
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Unsupervised.PCA.computeOfMatrix``1(``0)">
+<summary>
+ Computes a principal componant analysis of a given covariance matrix
+ !Attention: Matrix needs to be centered before
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Unsupervised.PCA.computeOfCovarianceMatrix``1(``0)">
+<summary>
+ Computes a principal componant analysis of a given covariance matrix
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Unsupervised.PCA.createComponentsOf(MathNet.Numerics.LinearAlgebra.Matrix{System.Double},System.Collections.Generic.IEnumerable{System.Double})">
+<summary>
+ Creates the principle components of eigenVectors and eigenValues
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Unsupervised.PCA.createComponent(System.Double[],System.Double,System.Double[],System.Double,System.Double,System.Int32)">
+<summary>
+ Creates a principle component type
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Unsupervised.PCA.toAdjustCorrelation(MathNet.Numerics.LinearAlgebra.Matrix{System.Double})">
+<summary>
+ Returns an AdjustmentFactory which centers and standardize the data
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Unsupervised.PCA.toAdjustStandardize(MathNet.Numerics.LinearAlgebra.Matrix{System.Double})">
+<summary>
+ Returns an AdjustmentFactory which centers and standardize the data
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Unsupervised.PCA.toAdjustCovariance(MathNet.Numerics.LinearAlgebra.Matrix{System.Double})">
+<summary>
+ Returns an AdjustmentFactory as covariance matrix
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.ML.Unsupervised.PCA.toAdjustCenter(MathNet.Numerics.LinearAlgebra.Matrix{System.Double})">
+<summary>
+ Returns an AdjustmentFactory which centers the data
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.ML.Unsupervised.PCA">
+<summary>
+ Principle component analysis 
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Random.RandBasic.#ctor(System.Int32)">
+<summary>
+ If n is negative, the random number generator seed is based on system time, if it is zero or positive it will
+ use n as the seed.
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Random.RandBasic.#ctor">
+<summary>
+ Constructs the default random number generator with seed 17.
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.Random.RandBasic">
+<summary>
+ A standard implementation of a uniform random source using System.Random()
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.Random.IRandom">
+<summary>
+ Interface that every uniform random number generator must implement.
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Random.GetSampleGenerator">
+<summary>
+ Returns the random number generator used for sampling.
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Random.SetSampleGenerator(BioFSharp.Stats.Random.IRandom)">
+<summary>
+ Sets the random number generator used for sampling.
+</summary>
+</member>
+<member name="P:BioFSharp.Stats.Random.rndgen">
+<summary>
+ The uniform random source used for sampling functions.
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.Rank.RankedValue`1">
+<summary>
+ RanlkedValue type contains the original value (Value), its rank (RankIndex) and its original position (Position)
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Rank.breakByMinDesc``1(System.Collections.Generic.IEnumerable{``0})">
+<summary>
+ Returns the RankedValue of a number (ascending order) in a sequence of numbers.
+ Remark: breaks ties by using minimum value    
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Rank.breakByMaxDesc``1(System.Collections.Generic.IEnumerable{``0})">
+<summary>
+ Returns the RankedValue of a number (ascending order) in a sequence of numbers.
+ Remark: breaks ties by using maximum value
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Rank.breakByMeanDesc``1(System.Collections.Generic.IEnumerable{``0})">
+<summary>
+ Returns the RankedValue of a number (ascending order) in a sequence of numbers.
+ Remark: breaks ties by mean    
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Rank.breakByMin``1(System.Collections.Generic.IEnumerable{``0})">
+<summary>
+ Returns the RankedValue of a number in a sequence of numbers.
+ Remark: breaks ties by using minimum value
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Rank.breakByMax``1(System.Collections.Generic.IEnumerable{``0})">
+<summary>
+ Returns the RankedValue of a number in a sequence of numbers.
+ Remark: breaks ties by using maximum value
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Rank.breakByMean``1(System.Collections.Generic.IEnumerable{``0})">
+<summary>
+ Returns the RankedValue of a number in a sequence of numbers.
+ Remark: breaks ties by mean
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Rank.distinct``1(System.Collections.Generic.IEnumerable{``0})">
+<summary>
+ Calculates the rank in ascending order
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.Rank">
+<summary>
+ Module to Calculate the rank. The rank of a number is its size relative to other values in a sequence
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Signal.Baseline.baselineAls'(System.Int32,System.Int32,System.Double,System.Double[])">
+<summary>
+ Asymmetric Least Squares Smoothing using spares Matrix (slower but memory efficient)
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Signal.Baseline.baselineAls(System.Int32,System.Int32,System.Double,System.Double[])">
+<summary>
+ Asymmetric Least Squares Smoothing by P. Eilers and H. Boelens in 2005
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Signal.Baseline.diff(System.Int32,System.Double[0:,0:])">
+<summary>
+ Calculate the n-th order discrete difference along given axis.
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Signal.Baseline.diag``1(System.Int32,``0)">
+<summary>
+ Creates a diagonal 2-D array with the given order and set all diagonal values to x
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Signal.Filtering.savitzky_golay(System.Int32,System.Int32,System.Int32,System.Int32,System.Double[])">
+<summary>
+ Smooth (and optionally differentiate) data with a Savitzky-Golay filter.
+ The Savitzky-Golay filter is a type of low-pass filter and removes high frequency noise from data.
+</summary>
+</member>
+<member name="P:BioFSharp.Stats.Signal.Filtering.chebeshevFilter">
+<summary>
+http://www.centerspace.net/blog/nmath/chebyshev-filters-with-nmath/
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.StatisticalMeasure.Range">
+<summary>
+ Range min max
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.averageDev(System.Collections.Generic.IEnumerable{System.Double})">
+<summary>
+ Average absolute deviation (Normalized by N-1)
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.populationAverageDev(System.Collections.Generic.IEnumerable{System.Double})">
+<summary>
+ Average absolute deviation (Normalized by N)
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.medianAbsoluteDev(System.Collections.Generic.IEnumerable{System.Double})">
+<summary>
+ Median absolute deviation
+ MAD
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.kurtosisPopulation(System.Collections.Generic.IEnumerable{System.Double})">
+ <summary>
+   Computes the Kurtosis for the given population. (baised)
+ </summary>
+ 
+ <remarks>
+   The framework uses the same definition used by default in SAS and SPSS.
+ </remarks>
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.kurtosis(System.Collections.Generic.IEnumerable{System.Double})">
+ <summary>
+   Computes the Kurtosis for the given values.
+ </summary>
+ 
+ <remarks>
+   The framework uses the same definition used by default in SAS and SPSS.
+ </remarks>
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.skewnessPopulation(System.Collections.Generic.IEnumerable{System.Double})">
+ <summary>
+   Computes the Skewness for the given population. (baised)
+ </summary>
+ 
+ <remarks>
+   Skewness characterizes the degree of asymmetry of a distribution
+   around its mean. Positive skewness indicates a distribution with
+   an asymmetric tail extending towards more positive values. Negative
+   skewness indicates a distribution with an asymmetric tail extending
+   towards more negative values.
+ </remarks>
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.skewness(System.Collections.Generic.IEnumerable{System.Double})">
+ <summary>
+   Computes the Skewness for the given values.
+ </summary>
+ 
+ <param name="mean">mean of sequence of values</param> 
+ <param name="items">sequence of float</param> 
+ <remarks>
+   Skewness characterizes the degree of asymmetry of a distribution
+   around its mean. Positive skewness indicates a distribution with
+   an asymmetric tail extending towards more positive values. Negative
+   skewness indicates a distribution with an asymmetric tail extending
+   towards more negative values.
+ </remarks>    
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.skewnessFromMean(System.Double,System.Collections.Generic.IEnumerable{System.Double})">
+ <summary>
+   Computes the Skewness for the given values.
+ </summary>
+ 
+ <param name="mean">mean of sequence of values</param> 
+ <param name="items">sequence of float</param> 
+ <remarks>
+   Skewness characterizes the degree of asymmetry of a distribution
+   around its mean. Positive skewness indicates a distribution with
+   an asymmetric tail extending towards more positive values. Negative
+   skewness indicates a distribution with an asymmetric tail extending
+   towards more negative values.
+ </remarks>
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.covarianceUnbaised(System.Collections.Generic.IEnumerable{System.Double},System.Collections.Generic.IEnumerable{System.Double})">
+ <summary>
+   Computes the unbiased covariance between two sequences of values (Bessel's correction by N-1)   
+ </summary>
+
+ <param name="items1">sequence 1 of float  </param>    
+ <param name="items2">sequence 2 of float  </param>
+ <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>    
+ <returns>Unbiased covariance between two sequences of values (Bessel's correction by N-1)</returns> 
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.covarianceUnbaisedOfMeans(System.Double,System.Double,System.Collections.Generic.IEnumerable{System.Double},System.Collections.Generic.IEnumerable{System.Double})">
+ <summary>
+   Computes the unbiased covariance between two sequences of values (Bessel's correction by N-1)   
+ </summary>
+
+ <param name="mean1">mean of sequence 1</param>
+ <param name="mean2">mean of sequence 2</param>
+ <param name="items1">sequence 1 of float  </param>    
+ <param name="items2">sequence 2 of float  </param>
+ <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>    
+ <returns>Unbiased covariance between two sequences of values (Bessel's correction by N-1)</returns> 
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.covariance(System.Collections.Generic.IEnumerable{System.Double},System.Collections.Generic.IEnumerable{System.Double})">
+ <summary>
+   Computes the covariance between two sequences of values    
+ </summary>
+
+ <param name="items1">sequence 1 of float  </param>    
+ <param name="items2">sequence 2 of float  </param>
+ <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>    
+ <returns>Covariance between two sequences of values</returns> 
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.covarianceOfMeans(System.Double,System.Double,System.Collections.Generic.IEnumerable{System.Double},System.Collections.Generic.IEnumerable{System.Double})">
+ <summary>
+   Computes the covariance between two sequences of values    
+ </summary>
+
+ <param name="mean1">mean of sequence 1</param>
+ <param name="mean2">mean of sequence 2</param>
+ <param name="items1">sequence 1 of float  </param>    
+ <param name="items2">sequence 2 of float  </param>
+ <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>    
+ <returns>Covariance between two sequences of values</returns> 
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.cvPopulation(System.Collections.Generic.IEnumerable{System.Double})">
+ <summary>
+   Computes the Coefficient of Variation of the population (population standard deviation)
+ </summary>
+
+ <param name="mean">value around which the standard deviation is calculated (mean)</param>
+ <param name="items">seq of float</param>
+ <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>
+ <returns>Coefficient of Variation of the population (Bessel's correction by N-1)</returns> 
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.cvPopulationOfMean(System.Double,System.Collections.Generic.IEnumerable{System.Double})">
+ <summary>
+   Computes the Coefficient of Variation of the population (population standard deviation)
+ </summary>
+
+ <param name="mean">value around which the standard deviation is calculated (mean)</param>
+ <param name="items">seq of float</param>
+ <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>
+ <returns>Coefficient of Variation of the population (Bessel's correction by N-1)</returns> 
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.cv(System.Collections.Generic.IEnumerable{System.Double})">
+ <summary>
+   Computes the Coefficient of Variation of a sample
+ </summary>
+
+ <param name="items">seq of float</param>
+ <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>
+ <returns>Coefficient of Variation of a sample</returns> 
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.cvOfMean(System.Double,System.Collections.Generic.IEnumerable{System.Double})">
+ <summary>
+   Computes the Coefficient of Variation of a sample
+ </summary>
+
+ <param name="mean">value around which the standard deviation is calculated (mean)</param>
+ <param name="items">seq of float</param>
+ <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>
+ <returns>Coefficient of Variation of a sample</returns> 
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.varPopulation(System.Collections.Generic.IEnumerable{System.Double})">
+ <summary>
+   Computes the unbaised variance estimator of the given values (Bessel's correction by N-1)
+ </summary>
+    
+ <param name="items">seq of float</param>
+ <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>
+ <returns>unbaised population variance estimator (Bessel's correction by N-1)</returns> 
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.varPopulationOfMean(System.Double,System.Collections.Generic.IEnumerable{System.Double})">
+ <summary>
+   Computes the unbaised variance estimator of the given values (Bessel's correction by N-1)
+ </summary>
+
+ <param name="mean">value around which the variance is calculated (mean)</param>
+ <param name="items">seq of float</param>
+ <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>
+ <returns>unbaised population variance estimator (Bessel's correction by N-1)</returns> 
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.var(System.Collections.Generic.IEnumerable{System.Double})">
+ <summary>
+   Computes the sample variance
+ </summary>
+
+ <param name="items">seq of float</param>
+ <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>
+ <returns>variance</returns> 
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.varOfMean(System.Double,System.Collections.Generic.IEnumerable{System.Double})">
+ <summary>
+   Computes the sample variance
+ </summary>
+
+ <param name="mean">value around which the variance is calculated (mean)</param>
+ <param name="items">seq of float</param>
+ <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>
+ <returns>variance</returns> 
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.stDevPopulation(System.Collections.Generic.IEnumerable{System.Double})">
+ <summary>
+   Computes the population standard deviation (Bessel's correction by N-1)
+ </summary>
+
+ <param name="items">seq of float</param>
+ <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>
+ <returns>population standard deviation (Bessel's correction by N-1)</returns>     
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.stDevPopulationOfMean(System.Double,System.Collections.Generic.IEnumerable{System.Double})">
+ <summary>
+   Computes the population standard deviation (Bessel's correction by N-1)
+ </summary>
+
+ <param name="mean">value around which the standard deviation is calculated (mean)</param>
+ <param name="items">seq of float</param>
+ <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>
+ <returns>population standard deviation (Bessel's correction by N-1)</returns>     
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.stDev(System.Collections.Generic.IEnumerable{System.Double})">
+ <summary>
+   Computes the sample standard deviation
+ </summary>
+
+ <param name="items">seq of float</param>
+ <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>
+ <returns>standard deviation of a sample</returns> 
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.stDevOfMean(System.Double,System.Collections.Generic.IEnumerable{System.Double})">
+ <summary>
+   Computes the sample standard deviation
+ </summary>
+
+ <param name="mean">value around which the standard deviation is calculated (mean)</param>
+ <param name="items">seq of float</param>
+ <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>
+ <returns>standard deviation of a sample</returns> 
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.median(System.Collections.Generic.IEnumerable{System.Double})">
+<summary>
+ Sample Median
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.meanTruncated(System.Double,System.Collections.Generic.IEnumerable{System.Double})">
+ <summary>
+   Computes the truncated (trimmed) mean
+ </summary>
+
+ <param name="items">seq of float</param>
+ <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>
+ <returns>truncated (trimmed) mean</returns>  
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.meanLogGeometric(System.Collections.Generic.IEnumerable{System.Double})">
+ <summary>
+   Computes the log gemetric mean
+ </summary>
+
+ <param name="items">seq of float</param>
+ <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>
+ <returns>log gemetric mean</returns>   
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.meanGeometric(System.Collections.Generic.IEnumerable{System.Double})">
+ <summary>
+   Computes gemetric mean
+ </summary>
+
+ <param name="items">seq of float</param>
+ <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>
+ <returns>gemetric mean</returns>   
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.meanHarmonic(System.Collections.Generic.IEnumerable{System.Double})">
+ <summary>
+   Computes harmonic mean
+ </summary>
+
+ <param name="items">seq of float</param>
+ <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>
+ <returns>harmonic mean</returns>   
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.mean(System.Collections.Generic.IEnumerable{System.Double})">
+ <summary>
+   Computes the population mean (Normalized by N)
+ </summary>
+
+ <param name="items">seq of float</param>
+ <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>
+ <returns>population mean (Normalized by N)</returns>   
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.createRange(System.Double,System.Double)">
+<summary>
+ Creates range with minimum and maximum
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.NaN.varPopulation(System.Collections.Generic.IEnumerable{System.Double})">
+<summary>
+ Computes the baised population variance estimator (Normalized by N)
+ Removes NaN before calculation
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.NaN.stDevPopulation(System.Collections.Generic.IEnumerable{System.Double})">
+<summary>
+ Computes the population standard deviation (Normalized by N)
+ Removes NaN before calculation
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.NaN.median(System.Collections.Generic.IEnumerable{System.Double})">
+<summary>
+ Computes the median
+ Removes NaN before calculation
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.NaN.mean(System.Collections.Generic.IEnumerable{System.Double})">
+<summary>
+ Computes the population mean (Normalized by N)
+ Removes NaN before calculation
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.StatisticalMeasure.NaN">
+<summary>
+ All descriptice stats function filters NaN and +/- inf values
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.MatrixModule.columnRange``1(``0)">
+<summary>
+ Returns range over column
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.MatrixModule.rowRange``1(``0)">
+<summary>
+ Returns range over row
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.MatrixModule.rowMean``1(``0)">
+<summary>
+ Returns mean over row
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.MatrixModule.columnMean``1(``0)">
+<summary>
+ Returns mean over column
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.MatrixModule.rowCovarianceUnbaised``1(``0)">
+<summary>
+ Returns the covariance matrix for the rows (Bessel&apos;s correction by N-1)
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.MatrixModule.columnCovarianceUnbaised``1(``0)">
+<summary>
+ Returns the covariance matrix for the columns (Bessel&apos;s correction by N-1)
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.MatrixModule.rowCovariance``1(``0)">
+<summary>
+ Returns the covariance matrix for the rows
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.MatrixModule.columnCovariance``1(``0)">
+<summary>
+ Returns the covariance matrix for the columns
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.StatisticalMeasure.MatrixModule">
+<summary>
+ A module which implements functional matrix operations.
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.UtilityFunctions.pooledStDevPopulation``1(System.Collections.Generic.IEnumerable{``0})">
+ <summary>
+   Computes the pooled population standard deviation of the given values (Bessel's correction by N-1)
+ </summary>       
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.UtilityFunctions.pooledStDevPopulationOf(System.Collections.Generic.IEnumerable{System.Int32},System.Collections.Generic.IEnumerable{System.Double})">
+ <summary>
+   Computes the pooled population standard deviation of the given values (Bessel's correction by N-1)
+ </summary>
+
+ <param name="sizes">The number of samples</param>
+ <param name="variances">The population variances for each samples.</param>       
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.UtilityFunctions.pooledStDev``1(System.Collections.Generic.IEnumerable{``0})">
+ <summary>
+   Computes the pooled standard deviation of the given values.
+ </summary>       
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.UtilityFunctions.pooledStDevOf(System.Collections.Generic.IEnumerable{System.Int32},System.Collections.Generic.IEnumerable{System.Double})">
+ <summary>
+   Computes the pooled standard deviation of the given values
+ </summary>
+
+ <param name="sizes">The number of samples</param>
+ <param name="variances">The population variances for each samples.</param>       
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.UtilityFunctions.pooledVarPopulation``1(System.Collections.Generic.IEnumerable{``0})">
+ <summary>
+   Computes the pooled population variance of the given values (Bessel's correction by N-1)
+ </summary>
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.UtilityFunctions.pooledVarPopulationOf(System.Collections.Generic.IEnumerable{System.Int32},System.Collections.Generic.IEnumerable{System.Double})">
+ <summary>
+   Computes the pooled population variance of the given values (Bessel's correction by N-1)
+ </summary>
+ 
+ <param name="sizes">The number of samples</param>
+ <param name="variances">The population variances for each samples.</param>
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.UtilityFunctions.pooledVar``1(System.Collections.Generic.IEnumerable{``0})">
+ <summary>
+   Computes the pooled variance of the given values
+ </summary>
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.UtilityFunctions.pooledVarOf(System.Collections.Generic.IEnumerable{System.Int32},System.Collections.Generic.IEnumerable{System.Double})">
+ <summary>
+   Computes the pooled variance of the given values
+ </summary>
+ 
+ <param name="sizes">The number of samples</param>
+ <param name="variances">The population variances for each samples.</param>
+</member>
+<member name="M:BioFSharp.Stats.StatisticalMeasure.UtilityFunctions.sumOfSquares(System.Collections.Generic.IEnumerable{System.Double},System.Collections.Generic.IEnumerable{System.Double})">
+ <summary>
+   Computes sum of squares
+ </summary>
+
+ <param name="items">seq of float</param>
+ <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>
+ <returns>sum of squares</returns> 
+</member>
+<member name="T:BioFSharp.Stats.StatisticalMeasure.UtilityFunctions">
+<summary>
+ A module which implements helper functions to provide special statistical measures
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.StatisticalMeasure">
+<summary>
+ Module to compute common statistical measure
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Testing.Anova.oneWayAnova``1(System.Collections.Generic.IEnumerable{``0})">
+<summary>
+ Calculates one-way analysis of variance (one-way ANOVA) which is a technique used to compare means of two or more samples (using the F distribution)
+ The ANOVA tests the null hypothesis that samples in two or more groups are drawn from populations with the same mean values.
+</summary>
+</member>
+<member name="P:BioFSharp.Stats.Testing.ChiSquareTest.ChiSquare.PValue_Right">
+<summary>
+ One Tailed/Sided
+</summary>
+</member>
+<member name="P:BioFSharp.Stats.Testing.ChiSquareTest.ChiSquare.PValue_Left">
+<summary>
+ One Tailed/Sided
+</summary>
+</member>
+<member name="P:BioFSharp.Stats.Testing.ChiSquareTest.ChiSquare.PValue">
+<summary>
+ Two Tailed/Sided
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.Testing.ChiSquareTest.ChiSquare">
+ <summary>
+   Computes the Chi-Square test statistics for a given statistic
+   with given degrees of freedom.
+ </summary>
+ 
+ <param name="statistic">The test statistic.</param>
+ <param name="df">The degrees of freedom for the numerator.</param>    
+</member>
+<member name="M:BioFSharp.Stats.Testing.ChiSquareTest.bartlettTest``1(System.Collections.Generic.IEnumerable{``0})">
+<summary>
+ Bartlett&apos;s test for equality of variances
+ Tests the null hypothesis that all group variances are equal
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Testing.ChiSquareTest.compute(System.Int32,System.Collections.Generic.IEnumerable{System.Double},System.Collections.Generic.IEnumerable{System.Double})">
+<summary>
+ Computes the Chi-Square test
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.Testing.ChiSquareTest">
+ <summary>
+   Two-Sample (Goodness-of-fit) Chi-Square Test (Upper Tail)
+ </summary>
+ 
+ <remarks>
+ <para>
+   A chi-square test (also chi-squared or χ2  test) is any statistical
+   hypothesis test in which the sampling distribution of the test statistic
+   is a <see cref="ChiSquareDistribution">chi-square distribution</see> when
+   the null hypothesis is true, or any in which this is asymptotically true,
+   meaning that the sampling distribution (if the null hypothesis is true) 
+   can be made to approximate a chi-square distribution as closely as desired
+   by making the sample size large enough.</para>
+ <para>
+   The chi-square test is used whenever one would like to test whether the
+   actual data differs from a random distribution. </para>
+   
+ <para>
+   References:
+   <list type="bullet">
+     <item><description><a href="http://en.wikipedia.org/wiki/Chi-square_test">
+        Wikipedia, The Free Encyclopedia. Chi-Square Test. Available on:
+        http://en.wikipedia.org/wiki/Chi-square_test </a></description></item>
+   
+     <item><description><a href="http://www2.lv.psu.edu/jxm57/irp/chisquar.html">
+        J. S. McLaughlin. Chi-Square Test. Available on:
+        http://www2.lv.psu.edu/jxm57/irp/chisquar.html </a></description></item>
+   </list></para>
+ </remarks>
+ 
+</member>
+<member name="M:BioFSharp.Stats.Testing.Hypergeometric.CalcHyperGeoPvalue(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+<summary>
+ Calculates p value based on hypergeometric distribution (pValue &lt;= k)
+</summary>
+</member>
+<member name="M:BioFSharp.Stats.Testing.PvalueAdjust.Benjamini_Hochberg``1(System.Collections.Generic.IEnumerable{System.Tuple{``0,System.Double}})">
+<summary>
+ Benjamini-Hochberg Correction (BH)
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.Testing.PvalueAdjust">
+
+</member>
+<member name="M:BioFSharp.Stats.Testing.TTest.noAssumtion(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+<summary>
+ Equal or unequal sample sizes, assume nothing about variance.
+ input: (mean1,variance1,N1) (mean2,variance2,N3)
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.Testing.TestStatistics.HypergeometricTEST">
+<summary>
+ Calculates p value based on hypergeometric distribution (p value &lt;= k)
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.Testing.TestStatistics.FTEST">
+ <summary>
+   Creates a new F-Test for a given statistic
+   with given degrees of freedom.
+ </summary>
+ 
+ <param name="statistic">The test statistic.</param>
+ <param name="d1">The degrees of freedom for the numerator.</param>
+ <param name="d2">The degrees of freedom for the denominator.</param>
+</member>
+<member name="P:BioFSharp.Stats.Testing.TestStatistics.TTEST.PValue_Right">
+<summary>
+ One Tailed/Sided
+</summary>
+</member>
+<member name="P:BioFSharp.Stats.Testing.TestStatistics.TTEST.PValue_Left">
+<summary>
+ One Tailed/Sided
+</summary>
+</member>
+<member name="P:BioFSharp.Stats.Testing.TestStatistics.TTEST.PValue">
+<summary>
+ Two Tailed/Sided
+</summary>
+</member>
+<member name="T:BioFSharp.Stats.Testing.TestStatistics.TTEST">
+ <summary>
+   Creates a new T-Test for a given statistic
+   with given degrees of freedom.
+ </summary>
+ 
+ <param name="statistic">The test statistic.</param>
+ <param name="df">The degrees of freedom for the numerator.</param>    
+</member>
+<member name="T:BioFSharp.Stats.Testing.TestStatistics">
+<summary>
+ [omit]
+</summary>
+</member>
+<member name="M:FSharpAux.Matrix.pseudoInvers(MathNet.Numerics.LinearAlgebra.Matrix{System.Double})">
+<summary>
+ Calculates the pseudo inverse of the matrix
+</summary>
+</member>
+<member name="M:FSharpAux.Matrix.stack``1(MathNet.Numerics.LinearAlgebra.Matrix{``0},MathNet.Numerics.LinearAlgebra.Matrix{``0})">
+<summary>
+ Stacks two matrices along the rows        
+</summary>
+</member>
+<member name="M:FSharpAux.Matrix.append``1(MathNet.Numerics.LinearAlgebra.Matrix{``0},MathNet.Numerics.LinearAlgebra.Matrix{``0})">
+<summary>
+ Concatenates two matrices along the column
+</summary>
+</member>
+<member name="M:FSharpAux.Matrix.cov(MathNet.Numerics.LinearAlgebra.Matrix{System.Double})">
+<summary>
+ Calculates the variance-covariance matrix of the columns
+</summary>
+</member>
+<member name="M:FSharpAux.Matrix.toJaggedArrayColumnWise``1(MathNet.Numerics.LinearAlgebra.Matrix{``0})">
+<summary>
+ Returns an an jagged array  over the column
+</summary>
+</member>
+<member name="M:FSharpAux.Matrix.toJaggedArrayRowWise``1(MathNet.Numerics.LinearAlgebra.Matrix{``0})">
+<summary>
+ Returns an jagged array over the rows  
+</summary>
+</member>
+<member name="M:FSharpAux.Matrix.toSeqColumnWise``1(MathNet.Numerics.LinearAlgebra.Matrix{``0})">
+<summary>
+ Returns an System.Collections.Generic.IEnumerable that enumerates over the column
+</summary>
+</member>
+<member name="M:FSharpAux.Matrix.toSeqRowWise``1(MathNet.Numerics.LinearAlgebra.Matrix{``0})">
+<summary>
+ Returns an System.Collections.Generic.IEnumerable that enumerates over the rows  
+</summary>
+</member>
+<member name="M:FSharpAux.Vector.windowed``1(System.Int32,MathNet.Numerics.LinearAlgebra.Vector{``0})">
+<summary>
+ Returns a sequence that yields sliding windows of containing elements from the input vectorl
+ Each window is retured as a fresh vector
+</summary>
+</member>
+<member name="M:FSharpAux.Auxiliary.Matrix.toJaggedArrayColumnWise(MathNet.Numerics.LinearAlgebra.Double.Matrix)">
+<summary>
+ Returns an an jagged array  over the column
+</summary>
+</member>
+<member name="M:FSharpAux.Auxiliary.Matrix.toJaggedArrayRowWise(MathNet.Numerics.LinearAlgebra.Double.Matrix)">
+<summary>
+ Returns an jagged array over the rows        
+</summary>
+</member>
+<member name="M:FSharpAux.Auxiliary.Matrix.toSeqColumnWise(MathNet.Numerics.LinearAlgebra.Double.Matrix)">
+<summary>
+ Returns an System.Collections.Generic.IEnumerable that enumerates over the column
+</summary>
+</member>
+<member name="M:FSharpAux.Auxiliary.Matrix.toSeqRowWise(MathNet.Numerics.LinearAlgebra.Double.Matrix)">
+<summary>
+ Returns an System.Collections.Generic.IEnumerable that enumerates over the rows        
+</summary>
+</member>
+<member name="M:FSharpAux.Auxiliary.Matrix`1.shuffle``1(MathNet.Numerics.LinearAlgebra.Matrix{``0})">
+<summary>
+ Shuffels each column of the input matrix separately  (method: Fisher-Yates)
+</summary>
+</member>
+<member name="M:FSharpAux.Auxiliary.Matrix`1.shuffleRowWise``1(MathNet.Numerics.LinearAlgebra.Matrix{``0})">
+<summary>
+ Shuffels each row of the input matrix separately  (method: Fisher-Yates)
+</summary>
+</member>
+<member name="M:FSharpAux.Auxiliary.Matrix`1.shuffleColumnWise``1(MathNet.Numerics.LinearAlgebra.Matrix{``0})">
+<summary>
+ Shuffels each column of the input matrix separately  (method: Fisher-Yates)
+</summary>
+</member>
+<member name="M:FSharpAux.Auxiliary.Vector`1.shuffleFisherYates``1(MathNet.Numerics.LinearAlgebra.Vector{``0})">
+<summary>
+ Shuffels the input vector (method: Fisher-Yates)
+</summary>
+</member>
+<member name="T:FSharpAux.Auxiliary">
+<summary>
+ Module that contains implementation of useful F#-specific
+ extension members for generic Matrix and Vector types
 </summary>
 </member>
 </members>

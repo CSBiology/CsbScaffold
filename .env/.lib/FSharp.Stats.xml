@@ -2,10 +2,20 @@
 <doc>
 <assembly><name>FSharp.Stats</name></assembly>
 <members>
+<member name="T:FSharp.Stats.Complex">
+<summary>
+Complex number in cartesian form
+</summary>
+</member>
 <member name="T:FSharp.Stats.OpsData`1">
 <summary>
  The value stored for the dictionary of numeric operations. If none is present then this indicates
  no operations are known for this type.
+</summary>
+</member>
+<member name="T:FSharp.Stats.complex">
+<summary>
+Complex number            
 </summary>
 </member>
 <member name="T:FSharp.Stats.Algebra.ILinearAlgebra">
@@ -110,6 +120,11 @@ It is those exposed APIs that should be used.
  This module is for internal use only.
 </summary>
 </member>
+<member name="M:FSharp.Stats.Array.seqInit(System.Double,System.Double,System.Int32)">
+<summary>
+ Generates array sequence (like R! seq.int)
+</summary>
+</member>
 <member name="M:FSharp.Stats.Array.sampleWithOutReplacement``1(System.Random,``0[],System.Int32)">
 <summary>
  Samples from an array of obj without replacement (without putting back)
@@ -125,12 +140,18 @@ It is those exposed APIs that should be used.
  Computes the sample median
 </summary>
 </member>
+<member name="M:FSharp.Stats.Array.quickSelectInPlace``1(System.Int32,``0[])">
+<summary>
+ Finds the kth smallest element in an unordered array
+ Works in place and can change the order of the elements in the input array
+</summary>
+</member>
 <member name="M:FSharp.Stats.Array.quickSelect``1(System.Int32,``0[])">
 <summary>
  Finds the kth smallest element in an unordered array
 </summary>
 </member>
-<member name="M:FSharp.Stats.Array.partionSortInPlace``1(System.Int32,System.Int32,``0[])">
+<member name="M:FSharp.Stats.Array.partitionSortInPlace``1(System.Int32,System.Int32,``0[])">
 <summary>
  Arranges the items between the left and right border, that all items left of the pivot element are smaller and bigger on the right.
  Function works in place and returns the index of the pivote element
@@ -141,7 +162,162 @@ It is those exposed APIs that should be used.
  Module to compute common statistical measure on array
 </summary>
 </member>
-<member name="M:FSharp.Stats.Correlation.pearsonCorrelation``3(``0,``1)">
+<member name="M:FSharp.Stats.ComplexModule.ofReal(System.Double)">
+<summary>
+Creates a complex number of a real number (imaginary part 0)
+</summary>
+</member>
+<member name="M:FSharp.Stats.ComplexModule.tan(FSharp.Stats.Complex)">
+<summary>
+Evaluates the tangent of a complex number
+</summary>
+</member>
+<member name="M:FSharp.Stats.ComplexModule.sin(FSharp.Stats.Complex)">
+<summary>
+Evaluates the sine of a complex number
+</summary>
+</member>
+<member name="M:FSharp.Stats.ComplexModule.cos(FSharp.Stats.Complex)">
+<summary>
+Evaluates the cosine of a complex number
+</summary>
+</member>
+<member name="M:FSharp.Stats.ComplexModule.sqrt(FSharp.Stats.Complex)">
+<summary>
+Evaluates square root of complex number
+</summary>
+</member>
+<member name="M:FSharp.Stats.ComplexModule.log(FSharp.Stats.Complex)">
+<summary>
+Evaluates natural logarithm of complex number
+</summary>
+</member>
+<member name="M:FSharp.Stats.ComplexModule.exp(FSharp.Stats.Complex)">
+<summary>
+Evaluates the exponent of the complex number to base e
+</summary>
+</member>
+<member name="P:FSharp.Stats.ComplexModule.pi">
+<summary>
+Pi as complex number
+</summary>
+</member>
+<member name="M:FSharp.Stats.ComplexModule.iscale(System.Double,FSharp.Stats.Complex)">
+<summary>
+Rotates a complex number 90� counterclockwise and multiplies by scalar k
+</summary>
+</member>
+<member name="M:FSharp.Stats.ComplexModule.muls(FSharp.Stats.Complex,System.Double)">
+<summary>
+Multiplies complex number a by scalar b
+</summary>
+</member>
+<member name="M:FSharp.Stats.ComplexModule.smul(System.Double,FSharp.Stats.Complex)">
+<summary>
+Multiplies complex number b by scalar a
+</summary>
+</member>
+<member name="M:FSharp.Stats.ComplexModule.neg(FSharp.Stats.Complex)">
+<summary>
+Reverses sign of the real and the imaginary part of a complex number
+</summary>
+</member>
+<member name="M:FSharp.Stats.ComplexModule.div(FSharp.Stats.Complex,FSharp.Stats.Complex)">
+<summary>
+Divides complex number x by complex number y
+</summary>
+</member>
+<member name="M:FSharp.Stats.ComplexModule.mul(FSharp.Stats.Complex,FSharp.Stats.Complex)">
+<summary>
+Multiplies two complex numbers
+</summary>
+</member>
+<member name="M:FSharp.Stats.ComplexModule.sub(FSharp.Stats.Complex,FSharp.Stats.Complex)">
+<summary>
+Substracts complex number b from complex number a
+</summary>
+</member>
+<member name="M:FSharp.Stats.ComplexModule.add(FSharp.Stats.Complex,FSharp.Stats.Complex)">
+<summary>
+Adds two complex numbers
+</summary>
+</member>
+<member name="M:FSharp.Stats.ComplexModule.abs(FSharp.Stats.Complex)">
+<summary>
+Evaluates the absolute value of a complex number
+</summary>
+</member>
+<member name="M:FSharp.Stats.ComplexModule.imagPart(FSharp.Stats.Complex)">
+<summary>
+Gets the imaginary part of a complex number
+</summary>
+</member>
+<member name="M:FSharp.Stats.ComplexModule.realPart(FSharp.Stats.Complex)">
+<summary>
+Gets the real part of a complex number
+</summary>
+</member>
+<member name="M:FSharp.Stats.ComplexModule.phase(FSharp.Stats.Complex)">
+<summary>
+Evaluates the phase (or the angle) of the complex number in polar form
+</summary>
+</member>
+<member name="M:FSharp.Stats.ComplexModule.magnitude(FSharp.Stats.Complex)">
+<summary>
+Evalues magnitude of complex number
+</summary>
+</member>
+<member name="P:FSharp.Stats.ComplexModule.onei">
+<summary>
+Complex number with real part 0 and imaginary part 1
+</summary>
+</member>
+<member name="P:FSharp.Stats.ComplexModule.one">
+<summary>
+Complex number with real part 1 and imaginary part 0
+</summary>
+</member>
+<member name="P:FSharp.Stats.ComplexModule.zero">
+<summary>
+Complex number with real part 0 and imaginary part 0
+</summary>
+</member>
+<member name="M:FSharp.Stats.ComplexModule.cis(System.Double)">
+<summary>
+Creates a complex number on the unit circle with b being the radius
+</summary>
+</member>
+<member name="M:FSharp.Stats.ComplexModule.mkPolar(System.Double,System.Double)">
+<summary>
+Creates a complex number from its polar form where a is the radius and b is the angle
+</summary>
+</member>
+<member name="M:FSharp.Stats.ComplexModule.conjugate(FSharp.Stats.Complex)">
+<summary>
+Conjugates a complex number (reverses sign of imaginary part)
+</summary>
+</member>
+<member name="M:FSharp.Stats.ComplexModule.mkRect(System.Double,System.Double)">
+<summary>
+Creates a complex number of a real part a and an imaginary part b
+</summary>
+</member>
+<member name="T:FSharp.Stats.ComplexModule">
+<summary>
+Operations for complex number in cartesian form
+</summary>
+</member>
+<member name="M:FSharp.Stats.Correlation.kendall``2(``0[],``1[])">
+<summary>
+ Kendall Correlation Coefficient 
+</summary>
+</member>
+<member name="M:FSharp.Stats.Correlation.spearman``2(``0[],``1[])">
+<summary>
+ Spearman Correlation (with ranks)
+</summary>
+</member>
+<member name="M:FSharp.Stats.Correlation.pearson``3(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})">
 <summary>
  Pearson correlation 
 </summary>
@@ -149,6 +325,66 @@ It is those exposed APIs that should be used.
 <member name="T:FSharp.Stats.Distributions.Distribution`2">
 <summary>
  Interface which every probability distribution must implement.
+</summary>
+</member>
+<member name="M:FSharp.Stats.Distributions.Bandwidth.uLSCV(System.Double[],Microsoft.FSharp.Core.FSharpOption{System.Int32})">
+<summary>
+ Least squares cross-validation of bandwidth (unbiased)
+</summary>
+</member>
+<member name="M:FSharp.Stats.Distributions.Bandwidth.nrd0(System.Double[])">
+<summary>
+ Implements Silverman&apos;s ‘rule of thumb’ for choosing the bandwidth of a Gaussian kernel density estimator.
+</summary>
+</member>
+<member name="M:FSharp.Stats.Distributions.Bandwidth.freedmanDiaconis(System.Double[])">
+<summary>
+ Calcultes bandwidth based on the Freedman–Diaconis rule
+</summary>
+</member>
+<member name="M:FSharp.Stats.Distributions.Bandwidth.scottNormal(System.Double[])">
+<summary>
+ Calcultes bandwidth according to Scott&apos;s normal reference rule
+</summary>
+</member>
+<member name="M:FSharp.Stats.Distributions.Bandwidth.forHistogram(System.Collections.Generic.IEnumerable{System.Double})">
+<summary>
+ Simple bandwidth for histogram
+</summary>
+</member>
+<member name="M:FSharp.Stats.Distributions.Bandwidth.fromBinNumber``3(``0,``1,``2)">
+<summary>
+ Calculates the bandwidth from min max and number of bins
+</summary>
+</member>
+<member name="M:FSharp.Stats.Distributions.Bandwidth.BinNumber.riceRule(System.Double)">
+<summary>
+The Rice Rule is presented as a simple alternative to Sturges&apos;s rule.
+</summary>
+</member>
+<member name="M:FSharp.Stats.Distributions.Bandwidth.BinNumber.sturges(System.Double)">
+<summary>
+ Sturges&apos; formula is derived from a binomial distribution and implicitly assumes an approximately normal distribution.
+</summary>
+</member>
+<member name="M:FSharp.Stats.Distributions.Bandwidth.BinNumber.sqrt(System.Double)">
+<summary>
+ Square-root choice
+</summary>
+</member>
+<member name="M:FSharp.Stats.Distributions.Bandwidth.BinNumber.fromBandwidth(System.Double,System.Double,System.Double)">
+<summary>
+ Compute the number of bins from bandwidth
+</summary>
+</member>
+<member name="T:FSharp.Stats.Distributions.Bandwidth.BinNumber">
+<summary>
+ Compute the number of bins for a histogram
+</summary>
+</member>
+<member name="T:FSharp.Stats.Distributions.Bandwidth">
+<summary>
+ Bandwidth selectors 
 </summary>
 </member>
 <member name="M:FSharp.Stats.Distributions.Continuous.F.Variance(System.Double,System.Double)">
@@ -519,6 +755,52 @@ It is those exposed APIs that should be used.
  Initializes a ChiSquared distribution        
 </summary>
 </member>
+<member name="M:FSharp.Stats.Distributions.Discrete.Binomial.Variance(System.Double,System.Int32)">
+<summary>
+ Computes the variance.
+</summary>
+</member>
+<member name="M:FSharp.Stats.Distributions.Discrete.Binomial.Support(System.Double,System.Int32)">
+<summary>
+ Returns the support of the Binomial distribution: (0., n).
+</summary>
+</member>
+<member name="M:FSharp.Stats.Distributions.Discrete.Binomial.StandardDeviation(System.Double,System.Int32)">
+<summary>
+ Computes the standard deviation.
+</summary>
+</member>
+<member name="M:FSharp.Stats.Distributions.Discrete.Binomial.SampleUnchecked(System.Double,System.Int32)">
+<summary>
+ Produces a random sample using the current random number generator (from GetSampleGenerator()).
+ No parameter checking!
+</summary>
+</member>
+<member name="M:FSharp.Stats.Distributions.Discrete.Binomial.Sample(System.Double,System.Int32)">
+<summary>
+ Produces a random sample using the current random number generator (from GetSampleGenerator()).
+</summary>
+</member>
+<member name="M:FSharp.Stats.Distributions.Discrete.Binomial.PDF(System.Double,System.Int32,System.Int32)">
+<summary>
+ Computes the probability density function at k, i.e. P(K = k)
+</summary>
+</member>
+<member name="M:FSharp.Stats.Distributions.Discrete.Binomial.Mean(System.Double,System.Int32)">
+<summary>
+ Computes the mean.
+</summary>
+</member>
+<member name="M:FSharp.Stats.Distributions.Discrete.Binomial.CDF(System.Double,System.Int32,System.Double)">
+<summary>
+ Computes the cumulative distribution function at x, i.e. P(X &lt;= x).
+</summary>
+</member>
+<member name="T:FSharp.Stats.Distributions.Discrete.Binomial">
+<summary>
+Binomial distribution
+</summary>
+</member>
 <member name="M:FSharp.Stats.Distributions.Discrete.Hypergeometric.Variance(System.Int32,System.Int32,System.Int32)">
 <summary>
  Computes the variance.
@@ -605,6 +887,11 @@ Hypergeometric distribution
  Bernoulli distribution.
 </summary>
 </member>
+<member name="M:FSharp.Stats.Distributions.Discrete.binomial(System.Double,System.Int32)">
+<summary>
+ Initializes a Binomial distribution       
+</summary>
+</member>
 <member name="M:FSharp.Stats.Distributions.Discrete.hypergeometric(System.Int32,System.Int32,System.Int32)">
 <summary>
  Initializes a hypergeometric distribution       
@@ -655,7 +942,31 @@ Hypergeometric distribution
  Chooses a random element from this PMF
 </summary>
 </member>
-<member name="M:FSharp.Stats.Distributions.Empirical.normalize(System.Double,Microsoft.FSharp.Collections.FSharpMap{System.Double,System.Double})">
+<member name="M:FSharp.Stats.Distributions.Empirical.normalizePDD(System.Double,Microsoft.FSharp.Collections.FSharpMap{System.Double,System.Double})">
+<summary>
+ Normalizes this PMF by the bandwidth to area equals 1.  (n/N)/Δx
+ Probability Denisty Distribution
+</summary>
+</member>
+<member name="M:FSharp.Stats.Distributions.Empirical.normalizeBandwidth(System.Double,Microsoft.FSharp.Collections.FSharpMap{System.Double,System.Double})">
+<summary>
+ Normalizes this PMF by the bandwidth n/Δx
+ Frequency Denisty Distribution
+</summary>
+</member>
+<member name="M:FSharp.Stats.Distributions.Empirical.normalizePercentage(Microsoft.FSharp.Collections.FSharpMap{System.Double,System.Double})">
+<summary>
+ Normalizes this PMF so the sum of all probabilities equals 100 percent 
+ Discrete Percentage Probability Distribution
+</summary>
+</member>
+<member name="M:FSharp.Stats.Distributions.Empirical.normalize(Microsoft.FSharp.Collections.FSharpMap{System.Double,System.Double})">
+<summary>
+ Normalizes this PMF so the sum of all probabilities equals 1. 
+ Discrete Probability Distribution
+</summary>
+</member>
+<member name="M:FSharp.Stats.Distributions.Empirical.normalizewith(System.Double,Microsoft.FSharp.Collections.FSharpMap{System.Double,System.Double})">
 <summary>
  Normalizes this PMF so the sum of all probabilities equals fraction
 </summary>
@@ -750,10 +1061,56 @@ Hypergeometric distribution
  Represents a histogram (map from values to integer frequencies).
 </summary>
 </member>
+<member name="M:FSharp.Stats.Distributions.KernelDensity.mapInPlace``1(Microsoft.FSharp.Core.FSharpFunc{``0,``0},``0[])">
+<summary>
+ Applying the given function to each of the elements of the array and returns the value in place.
+</summary>
+</member>
+<member name="M:FSharp.Stats.Distributions.KernelDensity.Kernel.cosine(System.Double,System.Double)">
+<summary>
+ Cosine kernel
+</summary>
+</member>
+<member name="M:FSharp.Stats.Distributions.KernelDensity.Kernel.biweight(System.Double,System.Double)">
+<summary>
+ Biweight kernel
+</summary>
+</member>
+<member name="M:FSharp.Stats.Distributions.KernelDensity.Kernel.epanechnikov(System.Double,System.Double)">
+<summary>
+ Epanechnikov kernel
+</summary>
+</member>
+<member name="M:FSharp.Stats.Distributions.KernelDensity.Kernel.triangular(System.Double,System.Double)">
+<summary>
+ Triangular kernel
+</summary>
+</member>
+<member name="M:FSharp.Stats.Distributions.KernelDensity.Kernel.rectangular(System.Double,System.Double)">
+<summary>
+ Rectangular kernel
+</summary>
+</member>
+<member name="M:FSharp.Stats.Distributions.KernelDensity.Kernel.gaussian(System.Double,System.Double)">
+<summary>
+ Gausian kernel
+</summary>
+</member>
+<member name="T:FSharp.Stats.Distributions.KernelDensity">
+<summary>
+ Module to perform Kernel density estimation
+</summary>
+</member>
 <member name="T:FSharp.Stats.DoubleImpl">
 <summary>
  Implementations of operations specific to floating point types
 </summary>
+</member>
+<member name="M:FSharp.Stats.Fitting.Hermite.initEvalAtWithLinearInterpol(FSharp.Stats.Vector{System.Double},FSharp.Stats.Vector{System.Double},FSharp.Stats.Vector{System.Double})">
+
+</member>
+<member name="M:FSharp.Stats.Fitting.Hermite.leftSegmentIdx``1(``0[],``0)">
+
 </member>
 <member name="P:FSharp.Stats.Fitting.Regression.SumOfSquares.Count">
 <summary>
@@ -916,6 +1273,129 @@ Point-wise multiplication
  Implementations of operations that will work for any type
 </summary>
 </member>
+<member name="M:FSharp.Stats.Integration.Differentiation.differentiateThreePoint(System.Double[],System.Double[],System.Int32,System.Int32,System.Int32,System.Int32)">
+<summary>
+ Three-Point Differentiation Helper.
+ xValues Sample Points t.
+ yValues Sample Values x(t)
+ idxT Index of the point of the differentiation.&lt;/param&gt;
+ idx0 Index of the first sample.&lt;/param&gt;
+ idx1 Index of the second sample.&lt;/param&gt;
+ idx2 Index of the third sample.&lt;/param&gt;
+</summary>
+</member>
+<member name="M:FSharp.Stats.Interpolation.Approximation.approx(System.Collections.Generic.IEnumerable{System.Double},System.Collections.Generic.IEnumerable{System.Double},System.Collections.Generic.IEnumerable{System.Double},Microsoft.FSharp.Core.FSharpFunc{System.Collections.Generic.IEnumerable{System.Double},System.Double})">
+<summary>
+ Return a sequence of points which linearly interpolate given data points, or a function performing the linear interpolation.
+</summary>
+</member>
+<member name="M:FSharp.Stats.Interpolation.Approximation.regularizeValues(System.Collections.Generic.IEnumerable{System.Double},System.Collections.Generic.IEnumerable{System.Double},Microsoft.FSharp.Core.FSharpFunc{System.Collections.Generic.IEnumerable{System.Double},System.Double})">
+<summary>
+ Regularize (like R! regularize.values) used in approx
+ 1. pairs x -y values 
+ 2. filters nan on both sides and sortby x
+ 3. handels ties by given function
+</summary>
+</member>
+<member name="P:FSharp.Stats.Interpolation.CubicSpline.SplineCoefficients.C3">
+<summary>
+ Third order spline coefficients (N)
+</summary>
+</member>
+<member name="P:FSharp.Stats.Interpolation.CubicSpline.SplineCoefficients.C2">
+<summary>
+ Second order spline coefficients (N)
+</summary>
+</member>
+<member name="P:FSharp.Stats.Interpolation.CubicSpline.SplineCoefficients.C1">
+<summary>
+ First order spline coefficients (N)
+</summary>
+</member>
+<member name="P:FSharp.Stats.Interpolation.CubicSpline.SplineCoefficients.C0">
+<summary>
+ Zero order spline coefficients (N)
+</summary>
+</member>
+<member name="P:FSharp.Stats.Interpolation.CubicSpline.SplineCoefficients.XValues">
+<summary>
+ sample points (N+1), sorted ascending
+</summary>
+</member>
+<member name="M:FSharp.Stats.Interpolation.CubicSpline.definiteIntegral(Microsoft.FSharp.Core.FSharpFunc{System.Double,System.Double},System.Double,System.Double)">
+
+</member>
+<member name="M:FSharp.Stats.Interpolation.CubicSpline.integrate(FSharp.Stats.Interpolation.CubicSpline.SplineCoefficients,System.Double)">
+
+</member>
+<member name="M:FSharp.Stats.Interpolation.CubicSpline.computeIndefiniteIntegral(FSharp.Stats.Interpolation.CubicSpline.SplineCoefficients)">
+
+</member>
+<member name="M:FSharp.Stats.Interpolation.CubicSpline.secondDerivative(FSharp.Stats.Interpolation.CubicSpline.SplineCoefficients,System.Double)">
+
+</member>
+<member name="M:FSharp.Stats.Interpolation.CubicSpline.firstDerivative(FSharp.Stats.Interpolation.CubicSpline.SplineCoefficients,System.Double)">
+
+</member>
+<member name="M:FSharp.Stats.Interpolation.CubicSpline.interpolateAtX(FSharp.Stats.Interpolation.CubicSpline.SplineCoefficients,System.Double)">
+
+</member>
+<member name="M:FSharp.Stats.Interpolation.CubicSpline.akimaCoefficients(System.Double[],System.Double[])">
+
+</member>
+<member name="M:FSharp.Stats.Interpolation.CubicSpline.leftSegmentIdx``1(``0[],``0)">
+
+</member>
+<member name="M:FSharp.Stats.Interpolation.CubicSpline.interpolateHermiteSorted(System.Double[],System.Double[],System.Double[])">
+
+</member>
+<member name="M:FSharp.Stats.Interpolation.CubicSpline.createSplineCoefficients(System.Double[],System.Double[],System.Double[],System.Double[],System.Double[])">
+
+</member>
+<member name="P:FSharp.Stats.Interpolation.LinearSpline.LinearSplineCoef.C1">
+<summary>
+ First order spline coefficients (N)
+</summary>
+</member>
+<member name="P:FSharp.Stats.Interpolation.LinearSpline.LinearSplineCoef.C0">
+<summary>
+ Zero order spline coefficients (N)
+</summary>
+</member>
+<member name="P:FSharp.Stats.Interpolation.LinearSpline.LinearSplineCoef.XValues">
+<summary>
+ sample points (N+1), sorted ascending
+</summary>
+</member>
+<member name="M:FSharp.Stats.Interpolation.LinearSpline.differentiate(FSharp.Stats.Interpolation.LinearSpline.LinearSplineCoef,System.Double)">
+<summary>
+ Differentiate at point x
+</summary>
+</member>
+<member name="M:FSharp.Stats.Interpolation.LinearSpline.interpolate(FSharp.Stats.Interpolation.LinearSpline.LinearSplineCoef,System.Double)">
+<summary>
+ Interpolate at point x
+</summary>
+</member>
+<member name="M:FSharp.Stats.Interpolation.LinearSpline.initInterpolate(System.Double[],System.Double[])">
+<summary>
+ Returns the linear spline interpolation coefficients from unsorted x,y data     
+</summary>
+</member>
+<member name="M:FSharp.Stats.Interpolation.LinearSpline.initInterpolateInplace(System.Double[],System.Double[])">
+<summary>
+ Returns the linear spline interpolation coefficients from unsorted x,y data 
+ Works in place
+</summary>
+</member>
+<member name="M:FSharp.Stats.Interpolation.LinearSpline.initInterpolateSorted(System.Double[],System.Double[])">
+<summary>
+ Returns the linear spline interpolation coefficients from sorted x,y data
+</summary>
+</member>
+<member name="M:FSharp.Stats.Interpolation.LinearSpline.createLinearSplineCoef(System.Double[],System.Double[],System.Double[])">
+
+</member>
 <member name="T:FSharp.Stats.Intervals.Interval`1">
 <summary>
  Closed interval [Start,End]
@@ -961,6 +1441,21 @@ Point-wise multiplication
  Returns the size of an closed interval
 </summary>
 </member>
+<member name="M:FSharp.Stats.Intervals.getEnd``1(FSharp.Stats.Intervals.Interval{``0})">
+<summary>
+ Returns max/end value of Interval [min,max]
+</summary>
+</member>
+<member name="M:FSharp.Stats.Intervals.getStart``1(FSharp.Stats.Intervals.Interval{``0})">
+<summary>
+ Returns min/start value of Interval [min,max]
+</summary>
+</member>
+<member name="M:FSharp.Stats.Intervals.values``1(FSharp.Stats.Intervals.Interval{``0})">
+<summary>
+ Returns min and max value of Interval [min,max]
+</summary>
+</member>
 <member name="M:FSharp.Stats.Intervals.ofSize(System.Int32,System.Int32)">
 <summary>
  Creates closed interval [min,max] by given start and size
@@ -969,6 +1464,30 @@ Point-wise multiplication
 <member name="M:FSharp.Stats.Intervals.create``1(``0,``0)">
 <summary>
  Creates closed interval [min,max] by given min and max
+</summary>
+</member>
+<member name="T:FSharp.Stats.LapackMKLStubs">
+<summary>
+ Warning:
+ IMPORTANT WARNING NOTICE:
+ INTEL MATH KERNEL LIBRARY 9.1 FOR WINDOWS IS THIRD PARTY TECHNOLOGY.
+ IT IS CLEARED ONLY FOR USE BY A SPECIFIC MSR RESEARCH TEAM.
+ DO NOT USE IT UNTIL YOU HAVE CLEARED ITS USE FOR YOUR PROJECT WITH YOUR LEGAL CONTACT.
+ 
+ The following stubs bind directly to Intel MKL functionality.
+ You should not use them without:
+ a) Intel MKL developer licenses.
+ b) Seeking local legal approval.
+</summary>
+</member>
+<member name="M:FSharp.Stats.LinearAlgebraMKL.dgesdd_(FSharp.Stats.Matrix{System.Double})">
+<summary>
+Singular Value Decomposition Divide- Conquer
+</summary>
+</member>
+<member name="M:FSharp.Stats.LinearAlgebraMKL.dgemm_(FSharp.Stats.Matrix{System.Double},FSharp.Stats.Matrix{System.Double})">
+<summary>
+Matrix-Matrix Multiplication
 </summary>
 </member>
 <member name="M:FSharp.Stats.List.median``1(Microsoft.FSharp.Collections.FSharpList{``0})">
@@ -982,10 +1501,28 @@ Point-wise multiplication
  Module to compute common statistical measure on list
 </summary>
 </member>
+<member name="M:FSharp.Stats.MatrixModule.meanColumnWise(FSharp.Stats.Matrix{System.Double})">
+<summary>
+ Computes the Column wise mean of a Matrix 
+</summary>
+</member>
+<member name="M:FSharp.Stats.MatrixModule.meanRowWise(FSharp.Stats.Matrix{System.Double})">
+<summary>
+ Computes the row wise mean of a Matrix 
+</summary>
+</member>
+<member name="M:FSharp.Stats.Ops.signum(System.Double,System.Double)">
+<summary>
+ Signum function, assigns a positive sign to a with respect to the signing of b. 
+</summary>
+</member>
 <member name="M:FSharp.Stats.Ops.round(System.Int32,System.Double)">
 <summary>
  Rounds a double-precision floating-point value to a specified number of fractional digits.  
 </summary>
+</member>
+<member name="M:FSharp.Stats.Ops.arsinh(System.Double)">
+
 </member>
 <member name="M:FSharp.Stats.Ops.square``2(``0)">
 <summary>
@@ -1035,6 +1572,192 @@ Point-wise multiplication
 <member name="T:FSharp.Stats.Ops">
 <summary>
  Operations module (automatically opened)
+</summary>
+</member>
+<member name="M:FSharp.Stats.Optimization.Bisection.tryFindRoot(Microsoft.FSharp.Core.FSharpFunc{System.Double,System.Double},System.Double,System.Double,System.Double,System.Int32)">
+<summary>
+Finds the value in an interval for which a given function returns a value at least as close to 0 as the accuracy 
+</summary>
+</member>
+<member name="M:FSharp.Stats.Precision.almostEqualNorm(System.Double,System.Double)">
+<summary>
+ Compares two float values and determines if they differ by no more than 10.*(2.**(-52.).
+</summary>
+</member>
+<member name="M:FSharp.Stats.Precision.almostEqualNormRelative(System.Double,System.Double,System.Double)">
+<summary>
+ Compares two float values and determines if they differ by no more than specified by the maximum error.
+</summary>
+</member>
+<member name="T:FSharp.Stats.Precision">
+<summary>
+ Module to estimate different quantile measures
+</summary>
+</member>
+<member name="M:FSharp.Stats.Quantile.computePercentiles``1(Microsoft.FSharp.Core.FSharpFunc{System.Double[],``0},System.Collections.Generic.IEnumerable{System.Double},System.Collections.Generic.IEnumerable{System.Double})">
+<summary>
+ Computes percentiles
+ percentiles: Each percentile must be between 0.0 and 1.0 (inclusive)
+ CalcMethod should be ofSorted array
+</summary>
+</member>
+<member name="M:FSharp.Stats.Quantile.interQuantileRange``1(Microsoft.FSharp.Core.FSharpFunc{System.Double,Microsoft.FSharp.Core.FSharpFunc{``0[],System.Double}},``0[])">
+<summary>
+ Computes the interquartile range (IQR)
+</summary>
+</member>
+<member name="M:FSharp.Stats.Quantile.normal(System.Double,System.Double[])">
+<summary>
+ Estimates the q-th quantile from the unsorted data array.
+</summary>
+</member>
+<member name="M:FSharp.Stats.Quantile.mode(System.Double,System.Double[])">
+<summary>
+ Estimates the q-th quantile from the unsorted data array.
+ R! default
+</summary>
+</member>
+<member name="M:FSharp.Stats.Quantile.nist(System.Double,System.Double[])">
+<summary>
+ Estimates the q-th quantile from the unsorted data array.
+</summary>
+</member>
+<member name="M:FSharp.Stats.Quantile.hazen(System.Double,System.Double[])">
+<summary>
+ Estimates the q-th quantile from the unsorted data array.
+</summary>
+</member>
+<member name="M:FSharp.Stats.Quantile.california(System.Double,System.Double[])">
+<summary>
+ Estimates the q-th quantile from the unsorted data array.
+</summary>
+</member>
+<member name="M:FSharp.Stats.Quantile.nearest(System.Double,System.Double[])">
+<summary>
+ Estimates the q-th quantile from the unsorted data array.
+</summary>
+</member>
+<member name="M:FSharp.Stats.Quantile.empiricalInvCdfAverage(System.Double,System.Double[])">
+<summary>
+ Estimates the q-th quantile from the unsorted data array.
+</summary>
+</member>
+<member name="M:FSharp.Stats.Quantile.empiricalInvCdf(System.Double,System.Double[])">
+<summary>
+ Estimates the q-th quantile from the unsorted data array.
+</summary>
+</member>
+<member name="M:FSharp.Stats.Quantile.compute(System.Double,System.Double[])">
+<summary>
+ Estimates the q-th quantile from the unsorted data array.
+ Approximately median-unbiased regardless of the sample distribution.
+</summary>
+</member>
+<member name="M:FSharp.Stats.Quantile.OfSorted.normal(System.Double,System.Double[])">
+<summary>
+ Estimates the q-th quantile from the unsorted data array. (in place)
+</summary>
+</member>
+<member name="M:FSharp.Stats.Quantile.OfSorted.mode(System.Double,System.Double[])">
+<summary>
+ Estimates the q-th quantile from the unsorted data array. (in place)
+</summary>
+</member>
+<member name="M:FSharp.Stats.Quantile.OfSorted.nist(System.Double,System.Double[])">
+<summary>
+ Estimates the q-th quantile from the unsorted data array. (in place)
+</summary>
+</member>
+<member name="M:FSharp.Stats.Quantile.OfSorted.hazen(System.Double,System.Double[])">
+<summary>
+ Estimates the q-th quantile from the unsorted data array. (in place)
+</summary>
+</member>
+<member name="M:FSharp.Stats.Quantile.OfSorted.california(System.Double,System.Double[])">
+<summary>
+ Estimates the q-th quantile from the unsorted data array. (in place)
+</summary>
+</member>
+<member name="M:FSharp.Stats.Quantile.OfSorted.nearest(System.Double,System.Double[])">
+<summary>
+ Estimates the q-th quantile from the unsorted data array. (in place)
+</summary>
+</member>
+<member name="M:FSharp.Stats.Quantile.OfSorted.empiricalInvCdfAverage(System.Double,System.Double[])">
+<summary>
+ Estimates the q-th quantile from the unsorted data array. (in place)
+</summary>
+</member>
+<member name="M:FSharp.Stats.Quantile.OfSorted.empiricalInvCdf(System.Double,System.Double[])">
+<summary>
+ Estimates the q-th quantile from the unsorted data array. (in place)
+</summary>
+</member>
+<member name="M:FSharp.Stats.Quantile.OfSorted.compute(System.Double,System.Double[])">
+<summary>
+ Estimates the q-th quantile from the unsorted data array. (in place)
+ Approximately median-unbiased regardless of the sample distribution.
+</summary>
+</member>
+<member name="T:FSharp.Stats.Quantile.OfSorted">
+<summary>
+ ! Input needs to be sorted
+</summary>
+</member>
+<member name="M:FSharp.Stats.Quantile.InPlace.normalInPLace(System.Double,System.Double[])">
+<summary>
+ Estimates the q-th quantile from the unsorted data array. (in place)
+</summary>
+</member>
+<member name="M:FSharp.Stats.Quantile.InPlace.modeInPLace(System.Double,System.Double[])">
+<summary>
+ Estimates the q-th quantile from the unsorted data array. (in place)
+</summary>
+</member>
+<member name="M:FSharp.Stats.Quantile.InPlace.nistInPLace(System.Double,System.Double[])">
+<summary>
+ Estimates the q-th quantile from the unsorted data array. (in place)
+</summary>
+</member>
+<member name="M:FSharp.Stats.Quantile.InPlace.hazenInPLace(System.Double,System.Double[])">
+<summary>
+ Estimates the q-th quantile from the unsorted data array. (in place)
+</summary>
+</member>
+<member name="M:FSharp.Stats.Quantile.InPlace.californiaInPLace(System.Double,System.Double[])">
+<summary>
+ Estimates the q-th quantile from the unsorted data array. (in place)
+</summary>
+</member>
+<member name="M:FSharp.Stats.Quantile.InPlace.nearestInPLace(System.Double,System.Double[])">
+<summary>
+ Estimates the q-th quantile from the unsorted data array. (in place)
+</summary>
+</member>
+<member name="M:FSharp.Stats.Quantile.InPlace.empiricalInvCdfAverageInPLace(System.Double,System.Double[])">
+<summary>
+ Estimates the q-th quantile from the unsorted data array. (in place)
+</summary>
+</member>
+<member name="M:FSharp.Stats.Quantile.InPlace.empiricalInvCdfInPLace(System.Double,System.Double[])">
+<summary>
+ Estimates the q-th quantile from the unsorted data array. (in place)
+</summary>
+</member>
+<member name="M:FSharp.Stats.Quantile.InPlace.computeInplace(System.Double,System.Double[])">
+<summary>
+ Estimates the q-th quantile from the unsorted data array. (in place)
+ Approximately median-unbiased regardless of the sample distribution.
+</summary>
+</member>
+<member name="T:FSharp.Stats.Quantile.InPlace">
+<summary>
+ ! Works inplace and can thus causes the data array to be reordered
+</summary>
+</member>
+<member name="T:FSharp.Stats.Quantile">
+<summary>
+ Module to estimate different quantile measures
 </summary>
 </member>
 <member name="M:FSharp.Stats.Random.RandBasic.#ctor(System.Int32)">
@@ -1112,120 +1835,163 @@ Point-wise multiplication
  Module to Calculate the rank. The rank of a number is its size relative to other values in a sequence
 </summary>
 </member>
-<member name="M:FSharp.Stats.Seq.cvPopulation``8(System.Collections.Generic.IEnumerable{``0})">
+<member name="M:FSharp.Stats.Rootfinding.Brent.tryFindRoot(Microsoft.FSharp.Core.FSharpFunc{System.Double,System.Double},System.Double,System.Double)">
+<summary>
+ Convergence is reached, return root
+ accuracy is not sufficient to reach a root 
+</summary>
+</member>
+<member name="M:FSharp.Stats.Rootfinding.Brent.tryFindRootWith(System.Double,System.Int32,Microsoft.FSharp.Core.FSharpFunc{System.Double,System.Double},System.Double,System.Double)">
+
+</member>
+<member name="M:FSharp.Stats.Rootfinding.Brent.updateBounds``2(Microsoft.FSharp.Core.FSharpFunc{System.Double,``0},System.Double,System.Double,``1,System.Double,System.Double)">
+
+</member>
+<member name="M:FSharp.Stats.Rootfinding.Brent.attemptInverseQuadraticInterpolation``1(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,``0,System.Double,System.Double)">
+
+</member>
+<member name="M:FSharp.Stats.Rootfinding.Brent.acceptBisection``2(``0,``1)">
+
+</member>
+<member name="M:FSharp.Stats.Rootfinding.Brent.acceptInterPolation``1(``0,System.Double,System.Double)">
+
+</member>
+<member name="M:FSharp.Stats.Rootfinding.Brent.checkConvergence(System.Double,System.Double,System.Double,System.Double,System.Double)">
+
+</member>
+<member name="M:FSharp.Stats.Rootfinding.Brent.adjustBounds(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+
+</member>
+<member name="M:FSharp.Stats.RunningStats.stDevPopulation``2(FSharp.Stats.RunningStats.RunningStats{``0})">
+
+</member>
+<member name="M:FSharp.Stats.RunningStats.stDev``2(FSharp.Stats.RunningStats.RunningStats{``0})">
+
+</member>
+<member name="M:FSharp.Stats.RunningStats.var``1(FSharp.Stats.RunningStats.RunningStats{``0})">
+
+</member>
+<member name="M:FSharp.Stats.RunningStats.varPopulation``1(FSharp.Stats.RunningStats.RunningStats{``0})">
+
+</member>
+<member name="M:FSharp.Stats.Seq.stats``3(System.Collections.Generic.IEnumerable{``0})">
+<summary>
+ Returns SummeryStats of deq with N, mean, sum-of-squares, minimum and maximum
+</summary>
+</member>
+<member name="M:FSharp.Stats.Seq.cvPopulationBy``5(Microsoft.FSharp.Core.FSharpFunc{``0,``1},System.Collections.Generic.IEnumerable{``0})">
  <summary>
    Computes the Coefficient of Variation of the population (population standard deviation)
  </summary>
 
- <param name="mean">value around which the standard deviation is calculated (mean)</param>
+ <param name="f">A function applied to transform each element of the sequence.</param>
  <param name="items">The input sequence.</param>
  <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>
- <returns>Coefficient of Variation of the population (Bessel's correction by N-1)</returns> 
+ <returns>Coefficient of Variation of the population</returns> 
 </member>
-<member name="M:FSharp.Stats.Seq.cvPopulationOfMean``6(``0,System.Collections.Generic.IEnumerable{``1})">
+<member name="M:FSharp.Stats.Seq.cvPopulation``4(System.Collections.Generic.IEnumerable{``0})">
  <summary>
    Computes the Coefficient of Variation of the population (population standard deviation)
  </summary>
 
- <param name="mean">value around which the standard deviation is calculated (mean)</param>
  <param name="items">The input sequence.</param>
  <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>
- <returns>Coefficient of Variation of the population (Bessel's correction by N-1)</returns> 
+ <returns>Coefficient of Variation of the population</returns> 
 </member>
-<member name="M:FSharp.Stats.Seq.cv``7(System.Collections.Generic.IEnumerable{``0})">
+<member name="M:FSharp.Stats.Seq.cvBy``5(Microsoft.FSharp.Core.FSharpFunc{``0,``1},System.Collections.Generic.IEnumerable{``0})">
  <summary>
-   Computes the Coefficient of Variation of a sample
+   Computes the Coefficient of Variation of a sample (Bessel's correction by N-1)
+ </summary>
+
+ <param name="f">A function applied to transform each element of the sequence.</param>
+ <param name="items">The input sequence.</param>
+ <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>
+ <returns>Coefficient of Variation of a sample (Bessel's correction by N-1)</returns> 
+</member>
+<member name="M:FSharp.Stats.Seq.cv``4(System.Collections.Generic.IEnumerable{``0})">
+ <summary>
+   Computes the Coefficient of Variation of a sample (Bessel's correction by N-1)
  </summary>
 
  <param name="items">The input sequence.</param>
  <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>
- <returns>Coefficient of Variation of a sample</returns> 
+ <returns>Coefficient of Variation of a sample (Bessel's correction by N-1)</returns> 
 </member>
-<member name="M:FSharp.Stats.Seq.cvOfMean``6(``0,System.Collections.Generic.IEnumerable{``1})">
+<member name="M:FSharp.Stats.Seq.stDevPopulationBy``5(Microsoft.FSharp.Core.FSharpFunc{``0,``1},System.Collections.Generic.IEnumerable{``0})">
  <summary>
-   Computes the Coefficient of Variation of a sample
+   Computes the population standard deviation (denominator = N)
  </summary>
 
- <param name="mean">value around which the standard deviation is calculated (mean)</param>
+ <param name="f">A function applied to transform each element of the sequence.</param>
  <param name="items">The input sequence.</param>
  <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>
- <returns>Coefficient of Variation of a sample</returns> 
+ <returns>population standard deviation (denominator = N)</returns>     
 </member>
-<member name="M:FSharp.Stats.Seq.varPopulation``7(System.Collections.Generic.IEnumerable{``0})">
+<member name="M:FSharp.Stats.Seq.stDevPopulation``4(System.Collections.Generic.IEnumerable{``0})">
  <summary>
-   Computes the unbaised variance estimator of the given values (Bessel's correction by N-1)
+   Computes the population standard deviation (denominator = N)
+ </summary>
+
+ <param name="items">The input sequence.</param>
+ <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>
+ <returns>population standard deviation (denominator = N)</returns>     
+</member>
+<member name="M:FSharp.Stats.Seq.stDevBy``5(Microsoft.FSharp.Core.FSharpFunc{``0,``1},System.Collections.Generic.IEnumerable{``0})">
+ <summary>
+   Computes the sample standard deviation
+ </summary>
+
+ <param name="f">A function applied to transform each element of the sequence.</param>
+ <param name="items">The input sequence.</param>
+ <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>
+ <returns>standard deviation of a sample (Bessel's correction by N-1)</returns> 
+</member>
+<member name="M:FSharp.Stats.Seq.stDev``4(System.Collections.Generic.IEnumerable{``0})">
+ <summary>
+   Computes the sample standard deviation
+ </summary>
+
+ <param name="items">The input sequence.</param>
+ <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>
+ <returns>standard deviation of a sample (Bessel's correction by N-1)</returns> 
+</member>
+<member name="M:FSharp.Stats.Seq.varPopulationBy``4(Microsoft.FSharp.Core.FSharpFunc{``0,``1},System.Collections.Generic.IEnumerable{``0})">
+ <summary>
+   Computes variance of the given values (denominator N)
+ </summary>
+    
+ <param name="f">A function applied to transform each element of the sequence.</param>
+ <param name="items">The input sequence.</param>
+ <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>
+ <returns>population variance estimator (denominator N)</returns> 
+</member>
+<member name="M:FSharp.Stats.Seq.varPopulation``3(System.Collections.Generic.IEnumerable{``0})">
+ <summary>
+   Computes variance of the given values (denominator N)
  </summary>
     
  <param name="items">The input sequence.</param>
  <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>
- <returns>unbaised population variance estimator (Bessel's correction by N-1)</returns> 
+ <returns>population variance estimator (denominator N)</returns> 
 </member>
-<member name="M:FSharp.Stats.Seq.varPopulationOfMean``5(``0,System.Collections.Generic.IEnumerable{``1})">
+<member name="M:FSharp.Stats.Seq.varBy``4(Microsoft.FSharp.Core.FSharpFunc{``0,``1},System.Collections.Generic.IEnumerable{``0})">
  <summary>
-   Computes the unbaised variance estimator of the given values (Bessel's correction by N-1)
+   Computes the sample variance (Bessel's correction by N-1)
  </summary>
 
- <param name="mean">value around which the variance is calculated (mean)</param>
+ <param name="f">A function applied to transform each element of the sequence.</param>
  <param name="items">The input sequence.</param>
  <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>
- <returns>unbaised population variance estimator (Bessel's correction by N-1)</returns> 
+ <returns>variance of a sample (Bessel's correction by N-1)</returns> 
 </member>
-<member name="M:FSharp.Stats.Seq.var``6(System.Collections.Generic.IEnumerable{``0})">
+<member name="M:FSharp.Stats.Seq.var``3(System.Collections.Generic.IEnumerable{``0})">
  <summary>
-   Computes the sample variance
- </summary>
-
- <param name="items">The input sequence.</param>
- <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>
- <returns>variance</returns> 
-</member>
-<member name="M:FSharp.Stats.Seq.varOfMean``5(``0,System.Collections.Generic.IEnumerable{``1})">
- <summary>
-   Computes the sample variance
- </summary>
-
- <param name="mean">value around which the variance is calculated (mean)</param>
- <param name="items">The input sequence.</param>
- <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>
- <returns>variance</returns> 
-</member>
-<member name="M:FSharp.Stats.Seq.stDevPopulation``8(System.Collections.Generic.IEnumerable{``0})">
- <summary>
-   Computes the population standard deviation (Bessel's correction by N-1)
+   Computes the sample variance (Bessel's correction by N-1)
  </summary>
 
  <param name="items">The input sequence.</param>
  <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>
- <returns>population standard deviation (Bessel's correction by N-1)</returns>     
-</member>
-<member name="M:FSharp.Stats.Seq.stDevPopulationOfMean``5(``0,System.Collections.Generic.IEnumerable{``1})">
- <summary>
-   Computes the population standard deviation (Bessel's correction by N-1)
- </summary>
-
- <param name="mean">value around which the standard deviation is calculated (mean)</param>
- <param name="items">The input sequence.</param>
- <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>
- <returns>population standard deviation (Bessel's correction by N-1)</returns>     
-</member>
-<member name="M:FSharp.Stats.Seq.stDev``7(System.Collections.Generic.IEnumerable{``0})">
- <summary>
-   Computes the sample standard deviation
- </summary>
-
- <param name="items">The input sequence.</param>
- <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>
- <returns>standard deviation of a sample</returns> 
-</member>
-<member name="M:FSharp.Stats.Seq.stDevOfMean``5(``0,System.Collections.Generic.IEnumerable{``1})">
- <summary>
-   Computes the sample standard deviation
- </summary>
-
- <param name="mean">value around which the standard deviation is calculated (mean)</param>
- <param name="items">The input sequence.</param>
- <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>
- <returns>standard deviation of a sample</returns> 
+ <returns>variance of a sample (Bessel's correction by N-1)</returns> 
 </member>
 <member name="M:FSharp.Stats.Seq.median``2(System.Collections.Generic.IEnumerable{``0})">
 <summary>
@@ -1251,14 +2017,15 @@ Point-wise multiplication
  <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>
  <returns>truncated (trimmed) mean</returns>  
 </member>
-<member name="M:FSharp.Stats.Seq.meanLogGeometric``2(System.Collections.Generic.IEnumerable{``0})">
+<member name="M:FSharp.Stats.Seq.meanGeometricBy``3(Microsoft.FSharp.Core.FSharpFunc{``0,``1},System.Collections.Generic.IEnumerable{``0})">
  <summary>
-   Computes the log gemetric mean
+   Computes gemetric mean
  </summary>
 
+ <param name="f">A function applied to transform each element of the sequence.</param>
  <param name="items">The input sequence.</param>
  <remarks>Returns NaN if data is empty or if any entry is NaN.</remarks>
- <returns>log gemetric mean</returns>   
+ <returns>gemetric mean</returns>   
 </member>
 <member name="M:FSharp.Stats.Seq.meanGeometric``2(System.Collections.Generic.IEnumerable{``0})">
  <summary>
@@ -1393,6 +2160,46 @@ Point-wise multiplication
  Creates a diagonal 2-D array with the given order and set all diagonal values to x
 </summary>
 </member>
+<member name="M:FSharp.Stats.Signal.FFT.inverseSymmetricScalingInPlace(System.Double[])">
+<summary>
+ Universal; Symmetric scaling and common exponent (used in Maple) Default
+</summary>
+</member>
+<member name="M:FSharp.Stats.Signal.FFT.inverseAsymmetricScalingInPlace(System.Double[])">
+<summary>
+ Only scale by 1/N in the inverse direction; No scaling in forward direction.
+</summary>
+</member>
+<member name="M:FSharp.Stats.Signal.FFT.symmetricScalingInPlace(System.Double[])">
+<summary>
+ Universal; Symmetric scaling and common exponent (used in Maple) Default InverseExponent
+</summary>
+</member>
+<member name="M:FSharp.Stats.Signal.FFT.asymmetricScalingInPlace(System.Double[])">
+<summary>
+ No scaling in forward direction.
+</summary>
+</member>
+<member name="M:FSharp.Stats.Signal.FFT.bluestein(FSharp.Stats.Complex[])">
+<summary>
+ Bluestein�s convolution algorith
+</summary>
+</member>
+<member name="M:FSharp.Stats.Signal.FFT.bitrev``1(``0[])">
+<summary>
+ Reorder the elements of the input array in lexicographic order by the bits of their indices
+</summary>
+</member>
+<member name="M:FSharp.Stats.Signal.FFT.mapInPlace``1(Microsoft.FSharp.Core.FSharpFunc{``0,``0},``0[])">
+<summary>
+ Applying the given function to each of the elements of the array and returns the value in place.
+</summary>
+</member>
+<member name="T:FSharp.Stats.Signal.FFT">
+<summary>
+ FFT analysis converts a signal from its original domain (often time or space) to a representation in the frequency domain and vice versa.
+</summary>
+</member>
 <member name="M:FSharp.Stats.Signal.Filtering.savitzky_golay``3(System.Int32,System.Int32,``0,``1,System.Double[])">
 <summary>
  Smooth (and optionally differentiate) data with a Savitzky-Golay filter.
@@ -1495,6 +2302,15 @@ Point-wise multiplication
  Generic operations that, when used on floating point types, use the specialized versions in DoubleImpl
 </summary>
 </member>
+<member name="M:FSharp.Stats.SummeryStats.var``3(FSharp.Stats.SummeryStats.SummeryStats{``0})">
+
+</member>
+<member name="M:FSharp.Stats.SummeryStats.varPopulation``2(FSharp.Stats.SummeryStats.SummeryStats{``0})">
+
+</member>
+<member name="M:FSharp.Stats.SummeryStats.mean``1(FSharp.Stats.SummeryStats.SummeryStats{``0})">
+
+</member>
 <member name="T:FSharp.Stats.SummeryStats">
 <summary>
  Module to compute common statistical measure on 
@@ -1594,12 +2410,12 @@ Point-wise multiplication
  <param name="PValueRight"> One Tailed/Sided.</param>   
  <param name="PValue">Two Tailed/Sided.</param>   
 </member>
-<member name="M:FSharp.Stats.VectorModule.stats``4(FSharp.Stats.Vector{``0})">
+<member name="M:FSharp.Stats.VectorModule.stats``3(FSharp.Stats.Vector{``0})">
 <summary>
  Returns SummeryStats of vector with N, mean, sum-of-squares, minimum and maximum
 </summary>
 </member>
-<member name="M:FSharp.Stats.VectorModule.median(FSharp.Stats.Vector{System.Int32})">
+<member name="M:FSharp.Stats.VectorModule.median``3(FSharp.Stats.Vector{``0})">
 <summary>
  Computes the sample median
 </summary>

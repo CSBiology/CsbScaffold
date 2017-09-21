@@ -7,194 +7,224 @@
 Marker interface for BioItem base.
 </summary>
 </member>
-<member name="M:BioFSharp.Algorithm.KnuthMorrisPratt.initFind``1(``0[])">
-<summary>
-returns a find function with a set prefix table created from the input
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.KnuthMorrisPratt.find``1(System.Int32[],``0[],``0[])">
-<summary>
-finds the first match of a query pattern in a source using a given prefix table
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.KnuthMorrisPratt.initFindFrom``1(``0[])">
-<summary>
-returns a findFrom function with a set prefix table created from the input
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.KnuthMorrisPratt.findFrom``1(System.Int32[],``0[],System.Int32,``0[])">
-<summary>
-finds the first match of a query pattern in a source starting from a specific position in the source using a given prefix table
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.KnuthMorrisPratt.initFindAll``1(``0[])">
-<summary>
-returns a findAll function with a set prefix table created from the input
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.KnuthMorrisPratt.findAll``1(System.Int32[],``0[],``0[])">
-<summary>
-finds all matches of a query pattern in a source using a given prefix table
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.KnuthMorrisPratt.createPrefixTable``1(``0[])">
-<summary>
-creates a prefix table for a query pattern
-</summary>
-</member>
-<member name="T:BioFSharp.Algorithm.KnuthMorrisPratt">
-<summary>
-A collection of Knuth-Morris-Pratt string matching algorithms
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.RabinKarp.findFromGeneric``2(System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,Microsoft.FSharp.Core.FSharpFunc{``1,``0}}},Microsoft.FSharp.Core.FSharpFunc{``1[],``0},``1[],``1[])">
-<summary>
-takes an updateHash and blockHash function to find the first match of a query pattern in a source starting from a specific position in the source
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.RabinKarp.findAllGeneric``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,Microsoft.FSharp.Core.FSharpFunc{``1,``0}}},Microsoft.FSharp.Core.FSharpFunc{``1[],``0},``1[],``1[])">
-<summary>
-takes an updateHash and blockHash function to find all matches of a query pattern in a source
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.RabinKarp.isMatchAt``1(``0[],``0[],System.Int32)">
-<summary>
-checks if content of pattern and source substring match
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.RabinKarp.CP.find``1(``0[],``0[])">
-<summary>
-find the first match of a query pattern in a source
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.RabinKarp.CP.findFrom``1(System.Int32,``0[],``0[])">
-<summary>
-find the first match of a query pattern in a source starting from a specific position in the source
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.RabinKarp.CP.findAll``1(``0[],``0[])">
-<summary>
-find all matches of a query pattern in a source   
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.RabinKarp.CP.updateHash``2(System.Int32,System.UInt64,``0,``1)">
-<summary>
-updates an existing hashvalue 
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.RabinKarp.CP.blockHash``1(``0[])">
-<summary>
-hashes a pattern
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.RabinKarp.CP.addToHashValue``1(System.UInt64,``0)">
-<summary>
-adds a hashvalue to an existing hashvalue
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.RabinKarp.CP.rotateLeft``1(System.Int32,``0)">
-<summary>
-bitwise cyclic rotation of a 64 bit pattern
-</summary>
-</member>
-<member name="T:BioFSharp.Algorithm.RabinKarp.CP">
-<summary>
-A collection of Rabin-Karp string matching algorithms using the cyclic polynomial (CP) hash
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.RabinKarp.RKStandard.find``1(``0[],``0[])">
-<summary>
-finds the first match of a query pattern in a source
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.RabinKarp.RKStandard.findFrom``1(System.Int32,``0[],``0[])">
-<summary>
-finds the first match of a query pattern in a source starting from a specific position in the source
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.RabinKarp.RKStandard.findAll``1(``0[],``0[])">
-<summary>
-finds all matches of a query pattern in a source
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.RabinKarp.RKStandard.updateHash``2(System.Int32,System.Int32,System.Int32,``0,``1)">
-<summary>
-updates an existing hashvalue 
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.RabinKarp.RKStandard.blockHash``1(System.Int32,``0[])">
-<summary>
-hashes a pattern
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.RabinKarp.RKStandard.addToHash``1(System.Int32,System.Int32,``0)">
-<summary>
-adds a hashvalue to an existing hashvalue
-</summary>
-</member>
-<member name="T:BioFSharp.Algorithm.RabinKarp.RKStandard">
-<summary>
-A collection of Rabin-Karp string matching algorithms using the built-in hash function of f#
-</summary>
-</member>
-<member name="T:BioFSharp.Algorithm.RabinKarp">
-<summary>
-A collection of Rabin-Karp string matching algorithms and hash functions
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.Naive.find``1(``0[],``0[])">
-<summary>
-finds the first match of a query pattern in a source
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.Naive.findFrom``1(System.Int32,``0[],``0[])">
-<summary>
-finds the first match of a query pattern in a source starting from a specific position in the source
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithm.Naive.findAll``1(``0[],``0[])">
-<summary>
-finds all matches of a query pattern in a source
-</summary>
-</member>
-<member name="T:BioFSharp.Algorithm.Naive">
-<summary>
-A collection of naive string matching algorithms
-</summary>
-</member>
-<member name="M:BioFSharp.Algorithms.DualAlignment.SmithWaterman.smithWaterman``1(BioFSharp.Algorithms.DualAlignment.RunGeneric.Costs{``0},``0[],``0[])">
+<member name="M:BioFSharp.Algorithm.PairwiseAlignment.SmithWaterman.smithWaterman``1(BioFSharp.Algorithm.PairwiseAlignment.RunGeneric.Costs{``0},``0[],``0[])">
 <summary>
  Uses the runGeneric function to create a matrix and then aligns the sequences via backtracing
 </summary>
 </member>
-<member name="T:BioFSharp.Algorithms.DualAlignment.SmithWaterman">
+<member name="T:BioFSharp.Algorithm.PairwiseAlignment.SmithWaterman">
 <summary>
  Local alignment algorithm  (AffineGaps)
 </summary>
 </member>
-<member name="M:BioFSharp.Algorithms.DualAlignment.NeedlemanWunsch.needlemanWunsch``1(BioFSharp.Algorithms.DualAlignment.RunGeneric.Costs{``0},``0[],``0[])">
+<member name="M:BioFSharp.Algorithm.PairwiseAlignment.NeedlemanWunsch.needlemanWunsch``1(BioFSharp.Algorithm.PairwiseAlignment.RunGeneric.Costs{``0},``0[],``0[])">
 <summary>
  Uses the runGeneric function to create a matrix and then aligns the sequences via backtracing
 </summary>
 </member>
-<member name="T:BioFSharp.Algorithms.DualAlignment.NeedlemanWunsch">
+<member name="T:BioFSharp.Algorithm.PairwiseAlignment.NeedlemanWunsch">
 <summary>
  Global alignment algorithm. (AffineGaps)
 </summary>
 </member>
-<member name="M:BioFSharp.Algorithms.DualAlignment.RunGeneric.traceBack``1(``0[],``0[],System.Int32,System.Int32,Microsoft.FSharp.Collections.FSharpList{System.Tuple{Microsoft.FSharp.Core.FSharpOption{``0},Microsoft.FSharp.Core.FSharpOption{``0}}},BioFSharp.Algorithms.DualAlignment.RunGeneric.Cell[0:,0:])">
+<member name="M:BioFSharp.Algorithm.PairwiseAlignment.RunGeneric.traceBack``1(``0[],``0[],System.Int32,System.Int32,Microsoft.FSharp.Collections.FSharpList{System.Tuple{Microsoft.FSharp.Core.FSharpOption{``0},Microsoft.FSharp.Core.FSharpOption{``0}}},BioFSharp.Algorithm.PairwiseAlignment.RunGeneric.Cell[0:,0:])">
 <summary>
  Creates the alignment out of the matrix and the 2 sequences
 </summary>
 </member>
-<member name="M:BioFSharp.Algorithms.DualAlignment.RunGeneric.runGeneric``1(Microsoft.FSharp.Core.FSharpFunc{BioFSharp.Algorithms.DualAlignment.RunGeneric.Cell[0:,0:],BioFSharp.Algorithms.DualAlignment.RunGeneric.Cell[0:,0:]},``0[],``0[],BioFSharp.Algorithms.DualAlignment.RunGeneric.OperationCosts{``0})">
+<member name="M:BioFSharp.Algorithm.PairwiseAlignment.RunGeneric.runGeneric``1(Microsoft.FSharp.Core.FSharpFunc{BioFSharp.Algorithm.PairwiseAlignment.RunGeneric.Cell[0:,0:],BioFSharp.Algorithm.PairwiseAlignment.RunGeneric.Cell[0:,0:]},``0[],``0[],BioFSharp.Algorithm.PairwiseAlignment.RunGeneric.OperationCosts{``0})">
 <summary>
  Creates an array and fills it with Cells
 </summary>
 </member>
-<member name="T:BioFSharp.Algorithms.DualAlignment.RunGeneric">
+<member name="T:BioFSharp.Algorithm.PairwiseAlignment.RunGeneric">
 <summary>
  Holds all types and helper-functions. Also includes the function for the matrix creation and the backtrace-function
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.ScoringMatrix.getScoringMatrixNucleotide(BioFSharp.Algorithm.ScoringMatrix.ScoringMatrixNucleotide)">
+<summary>
+creates a scoring function for nucleotides out of a scoring matrix
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.ScoringMatrix.getScoringMatrixAminoAcid(BioFSharp.Algorithm.ScoringMatrix.ScoringMatrixAminoAcid)">
+<summary>
+creates a scoring function for amino acids out of a scoring matrix
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.BoyerMoore.getGoodSuffixShift``1(System.Int32[],``0[])">
+<summary>
+ Creates an array containing the shiftig values created by using the good suffix heuristics.
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.BoyerMoore.suffixes``1(``0[])">
+<summary>
+ Creates N(j) that is needed for the good suffix rule.
+</summary>
+</member>
+<member name="T:BioFSharp.Algorithm.StringMatching.BoyerMoore">
+<summary>
+A collection of Boyer-Moore string matching algorithms
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.KnuthMorrisPratt.initFind``1(``0[])">
+<summary>
+returns a find function with a set prefix table created from the input
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.KnuthMorrisPratt.find``1(System.Int32[],``0[],``0[])">
+<summary>
+finds the first match of a query pattern in a source using a given prefix table
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.KnuthMorrisPratt.initFindFrom``1(``0[])">
+<summary>
+returns a findFrom function with a set prefix table created from the input
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.KnuthMorrisPratt.findFrom``1(System.Int32[],``0[],System.Int32,``0[])">
+<summary>
+finds the first match of a query pattern in a source starting from a specific position in the source using a given prefix table
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.KnuthMorrisPratt.initFindAll``1(``0[])">
+<summary>
+returns a findAll function with a set prefix table created from the input
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.KnuthMorrisPratt.findAll``1(System.Int32[],``0[],``0[])">
+<summary>
+finds all matches of a query pattern in a source using a given prefix table
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.KnuthMorrisPratt.createPrefixTable``1(``0[])">
+<summary>
+creates a prefix table for a query pattern
+</summary>
+</member>
+<member name="T:BioFSharp.Algorithm.StringMatching.KnuthMorrisPratt">
+<summary>
+A collection of Knuth-Morris-Pratt string matching algorithms
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.RabinKarp.findFromGeneric``2(System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,Microsoft.FSharp.Core.FSharpFunc{``1,``0}}},Microsoft.FSharp.Core.FSharpFunc{``1[],``0},``1[],``1[])">
+<summary>
+takes an updateHash and blockHash function to find the first match of a query pattern in a source starting from a specific position in the source
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.RabinKarp.findAllGeneric``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,Microsoft.FSharp.Core.FSharpFunc{``1,``0}}},Microsoft.FSharp.Core.FSharpFunc{``1[],``0},``1[],``1[])">
+<summary>
+takes an updateHash and blockHash function to find all matches of a query pattern in a source
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.RabinKarp.isMatchAt``1(``0[],``0[],System.Int32)">
+<summary>
+checks if content of pattern and source substring match
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.RabinKarp.CP.find``1(``0[],``0[])">
+<summary>
+find the first match of a query pattern in a source
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.RabinKarp.CP.findFrom``1(System.Int32,``0[],``0[])">
+<summary>
+find the first match of a query pattern in a source starting from a specific position in the source
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.RabinKarp.CP.findAll``1(``0[],``0[])">
+<summary>
+find all matches of a query pattern in a source   
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.RabinKarp.CP.updateHash``2(System.Int32,System.UInt64,``0,``1)">
+<summary>
+updates an existing hashvalue 
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.RabinKarp.CP.blockHash``1(``0[])">
+<summary>
+hashes a pattern
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.RabinKarp.CP.addToHashValue``1(System.UInt64,``0)">
+<summary>
+adds a hashvalue to an existing hashvalue
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.RabinKarp.CP.rotateLeft``1(System.Int32,``0)">
+<summary>
+bitwise cyclic rotation of a 64 bit pattern
+</summary>
+</member>
+<member name="T:BioFSharp.Algorithm.StringMatching.RabinKarp.CP">
+<summary>
+A collection of Rabin-Karp string matching algorithms using the cyclic polynomial (CP) hash
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.RabinKarp.RKStandard.find``1(``0[],``0[])">
+<summary>
+finds the first match of a query pattern in a source
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.RabinKarp.RKStandard.findFrom``1(System.Int32,``0[],``0[])">
+<summary>
+finds the first match of a query pattern in a source starting from a specific position in the source
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.RabinKarp.RKStandard.findAll``1(``0[],``0[])">
+<summary>
+finds all matches of a query pattern in a source
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.RabinKarp.RKStandard.updateHash``2(System.Int32,System.Int32,System.Int32,``0,``1)">
+<summary>
+updates an existing hashvalue 
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.RabinKarp.RKStandard.blockHash``1(System.Int32,``0[])">
+<summary>
+hashes a pattern
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.RabinKarp.RKStandard.addToHash``1(System.Int32,System.Int32,``0)">
+<summary>
+adds a hashvalue to an existing hashvalue
+</summary>
+</member>
+<member name="T:BioFSharp.Algorithm.StringMatching.RabinKarp.RKStandard">
+<summary>
+A collection of Rabin-Karp string matching algorithms using the built-in hash function of f#
+</summary>
+</member>
+<member name="T:BioFSharp.Algorithm.StringMatching.RabinKarp">
+<summary>
+A collection of Rabin-Karp string matching algorithms and hash functions
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.Naive.find``1(``0[],``0[])">
+<summary>
+finds the first match of a query pattern in a source
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.Naive.findFrom``1(System.Int32,``0[],``0[])">
+<summary>
+finds the first match of a query pattern in a source starting from a specific position in the source
+</summary>
+</member>
+<member name="M:BioFSharp.Algorithm.StringMatching.Naive.findAll``1(``0[],``0[])">
+<summary>
+finds all matches of a query pattern in a source
+</summary>
+</member>
+<member name="T:BioFSharp.Algorithm.StringMatching.Naive">
+<summary>
+A collection of naive string matching algorithms
+</summary>
+</member>
+<member name="T:BioFSharp.Algorithm.StringMatching">
+<summary>
+A collection of different string matching algorithms
 </summary>
 </member>
 <member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.Xle">
@@ -340,6 +370,21 @@ A collection of naive string matching algorithms
 <member name="T:BioFSharp.AminoAcidSymbols.AminoAcidSymbol">
 <summary>
  Symbols of all amino acids (including Gap + Term) 
+</summary>
+</member>
+<member name="M:BioFSharp.AminoAcidSymbols.isNegCharged(BioFSharp.AminoAcidSymbols.AminoAcidSymbol)">
+<summary>
+ Returns true, if the AminoAcidSymbol has a charged side chain
+</summary>
+</member>
+<member name="M:BioFSharp.AminoAcidSymbols.isPosCharged(BioFSharp.AminoAcidSymbols.AminoAcidSymbol)">
+<summary>
+ Returns true, if the AminoAcidSymbol has a charged side chain
+</summary>
+</member>
+<member name="M:BioFSharp.AminoAcidSymbols.isCharged(BioFSharp.AminoAcidSymbols.AminoAcidSymbol)">
+<summary>
+ Returns true, if the AminoAcidSymbol has a charged side chain
 </summary>
 </member>
 <member name="P:BioFSharp.AminoAcidSymbols.initAverageMassWithMemP">
@@ -525,6 +570,21 @@ A collection of naive string matching algorithms
 <member name="T:BioFSharp.AminoAcids.AminoAcid">
 <summary>
  Amino acid Codes
+</summary>
+</member>
+<member name="M:BioFSharp.AminoAcids.isNegCharged(BioFSharp.AminoAcids.AminoAcid)">
+<summary>
+ Returns true, if the AminoAcid has a charged side chain
+</summary>
+</member>
+<member name="M:BioFSharp.AminoAcids.isPosCharged(BioFSharp.AminoAcids.AminoAcid)">
+<summary>
+ Returns true, if the AminoAcid has a charged side chain
+</summary>
+</member>
+<member name="M:BioFSharp.AminoAcids.isCharged(BioFSharp.AminoAcids.AminoAcid)">
+<summary>
+ Returns true, if the AminoAcid has a charged side chain
 </summary>
 </member>
 <member name="P:BioFSharp.AminoAcids.initAverageMassWithMemP">
@@ -922,9 +982,21 @@ UniProtKB entry isoform sequence: P00750-2
  Converters char to AminoAcid option by ignoring bad character
 </summary>
 </member>
-<member name="M:BioFSharp.BioItemsConverter.OptionConverter.charToOptionStandardAminoAcid(System.Char)">
+<member name="M:BioFSharp.BioItemsConverter.OptionConverter.charToOptionStandardAminoAcidWithoutGapTer(System.Char)">
 <summary>
  Converters char to AminoAcid option by ignoring bad character and ambiguis code
+ Ignores Gap and Ter
+</summary>
+</member>
+<member name="M:BioFSharp.BioItemsConverter.OptionConverter.charToOptionStandardAminoAcid(System.Char)">
+<summary>
+ Converters char to AminoAcid option by ignoring bad character and ambiguis code        
+</summary>
+</member>
+<member name="M:BioFSharp.BioItemsConverter.OptionConverter.charToOptionAminoAcidWithoutGapTer(System.Char)">
+<summary>
+ Converters char to AminoAcid option by ignoring bad character
+ Ignores Gap and Ter
 </summary>
 </member>
 <member name="M:BioFSharp.BioItemsConverter.OptionConverter.charToOptionAminoAcid(System.Char)">
@@ -1133,6 +1205,11 @@ Active pattern which returns a base triplet
  Generates amino acid sequence of one-letter-code string using given OptionConverter
 </summary>
 </member>
+<member name="M:BioFSharp.Bisection.tryFindRoot(Microsoft.FSharp.Core.FSharpFunc{System.Double,System.Double},System.Double,System.Double,System.Double,System.Int32)">
+<summary>
+Finds the value in an interval for which a given function returns a value close to 0 
+</summary>
+</member>
 <member name="M:BioFSharp.Digestion.BioArray.concernMissCleavages(System.Int32,System.Int32,BioFSharp.Digestion.DigestedPeptide[])">
 <summary>
  Takes Array of DigestedPeptides and and returns Array of DigestedPeptides including those resulting of one or more Misscleavage events
@@ -1219,6 +1296,56 @@ Active pattern which returns a base triplet
 <member name="M:BioFSharp.Elements.Table.ElementAsObject(System.String)">
 <summary>
  Returns element object according to element symbol string
+</summary>
+</member>
+<member name="P:BioFSharp.Elements.Table.Cu">
+<summary>
+Copper
+</summary>
+</member>
+<member name="P:BioFSharp.Elements.Table.K">
+<summary>
+Potassium
+</summary>
+</member>
+<member name="P:BioFSharp.Elements.Table.S">
+<summary>
+Sulfur
+</summary>
+</member>
+<member name="P:BioFSharp.Elements.Table.P">
+<summary>
+Phosphorus
+</summary>
+</member>
+<member name="P:BioFSharp.Elements.Table.Mg">
+<summary>
+Magnesium
+</summary>
+</member>
+<member name="P:BioFSharp.Elements.Table.Na">
+<summary>
+Sodium
+</summary>
+</member>
+<member name="P:BioFSharp.Elements.Table.O">
+<summary>
+Oxygen
+</summary>
+</member>
+<member name="P:BioFSharp.Elements.Table.N">
+<summary>
+Nitrogen
+</summary>
+</member>
+<member name="P:BioFSharp.Elements.Table.C">
+<summary>
+Carbon
+</summary>
+</member>
+<member name="P:BioFSharp.Elements.Table.H">
+<summary>
+Hydrogen
 </summary>
 </member>
 <member name="T:BioFSharp.Formula.Formula">
@@ -1309,6 +1436,21 @@ Active pattern which returns a base triplet
  A : Adenine
 </summary>
 </member>
+<member name="M:BioFSharp.IsoelectricPoint.tryFind(Microsoft.FSharp.Core.FSharpFunc{BioFSharp.AminoAcidSymbols.AminoAcidSymbol,System.Double},System.Double,System.Collections.Generic.IEnumerable{BioFSharp.AminoAcidSymbols.AminoAcidSymbol})">
+<summary>
+Finds the pH for which the global charge of the aaSeq is closer to 0 than the given accuracy
+</summary>
+</member>
+<member name="P:BioFSharp.IsoelectricPoint.getpKr">
+<summary>
+Maps AminoAcidSymbol to default pK value of it&apos;s sidechain. Returns 0.0 if sidechain is neither acidic nor basic
+</summary>
+</member>
+<member name="T:BioFSharp.IsoelectricPoint">
+<summary>
+Finding the isoelectric point of peptides
+</summary>
+</member>
 <member name="M:BioFSharp.IsotopicDistribution.ofFormula(System.Int32,Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double})">
 <summary>
  Generates the distribution of the isotopic abundancy
@@ -1394,7 +1536,7 @@ Active pattern which returns a base triplet
 </member>
 <member name="T:BioFSharp.Nucleotides.Nucleotide.V">
 <summary>
- V : G or V or A = not T/U
+ V : G or C or A = not T/U
 </summary>
 </member>
 <member name="T:BioFSharp.Nucleotides.Nucleotide.H">

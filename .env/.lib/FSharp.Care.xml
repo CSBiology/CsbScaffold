@@ -58,92 +58,9 @@ Applies a function to each element of the collection, threading an accumulator a
  Shuffels each column of the input Array2D separately  (method: Fisher-Yates)
 </summary>
 </member>
-<member name="M:FSharp.Care.Collections.Array2D.map2``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``0,``1}},``0[0:,0:],``0[0:,0:])">
-<summary>
- Builds a new array whose elements are the results of applying the given function
- to the corresponding pairs of elements from the two arrays. 
-</summary>
-</member>
-<member name="M:FSharp.Care.Collections.Array2D.mapInPlaceRowi``1(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,``0}},``0[0:,0:])">
-<summary>
- Applying the given function to each of the elements of the array and returns the value in place.
- The integer indices passed to the function indicates the row index of the element being transformed.
-</summary>
-</member>
-<member name="M:FSharp.Care.Collections.Array2D.mapInPlaceColi``1(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,``0}},``0[0:,0:])">
-<summary>
- Applying the given function to each of the elements of the array and returns the value in place.
- The integer indices passed to the function indicates the column index of the element being transformed.
-</summary>
-</member>
-<member name="M:FSharp.Care.Collections.Array2D.mapiInPlace``1(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,``0}},``0[0:,0:])">
-<summary>
- Applying the given function to each of the elements of the array and returns the value in place.
- The integer indices passed to the function indicates the element being transformed.
-</summary>
-</member>
-<member name="M:FSharp.Care.Collections.Array2D.mapInPlace``1(Microsoft.FSharp.Core.FSharpFunc{``0,``0},``0[0:,0:])">
-<summary>
- Applying the given function to each of the elements of the array and returns the value in place.
-</summary>
-</member>
-<member name="M:FSharp.Care.Collections.Array2D.mapRowI``2(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,``1}},``0[0:,0:])">
-<summary>
- Builds a new array whose elements are the results of applying the given function
- to each of the elements of the array. The integer indices passed to the
- function indicates the row index of the element being transformed.
-</summary>
-</member>
-<member name="M:FSharp.Care.Collections.Array2D.mapColI``2(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,``1}},``0[0:,0:])">
-<summary>
- Builds a new array whose elements are the results of applying the given function
- to each of the elements of the array. The integer indices passed to the
- function indicates the column index of the element being transformed.
-</summary>
-</member>
-<member name="M:FSharp.Care.Collections.Array2D.foldByRow``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``0}},``0,``1[0:,0:])">
-<summary>
- Fold all rows into one column array.
-</summary>
-</member>
-<member name="M:FSharp.Care.Collections.Array2D.foldByCol``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``0}},``0,``1[0:,0:])">
-<summary>
- Fold all columns into one row array.
-</summary>
-</member>
-<member name="M:FSharp.Care.Collections.Array2D.foldRow``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``0}},``0,``1[0:,0:],System.Int32)">
-<summary>
- Fold one row.
-</summary>
-</member>
-<member name="M:FSharp.Care.Collections.Array2D.foldCol``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``0}},``0,``1[0:,0:],System.Int32)">
-<summary>
- Fold one column.
-</summary>
-</member>
-<member name="M:FSharp.Care.Collections.Array2D.colCount``1(``0[0:,0:])">
-<summary>
- Returns the numbers of rows.
-</summary>
-</member>
-<member name="M:FSharp.Care.Collections.Array2D.rowCount``1(``0[0:,0:])">
-<summary>
- Returns the numbers of rows.
-</summary>
-</member>
 <member name="M:FSharp.Care.Collections.Array2D.transpose``1(``0[0:,0:])">
 <summary>
  Transpose the array
-</summary>
-</member>
-<member name="M:FSharp.Care.Collections.Array2D.indexMaxBy``2(Microsoft.FSharp.Core.FSharpFunc{``0,``1},``0[0:,0:])">
-<summary>
-Returns the index of the element which is the biggest after projection according to the Operators.max operator in the array
-</summary>
-</member>
-<member name="M:FSharp.Care.Collections.Array2D.maxBy``2(Microsoft.FSharp.Core.FSharpFunc{``0,``1},``0[0:,0:])">
-<summary>
-Returns the element of the array which is the biggest after projection according to the Operators.max operator
 </summary>
 </member>
 <member name="M:FSharp.Care.Collections.Array2D.ofLongColumnArray``1(``0[],System.Int32,System.Int32)">
@@ -318,36 +235,6 @@ Applies the given function to each element of the divvy array.
 <member name="M:FSharp.Care.Collections.JaggedArray.shuffleColumnWise``1(``0[][])">
 <summary>
  Shuffels each column of a jagged array separately  (method: Fisher-Yates)
-</summary>
-</member>
-<member name="T:FSharp.Care.Collections.KdTree.KdTree`2">
-<summary>
- k -dimension tree    
-</summary>
-</member>
-<member name="M:FSharp.Care.Collections.KdTree.rangeSearch``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``0,System.Double}},Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{System.Int32,System.Double}},FSharp.Care.Collections.KdTree.KdTree{``1,``0},System.Double,``0)">
-<summary>
- Searches query coordinates within a given radius
-</summary>
-</member>
-<member name="M:FSharp.Care.Collections.KdTree.print``2(FSharp.Care.Collections.KdTree.KdTree{``0,``1})">
-<summary>
- Prints kd tree
-</summary>
-</member>
-<member name="M:FSharp.Care.Collections.KdTree.toList``2(FSharp.Care.Collections.KdTree.KdTree{``0,``1})">
-<summary>
- Flattens KdTree
-</summary>
-</member>
-<member name="M:FSharp.Care.Collections.KdTree.ofArrayBy``3(Microsoft.FSharp.Core.FSharpFunc{``0,``1},Microsoft.FSharp.Core.FSharpFunc{``1,Microsoft.FSharp.Core.FSharpFunc{System.Int32,``2}},System.Int32,``0[])">
-<summary>
- Create KD Tree from list
-</summary>
-</member>
-<member name="T:FSharp.Care.Collections.KdTree">
-<summary>
- Module for k -dimension trees  
 </summary>
 </member>
 <member name="M:FSharp.Care.Collections.List.insertAt``1(System.Int32,``0,Microsoft.FSharp.Collections.FSharpList{``0})">

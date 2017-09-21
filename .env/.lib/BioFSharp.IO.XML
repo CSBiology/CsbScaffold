@@ -144,6 +144,11 @@ A Wrapper to perform different BLAST tasks
  Fasta item contains header and sequence
 </summary>
 </member>
+<member name="M:BioFSharp.IO.FastA.toString``2(Microsoft.FSharp.Core.FSharpFunc{``0,System.Char},System.Collections.Generic.IEnumerable{BioFSharp.IO.FastA.FastaItem{``1}})">
+<summary>
+ Converts FastaItem to string. Converter determines type of sequence by converting type -&gt; seq&lt;char&gt;
+</summary>
+</member>
 <member name="M:BioFSharp.IO.FastA.write``2(Microsoft.FSharp.Core.FSharpFunc{``0,System.Char},System.String,System.Collections.Generic.IEnumerable{BioFSharp.IO.FastA.FastaItem{``1}})">
 <summary>
  Writes FastaItem to file. Converter determines type of sequence by converting seq&lt;char&gt; -&gt; type
@@ -167,6 +172,137 @@ A Wrapper to perform different BLAST tasks
 <member name="M:BioFSharp.IO.FastA.createFastaItem``1(System.String,``0)">
 <summary>
  Creates with header line and sequence.
+</summary>
+</member>
+<member name="T:BioFSharp.IO.FastQ.FastqItem`2">
+<summary>
+ FastqItem record contains header, sequence, qualityheader, qualitysequence of one entry
+</summary>
+</member>
+<member name="M:BioFSharp.IO.FastQ.fromGzipFile``2(Microsoft.FSharp.Core.FSharpFunc{System.String,``0},Microsoft.FSharp.Core.FSharpFunc{System.String,``1},System.String)">
+<summary>
+ Reads FastqItem from GZip format file. Converter and qualityConverter determines type of sequence by converting seq&lt;char&gt; -&gt; type
+</summary>
+</member>
+<member name="M:BioFSharp.IO.FastQ.fromFile``2(Microsoft.FSharp.Core.FSharpFunc{System.String,``0},Microsoft.FSharp.Core.FSharpFunc{System.String,``1},System.String)">
+<summary>
+ Reads FastqItem from FastQ format file. Converter and qualityConverter determines type of sequence by converting seq&lt;char&gt; -&gt; type
+</summary>
+</member>
+<member name="M:BioFSharp.IO.FastQ.fromFileEnumerator``2(Microsoft.FSharp.Core.FSharpFunc{System.String,``0},Microsoft.FSharp.Core.FSharpFunc{System.String,``1},System.Collections.Generic.IEnumerable{System.String})">
+<summary>
+ Maps each lines from an entry to FastqItem
+</summary>
+</member>
+<member name="M:BioFSharp.IO.FastQ.createFastqItem``2(System.String,``0,System.String,``1)">
+<summary>
+ Creates FastqItem with header line, sequence, qualityHeader and qualitySequence
+</summary>
+</member>
+<member name="M:BioFSharp.IO.GFF3Parser.Relationship.relationshipSearch``1(System.Collections.Generic.IEnumerable{BioFSharp.IO.GFF3Parser.GFF{``0}},System.String)">
+<summary>
+Searches for an term and gives a list of all features of which the searchterm is the mainfeature (ID) or a child of it (Parent) (shows all features which are linked to searchterm)
+</summary>
+</member>
+<member name="M:BioFSharp.IO.GFF3Parser.Reader.GFF3readerWithoutFasta(System.String)">
+<summary>
+If no information about Sequence is required or no Fasta is included you can use this function
+</summary>
+</member>
+<member name="M:BioFSharp.IO.GFF3Parser.Reader.GFF3reader``1(Microsoft.FSharp.Core.FSharpFunc{System.Collections.Generic.IEnumerable{System.Char},``0},System.String)">
+<summary>
+reads in a file and gives a GFF&lt;&apos;a&gt; list. If file contains a FastA sequence it is converted to FastA.FastaItem with given converter. (Use &apos;id&apos; as converter if no FastA is required).
+</summary>
+</member>
+<member name="M:BioFSharp.IO.GFF3Parser.Reader.addFastaSequence``2(System.Collections.Generic.IEnumerator{System.String},Microsoft.FSharp.Collections.FSharpList{BioFSharp.IO.GFF3Parser.GFF{``0}},Microsoft.FSharp.Core.FSharpFunc{System.Collections.Generic.IEnumerable{System.Char},``0})">
+<summary>
+If there is a ##FASTA directive, all subsequent lines are taken by this function, transformed to seq&lt;FastA.FastaItem&lt;&apos;a&gt;&gt; and added to the previous parsed GFF&lt;&apos;a&gt; list.
+</summary>
+</member>
+<member name="M:BioFSharp.IO.GFF3Parser.Reader.parseStrToGFFEntry(System.String)">
+<summary>
+Converts a string into a GFFEntry type. If there are more than 9 fields an additional &quot;supplement&quot; field gets filled. If there are less than 9 only the supplement field gets filled with the string.
+</summary>
+</member>
+<member name="M:BioFSharp.IO.GFF3Parser.Reader.createGFFEntry(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+<summary>
+Gets strings of each field and creates a GFFEntry type thereby converting the strings into desired types.        
+</summary>
+</member>
+<member name="M:BioFSharp.IO.GFF3Parser.Reader.innerTokenizer(System.String)">
+<summary>
+Separates every key-value pair of field &apos;attributes&apos; at &apos;;&apos;. Seperates key from value at &apos;=&apos; and separates values at &apos;,&apos;.
+</summary>
+</member>
+<member name="T:BioFSharp.IO.GeneBankParser.GeneBank">
+<summary>
+Represents a GeneBank file consistign of Meta, Reference, Features and Origin section.
+</summary>
+</member>
+<member name="T:BioFSharp.IO.GeneBankParser.Origin">
+<summary>
+Represents the origin part of a GeneBank file.
+</summary>
+</member>
+<member name="T:BioFSharp.IO.GeneBankParser.Features">
+<summary>
+Represents the features part of a GeneBank file.
+</summary>
+</member>
+<member name="T:BioFSharp.IO.GeneBankParser.Reference">
+<summary>
+Represents the lower part of the header of a GeneBank file.
+</summary>
+</member>
+<member name="T:BioFSharp.IO.GeneBankParser.Meta">
+<summary>
+Represents the upper part of the header of a GeneBank file.
+</summary>
+</member>
+<member name="T:BioFSharp.IO.GeneBankParser.CurrentSection">
+<summary>
+Represents the possible section locations in a GeneBank file
+</summary>
+</member>
+<member name="M:BioFSharp.IO.GeneBankParser.originParser(System.Collections.Generic.IEnumerator{System.String},System.String,System.String)">
+<summary>
+Parses the Origin section of a GeneBank file. Returns a Map mappping the position in the sequence to the nucleotide sequences starting from that position
+</summary>
+</member>
+<member name="M:BioFSharp.IO.GeneBankParser.featuresParser``1(System.Collections.Generic.IEnumerator{System.String},System.String,``0)">
+<summary>
+Parses the Features section of a GeneBank file until the &apos;Origin&apos; keyword is found. Returns a List keys representing 
+the feature name, toupled with a list of the features belonging to that key
+</summary>
+</member>
+<member name="M:BioFSharp.IO.GeneBankParser.referenceParser(System.Collections.Generic.IEnumerator{System.String},System.String,System.String)">
+<summary>
+Parses the lower section of the header until the &apos;Features&apos; keyword is found. Returns a List of Reference types filled with the parsed key value pairs or default values
+</summary>
+</member>
+<member name="M:BioFSharp.IO.GeneBankParser.metaParser(System.Collections.Generic.IEnumerator{System.String},System.String,System.String)">
+<summary>
+Parses the upper section of the header until the &apos;Reference&apos; keyword is found. Returns the Meta type filled with the parsed key value pairs or default values
+</summary>
+</member>
+<member name="M:BioFSharp.IO.GeneBankParser.valueOrDefault``2(Microsoft.FSharp.Collections.FSharpMap{``0,``1},``0,``1)">
+<summary>
+returns the value belonging to a query key, or a default value if the key is not present in the map.
+</summary>
+</member>
+<member name="M:BioFSharp.IO.GeneBankParser.splitToKV(System.String,System.Int32)">
+<summary>
+returns a trimmed tuple created from an input string, splitted at the input position
+</summary>
+</member>
+<member name="M:BioFSharp.IO.GeneBankParser.readFile(System.String)">
+<summary>
+returns the input as a sequence of strings, one line at a time
+</summary>
+</member>
+<member name="T:BioFSharp.IO.GeneBankParser">
+<summary>
+A collection of functions for reading and writing GeneBank files.
 </summary>
 </member>
 <member name="T:BioFSharp.IO.Mgf.MgfEntry">
@@ -220,6 +356,36 @@ A Wrapper to perform different BLAST tasks
  Mgf &lt;http://www.matrixscience.com/help/data_file_help.html&gt;`_ is a simple
  human-readable format for MS/MS data. It allows storing MS/MS peak lists and
  exprimental parameters.
+</summary>
+</member>
+<member name="T:BioFSharp.IO.Newick.Tags">
+<summary>
+Union case for lexer tags
+</summary>
+</member>
+<member name="T:BioFSharp.IO.Newick.NewickTree">
+<summary>
+Phylogenetic Tree which is used for parsing the Newick format
+</summary>
+</member>
+<member name="M:BioFSharp.IO.Newick.fromFile(System.String)">
+<summary>
+Creates a phylogenetic tree of type newick tree of file
+</summary>
+</member>
+<member name="M:BioFSharp.IO.Newick.lexer(System.String)">
+<summary>
+Lexer
+</summary>
+</member>
+<member name="M:BioFSharp.IO.Newick.|D|_|(System.String)">
+<summary>
+Active Pattern for nodedistance
+</summary>
+</member>
+<member name="M:BioFSharp.IO.Newick.|L|_|(System.String)">
+<summary>
+Active Pattern for a leaf
 </summary>
 </member>
 <member name="T:BioFSharp.IO.Obo.OboTerm">
