@@ -16,6 +16,8 @@
 // Include BioFSharp and BioFSharp.Stats   
 #r ".lib/BioFSharp.dll"
 #r ".lib/BioFSharp.IO.dll"
+#r ".lib/SwaggerProvider.Runtime.dll"
+#r ".lib/BioFSharp.BioDB.dll"
 #r ".lib/BioFSharp.Stats.dll"
 #r ".lib/BioFSharp.Mz.dll"
 
@@ -26,10 +28,10 @@
 #r ".lib/MzLite.Processing.dll"
 #r ".lib/FsMzLite.dll"
 
-// Include Accord
-#r "packages/Accord/lib/net45/Accord.dll"
-#r "packages/Accord.Statistics/lib/net45/Accord.Statistics.dll"
-#r "packages/Accord.MachineLearning/lib/net45/Accord.MachineLearning.dll"
+// // Include Accord
+// #r "packages/Accord/lib/net45/Accord.dll"
+// #r "packages/Accord.Statistics/lib/net45/Accord.Statistics.dll"
+// #r "packages/Accord.MachineLearning/lib/net45/Accord.MachineLearning.dll"
 
 
 // Include FSharp.Plotly

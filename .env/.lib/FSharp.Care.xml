@@ -17,6 +17,16 @@ Applies a function to each element of the collection, threading an accumulator a
  Look up an element in an array by index, returning a value if the index is in the domain of the array and default value if not
 </summary>
 </member>
+<member name="M:FSharp.Care.Collections.Array.countDistinctBy``2(Microsoft.FSharp.Core.FSharpFunc{``0,``1},``0[])">
+<summary>
+Applies a keyfunction to each element and counts the amount of each distinct resulting key
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array.foldi``2(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``0}}},``0,``1[])">
+<summary>
+Applies a function to each element and its index of the array, threading an accumulator argument through the computation
+</summary>
+</member>
 <member name="M:FSharp.Care.Collections.Array.centeredWindow``1(System.Int32,``0[])">
 <summary>
  Returns an array of sliding windows of data drawn from the source array.
@@ -43,6 +53,11 @@ Applies a function to each element of the collection, threading an accumulator a
  Stacks an array of arrays horizontaly
 </summary>
 </member>
+<member name="M:FSharp.Care.Collections.Array2D.countDistinctBy``2(Microsoft.FSharp.Core.FSharpFunc{``0,``1},``0[0:,0:])">
+<summary>
+Applies a keyfunction to each element and counts the amount of each distinct resulting key
+</summary>
+</member>
 <member name="M:FSharp.Care.Collections.Array2D.shuffle``1(``0[0:,0:])">
 <summary>
  Shuffels the input Array2D (method: Fisher-Yates)
@@ -58,9 +73,92 @@ Applies a function to each element of the collection, threading an accumulator a
  Shuffels each column of the input Array2D separately  (method: Fisher-Yates)
 </summary>
 </member>
+<member name="M:FSharp.Care.Collections.Array2D.map2``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``0,``1}},``0[0:,0:],``0[0:,0:])">
+<summary>
+ Builds a new array whose elements are the results of applying the given function
+ to the corresponding pairs of elements from the two arrays. 
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array2D.mapInPlaceRowi``1(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,``0}},``0[0:,0:])">
+<summary>
+ Applying the given function to each of the elements of the array and returns the value in place.
+ The integer indices passed to the function indicates the row index of the element being transformed.
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array2D.mapInPlaceColi``1(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,``0}},``0[0:,0:])">
+<summary>
+ Applying the given function to each of the elements of the array and returns the value in place.
+ The integer indices passed to the function indicates the column index of the element being transformed.
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array2D.mapiInPlace``1(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,``0}},``0[0:,0:])">
+<summary>
+ Applying the given function to each of the elements of the array and returns the value in place.
+ The integer indices passed to the function indicates the element being transformed.
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array2D.mapInPlace``1(Microsoft.FSharp.Core.FSharpFunc{``0,``0},``0[0:,0:])">
+<summary>
+ Applying the given function to each of the elements of the array and returns the value in place.
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array2D.mapRowI``2(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,``1}},``0[0:,0:])">
+<summary>
+ Builds a new array whose elements are the results of applying the given function
+ to each of the elements of the array. The integer indices passed to the
+ function indicates the row index of the element being transformed.
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array2D.mapColI``2(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,``1}},``0[0:,0:])">
+<summary>
+ Builds a new array whose elements are the results of applying the given function
+ to each of the elements of the array. The integer indices passed to the
+ function indicates the column index of the element being transformed.
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array2D.foldByRow``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``0}},``0,``1[0:,0:])">
+<summary>
+ Fold all rows into one column array.
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array2D.foldByCol``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``0}},``0,``1[0:,0:])">
+<summary>
+ Fold all columns into one row array.
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array2D.foldRow``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``0}},``0,``1[0:,0:],System.Int32)">
+<summary>
+ Fold one row.
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array2D.foldCol``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``0}},``0,``1[0:,0:],System.Int32)">
+<summary>
+ Fold one column.
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array2D.colCount``1(``0[0:,0:])">
+<summary>
+ Returns the numbers of rows.
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array2D.rowCount``1(``0[0:,0:])">
+<summary>
+ Returns the numbers of rows.
+</summary>
+</member>
 <member name="M:FSharp.Care.Collections.Array2D.transpose``1(``0[0:,0:])">
 <summary>
  Transpose the array
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array2D.indexMaxBy``2(Microsoft.FSharp.Core.FSharpFunc{``0,``1},``0[0:,0:])">
+<summary>
+Returns the index of the element which is the biggest after projection according to the Operators.max operator in the array
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Array2D.maxBy``2(Microsoft.FSharp.Core.FSharpFunc{``0,``1},``0[0:,0:])">
+<summary>
+Returns the element of the array which is the biggest after projection according to the Operators.max operator
 </summary>
 </member>
 <member name="M:FSharp.Care.Collections.Array2D.ofLongColumnArray``1(``0[],System.Int32,System.Int32)">
@@ -229,12 +327,163 @@ Applies the given function to each element of the divvy array.
 </member>
 <member name="M:FSharp.Care.Collections.JaggedArray.shuffleRowWise``1(``0[][])">
 <summary>
- Shuffels each row of a jagged array separately  (method: Fisher-Yates)
+ Shuffles each row of a jagged array separately  (method: Fisher-Yates)
 </summary>
 </member>
 <member name="M:FSharp.Care.Collections.JaggedArray.shuffleColumnWise``1(``0[][])">
 <summary>
- Shuffels each column of a jagged array separately  (method: Fisher-Yates)
+ Shuffles each column of a jagged array separately  (method: Fisher-Yates)
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.JaggedArray.innerChoose``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpOption{``1}},``0[][])">
+<summary>
+Applies the given function to each element in the inner arrays of the jagged array. Returns the jagged array whose inner arrays are comprised of the results x for each element where the function returns Some(x)
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.JaggedArray.innerFilter``1(Microsoft.FSharp.Core.FSharpFunc{``0,System.Boolean},``0[][])">
+<summary>
+Returns a new jagged array whose inner arrays only contain the elements for which the given predicate returns true
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.JaggedArray.fold``3(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``0}},Microsoft.FSharp.Core.FSharpFunc{``2,Microsoft.FSharp.Core.FSharpFunc{``0,``2}},``0,``2,``1[][])">
+<summary>
+Applies a function to each element of the inner arrays of the jagged array, threading an accumulator argument through the computation. 
+A second function is the applied to each result of the predeceding computation, again passing an accumulater through the computation 
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.JaggedArray.innerFold``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``0}},``0,``1[][])">
+<summary>
+Applies a function to each element of the inner arrays of the jagged array, threading an accumulator argument through the computation.
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.JaggedArray.mapi``2(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,``1}},``0[][])">
+<summary>
+Builds a new jagged array whose inner arrays are the results of applying the given function to each of their elements. The integer index passed to the function indicates the index of element in the inner array being transformed.
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.JaggedArray.map3``4(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,Microsoft.FSharp.Core.FSharpFunc{``2,``3}}},``0[][],``1[][],``2[][])">
+<summary>
+ Builds a new jagged array whose inner arrays are the results of applying the given function to the corresponding elements of the inner arrays of the tree jagged arrays triplewise. 
+ All corresponding inner arrays must be of the same length, otherwise ArgumentException is raised.
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.JaggedArray.map2``3(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``2}},``0[][],``1[][])">
+<summary>
+ Builds a new jagged array whose inner arrays are the results of applying the given function to the corresponding elements of the inner arrays of the two jagged arrays pairwise. 
+ All corresponding inner arrays must be of the same length, otherwise ArgumentException is raised.
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.JaggedArray.map``2(Microsoft.FSharp.Core.FSharpFunc{``0,``1},``0[][])">
+<summary>
+ Builds a new jagged array whose inner arrays are the results of applying the given function to each of their elements.
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.JaggedArray.toJaggedSeq``1(``0[][])">
+<summary>
+ Converts a jagged array into a jagged seq
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.JaggedArray.ofJaggedSeq``2(System.Collections.Generic.IEnumerable{``0})">
+<summary>
+ Converts a jagged Seq into a jagged array
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.JaggedArray.toJaggedList``1(``0[][])">
+<summary>
+ Converts a jagged array into a jagged list
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.JaggedArray.ofJaggedList``1(Microsoft.FSharp.Collections.FSharpList{Microsoft.FSharp.Collections.FSharpList{``0}})">
+<summary>
+ Converts a jagged list into a jagged array
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.JaggedArray.transpose``1(``0[][])">
+<summary>
+ Transposes a jagged array
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.JaggedList.innerChoose``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpOption{``1}},Microsoft.FSharp.Collections.FSharpList{Microsoft.FSharp.Collections.FSharpList{``0}})">
+<summary>
+Applies the given function to each element in the inner lists of the jagged List. Returns the jagged list whose inner lists are comprised of the results x for each element where the function returns Some(x)
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.JaggedList.innerFilter``1(Microsoft.FSharp.Core.FSharpFunc{``0,System.Boolean},Microsoft.FSharp.Collections.FSharpList{Microsoft.FSharp.Collections.FSharpList{``0}})">
+<summary>
+Returns a new jagged list whose inner lists only contain the elements for which the given predicate returns true
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.JaggedList.fold``3(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``0}},Microsoft.FSharp.Core.FSharpFunc{``2,Microsoft.FSharp.Core.FSharpFunc{``0,``2}},``0,``2,Microsoft.FSharp.Collections.FSharpList{Microsoft.FSharp.Collections.FSharpList{``1}})">
+<summary>
+Applies a function to each element of the inner lists of the jagged list, threading an accumulator argument through the computation. 
+A second function is the applied to each result of the predeceding computation, again passing an accumulater through the computation 
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.JaggedList.innerFold``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``0}},``0,Microsoft.FSharp.Collections.FSharpList{Microsoft.FSharp.Collections.FSharpList{``1}})">
+<summary>
+Applies a function to each element of the inner lists of the jagged list, threading an accumulator argument through the computation.
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.JaggedList.mapi``2(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,``1}},Microsoft.FSharp.Collections.FSharpList{Microsoft.FSharp.Collections.FSharpList{``0}})">
+<summary>
+Builds a new jagged list whose inner lists are the results of applying the given function to each of their elements. The integer index passed to the function indicates the index of element in the inner list being transformed.
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.JaggedList.map3``4(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,Microsoft.FSharp.Core.FSharpFunc{``2,``3}}},Microsoft.FSharp.Collections.FSharpList{Microsoft.FSharp.Collections.FSharpList{``0}},Microsoft.FSharp.Collections.FSharpList{Microsoft.FSharp.Collections.FSharpList{``1}},Microsoft.FSharp.Collections.FSharpList{Microsoft.FSharp.Collections.FSharpList{``2}})">
+<summary>
+ Builds a new jagged list whose inner lists are the results of applying the given function to the corresponding elements of the inner lists of the tree jagged lists triplewise. 
+ All corresponding inner lists must be of the same length, otherwise ArgumentException is raised.
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.JaggedList.map2``3(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``2}},Microsoft.FSharp.Collections.FSharpList{Microsoft.FSharp.Collections.FSharpList{``0}},Microsoft.FSharp.Collections.FSharpList{Microsoft.FSharp.Collections.FSharpList{``1}})">
+<summary>
+ Builds a new jagged list whose inner lists are the results of applying the given function to the corresponding elements of the inner lists of the two jagged lists pairwise. 
+ All corresponding inner lists must be of the same length, otherwise ArgumentException is raised.
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.JaggedList.map``2(Microsoft.FSharp.Core.FSharpFunc{``0,``1},Microsoft.FSharp.Collections.FSharpList{Microsoft.FSharp.Collections.FSharpList{``0}})">
+<summary>
+ Builds a new jagged list whose inner lists are the results of applying the given function to each of their elements.
+</summary>
+</member>
+<member name="T:FSharp.Care.Collections.KdTree.KdTree`2">
+<summary>
+ k -dimension tree    
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.KdTree.rangeSearch``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``0,System.Double}},Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{System.Int32,System.Double}},FSharp.Care.Collections.KdTree.KdTree{``1,``0},System.Double,``0)">
+<summary>
+ Searches query coordinates within a given radius
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.KdTree.print``2(FSharp.Care.Collections.KdTree.KdTree{``0,``1})">
+<summary>
+ Prints kd tree
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.KdTree.toList``2(FSharp.Care.Collections.KdTree.KdTree{``0,``1})">
+<summary>
+ Flattens KdTree
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.KdTree.ofArrayBy``3(Microsoft.FSharp.Core.FSharpFunc{``0,``1},Microsoft.FSharp.Core.FSharpFunc{``1,Microsoft.FSharp.Core.FSharpFunc{System.Int32,``2}},System.Int32,``0[])">
+<summary>
+ Create KD Tree from list
+</summary>
+</member>
+<member name="T:FSharp.Care.Collections.KdTree">
+<summary>
+ Module for k -dimension trees  
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.List.countDistinctBy``2(Microsoft.FSharp.Core.FSharpFunc{``0,``1},Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+Applies a keyfunction to each element and counts the amount of each distinct resulting key
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.List.foldi``2(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``0}}},``0,Microsoft.FSharp.Collections.FSharpList{``1})">
+<summary>
+Applies a function to each element and its index of the list, threading an accumulator argument through the computation
 </summary>
 </member>
 <member name="M:FSharp.Care.Collections.List.insertAt``1(System.Int32,``0,Microsoft.FSharp.Collections.FSharpList{``0})">
@@ -321,6 +570,11 @@ Applies the given function to each element of the divvy array.
  A MultiMap is a special case of a map where value is a list of values
 </summary>
 </member>
+<member name="M:FSharp.Care.Collections.Seq.countDistinctBy``2(Microsoft.FSharp.Core.FSharpFunc{``0,``1},System.Collections.Generic.IEnumerable{``0})">
+<summary>
+Applies a keyfunction to each element and counts the amount of each distinct resulting key
+</summary>
+</member>
 <member name="M:FSharp.Care.Collections.Seq.unzip3``3(System.Collections.Generic.IEnumerable{System.Tuple{``0,``1,``2}})">
 <summary>
  Splits a sequence of triples into three sequences
@@ -376,12 +630,22 @@ Applies the given function to each element of the divvy array.
 </member>
 <member name="M:FSharp.Care.Collections.Seq.initRepeatValues``1(System.Int32,System.Collections.Generic.IEnumerable{``0})">
 <summary>
- Initialie a sequence of length and repeted values (like R! repeat: but swapped input)
+ Initialize a sequence of length and repeated values (like R! repeat: but swapped input)
 </summary>
 </member>
 <member name="M:FSharp.Care.Collections.Seq.initRepeatValue``1(System.Int32,``0)">
 <summary>
- Initialie a sequence of length and repeted value (like R! repeat : but swapped input)
+ Initialize a sequence of length and repeated value (like R! repeat : but swapped input)
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Seq.consSingleton``1(System.Collections.Generic.IEnumerable{``0},``0)">
+<summary>
+Adds a value to the front of a sequence
+</summary>
+</member>
+<member name="M:FSharp.Care.Collections.Seq.appendSingleton``1(System.Collections.Generic.IEnumerable{``0},``0)">
+<summary>
+Adds a value to the back of a sequence
 </summary>
 </member>
 <member name="M:FSharp.Care.Collections.Seq.Double.existsNaN(System.Collections.Generic.IEnumerable{System.Double})">
@@ -713,6 +977,11 @@ Generic Zero
 <member name="T:FSharp.Care.Regex">
 <summary>
  Regex module for functional use of regular expressions
+</summary>
+</member>
+<member name="M:FSharp.Care.String.rev(System.String)">
+<summary>
+ Reverts a string
 </summary>
 </member>
 <member name="M:FSharp.Care.String.inferType(System.Collections.Generic.IEnumerable{System.String})">
