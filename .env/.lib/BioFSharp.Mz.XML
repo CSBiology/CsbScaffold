@@ -2,44 +2,215 @@
 <doc>
 <assembly><name>BioFSharp.Mz</name></assembly>
 <members>
-<member name="T:BioFSharp.Mz.AndromedaLike.AndromedaLikeScore">
+<member name="M:BioFSharp.Mz.TaggedPeak.createTaggedPeakOf(BioFSharp.Mz.TaggedMass.TaggedMass,Microsoft.FSharp.Core.FSharpFunc{BioFSharp.Mz.Ions.IonTypeFlag,System.Double})">
 
 </member>
-<member name="M:BioFSharp.Mz.AndromedaLike.calcAndromedaLikeScoresRevDecoy``1(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},System.Int32,System.Int32,System.Double,System.Double,System.Double,``0[],System.Int32,System.Double,Microsoft.FSharp.Collections.FSharpList{BioFSharp.Mz.SearchDB.LookUpResult{BioFSharp.AminoAcids.AminoAcid}},System.String)">
+<member name="M:BioFSharp.Mz.TaggedPeak.createTaggedPeak(BioFSharp.Mz.Ions.IonTypeFlag,System.Double,System.Double)">
 
 </member>
-<member name="M:BioFSharp.Mz.AndromedaLike.scoreFuncImpl(System.Int32,System.Int32,System.Int32)">
+<member name="M:BioFSharp.Mz.TaggedMass.createTaggedNH3Loss(BioFSharp.Mz.Ions.IonTypeFlag,System.Double)">
 
 </member>
-<member name="M:BioFSharp.Mz.AndromedaLike.lnProb(System.Double,System.Double,System.Double,System.Double)">
+<member name="M:BioFSharp.Mz.TaggedMass.createTaggedH2OLoss(BioFSharp.Mz.Ions.IonTypeFlag,System.Double)">
 
 </member>
-<member name="M:BioFSharp.Mz.AndromedaLike.gammLn(System.Double)">
+<member name="M:BioFSharp.Mz.TaggedMass.createTaggedMass(BioFSharp.Mz.Ions.IonTypeFlag,System.Double)">
 
 </member>
-<member name="M:BioFSharp.Mz.AndromedaLike.countMatches(System.Double,System.Double,System.Double,BioFSharp.Mz.AndromedaLike.PeakFamily{BioFSharp.Mz.Tag{BioFSharp.Mz.IonTypes,BioFSharp.Mz.Peak}}[],System.Int32,Microsoft.FSharp.Collections.FSharpList{Microsoft.FSharp.Collections.FSharpList{System.Tuple{System.Double,System.Double}}})">
+<member name="M:BioFSharp.Mz.Peaks.createPeakFamily``1(``0,Microsoft.FSharp.Collections.FSharpList{``0})">
 
 </member>
-<member name="M:BioFSharp.Mz.AndromedaLike.hasMatchingPeakPPM(System.Double,System.Double,Microsoft.FSharp.Collections.FSharpList{Microsoft.FSharp.Collections.FSharpList{System.Tuple{System.Double,System.Double}}})">
+<member name="M:BioFSharp.Mz.Peaks.createPeakAnnotation``1(``0,BioFSharp.Mz.Peak)">
 
 </member>
-<member name="M:BioFSharp.Mz.AndromedaLike.findBinIdx(System.Double)">
+<member name="M:BioFSharp.Mz.Peaks.createTag``2(``0,``1)">
 
 </member>
-<member name="M:BioFSharp.Mz.AndromedaLike.predictOf(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},System.Double,System.Double,Microsoft.FSharp.Collections.FSharpList{BioFSharp.AminoAcids.AminoAcid},System.Double)">
+<member name="M:BioFSharp.Mz.Peaks.createPeak(System.Double,System.Double)">
 
 </member>
-<member name="M:BioFSharp.Mz.AndromedaLike.ions(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},BioFSharp.Mz.IonSeries,Microsoft.FSharp.Collections.FSharpList{BioFSharp.AminoAcids.AminoAcid})">
+<member name="M:BioFSharp.Mz.PeakArray.peaksToNearestUnitDaltonBinVector``1(``0[],System.Double,System.Double)">
+<summary>
+ Bins peaks to their nearest 1 Da bin
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.PeakArray.peaksToNearestUnitDaltonBin``1(``0[],System.Int32,System.Int32)">
+<summary>
+ Bins peaks to their nearest 1 Da bin
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.PeakArray.binToUpperIntergerMass``1(``0[],System.Int32,System.Int32)">
+<summary>
+ Bins peaks to their next upperIntegerMass bin
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.Cache.containsItemsBetween``2(System.Collections.Generic.SortedList{``0,``1},``0,``0)">
 
 </member>
-<member name="M:BioFSharp.Mz.AndromedaLike.spectrumToBinnedArray(System.Int32,System.Int32,System.Double,System.Double,System.Tuple{System.Double,System.Double}[])">
+<member name="M:BioFSharp.Mz.Cache.getValuesByIdx``2(System.Collections.Generic.SortedList{``0,``1},System.Int32,System.Int32)">
 
 </member>
-<member name="M:BioFSharp.Mz.AndromedaLike.nrOfBins(System.Double,System.Double)">
+<member name="M:BioFSharp.Mz.Cache.getValuesBy``2(System.Collections.Generic.SortedList{``0,``1},``0,``0)">
 
 </member>
-<member name="M:BioFSharp.Mz.AndromedaLike.createAndromedaScore(System.String,System.Int32,System.Int32,System.Int32,System.Boolean,System.String,System.Int32,System.Double,System.Double,System.Double,System.Int32,System.Double,System.Double)">
+<member name="M:BioFSharp.Mz.Cache.getItemsByIdx``2(System.Collections.Generic.SortedList{``0,``1},System.Int32,System.Int32)">
 
+</member>
+<member name="M:BioFSharp.Mz.Cache.getItemsByRange``2(System.Collections.Generic.SortedList{``0,``1},``0,``0)">
+
+</member>
+<member name="M:BioFSharp.Mz.Cache.getItemBy``2(System.Collections.Generic.SortedList{``0,``1},``0)">
+
+</member>
+<member name="M:BioFSharp.Mz.Cache.bulkDeleteBy``3(System.Collections.Generic.SortedList{``0,``1},``0)">
+
+</member>
+<member name="M:BioFSharp.Mz.Cache.bulkInsertBy``2(System.Collections.Generic.SortedList{``0,``1},Microsoft.FSharp.Collections.FSharpList{System.Tuple{``0,``1}})">
+
+</member>
+<member name="M:BioFSharp.Mz.Cache.addItem``2(System.Collections.Generic.SortedList{``0,``1},``0,``1)">
+
+</member>
+<member name="M:BioFSharp.Mz.Cache.binarySearch``2(BioFSharp.Mz.Cache.Border,System.Collections.Generic.SortedList{``0,``1},``0)">
+
+</member>
+<member name="M:BioFSharp.Mz.Cache.createCacheWith``2(System.Collections.Generic.IComparer{``0},System.Int32)">
+
+</member>
+<member name="M:BioFSharp.Mz.Cache.createCacheWithComp``2(System.Collections.Generic.IComparer{``0})">
+
+</member>
+<member name="M:BioFSharp.Mz.Cache.createCacheWithCap``2(System.Int32)">
+
+</member>
+<member name="M:BioFSharp.Mz.Cache.createCache``2">
+
+</member>
+<member name="M:BioFSharp.Mz.SignalDetection.upperIdxBy(System.Double[],System.Double,System.Double)">
+<summary>
+ Returns a Index that accesses the mzData Array at a position determined by a precursorMz at the upper end of a given windowwidth 
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SignalDetection.lowerIdxBy(System.Double[],System.Double,System.Double)">
+<summary>
+ Returns a Index that accesses the mzData Array at a position determined by a precursorMz at the lower end of a given windowwidth 
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SignalDetection.windowToCentroid(Microsoft.FSharp.Core.FSharpFunc{System.Double[],Microsoft.FSharp.Core.FSharpFunc{System.Double[],System.Tuple{System.Double[],System.Double[]}}},System.Double[],System.Double[],System.Int32,System.Int32)">
+<summary>
+ Returns mzIntensityArray consisting of centroided Peaks. 
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SignalDetection.toCentroid``2(Microsoft.FSharp.Core.FSharpFunc{System.Double[],Microsoft.FSharp.Core.FSharpFunc{System.Double[],System.Tuple{``0[],``1[]}}},System.Double[],System.Double[])">
+<summary>
+ Returns mzIntensityArray consisting of centroided Peaks. 
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SignalDetection.filterByIntensitySNR(System.Double,System.Double,System.Double[],System.Double[])">
+<summary>
+ Returns mzIntensityArray after noise reduction 
+</summary>
+</member>
+<member name="T:BioFSharp.Mz.SignalDetection.Wavelet.WaveletParameters">
+
+</member>
+<member name="M:BioFSharp.Mz.SignalDetection.Wavelet.toCentroid(Microsoft.FSharp.Core.FSharpFunc{System.Double[],Microsoft.FSharp.Core.FSharpFunc{System.Double[],Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{System.Double,Microsoft.FSharp.Core.FSharpFunc{System.Double,System.Double[]}}}}}}},System.Int32,System.Double,System.Double,System.Double,System.Double,System.Double[],System.Double[])">
+<summary>
+ Returns a MzIntensityArray that containing the spectral centroids of the input spectra. 
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SignalDetection.Wavelet.refinePeaks(System.Double,System.Double,System.Double[],System.Double[],System.Double[],System.Collections.Generic.List{BioFSharp.Mz.SignalDetection.Wavelet.RidgeLine},System.Double[])">
+
+</member>
+<member name="M:BioFSharp.Mz.SignalDetection.Wavelet.getSNRFilteredPeakLines(System.Double,System.Double,System.Int32,System.Double[],System.Collections.Generic.List{BioFSharp.Mz.SignalDetection.Wavelet.RidgeLine},System.Double[0:,0:])">
+
+</member>
+<member name="M:BioFSharp.Mz.SignalDetection.Wavelet.ricker2d(System.Double[],System.Double[],System.Int32,System.Int32,System.Int32,System.Double,System.Double)">
+
+</member>
+<member name="M:BioFSharp.Mz.SignalDetection.Wavelet.getScales(System.Int32,System.Double[],System.Double,System.Int32,System.Int32,System.Double[],System.Double[],System.Double[],System.Int32[0:,0:,0:],System.Double[])">
+
+</member>
+<member name="M:BioFSharp.Mz.SignalDetection.Wavelet.convertColToMz(System.Double[],System.Int32)">
+<summary>
+ Helperfunction to get mz back of Columnnumber
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SignalDetection.Wavelet.createPadding(System.Int32,System.Double[],System.Double[],System.Double[],System.Double[])">
+
+</member>
+<member name="M:BioFSharp.Mz.SignalDetection.Wavelet.getNpointsX(System.Int32,System.Int32,System.Double,System.Int32[0:,0:,0:],System.Double[])">
+<summary>
+ Helperfunction to calculate the mz values left and right from the target value which will be included in the computation of 
+ the CWT correlation coefficient
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SignalDetection.Wavelet.createWaveletParameters(System.Int32,System.Double,System.Double,System.Double,System.Double)">
+
+</member>
+<member name="M:BioFSharp.Mz.SignalDetection.Wavelet.createRidgeLine(System.Int32,System.Int32)">
+
+</member>
+<member name="T:BioFSharp.Mz.SignalDetection.Care.Extrema">
+
+</member>
+<member name="M:BioFSharp.Mz.SignalDetection.Care.scoreAtPercentile(System.Double,System.Int32,System.Double[])">
+<summary>
+ Helper function for determining the score in a (sorted) vector at a given percentile
+ end of getScoreAtPercentile. Allow passing of length of vector in case you only 
+ want a slice of the first portion of a vector;
+ perc should not be a fraction (e.g. 5th per centile = 5.0)
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SignalDetection.Care.accumulate``2(System.Int32,System.Int32,``0,Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``0}},``1[])">
+<summary>
+ Helper function to accumulate Array values
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SignalDetection.Care.createXspacing(System.Double[])">
+<summary>
+ Returns a Array containing the distances between adjacent mz values of the input array.
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SignalDetection.Care.labelPeaks(System.Double,System.Double,System.Double[],System.Double[])">
+<summary>
+ Returns a collection of local Maxima and Minima. Attention: The algorithm is very sensitive to noise   
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SignalDetection.Care.localMinimaIdx(System.Double[],System.Double[])">
+<summary>
+ Returns a collection of indices corresponding to local minima. Attention: The algorithm is very sensitive to noise   
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SignalDetection.Care.localMinima(System.Double[],System.Double[])">
+<summary>
+ Returns a collection of local minima. Attention: The algorithm is very sensitive to noise   
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SignalDetection.Care.localMaximaIdx(System.Double,System.Double[],System.Double[])">
+<summary>
+ Returns a collection of indices corresponding to local maxima. Attention: The algorithm is very sensitive to noise and behaves irregulary for negative Y-values.
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SignalDetection.Care.localMaxima(System.Double,System.Double[],System.Double[])">
+<summary>
+ Returns a collection local maxima. Attention: The algorithm is very sensitive to noise and behaves irregulary for negative Y-values.
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.SignalDetection.Care.calc``1(``0,System.Int32,System.Int32,System.Int32,System.Int32)">
+
+</member>
+<member name="M:BioFSharp.Mz.SignalDetection.Care.getColHighBound(System.Double[],System.Int32,System.Double)">
+
+</member>
+<member name="M:BioFSharp.Mz.SignalDetection.Care.getColLowBound(System.Double[],System.Int32,System.Double)">
+
+</member>
+<member name="M:BioFSharp.Mz.SignalDetection.Filtering.savitzky_golay(System.Int32,System.Int32,System.Int32,System.Int32,System.Double[])">
+<summary>
+ Smooth (and optionally differentiate) data with a Savitzky-Golay filter.
+ The Savitzky-Golay filter is a type of low-pass filter and removes high frequency noise from data.
+</summary>
 </member>
 <member name="P:BioFSharp.Mz.ChargeState.ChargeDetermParams.DeltaMinIntensity">
 <summary>
@@ -180,208 +351,13 @@ stdv 0.01516580549
  Returns Index of the highestPeak flanking a given mzValue
 </summary>
 </member>
-<member name="M:BioFSharp.Mz.Fragmentation.BioList.abcSeriesAmmoniaLoss(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},Microsoft.FSharp.Collections.FSharpList{BioFSharp.AminoAcids.AminoAcid})">
- <summary>
-   Computes uncharged mass series of a-,b-,c- ions
-   with neutral ammonia loss
- </summary>
-
- <param name="aal"> List of aminoacids </param>
- <remarks> Result is uncharged use <c>Mass.toMZ</c> </remarks>
- <returns> Uncharged mass series of a-,b-,c- ions with neutral ammonia loss </returns>   
-</member>
-<member name="M:BioFSharp.Mz.Fragmentation.BioList.xyzSeriesWaterLoss(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},Microsoft.FSharp.Collections.FSharpList{BioFSharp.AminoAcids.AminoAcid})">
- <summary>
-   Computes uncharged mass series of x-,y-,z- ions
-   with neutral water loss
- </summary>
-
- <param name="aal"> List of aminoacids </param>
- <remarks> Result is uncharged use <c>Mass.toMZ</c> </remarks>
- <returns> Uncharged mass series of x-,y-,z- ions with neutral water loss </returns>   
-</member>
-<member name="M:BioFSharp.Mz.Fragmentation.BioList.xyzSeries(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},Microsoft.FSharp.Collections.FSharpList{BioFSharp.AminoAcids.AminoAcid})">
- <summary>
-   Computes uncharged mass series of x-,y-,z- ions
- </summary>
-
- <param name="aal"> List of aminoacids </param>
- <remarks> Result is uncharged use <c>Mass.toMZ</c> </remarks>
- <returns> Uncharged mass series of x-,y-,z- ions </returns>   
-</member>
-<member name="M:BioFSharp.Mz.Fragmentation.BioList.abcSeries(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},Microsoft.FSharp.Collections.FSharpList{BioFSharp.AminoAcids.AminoAcid})">
- <summary>
-   Computes uncharged mass series of a-,b-,c- ions
- </summary>
-
- <param name="aal">list of aminoacids </param>
- <remarks>result is uncharged use <c>Mass.toMZ</c></remarks>
- <returns>uncharged mass series of a-,b-,c- ions</returns>   
-</member>
-<member name="M:BioFSharp.Mz.PeakArray.peaksToNearestUnitDaltonBinVector``1(``0[],System.Int32,System.Int32)">
-<summary>
- Bins peaks to their nearest 1 Da bin
-</summary>
-</member>
-<member name="M:BioFSharp.Mz.PeakArray.peaksToNearestUnitDaltonBin``1(``0[],System.Int32,System.Int32)">
-<summary>
- Bins peaks to their nearest 1 Da bin
-</summary>
-</member>
-<member name="M:BioFSharp.Mz.PeakArray.binToUpperIntergerMass``1(``0[],System.Int32,System.Int32)">
-<summary>
- Bins peaks to their next upper 1 Da bin
-</summary>
-</member>
-<member name="M:BioFSharp.Mz.Peaks.createPeakAnnotation(BioFSharp.Mz.IonTypes,BioFSharp.Mz.Peak)">
-
-</member>
-<member name="M:BioFSharp.Mz.Peaks.createTag``2(``0,``1)">
-
-</member>
-<member name="M:BioFSharp.Mz.Peaks.createPeak(System.Double,System.Double)">
-
-</member>
-<member name="M:BioFSharp.Mz.Quantification.MyQuant.quantify(Microsoft.FSharp.Core.FSharpFunc{BioFSharp.Mz.Tag{BioFSharp.Mz.SignalDetection.Care.Extrema,System.Tuple{System.Double,System.Double}}[],Microsoft.FSharp.Core.FSharpFunc{BioFSharp.Mz.SignalDetection.Care.Extrema,Microsoft.FSharp.Core.FSharpFunc{System.Double,Microsoft.FSharp.Core.FSharpOption{System.Tuple{System.Int32,BioFSharp.Mz.Tag{BioFSharp.Mz.SignalDetection.Care.Extrema,System.Tuple{System.Double,System.Double}}}}}}},System.Int32,System.Double,System.Double,System.Double,System.Double[],System.Double[])">
-
-</member>
-<member name="M:BioFSharp.Mz.Quantification.MyQuant.findRightFittingIdx(System.Tuple{System.Double,System.Double}[],BioFSharp.Mz.Tag{BioFSharp.Mz.SignalDetection.Care.Extrema,System.Tuple{System.Double,System.Double}}[],System.Int32,Microsoft.FSharp.Core.FSharpOption{System.Int32})">
-
-</member>
-<member name="P:BioFSharp.Mz.Quantification.MyQuant.createGaussSolverOption">
-
-</member>
-<member name="P:BioFSharp.Mz.Quantification.MyQuant.createEMGSolverOption">
-
-</member>
-<member name="T:BioFSharp.Mz.Quantification.Fitting.SolverOptions">
-
-</member>
-<member name="P:BioFSharp.Mz.Quantification.Fitting.Model.GetGradientValue">
-<summary>
-Gradient: Vector of partial derivations of function body
-</summary>
-</member>
-<member name="P:BioFSharp.Mz.Quantification.Fitting.Model.GetFunctionValue">
-<summary>
-originally GetValue; contains function body
-</summary>
-</member>
-<member name="T:BioFSharp.Mz.Quantification.Fitting.Model">
-
-</member>
-<member name="M:BioFSharp.Mz.Quantification.Fitting.levenbergMarquardtSolver(BioFSharp.Mz.Quantification.Fitting.Model,BioFSharp.Mz.Quantification.Fitting.SolverOptions,System.Double[],System.Double[],System.Collections.Generic.List{MathNet.Numerics.LinearAlgebra.Double.DenseVector})">
-<summary>
- Returns a parameter vector as a possible solution for linear least square based nonlinear fitting of a given dataset (xData, yData) with a given 
- model function. 
-</summary>
-</member>
-<member name="M:BioFSharp.Mz.Quantification.Fitting.gaussNewtonSolver(BioFSharp.Mz.Quantification.Fitting.Model,BioFSharp.Mz.Quantification.Fitting.SolverOptions,System.Double[],System.Double[],System.Collections.Generic.List{MathNet.Numerics.LinearAlgebra.Double.DenseVector})">
-<summary>
- Returns a parameter vector as a possible solution for linear least square based nonlinear fitting of a given dataset (xData, yData) with a given 
- model function. 
-</summary>
-</member>
-<member name="M:BioFSharp.Mz.Quantification.Fitting.shouldTerminate(System.Double,System.Double,System.Int32,MathNet.Numerics.LinearAlgebra.Double.DenseVector,MathNet.Numerics.LinearAlgebra.Double.DenseVector,BioFSharp.Mz.Quantification.Fitting.SolverOptions)">
-<summary>
- Returns true if convergence criteria are met or a user defined number of iiterations has been carried out
-</summary>
-</member>
-<member name="M:BioFSharp.Mz.Quantification.Fitting.getResidualVector(BioFSharp.Mz.Quantification.Fitting.Model,System.Int32,System.Double[],System.Double[],MathNet.Numerics.LinearAlgebra.Double.DenseVector,MathNet.Numerics.LinearAlgebra.Double.DenseVector)">
-<summary>
- Returns the residual vector, each row i contains the difference between the yEst_i and the yData_i. 
-</summary>
-</member>
-<member name="M:BioFSharp.Mz.Quantification.Fitting.getJacobianOf(BioFSharp.Mz.Quantification.Fitting.Model,System.Int32,System.Double[],MathNet.Numerics.LinearAlgebra.Double.DenseVector,MathNet.Numerics.LinearAlgebra.Double.Matrix)">
-<summary>
- Returns the Jacobian matrix of a given model and discrete parameters.
-</summary>
-</member>
-<member name="M:BioFSharp.Mz.Quantification.Fitting.getRSS``1(BioFSharp.Mz.Quantification.Fitting.Model,``0,System.Double[],System.Double[],MathNet.Numerics.LinearAlgebra.Double.DenseVector)">
-<summary>
- Returns the residual sum of squares (RSS) as a measure of discrepancy between the data and the used estimation model.
-</summary>
-</member>
-<member name="M:BioFSharp.Mz.Quantification.Fitting.createSolverOption(System.Double,System.Double,System.Int32,System.Double[])">
-
-</member>
-<member name="M:BioFSharp.Mz.Quantification.Fitting.createModel(System.String,System.String[],Microsoft.FSharp.Core.FSharpFunc{MathNet.Numerics.LinearAlgebra.Double.DenseVector,Microsoft.FSharp.Core.FSharpFunc{System.Double,System.Double}},Microsoft.FSharp.Core.FSharpFunc{MathNet.Numerics.LinearAlgebra.Double.DenseVector,Microsoft.FSharp.Core.FSharpFunc{MathNet.Numerics.LinearAlgebra.Double.DenseVector,Microsoft.FSharp.Core.FSharpFunc{System.Double,MathNet.Numerics.LinearAlgebra.Double.DenseVector}}})">
-
-</member>
-<member name="M:BioFSharp.Mz.Quantification.Fitting.standardErrorOfPrediction(System.Double,System.Double[],System.Double[])">
-
-</member>
-<member name="P:BioFSharp.Mz.Quantification.Fitting.Table.emgModel">
-<summary>
- Exponentially modified Gaussian (EMG)
-</summary>
-</member>
-<member name="P:BioFSharp.Mz.Quantification.Fitting.Table.gaussModel">
-<summary>
- Gaussian function
-</summary>
-</member>
-<member name="P:BioFSharp.Mz.Quantification.Fitting.Table.parabolaModel">
-<summary>
- Parabola
-</summary>
-</member>
-<member name="P:BioFSharp.Mz.Quantification.Fitting.Table.lineModel">
-<summary>
- Line  
-</summary>
-</member>
-<member name="T:BioFSharp.Mz.Quantification.Fitting.Table">
-
-</member>
-<member name="T:BioFSharp.Mz.Quantification.GaussEstimation.GaussParams">
-
-</member>
-<member name="M:BioFSharp.Mz.Quantification.GaussEstimation.caruanaAlgorithm(System.Double[],System.Double[])">
-<summary>
- Estimates the Parameters of a Gaussian function
- Warning: This method is sensitive to noisy data. If the noise level of the input parameters is high, smoothing of 
- the data is strongly recommended. 
-</summary>
-</member>
-<member name="M:BioFSharp.Mz.Quantification.GaussEstimation.expModGaussFunc(System.Double,System.Double,System.Double,System.Double,System.Double)">
-<summary>
- Returns the yValue of a exponentially modified gauss function at a given position.
- The function parameter tau represents the exponential relaxation time which is the inverse of the exponential decay parameter.
-</summary>
-</member>
-<member name="M:BioFSharp.Mz.Quantification.GaussEstimation.gaussFunc(System.Double,System.Double,System.Double,System.Double)">
-<summary>
- Returns the yValue of a gauss function at a given position x.
-</summary>
-</member>
-<member name="M:BioFSharp.Mz.Quantification.GaussEstimation.toFWHM(System.Double)">
-<summary>
- Returns the full width at half maximum  
-</summary>
-</member>
-<member name="M:BioFSharp.Mz.Quantification.GaussEstimation.toSTD(System.Double)">
-<summary>
- Returns the value of the standard deviation
-</summary>
-</member>
-<member name="M:BioFSharp.Mz.Quantification.GaussEstimation.createGausParams(System.Double,System.Double,System.Double,System.Double)">
-
-</member>
-<member name="M:BioFSharp.Mz.Quantification.Integration.trapezEstAreaOf(System.Double[],System.Double[])">
-<summary>
- Returns the estimated area beneath the data using the trapezoidal rule.
-</summary>
-</member>
-<member name="M:BioFSharp.Mz.Quantification.Integration.trapezEstAreaOfUniform(System.Double[],System.Double[])">
-<summary>
- Returns the estimated area beneath the data using the trapezoidal rule. Requires uniform distributed datapoints. 
-</summary>
-</member>
 <member name="M:BioFSharp.Mz.SearchDB.getSDBParamsBy(System.String)">
 <summary>
  Returns SearchDbParams of a existing database by filePath
 </summary>
+</member>
+<member name="M:BioFSharp.Mz.SearchDB.getPeptideLookUpWithMemBy(Microsoft.FSharp.Core.FSharpFunc{System.Double,Microsoft.FSharp.Core.FSharpFunc{System.Double,Microsoft.FSharp.Collections.FSharpList{BioFSharp.Mz.SearchDB.LookUpResult{BioFSharp.AminoAcids.AminoAcid}}}},System.Collections.Generic.SortedList{System.Int64,Microsoft.FSharp.Collections.FSharpList{BioFSharp.Mz.SearchDB.LookUpResult{BioFSharp.AminoAcids.AminoAcid}}},System.Double,System.Double)">
+
 </member>
 <member name="M:BioFSharp.Mz.SearchDB.getPeptideLookUpBy(BioFSharp.Mz.SearchDB.SearchDbParams)">
 <summary>
@@ -393,7 +369,7 @@ originally GetValue; contains function body
  Returns a LookUpResult list
 </summary>
 </member>
-<member name="M:BioFSharp.Mz.SearchDB.createLookUpResultBy``1(Microsoft.FSharp.Collections.FSharpMap{System.String,BioFSharp.Mz.SearchDB.SearchModification},BioFSharp.Mz.SearchDB.SearchDbParams,System.Int32,System.Int32,System.Double,``0,System.String,System.Int32)">
+<member name="M:BioFSharp.Mz.SearchDB.createLookUpResultBy(Microsoft.FSharp.Collections.FSharpMap{System.String,BioFSharp.Mz.SearchDB.SearchModification},BioFSharp.Mz.SearchDB.SearchDbParams,System.Int32,System.Int32,System.Double,System.Int64,System.String,System.Int32)">
 <summary>
  Creates a LookUpResult out of a entry in the ModSequence table
 </summary>
@@ -627,21 +603,580 @@ The boolean value &quot;false&quot; is used to state that the Modification is fi
   Prepared statements via Closure
 </summary>
 </member>
-<member name="M:BioFSharp.Mz.SequestLike.calcDeltaCN(Microsoft.FSharp.Collections.FSharpList{BioFSharp.Mz.SequestLike.SequestLikeScore})">
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.Parent.prepareSelectParentbyRowVersion``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.Parent.prepareSelectParentbyCountry``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.Parent.prepareSelectParentbyName``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.Parent.prepareSelectParentbyID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.AnalysisSoftware.prepareSelectAnalysisSoftwarebyRowVersion``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.AnalysisSoftware.prepareSelectAnalysisSoftwarebyName``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.AnalysisSoftware.prepareSelectAnalysisSoftwarebyID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.Organization.prepareSelectOrganizationbyRowVersion``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.Organization.prepareSelectOrganizationbyParent_ID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.Organization.prepareSelectOrganizationbyName``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.Organization.prepareSelectOrganizationbyID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.Person.prepareSelectPersonbyRowVersion``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.Person.prepareSelectPersonbyOrganisationID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.Person.prepareSelectPersonbyMiddleName``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.Person.prepareSelectPersonbyLastName``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.Person.prepareSelectPersonbyFirstName``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.Person.prepareSelectPersonbyID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.ProteinDetectionProtocol.prepareSelectProteinDetectionProtocolbyRowVersion``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.ProteinDetectionProtocol.prepareSelectProteinDetectionProtocolbyAnalysisSoftwareID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.ProteinDetectionProtocol.prepareSelectProteinDetectionProtocolbyName``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.ProteinDetectionProtocol.prepareSelectProteinDetectionProtocolbyID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.SpectrumIdentificationProtocol.prepareSelectSpectrumIdentificationProtocolbyRowVersion``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.SpectrumIdentificationProtocol.prepareSelectSpectrumIdentificationProtocolbyAnalysisSoftwareID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.SpectrumIdentificationProtocol.prepareSelectSpectrumIdentificationProtocolbyName``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.SpectrumIdentificationProtocol.prepareSelectSpectrumIdentificationProtocolbyID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.SpectrumIdentification.prepareSelectSpectrumIdentificationbyRowVersion``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.SpectrumIdentification.prepareSelectSpectrumIdentificationbySpectrumIdentficationProtocolID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.SpectrumIdentification.prepareSelectSpectrumIdentificationbySpectrumIdentficationListID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.SpectrumIdentification.prepareSelectSpectrumIdentificationbyActivityDate``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.SpectrumIdentification.prepareSelectSpectrumIdentificationbyName``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.SpectrumIdentification.prepareSelectSpectrumIdentificationbyID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.ProteinAmbiguityGroup.prepareSelectProteinAmbiguityGroupbyRowVersion``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.ProteinAmbiguityGroup.prepareSelectProteinAmbiguityGroupbyName``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.ProteinAmbiguityGroup.prepareSelectProteinAmbiguityGroupbyProteinDetectionListID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.ProteinAmbiguityGroup.prepareSelectProteinAmbiguityGroupbyID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.PeptideHypothesis.prepareSelectPeptideHypothesisbyRowVersion``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.PeptideHypothesis.prepareSelectPeptideHypothesisbyProteinDetectionHypothesisID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.PeptideHypothesis.prepareSelectPeptideHypothesisbyPeptideEvidenceID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.PeptideHypothesis.prepareSelectPeptideHypothesisbyID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.ProteinDetectionList.prepareSelectProteinDetectionListbyRowVersion``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.ProteinDetectionList.prepareSelectProteinDetectionListbySearchDBID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.ProteinDetectionList.prepareSelectProteinDetectionListbyName``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.ProteinDetectionList.prepareSelectProteinDetectionListbyAccession``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.ProteinDetectionList.prepareSelectProteinDetectionListbyID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.ProteinDetectionHypothesis.prepareSelectProteinDetectionHypothesisbyRowVersion``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.ProteinDetectionHypothesis.prepareSelectProteinDetectionHypothesisbyPassThreshold``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.ProteinDetectionHypothesis.prepareSelectProteinDetectionHypothesisbyName``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.ProteinDetectionHypothesis.prepareSelectProteinDetectionHypothesisbyProteinAmbiguityGroupID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.ProteinDetectionHypothesis.prepareSelectProteinDetectionHypothesisbyDBSequenceID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.ProteinDetectionHypothesis.prepareSelectProteinDetectionHypothesisbyID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.TermRelationShip.prepareSelectTermRelationShipbyRowVersion``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.TermRelationShip.prepareSelectTermRelationShipbyFKRelatedTerm``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.TermRelationShip.prepareSelectTermRelationShipbyRelationShipType``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.TermRelationShip.prepareSelectTermRelationShipbyTermID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.TermRelationShip.prepareSelectTermRelationShipbyID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.TermTag.prepareSelectTermTagbyRowVersion``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.TermTag.prepareSelectTermTagbyValue``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.TermTag.prepareSelectTermTagbyName``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.TermTag.prepareSelectTermTagbyTermID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.TermTag.prepareSelectTermTagbyID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.Ontology.prepareSelectOntologybyName``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.Ontology.prepareSelectOntologybyID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.Modification.prepareSelectModificationbyRowVersion``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.Modification.prepareSelectModificationbyAvgMassDelta``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.Modification.prepareSelectModificationbyMonoisotopicMassDelta``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.Modification.prepareSelectModificationbyResidues``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.Modification.prepareSelectModificationbyName``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.Modification.prepareSelectModificationbyID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.ModLocation.prepareSelectModLocationbyRowVersion``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.ModLocation.prepareSelectModLocationbyResidue``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.ModLocation.prepareSelectModLocationbyLocation``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.ModLocation.prepareSelectModLocationbyModificationID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.ModLocation.prepareSelectModLocationbyPeptideID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.ModLocation.prepareSelectModLocationbyID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.SpectrumIdentificationList.prepareSelectSpectrumIdentificationListbyRowVersion``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.SpectrumIdentificationList.prepareSelectSpectrumIdentificationListbyNumSequencesSearched``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.SpectrumIdentificationList.prepareSelectSpectrumIdentificationListbyName``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.SpectrumIdentificationList.prepareSelectSpectrumIdentificationListbyID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.SpectrumIdentificationResult.prepareSelectSpectrumIdentificationResultbyRowVersion``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.SpectrumIdentificationResult.prepareSelectSpectrumIdentificationResultbyName``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.SpectrumIdentificationResult.prepareSelectSpectrumIdentificationResultbySpectrumIdentficationListID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.SpectrumIdentificationResult.prepareSelectSpectrumIdentificationResultbySpectraDataID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.SpectrumIdentificationResult.prepareSelectSpectrumIdentificationResultbySpectrumID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.SpectrumIdentificationResult.prepareSelectSpectrumIdentificationResultbyID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.Term.prepareSelectTermbyRowVersion``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.Term.prepareSelectTermbyName``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.Term.prepareSelectTermbyOntologyID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.Term.prepareSelectTermbyID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.SpectrumIdentificationItem.prepareSelectSpectrumIdentificationItembyRowVersion``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.SpectrumIdentificationItem.prepareSelectSpectrumIdentificationItembyFragmentation``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.SpectrumIdentificationItem.prepareSelectSpectrumIdentificationItembyCalculatedPI``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.SpectrumIdentificationItem.prepareSelectSpectrumIdentificationItembyChargeState``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.SpectrumIdentificationItem.prepareSelectSpectrumIdentificationItembyExperimentalMassToCharge``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.SpectrumIdentificationItem.prepareSelectSpectrumIdentificationItembyCalculatedMassToCharge``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.SpectrumIdentificationItem.prepareSelectSpectrumIdentificationItembyRank``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.SpectrumIdentificationItem.prepareSelectSpectrumIdentificationItembyPassThreshold``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.SpectrumIdentificationItem.prepareSelectSpectrumIdentificationItembyName``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.SpectrumIdentificationItem.prepareSelectSpectrumIdentificationItembyMassTableID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.SpectrumIdentificationItem.prepareSelectSpectrumIdentificationItembyPeptideID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.SpectrumIdentificationItem.prepareSelectSpectrumIdentificationItembySampleID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.SpectrumIdentificationItem.prepareSelectSpectrumIdentificationItembySpectrumIdentificationResultID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.SpectrumIdentificationItem.prepareSelectSpectrumIdentificationItembyID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.Peptide.prepareSelectPeptidebyRowVersion``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.Peptide.prepareSelectPeptidebySequence``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.Peptide.prepareSelectPeptidebyID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.PeptideEvidence.prepareSelectPeptideEvidencebyRowVersion``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.PeptideEvidence.prepareSelectPeptideEvidencebyTranslationsID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.PeptideEvidence.prepareSelectPeptideEvidencebyPost``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.PeptideEvidence.prepareSelectPeptideEvidencebyPre``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.PeptideEvidence.prepareSelectPeptideEvidencebyEnd``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.PeptideEvidence.prepareSelectPeptideEvidencebyStart``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.PeptideEvidence.prepareSelectPeptideEvidencebyFrame``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.PeptideEvidence.prepareSelectPeptideEvidencebyisDecoy``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.PeptideEvidence.prepareSelectPeptideEvidencebyPeptideID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.PeptideEvidence.prepareSelectPeptideEvidencebyDBSequenceID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.PeptideEvidence.prepareSelectPeptideEvidencebyID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.DBSequence.prepareSelectDBSequencebyRowVersion``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.DBSequence.prepareSelectDBSequencebySearchDBID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.DBSequence.prepareSelectDBSequencebyName``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.DBSequence.prepareSelectDBSequencebyAccession``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Db.DBSequence.prepareSelectDBSequencebyID``1(System.Data.SQLite.SQLiteConnection,System.Data.SQLite.SQLiteTransaction)">
+
+</member>
+<member name="T:BioFSharp.Mz.MzIdentMLModel.ParamContainer.ParamContainer">
+<summary>
+ Type ParamContainer
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.ParamContainer.getValueAsString(System.String,System.Collections.Generic.Dictionary{System.String,BioFSharp.Mz.MzIdentMLModel.DataModel.CvParam})">
+<summary>
+ Get value as string by termid or empty string
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.ParamContainer.getValueAsInt(System.String,System.Collections.Generic.Dictionary{System.String,BioFSharp.Mz.MzIdentMLModel.DataModel.CvParam})">
+<summary>
+ Get value as int32 by termid or &apos;-1&apos;
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.ParamContainer.getValueAsFloat(System.String,System.Collections.Generic.Dictionary{System.String,BioFSharp.Mz.MzIdentMLModel.DataModel.CvParam})">
+<summary>
+ Get value as float by termid or &apos;nan&apos;
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.ParamContainer.tryGetCvParam(System.String,System.Collections.Generic.Dictionary{System.String,BioFSharp.Mz.MzIdentMLModel.DataModel.CvParam})">
+<summary>
+ Get optional CvParam by id 
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.ParamContainer.getCvParam(System.String,System.Collections.Generic.Dictionary{System.String,BioFSharp.Mz.MzIdentMLModel.DataModel.CvParam})">
+<summary>
+ Get CvParam by id (Function can fail)
+</summary>
+</member>
+<member name="T:BioFSharp.Mz.MzIdentMLModel.ParamContainer">
+<summary>
+ Module containing functions to operate on ParamContainer
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.CvParam.createCvParamValueWithUnit(BioFSharp.Mz.MzIdentMLModel.DataModel.Term,System.IConvertible,BioFSharp.Mz.MzIdentMLModel.DataModel.Term)">
+<summary>
+ Creates a controlled vocabulary parameter value with unit term 
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.CvParam.ofValue(BioFSharp.Mz.MzIdentMLModel.DataModel.Term,System.IConvertible)">
+<summary>
+ Creates a controlled vocabulary parameter value
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.CvParam.createWithUnit(System.Guid,BioFSharp.Mz.MzIdentMLModel.DataModel.Term,System.IConvertible,BioFSharp.Mz.MzIdentMLModel.DataModel.Term)">
+<summary>
+ Creates a controlled vocabulary parameter with unit term 
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.CvParam.create(System.Guid,BioFSharp.Mz.MzIdentMLModel.DataModel.Term,System.IConvertible)">
+<summary>
+ Creates a controlled vocabulary parameter
+</summary>
+</member>
+<member name="T:BioFSharp.Mz.MzIdentMLModel.CvParam">
+<summary>
+ Module containing functions to operate on controlled vocabulary parameter
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Term.create(System.String,System.String,System.String)">
+<summary>
+ Creates a controlled vocabulary term
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.MzIdentMLModel.Term.initOf(System.String,System.String,System.String,System.DateTime)">
+<summary>
+ Creates a controlled vocabulary term with rowVersion
+</summary>
+</member>
+<member name="T:BioFSharp.Mz.MzIdentMLModel.Term">
+<summary>
+ Module containing functions to operate on controlled vocabulary term
+</summary>
+</member>
+<member name="T:BioFSharp.Mz.MzIdentMLModel.DataModel.CvParam">
+<summary>
+ Define a controlled vocabulary parameter
+</summary>
+</member>
+<member name="P:BioFSharp.Mz.MzIdentMLModel.DataModel.Term.Id">
+<summary>
+ accession number
+</summary>
+</member>
+<member name="T:BioFSharp.Mz.MzIdentMLModel.DataModel.Term">
+<summary>
+ Define a controlled vocabulary term
+</summary>
+</member>
+<member name="T:BioFSharp.Mz.MzIdentMLModel.DataModel.TermId">
+<summary>
+ Term (cv) accession number
+</summary>
+</member>
+<member name="T:BioFSharp.Mz.MzIdentMLModel.DataModel">
+<summary>
+ Module containing all data types used in the model
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.Fragmentation.Series.zOfBioList(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},Microsoft.FSharp.Collections.FSharpList{BioFSharp.AminoAcids.AminoAcid})">
+
+</member>
+<member name="M:BioFSharp.Mz.Fragmentation.Series.yOfBioList(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},Microsoft.FSharp.Collections.FSharpList{BioFSharp.AminoAcids.AminoAcid})">
+
+</member>
+<member name="M:BioFSharp.Mz.Fragmentation.Series.xOfBioList(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},Microsoft.FSharp.Collections.FSharpList{BioFSharp.AminoAcids.AminoAcid})">
+
+</member>
+<member name="M:BioFSharp.Mz.Fragmentation.Series.yzOfBioList(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},Microsoft.FSharp.Collections.FSharpList{BioFSharp.AminoAcids.AminoAcid})">
+
+</member>
+<member name="M:BioFSharp.Mz.Fragmentation.Series.xzOfBioList(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},Microsoft.FSharp.Collections.FSharpList{BioFSharp.AminoAcids.AminoAcid})">
+
+</member>
+<member name="M:BioFSharp.Mz.Fragmentation.Series.xyOfBioList(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},Microsoft.FSharp.Collections.FSharpList{BioFSharp.AminoAcids.AminoAcid})">
+
+</member>
+<member name="M:BioFSharp.Mz.Fragmentation.Series.xyzOfBioList(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},Microsoft.FSharp.Collections.FSharpList{BioFSharp.AminoAcids.AminoAcid})">
+
+</member>
+<member name="M:BioFSharp.Mz.Fragmentation.Series.cOfBioList(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},Microsoft.FSharp.Collections.FSharpList{BioFSharp.AminoAcids.AminoAcid})">
+
+</member>
+<member name="M:BioFSharp.Mz.Fragmentation.Series.bOfBioList(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},Microsoft.FSharp.Collections.FSharpList{BioFSharp.AminoAcids.AminoAcid})">
+
+</member>
+<member name="M:BioFSharp.Mz.Fragmentation.Series.aOfBioList(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},Microsoft.FSharp.Collections.FSharpList{BioFSharp.AminoAcids.AminoAcid})">
+
+</member>
+<member name="M:BioFSharp.Mz.Fragmentation.Series.bcOfBioList(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},Microsoft.FSharp.Collections.FSharpList{BioFSharp.AminoAcids.AminoAcid})">
+
+</member>
+<member name="M:BioFSharp.Mz.Fragmentation.Series.acOfBioList(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},Microsoft.FSharp.Collections.FSharpList{BioFSharp.AminoAcids.AminoAcid})">
+
+</member>
+<member name="M:BioFSharp.Mz.Fragmentation.Series.abOfBioList(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},Microsoft.FSharp.Collections.FSharpList{BioFSharp.AminoAcids.AminoAcid})">
+
+</member>
+<member name="M:BioFSharp.Mz.Fragmentation.Series.abcOfBioList(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},Microsoft.FSharp.Collections.FSharpList{BioFSharp.AminoAcids.AminoAcid})">
+
+</member>
+<member name="M:BioFSharp.Mz.Fragmentation.BioList.xyzfragmentMassesOf(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},BioFSharp.Mz.Ions.IonTypeFlag,Microsoft.FSharp.Collections.FSharpList{BioFSharp.AminoAcids.AminoAcid})">
+
+</member>
+<member name="M:BioFSharp.Mz.Fragmentation.BioList.abcfragmentMassesOf(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},BioFSharp.Mz.Ions.IonTypeFlag,Microsoft.FSharp.Collections.FSharpList{BioFSharp.AminoAcids.AminoAcid})">
+
+</member>
+<member name="M:BioFSharp.Mz.Fragmentation.BioList.peptideLadderElementOf(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},Microsoft.FSharp.Core.FSharpFunc{System.Double,Microsoft.FSharp.Core.FSharpFunc{BioFSharp.AminoAcids.AminoAcid,BioFSharp.Mz.TaggedMass.TaggedMass}}},Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},System.Boolean,System.Boolean,System.Double,BioFSharp.AminoAcids.AminoAcid)">
+
+</member>
+<member name="M:BioFSharp.Mz.Fragmentation.BioList.createZIonTaggedMass(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},System.Double,BioFSharp.AminoAcids.AminoAcid)">
+
+</member>
+<member name="M:BioFSharp.Mz.Fragmentation.BioList.createXIonTaggedMass(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},System.Double,BioFSharp.AminoAcids.AminoAcid)">
+
+</member>
+<member name="M:BioFSharp.Mz.Fragmentation.BioList.createYIonTaggedMass(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},System.Double,BioFSharp.AminoAcids.AminoAcid)">
+
+</member>
+<member name="M:BioFSharp.Mz.Fragmentation.BioList.createCIonTaggedMass(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},System.Double,BioFSharp.AminoAcids.AminoAcid)">
+
+</member>
+<member name="M:BioFSharp.Mz.Fragmentation.BioList.createAIonTaggedMass(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},System.Double,BioFSharp.AminoAcids.AminoAcid)">
+
+</member>
+<member name="M:BioFSharp.Mz.Fragmentation.BioList.createBIonTaggedMass(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},System.Double,BioFSharp.AminoAcids.AminoAcid)">
+
+</member>
+<member name="M:BioFSharp.Mz.Fragmentation.BioList.calcZIonFragMass(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},System.Double,BioFSharp.AminoAcids.AminoAcid)">
+
+</member>
+<member name="M:BioFSharp.Mz.Fragmentation.BioList.calcXIonFragMass(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},System.Double,BioFSharp.AminoAcids.AminoAcid)">
+
+</member>
+<member name="M:BioFSharp.Mz.Fragmentation.BioList.calcCIonFragMass(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},System.Double,BioFSharp.AminoAcids.AminoAcid)">
+
+</member>
+<member name="M:BioFSharp.Mz.Fragmentation.BioList.calcAIonFragMass(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},System.Double,BioFSharp.AminoAcids.AminoAcid)">
+
+</member>
+<member name="M:BioFSharp.Mz.Fragmentation.BioList.calcBorYIonFragMass(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},System.Double,BioFSharp.AminoAcids.AminoAcid)">
+
+</member>
+<member name="M:BioFSharp.Mz.TheoreticalSpectra.getTheoSpecs``1(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},Microsoft.FSharp.Core.FSharpFunc{System.Tuple{System.Double,System.Double},Microsoft.FSharp.Core.FSharpFunc{System.Double,Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpList{BioFSharp.AminoAcids.AminoAcid},``0}}}},Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},System.Double,System.Double,System.Int32,Microsoft.FSharp.Collections.FSharpList{BioFSharp.Mz.SearchDB.LookUpResult{BioFSharp.AminoAcids.AminoAcid}})">
+
+</member>
+<member name="M:BioFSharp.Mz.TheoreticalSpectra.getTheoSpec``1(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},Microsoft.FSharp.Core.FSharpFunc{System.Tuple{System.Double,System.Double},Microsoft.FSharp.Core.FSharpFunc{System.Double,Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpList{BioFSharp.AminoAcids.AminoAcid},``0}}}},Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},System.Double,System.Double,System.Int32,BioFSharp.Mz.SearchDB.LookUpResult{BioFSharp.AminoAcids.AminoAcid})">
+
+</member>
+<member name="M:BioFSharp.Mz.TheoreticalSpectra.createTheoreticalSpectrum``1(BioFSharp.Mz.SearchDB.LookUpResult{BioFSharp.AminoAcids.AminoAcid},``0,``0)">
+
+</member>
+<member name="M:BioFSharp.Mz.SearchEngineResult.createSearchEngineResult``1(BioFSharp.Mz.SearchEngineResult.SearchEngine,System.String,System.Int32,System.Int32,System.Int32,System.Boolean,System.String,System.Int32,System.Double,System.Double,System.Double,System.Int32,``0,System.Double)">
+
+</member>
+<member name="M:BioFSharp.Mz.SequestLike.calcDeltaCN(Microsoft.FSharp.Collections.FSharpList{BioFSharp.Mz.SearchEngineResult.SearchEngineResult{System.Double}})">
 <summary>
  Calculates sequest-like deltaCN score
   (Xcorr(top hit) - Xcorr(n)) ÷ Xcorr(top hit). Thus, the deltaCn for the top hit is
   (Xcorr(top hit) - Xcorr(top hit)) ÷ Xcorr(top hit) = 0.
 </summary>
 </member>
-<member name="M:BioFSharp.Mz.SequestLike.spectrumToIntensityArrayMinusAutoCorrelation``1(System.Int32,System.Int32,``0[])">
+<member name="M:BioFSharp.Mz.SequestLike.spectrumToIntensityArrayMinusAutoCorrelation``1(System.Double,System.Double,``0[])">
 <summary>
  Measured spectrum to sequest-like normalized intensity array
  minus auto-correlation (delay 75 -&gt; like in original sequest algorithm)
  ! Uses 10 as number of windows for window normalization (like in original sequest algorithm)    
 </summary>
 </member>
-<member name="M:BioFSharp.Mz.SequestLike.peptideToNormalizedIntensityArray(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},System.Int32,System.Int32,System.Double,Microsoft.FSharp.Collections.FSharpList{BioFSharp.AminoAcids.AminoAcid})">
+<member name="M:BioFSharp.Mz.SequestLike.peaksToNormalizedIntensityArray(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},System.Double},System.Double,System.Double,System.Double,Microsoft.FSharp.Collections.FSharpList{BioFSharp.Mz.PeakFamily{BioFSharp.Mz.TaggedMass.TaggedMass}})">
 <summary>
  Amino acid sequence (peptide) to sequest-like predicted intensity array
 </summary>
@@ -652,130 +1187,140 @@ The boolean value &quot;false&quot; is used to state that the Modification is fi
  Attention shortens the array  (cuts)
 </summary>
 </member>
-<member name="M:BioFSharp.Mz.SignalDetection.upperIdxBy(System.Double[],System.Double,System.Double)">
-<summary>
- Returns a Index that accesses the mzData Array at a position determined by a precursorMz at the upper end of a given windowwidth 
-</summary>
-</member>
-<member name="M:BioFSharp.Mz.SignalDetection.lowerIdxBy(System.Double[],System.Double,System.Double)">
-<summary>
- Returns a Index that accesses the mzData Array at a position determined by a precursorMz at the lower end of a given windowwidth 
-</summary>
-</member>
-<member name="M:BioFSharp.Mz.SignalDetection.windowToCentroid(Microsoft.FSharp.Core.FSharpFunc{System.Double[],Microsoft.FSharp.Core.FSharpFunc{System.Double[],System.Tuple{System.Double[],System.Double[]}}},System.Double[],System.Double[],System.Int32,System.Int32)">
-<summary>
- Returns mzIntensityArray consisting of centroided Peaks. 
-</summary>
-</member>
-<member name="M:BioFSharp.Mz.SignalDetection.toCentroid``2(Microsoft.FSharp.Core.FSharpFunc{System.Double[],Microsoft.FSharp.Core.FSharpFunc{System.Double[],System.Tuple{``0[],``1[]}}},System.Double[],System.Double[])">
-<summary>
- Returns mzIntensityArray consisting of centroided Peaks. 
-</summary>
-</member>
-<member name="M:BioFSharp.Mz.SignalDetection.filterByIntensitySNR(System.Double,System.Double,System.Double[],System.Double[])">
-<summary>
- Returns mzIntensityArray after noise reduction 
-</summary>
-</member>
-<member name="T:BioFSharp.Mz.SignalDetection.Wavelet.waveletParameters">
+<member name="M:BioFSharp.Mz.Quantification.MyQuant.quantify(Microsoft.FSharp.Core.FSharpFunc{BioFSharp.Mz.Tag{BioFSharp.Mz.SignalDetection.Care.Extrema,System.Tuple{System.Double,System.Double}}[],Microsoft.FSharp.Core.FSharpFunc{BioFSharp.Mz.SignalDetection.Care.Extrema,Microsoft.FSharp.Core.FSharpFunc{System.Double,Microsoft.FSharp.Core.FSharpOption{System.Tuple{System.Int32,BioFSharp.Mz.Tag{BioFSharp.Mz.SignalDetection.Care.Extrema,System.Tuple{System.Double,System.Double}}}}}}},System.Int32,System.Double,System.Double,System.Double,System.Double[],System.Double[])">
 
 </member>
-<member name="M:BioFSharp.Mz.SignalDetection.Wavelet.toCentroid(Microsoft.FSharp.Core.FSharpFunc{System.Double[],Microsoft.FSharp.Core.FSharpFunc{System.Double[],Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{System.Double,Microsoft.FSharp.Core.FSharpFunc{System.Double,System.Double[]}}}}}}},System.Int32,System.Double,System.Double,System.Double,System.Double,System.Double[],System.Double[])">
-<summary>
- Returns a MzIntensityArray that containing the spectral centroids of the input spectra. 
-</summary>
-</member>
-<member name="M:BioFSharp.Mz.SignalDetection.Wavelet.refinePeaks(System.Double,System.Double,System.Double[],System.Double[],System.Double[],System.Collections.Generic.List{BioFSharp.Mz.SignalDetection.Wavelet.RidgeLine},System.Double[])">
+<member name="M:BioFSharp.Mz.Quantification.MyQuant.findRightFittingIdx(System.Tuple{System.Double,System.Double}[],BioFSharp.Mz.Tag{BioFSharp.Mz.SignalDetection.Care.Extrema,System.Tuple{System.Double,System.Double}}[],System.Int32,Microsoft.FSharp.Core.FSharpOption{System.Int32})">
 
 </member>
-<member name="M:BioFSharp.Mz.SignalDetection.Wavelet.getSNRFilteredPeakLines(System.Double,System.Double,System.Int32,System.Double[],System.Collections.Generic.List{BioFSharp.Mz.SignalDetection.Wavelet.RidgeLine},System.Double[0:,0:])">
+<member name="P:BioFSharp.Mz.Quantification.MyQuant.createGaussSolverOption">
 
 </member>
-<member name="M:BioFSharp.Mz.SignalDetection.Wavelet.ricker2d(System.Double[],System.Double[],System.Int32,System.Int32,System.Int32,System.Double,System.Double)">
+<member name="P:BioFSharp.Mz.Quantification.MyQuant.createEMGSolverOption">
 
 </member>
-<member name="M:BioFSharp.Mz.SignalDetection.Wavelet.getScales(System.Int32,System.Double[],System.Double,System.Int32,System.Int32,System.Double[],System.Double[],System.Double[],System.Int32[0:,0:,0:],System.Double[])">
+<member name="T:BioFSharp.Mz.Quantification.Fitting.SolverOptions">
 
 </member>
-<member name="M:BioFSharp.Mz.SignalDetection.Wavelet.convertColToMz(System.Double[],System.Int32)">
+<member name="P:BioFSharp.Mz.Quantification.Fitting.Model.GetGradientValue">
 <summary>
- Helperfunction to get mz back of Columnnumber
+Gradient: Vector of partial derivations of function body
 </summary>
 </member>
-<member name="M:BioFSharp.Mz.SignalDetection.Wavelet.createPadding(System.Int32,System.Double[],System.Double[],System.Double[],System.Double[])">
+<member name="P:BioFSharp.Mz.Quantification.Fitting.Model.GetFunctionValue">
+<summary>
+originally GetValue; contains function body
+</summary>
+</member>
+<member name="T:BioFSharp.Mz.Quantification.Fitting.Model">
 
 </member>
-<member name="M:BioFSharp.Mz.SignalDetection.Wavelet.getNpointsX(System.Int32,System.Int32,System.Double,System.Int32[0:,0:,0:],System.Double[])">
+<member name="M:BioFSharp.Mz.Quantification.Fitting.levenbergMarquardtSolver(BioFSharp.Mz.Quantification.Fitting.Model,BioFSharp.Mz.Quantification.Fitting.SolverOptions,System.Double[],System.Double[],System.Collections.Generic.List{MathNet.Numerics.LinearAlgebra.Double.DenseVector})">
 <summary>
- Helperfunction to calculate the mz values left and right from the target value which will be included in the computation of 
- the CWT correlation coefficient
+ Returns a parameter vector as a possible solution for linear least square based nonlinear fitting of a given dataset (xData, yData) with a given 
+ model function. 
 </summary>
 </member>
-<member name="M:BioFSharp.Mz.SignalDetection.Wavelet.createWaveletParameters(System.Int32,System.Double,System.Double,System.Double,System.Double)">
+<member name="M:BioFSharp.Mz.Quantification.Fitting.gaussNewtonSolver(BioFSharp.Mz.Quantification.Fitting.Model,BioFSharp.Mz.Quantification.Fitting.SolverOptions,System.Double[],System.Double[],System.Collections.Generic.List{MathNet.Numerics.LinearAlgebra.Double.DenseVector})">
+<summary>
+ Returns a parameter vector as a possible solution for linear least square based nonlinear fitting of a given dataset (xData, yData) with a given 
+ model function. 
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.Quantification.Fitting.shouldTerminate(System.Double,System.Double,System.Int32,MathNet.Numerics.LinearAlgebra.Double.DenseVector,MathNet.Numerics.LinearAlgebra.Double.DenseVector,BioFSharp.Mz.Quantification.Fitting.SolverOptions)">
+<summary>
+ Returns true if convergence criteria are met or a user defined number of iiterations has been carried out
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.Quantification.Fitting.getResidualVector(BioFSharp.Mz.Quantification.Fitting.Model,System.Int32,System.Double[],System.Double[],MathNet.Numerics.LinearAlgebra.Double.DenseVector,MathNet.Numerics.LinearAlgebra.Double.DenseVector)">
+<summary>
+ Returns the residual vector, each row i contains the difference between the yEst_i and the yData_i. 
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.Quantification.Fitting.getJacobianOf(BioFSharp.Mz.Quantification.Fitting.Model,System.Int32,System.Double[],MathNet.Numerics.LinearAlgebra.Double.DenseVector,MathNet.Numerics.LinearAlgebra.Double.Matrix)">
+<summary>
+ Returns the Jacobian matrix of a given model and discrete parameters.
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.Quantification.Fitting.getRSS(BioFSharp.Mz.Quantification.Fitting.Model,System.Double[],System.Double[],MathNet.Numerics.LinearAlgebra.Double.DenseVector)">
+<summary>
+ Returns the residual sum of squares (RSS) as a measure of discrepancy between the data and the used estimation model.
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.Quantification.Fitting.createSolverOption(System.Double,System.Double,System.Int32,System.Double[])">
 
 </member>
-<member name="M:BioFSharp.Mz.SignalDetection.Wavelet.createRidgeLine(System.Int32,System.Int32)">
+<member name="M:BioFSharp.Mz.Quantification.Fitting.createModel(System.String,System.String[],Microsoft.FSharp.Core.FSharpFunc{MathNet.Numerics.LinearAlgebra.Double.DenseVector,Microsoft.FSharp.Core.FSharpFunc{System.Double,System.Double}},Microsoft.FSharp.Core.FSharpFunc{MathNet.Numerics.LinearAlgebra.Double.DenseVector,Microsoft.FSharp.Core.FSharpFunc{MathNet.Numerics.LinearAlgebra.Double.DenseVector,Microsoft.FSharp.Core.FSharpFunc{System.Double,MathNet.Numerics.LinearAlgebra.Double.DenseVector}}})">
 
 </member>
-<member name="T:BioFSharp.Mz.SignalDetection.Care.Extrema">
+<member name="M:BioFSharp.Mz.Quantification.Fitting.standardErrorOfPrediction(System.Double,System.Double[],System.Double[])">
 
 </member>
-<member name="M:BioFSharp.Mz.SignalDetection.Care.scoreAtPercentile(System.Double,System.Int32,System.Double[])">
+<member name="P:BioFSharp.Mz.Quantification.Fitting.Table.emgModel">
 <summary>
- Helper function for determining the score in a (sorted) vector at a given percentile
- end of getScoreAtPercentile. Allow passing of length of vector in case you only 
- want a slice of the first portion of a vector;
- perc should not be a fraction (e.g. 5th per centile = 5.0)
+ Exponentially modified Gaussian (EMG)
 </summary>
 </member>
-<member name="M:BioFSharp.Mz.SignalDetection.Care.accumulate``2(System.Int32,System.Int32,``0,Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``0}},``1[])">
+<member name="P:BioFSharp.Mz.Quantification.Fitting.Table.gaussModel">
 <summary>
- Helper function to accumulate Array values
+ Gaussian function
 </summary>
 </member>
-<member name="M:BioFSharp.Mz.SignalDetection.Care.createXspacing(System.Double[])">
+<member name="P:BioFSharp.Mz.Quantification.Fitting.Table.parabolaModel">
 <summary>
- Returns a Array containing the distances between adjacent mz values of the input array.
+ Parabola
 </summary>
 </member>
-<member name="M:BioFSharp.Mz.SignalDetection.Care.labelPeaks(System.Double,System.Double,System.Double[],System.Double[])">
+<member name="P:BioFSharp.Mz.Quantification.Fitting.Table.lineModel">
 <summary>
- Returns a collection of local Maxima and Minima. Attention: The algorithm is very sensitive to noise   
+ Line  
 </summary>
 </member>
-<member name="M:BioFSharp.Mz.SignalDetection.Care.localMinimaIdx(System.Double[],System.Double[])">
-<summary>
- Returns a collection of indices corresponding to local minima. Attention: The algorithm is very sensitive to noise   
-</summary>
-</member>
-<member name="M:BioFSharp.Mz.SignalDetection.Care.localMinima(System.Double[],System.Double[])">
-<summary>
- Returns a collection of local minima. Attention: The algorithm is very sensitive to noise   
-</summary>
-</member>
-<member name="M:BioFSharp.Mz.SignalDetection.Care.localMaximaIdx(System.Double,System.Double[],System.Double[])">
-<summary>
- Returns a collection of indices corresponding to local maxima. Attention: The algorithm is very sensitive to noise and behaves irregulary for negative Y-values.
-</summary>
-</member>
-<member name="M:BioFSharp.Mz.SignalDetection.Care.localMaxima(System.Double,System.Double[],System.Double[])">
-<summary>
- Returns a collection local maxima. Attention: The algorithm is very sensitive to noise and behaves irregulary for negative Y-values.
-</summary>
-</member>
-<member name="M:BioFSharp.Mz.SignalDetection.Care.calc``1(``0,System.Int32,System.Int32,System.Int32,System.Int32)">
+<member name="T:BioFSharp.Mz.Quantification.Fitting.Table">
 
 </member>
-<member name="M:BioFSharp.Mz.SignalDetection.Care.getColHighBound(System.Double[],System.Int32,System.Double)">
+<member name="T:BioFSharp.Mz.Quantification.GaussEstimation.GaussParams">
 
 </member>
-<member name="M:BioFSharp.Mz.SignalDetection.Care.getColLowBound(System.Double[],System.Int32,System.Double)">
-
-</member>
-<member name="M:BioFSharp.Mz.SignalDetection.Filtering.savitzky_golay(System.Int32,System.Int32,System.Int32,System.Int32,System.Double[])">
+<member name="M:BioFSharp.Mz.Quantification.GaussEstimation.caruanaAlgorithm(System.Double[],System.Double[])">
 <summary>
- Smooth (and optionally differentiate) data with a Savitzky-Golay filter.
- The Savitzky-Golay filter is a type of low-pass filter and removes high frequency noise from data.
+ Estimates the Parameters of a Gaussian function
+ Warning: This method is sensitive to noisy data. If the noise level of the input parameters is high, smoothing of 
+ the data is strongly recommended. 
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.Quantification.GaussEstimation.expModGaussFunc(System.Double,System.Double,System.Double,System.Double,System.Double)">
+<summary>
+ Returns the yValue of a exponentially modified gauss function at a given position.
+ The function parameter tau represents the exponential relaxation time which is the inverse of the exponential decay parameter.
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.Quantification.GaussEstimation.gaussFunc(System.Double,System.Double,System.Double,System.Double)">
+<summary>
+ Returns the yValue of a gauss function at a given position x.
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.Quantification.GaussEstimation.toFWHM(System.Double)">
+<summary>
+ Returns the full width at half maximum  
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.Quantification.GaussEstimation.toSTD(System.Double)">
+<summary>
+ Returns the value of the standard deviation
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.Quantification.GaussEstimation.createGausParams(System.Double,System.Double,System.Double,System.Double)">
+
+</member>
+<member name="M:BioFSharp.Mz.Quantification.Integration.trapezEstAreaOf(System.Double[],System.Double[])">
+<summary>
+ Returns the estimated area beneath the data using the trapezoidal rule.
+</summary>
+</member>
+<member name="M:BioFSharp.Mz.Quantification.Integration.trapezEstAreaOfUniform(System.Double[],System.Double[])">
+<summary>
+ Returns the estimated area beneath the data using the trapezoidal rule. Requires uniform spaced datapoints. 
 </summary>
 </member>
 </members>

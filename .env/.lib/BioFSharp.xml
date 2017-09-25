@@ -471,7 +471,6 @@ Contains chemical elements represented as a mixture of their stable isotopes and
 </member>
 <member name="M:BioFSharp.Formula.substract(Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double})">
 <summary>
- adds two formula
  substract two formula
 </summary>
 </member>
@@ -774,6 +773,51 @@ Contains functionality for working with molecules as a formula of their elements
 Contains functionality for working with isotopic abundancies of molecules
 </summary>
 </member>
+<member name="P:BioFSharp.ModificationInfo.Modification.isTerminator">
+<summary>
+Returns false 
+</summary>
+</member>
+<member name="P:BioFSharp.ModificationInfo.Modification.isGap">
+<summary>
+Returns false 
+</summary>
+</member>
+<member name="P:BioFSharp.ModificationInfo.Modification.Symbol">
+<summary>
+Returns &apos;#&apos;
+</summary>
+</member>
+<member name="P:BioFSharp.ModificationInfo.Modification.Name">
+<summary>
+Returns name of modification
+</summary>
+</member>
+<member name="P:BioFSharp.ModificationInfo.Modification.Formula">
+<summary>
+Returns formula of modification
+</summary>
+</member>
+<member name="M:BioFSharp.ModificationInfo.Modification.GetHashCode">
+<summary>
+Returns hash code of name of modification
+</summary>
+</member>
+<member name="M:BioFSharp.ModificationInfo.Modification.Equals(System.Object)">
+<summary>
+Returns true if both modifications have the same name, else returns false
+</summary>
+</member>
+<member name="T:BioFSharp.ModificationInfo.Modification">
+<summary>
+ Modification consisting of name, location specifier and a formula modifier
+</summary>
+</member>
+<member name="T:BioFSharp.ModificationInfo.ModLocation">
+<summary>
+ Specifier for location of modification
+</summary>
+</member>
 <member name="M:BioFSharp.ModificationInfo.isGap(BioFSharp.ModificationInfo.Modification)">
 <summary>
  Returns true if the modification represents a sequence gap
@@ -802,6 +846,31 @@ Contains functionality for working with isotopic abundancies of molecules
 <member name="M:BioFSharp.ModificationInfo.toString(BioFSharp.ModificationInfo.Modification)">
 <summary>
  Returns modification name as string
+</summary>
+</member>
+<member name="M:BioFSharp.ModificationInfo.createModificationWithSubstract(System.String,BioFSharp.ModificationInfo.ModLocation,System.String)">
+<summary>
+ Create modification, where elements of given formula will be substracted molecule
+</summary>
+</member>
+<member name="M:BioFSharp.ModificationInfo.createModificationWithAdd(System.String,BioFSharp.ModificationInfo.ModLocation,System.String)">
+<summary>
+ Create modification, where elements of given formula will be added to molecule
+</summary>
+</member>
+<member name="M:BioFSharp.ModificationInfo.createModification(System.String,BioFSharp.ModificationInfo.ModLocation,Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double},Microsoft.FSharp.Collections.FSharpMap{BioFSharp.Elements.Element,System.Double}})">
+<summary>
+ Create modification, where molecule will be modified by application of given modifier
+</summary>
+</member>
+<member name="T:BioFSharp.ModificationInfo.Table">
+<summary>
+Contains frequent modifications
+</summary>
+</member>
+<member name="T:BioFSharp.ModificationInfo">
+<summary>
+ Functionality for creating formula modifications
 </summary>
 </member>
 <member name="P:BioFSharp.AminoAcidSymbols.AminoAcidSymbol.isTerminator">

@@ -2,564 +2,64 @@
 <doc>
 <assembly><name>MathNet.Numerics.FSharp</name></assembly>
 <members>
-<member name="M:MathNet.Numerics.Complex32Module.acsch(MathNet.Numerics.Complex32)">
+<member name="M:MathNet.Numerics.Random.RandomModule.mrg32k3a">
 <summary>
- Inverse Hyperbolic Cosecant
+ Creates a 32-bit combined multiple recursive generator with 2 components of order 3 pRNG with a robust seed
 </summary>
 </member>
-<member name="M:MathNet.Numerics.Complex32Module.asech(MathNet.Numerics.Complex32)">
+<member name="M:MathNet.Numerics.Random.RandomModule.mcg31m1">
 <summary>
- Inverse Hyperbolic Secant
+ Creates a Multiplicative congruential generator using a modulus of 2^31-1 and a multiplier of 1132489760 pRNG with a robust seed
 </summary>
 </member>
-<member name="M:MathNet.Numerics.Complex32Module.acoth(MathNet.Numerics.Complex32)">
+<member name="M:MathNet.Numerics.Random.RandomModule.mcg59">
 <summary>
- Inverse Hyperbolic Cotangent
+ Creates a Multiplicative congruential generator using a modulus of 2^59 and a multiplier of 13^13 pRNG with a robust seed
 </summary>
 </member>
-<member name="M:MathNet.Numerics.Complex32Module.atanh(MathNet.Numerics.Complex32)">
+<member name="M:MathNet.Numerics.Random.RandomModule.palf">
 <summary>
- Inverse Hyperbolic Tangent
+ Creates a Parallel Additive Lagged Fibonacci pRNG with a robust seed
 </summary>
 </member>
-<member name="M:MathNet.Numerics.Complex32Module.acosh(MathNet.Numerics.Complex32)">
+<member name="M:MathNet.Numerics.Random.RandomModule.wh2006">
 <summary>
- Inverse Hyperbolic Cosine
+ Creates a Wichmann-Hill’s 2006 combined multiplicative congruential pRNG with a robust seed
 </summary>
 </member>
-<member name="M:MathNet.Numerics.Complex32Module.asinh(MathNet.Numerics.Complex32)">
+<member name="M:MathNet.Numerics.Random.RandomModule.wh1982">
 <summary>
- Inverse Hyperbolic Sine
+ Creates a Wichmann-Hill’s 1982 combined multiplicative congruential pRNG with a robust seed
 </summary>
 </member>
-<member name="M:MathNet.Numerics.Complex32Module.csch(MathNet.Numerics.Complex32)">
+<member name="M:MathNet.Numerics.Random.RandomModule.xorshift">
 <summary>
- Hyperbolic Cosecant
+ Creates a multiply-with-carry Xorshift (Xn = a * Xn−3 + c mod 2^32) pRNG with a robust seed
 </summary>
 </member>
-<member name="M:MathNet.Numerics.Complex32Module.sech(MathNet.Numerics.Complex32)">
+<member name="P:MathNet.Numerics.Random.RandomModule.mersenneTwisterShared">
 <summary>
- Hyperbolic Secant
+ Creates a Mersenne Twister 19937 pRNG with a robust seed
 </summary>
 </member>
-<member name="M:MathNet.Numerics.Complex32Module.coth(MathNet.Numerics.Complex32)">
+<member name="M:MathNet.Numerics.Random.RandomModule.crypto">
 <summary>
- Hyperbolic Cotangent
+ Creates a default .Net cryptographic system pRNG
 </summary>
 </member>
-<member name="M:MathNet.Numerics.Complex32Module.tanh(MathNet.Numerics.Complex32)">
+<member name="P:MathNet.Numerics.Random.RandomModule.systemShared">
 <summary>
- Hyperbolic Tangent
+ Creates a default .Net system pRNG with a robust seed
 </summary>
 </member>
-<member name="M:MathNet.Numerics.Complex32Module.cosh(MathNet.Numerics.Complex32)">
+<member name="M:MathNet.Numerics.Random.RandomModule.doubles(System.Int32)">
 <summary>
- Hyperbolic Cosine
+ Default sampling, efficient but without custom seed (uses robust seeds internally)
 </summary>
 </member>
-<member name="M:MathNet.Numerics.Complex32Module.sinh(MathNet.Numerics.Complex32)">
+<member name="P:MathNet.Numerics.Random.RandomModule.shared">
 <summary>
- Hyperbolic Sine
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Complex32Module.acsc(MathNet.Numerics.Complex32)">
-<summary>
- Arc Cosecant
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Complex32Module.asec(MathNet.Numerics.Complex32)">
-<summary>
- Arc Secant
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Complex32Module.acot(MathNet.Numerics.Complex32)">
-<summary>
- Arc Cotangent
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Complex32Module.atan(MathNet.Numerics.Complex32)">
-<summary>
- Arc Tangent
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Complex32Module.acos(MathNet.Numerics.Complex32)">
-<summary>
- Arc Cosine
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Complex32Module.asin(MathNet.Numerics.Complex32)">
-<summary>
- Arc Sine
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Complex32Module.csc(MathNet.Numerics.Complex32)">
-<summary>
- Cosecant
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Complex32Module.sec(MathNet.Numerics.Complex32)">
-<summary>
- Secant
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Complex32Module.cot(MathNet.Numerics.Complex32)">
-<summary>
- Cotangent
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Complex32Module.tan(MathNet.Numerics.Complex32)">
-<summary>
- Tangent
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Complex32Module.cos(MathNet.Numerics.Complex32)">
-<summary>
- Cosine
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Complex32Module.sin(MathNet.Numerics.Complex32)">
-<summary>
- Sine
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Complex32Module.sqrt(MathNet.Numerics.Complex32)">
-<summary>
- sqrt(x) and 0 &lt;= phase(x) &lt; pi
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Complex32Module.sqr(MathNet.Numerics.Complex32)">
-<summary>
- sqr(x) is the square (power 2)
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Complex32Module.powf(System.Single,MathNet.Numerics.Complex32)">
-<summary>
- pow(power,x) is the scalar power
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Complex32Module.pow(MathNet.Numerics.Complex32,MathNet.Numerics.Complex32)">
-<summary>
- pow(power,x) is the complex power
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Complex32Module.log(System.Single,MathNet.Numerics.Complex32)">
-<summary>
- log(base,x) is log with custom base
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Complex32Module.log10(MathNet.Numerics.Complex32)">
-<summary>
- log10(x) is common log (base 10)
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Complex32Module.ln(MathNet.Numerics.Complex32)">
-<summary>
- ln(x) is natural log (base e)
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Complex32Module.exp(MathNet.Numerics.Complex32)">
-<summary>
- exp(x) = e^x
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Complex32Module.muls(MathNet.Numerics.Complex32,System.Single)">
-<summary>
- Multiply a complex number by a scalar
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Complex32Module.smul(System.Single,MathNet.Numerics.Complex32)">
-<summary>
- Multiply a scalar by a complex number
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Complex32Module.div(MathNet.Numerics.Complex32,MathNet.Numerics.Complex32)">
-<summary>
- Complex division of two complex numbers
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Complex32Module.mul(MathNet.Numerics.Complex32,MathNet.Numerics.Complex32)">
-<summary>
- Multiply two complex numbers
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Complex32Module.sub(MathNet.Numerics.Complex32,MathNet.Numerics.Complex32)">
-<summary>
- Subtract one complex number from another
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Complex32Module.add(MathNet.Numerics.Complex32,MathNet.Numerics.Complex32)">
-<summary>
- Add two complex numbers
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Complex32Module.conjugate(MathNet.Numerics.Complex32)">
-<summary>
- The conjugate of a complex number, i.e. x-yi
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Complex32Module.neg(MathNet.Numerics.Complex32)">
-<summary>
- Unary negation of a complex number
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Complex32Module.phase(MathNet.Numerics.Complex32)">
-<summary>
- The polar-coordinate phase of a complex number
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Complex32Module.magnitude(MathNet.Numerics.Complex32)">
-<summary>
- The polar-coordinate magnitude of a complex number
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Complex32Module.imagPart(MathNet.Numerics.Complex32)">
-<summary>
- The imaginary part of a complex number
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Complex32Module.realPart(MathNet.Numerics.Complex32)">
-<summary>
- The real part of a complex number
-</summary>
-</member>
-<member name="P:MathNet.Numerics.Complex32Module.pi">
-<summary>
- pi
-</summary>
-</member>
-<member name="P:MathNet.Numerics.Complex32Module.onei">
-<summary>
- The complex number 0+1i
-</summary>
-</member>
-<member name="P:MathNet.Numerics.Complex32Module.one">
-<summary>
- The complex number 1+0i
-</summary>
-</member>
-<member name="P:MathNet.Numerics.Complex32Module.zero">
-<summary>
- The complex number 0+0i
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Complex32Module.cis(System.Single)">
-<summary>
- A complex of magnitude 1 and the given phase and , i.e. cis x = mkPolar 1.0 x
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Complex32Module.mkPolar(System.Single,System.Single)">
-<summary>
- Create a complex number using magnitude/phase polar coordinates
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Complex32Module.mkRect(System.Single,System.Single)">
-<summary>
- Create a complex number using real and imaginary parts
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexExtensions.Complex32.CreatePolar.Static(System.Single,System.Single)">
-<summary>
- Create a complex number using magnitude/phase polar coordinates
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexExtensions.Complex32.Create.Static(System.Single,System.Single)">
-<summary>
- Create a complex number x+ij using rectangular coordinates
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexExtensions.Complex32.get_i(MathNet.Numerics.Complex32)">
-<summary>
- The imaginary part of a complex number
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexExtensions.Complex32.get_r(MathNet.Numerics.Complex32)">
-<summary>
- The real part of a complex number
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexExtensions.Complex.CreatePolar.Static(System.Double,System.Double)">
-<summary>
- Create a complex number using magnitude/phase polar coordinates
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexExtensions.Complex.Create.Static(System.Double,System.Double)">
-<summary>
- Create a complex number x+ij using rectangular coordinates
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexExtensions.Complex.get_i(System.Numerics.Complex)">
-<summary>
- The imaginary part of a complex number
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexExtensions.Complex.get_r(System.Numerics.Complex)">
-<summary>
- The real part of a complex number
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexExtensions.complex32(System.Single,System.Single)">
-<summary>
- Constructs a single precision complex number from both the real and imaginary part.
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexExtensions.complex(System.Double,System.Double)">
-<summary>
- Constructs a double precision complex number from both the real and imaginary part.
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.acsch(System.Numerics.Complex)">
-<summary>
- Inverse Hyperbolic Cosecant
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.asech(System.Numerics.Complex)">
-<summary>
- Inverse Hyperbolic Secant
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.acoth(System.Numerics.Complex)">
-<summary>
- Inverse Hyperbolic Cotangent
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.atanh(System.Numerics.Complex)">
-<summary>
- Inverse Hyperbolic Tangent
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.acosh(System.Numerics.Complex)">
-<summary>
- Inverse Hyperbolic Cosine
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.asinh(System.Numerics.Complex)">
-<summary>
- Inverse Hyperbolic Sine
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.csch(System.Numerics.Complex)">
-<summary>
- Hyperbolic Cosecant
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.sech(System.Numerics.Complex)">
-<summary>
- Hyperbolic Secant
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.coth(System.Numerics.Complex)">
-<summary>
- Hyperbolic Cotangent
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.tanh(System.Numerics.Complex)">
-<summary>
- Hyperbolic Tangent
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.cosh(System.Numerics.Complex)">
-<summary>
- Hyperbolic Cosine
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.sinh(System.Numerics.Complex)">
-<summary>
- Hyperbolic Sine
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.acsc(System.Numerics.Complex)">
-<summary>
- Arc Cosecant
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.asec(System.Numerics.Complex)">
-<summary>
- Arc Secant
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.acot(System.Numerics.Complex)">
-<summary>
- Arc Cotangent
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.atan(System.Numerics.Complex)">
-<summary>
- Arc Tangent
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.acos(System.Numerics.Complex)">
-<summary>
- Arc Cosine
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.asin(System.Numerics.Complex)">
-<summary>
- Arc Sine
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.csc(System.Numerics.Complex)">
-<summary>
- Cosecant
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.sec(System.Numerics.Complex)">
-<summary>
- Secant
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.cot(System.Numerics.Complex)">
-<summary>
- Cotangent
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.tan(System.Numerics.Complex)">
-<summary>
- Tangent
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.cos(System.Numerics.Complex)">
-<summary>
- Cosine
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.sin(System.Numerics.Complex)">
-<summary>
- Sine
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.sqrt(System.Numerics.Complex)">
-<summary>
- sqrt(x) and 0 &lt;= phase(x) &lt; pi
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.sqr(System.Numerics.Complex)">
-<summary>
- sqr(x) is the square (power 2)
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.powf(System.Double,System.Numerics.Complex)">
-<summary>
- pow(power,x) is the scalar power
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.pow(System.Numerics.Complex,System.Numerics.Complex)">
-<summary>
- pow(power,x) is the complex power
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.log(System.Double,System.Numerics.Complex)">
-<summary>
- log(base,x) is log with custom base
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.log10(System.Numerics.Complex)">
-<summary>
- log10(x) is common log (base 10)
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.ln(System.Numerics.Complex)">
-<summary>
- ln(x) is natural log (base e)
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.exp(System.Numerics.Complex)">
-<summary>
- exp(x) = e^x
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.muls(System.Numerics.Complex,System.Double)">
-<summary>
- Multiply a complex number by a scalar
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.smul(System.Double,System.Numerics.Complex)">
-<summary>
- Multiply a scalar by a complex number
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.div(System.Numerics.Complex,System.Numerics.Complex)">
-<summary>
- Complex division of two complex numbers
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.mul(System.Numerics.Complex,System.Numerics.Complex)">
-<summary>
- Multiply two complex numbers
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.sub(System.Numerics.Complex,System.Numerics.Complex)">
-<summary>
- Subtract one complex number from another
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.add(System.Numerics.Complex,System.Numerics.Complex)">
-<summary>
- Add two complex numbers
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.conjugate(System.Numerics.Complex)">
-<summary>
- The conjugate of a complex number, i.e. x-yi
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.neg(System.Numerics.Complex)">
-<summary>
- Unary negation of a complex number
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.phase(System.Numerics.Complex)">
-<summary>
- The polar-coordinate phase of a complex number
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.magnitude(System.Numerics.Complex)">
-<summary>
- The polar-coordinate magnitude of a complex number
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.imagPart(System.Numerics.Complex)">
-<summary>
- The imaginary part of a complex number
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.realPart(System.Numerics.Complex)">
-<summary>
- The real part of a complex number
-</summary>
-</member>
-<member name="P:MathNet.Numerics.ComplexModule.pi">
-<summary>
- pi
-</summary>
-</member>
-<member name="P:MathNet.Numerics.ComplexModule.onei">
-<summary>
- The complex number 0+1i
-</summary>
-</member>
-<member name="P:MathNet.Numerics.ComplexModule.one">
-<summary>
- The complex number 1+0i
-</summary>
-</member>
-<member name="P:MathNet.Numerics.ComplexModule.zero">
-<summary>
- The complex number 0+0i
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.cis(System.Double)">
-<summary>
- A complex of magnitude 1 and the given phase and , i.e. cis x = mkPolar 1.0 x
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.mkPolar(System.Double,System.Double)">
-<summary>
- Create a complex number using magnitude/phase polar coordinates
-</summary>
-</member>
-<member name="M:MathNet.Numerics.ComplexModule.mkRect(System.Double,System.Double)">
-<summary>
- Create a complex number using real and imaginary parts
+ Returns the default random source, thread-safe and also thread-locally shared
 </summary>
 </member>
 <member name="M:MathNet.Numerics.Distributions.SampleModule.zipf(System.Double,System.Int32,System.Random)">
@@ -707,52 +207,632 @@
  Bernoulli with probability (p).
 </summary>
 </member>
-<member name="M:MathNet.Numerics.FitModule.linearFunc``1(Microsoft.FSharp.Collections.FSharpList{Microsoft.FSharp.Core.FSharpFunc{``0,System.Double}},``0[],System.Double[])">
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorExtensions.Vector`1.SetSlice``1(MathNet.Numerics.LinearAlgebra.Vector{``0},Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.Int32},MathNet.Numerics.LinearAlgebra.Vector{``0})">
 <summary>
- Least-Squares fitting the points (x,y) to an arbitrary linear combination y : x -&gt; p0*f0(x) + p1*f1(x) + ... + pk*fk(x),
- returning a function y&apos; for the best fitting combination.
+ Sets a slice of a vector starting at a specified index
+ and ending at a specified index (both indices are optional)
+ This method can be used via the x.[start .. finish] &lt;- v syntax
 </summary>
 </member>
-<member name="M:MathNet.Numerics.FitModule.linear``1(Microsoft.FSharp.Collections.FSharpList{Microsoft.FSharp.Core.FSharpFunc{``0,System.Double}},``0[],System.Double[])">
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorExtensions.Vector`1.GetSlice``1(MathNet.Numerics.LinearAlgebra.Vector{``0},Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.Int32})">
 <summary>
- Least-Squares fitting the points (x,y) to an arbitrary linear combination y : x -&gt; p0*f0(x) + p1*f1(x) + ... + pk*fk(x),
- returning its best fitting parameters as [p0, p1, p2, ..., pk] list.
+ Gets a slice of a vector starting at a specified index
+ and ending at a specified index (both indices are optional)
+ This method can be used via the x.[start .. finish] syntax
 </summary>
 </member>
-<member name="M:MathNet.Numerics.FitModule.polynomialFunc(System.Int32,System.Double[],System.Double[])">
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorExtensions.vector``1(Microsoft.FSharp.Collections.FSharpList{``0})">
 <summary>
- Least-Squares fitting the points (x,y) to a k-order polynomial y : x -&gt; p0 + p1*x + p2*x^2 + ... + pk*x^k,
- returning a function y&apos; for the best fitting polynomial.
+ Construct a dense vector from a list of floating point numbers.
 </summary>
 </member>
-<member name="M:MathNet.Numerics.FitModule.polynomial(System.Int32,System.Double[],System.Double[])">
+<member name="T:MathNet.Numerics.LinearAlgebra.VectorExtensions">
 <summary>
- Least-Squares fitting the points (x,y) to a k-order polynomial y : x -&gt; p0 + p1*x + p2*x^2 + ... + pk*x^k,
- returning its best fitting parameters as [p0, p1, p2, ..., pk] array, compatible with Evaluate.Polynomial.
+ Module that contains implementation of useful F#-specific extension members for generic vectors
 </summary>
 </member>
-<member name="M:MathNet.Numerics.FitModule.multiDimFunc(System.Boolean,System.Double[][],System.Double[])">
+<member name="M:MathNet.Numerics.LinearAlgebra.SparseVectorModule.ofSeqi``2(System.Int32,``0)">
 <summary>
- Least-Squares fitting the points ((x0,x1,...,xk),y) to a linear surface y : X -&gt; p0*x0 + p1*x1 + ... + pk*xk,
- returning a function y&apos; for the best fitting surface.
+ Create a sparse vector with a given dimension from an indexed sequence of index, value pairs.
 </summary>
 </member>
-<member name="M:MathNet.Numerics.FitModule.multiDim(System.Boolean,System.Double[][],System.Double[])">
+<member name="M:MathNet.Numerics.LinearAlgebra.SparseVectorModule.ofListi``1(System.Int32,Microsoft.FSharp.Collections.FSharpList{System.Tuple{System.Int32,``0}})">
 <summary>
- Least-Squares fitting the points ((x0,x1,...,xk),y) to a linear surface y : X -&gt; p0*x0 + p1*x1 + ... + pk*xk,
- returning its best fitting parameters as [p0, p1, p2, ..., pk] array.
+ Create a sparse vector with a given dimension from an indexed list of index, value pairs.
 </summary>
 </member>
-<member name="M:MathNet.Numerics.FitModule.lineFunc(System.Double[],System.Double[])">
+<member name="M:MathNet.Numerics.LinearAlgebra.SparseVectorModule.ofSeq``2(``0)">
 <summary>
- Least-Squares fitting the points (x,y) to a line y : x -&gt; a+b*x,
- returning a function y&apos; for the best fitting line.
+ Create a sparse vector from a float sequence.
 </summary>
 </member>
-<member name="M:MathNet.Numerics.FitModule.line(System.Double[],System.Double[])">
+<member name="M:MathNet.Numerics.LinearAlgebra.SparseVectorModule.ofList``1(Microsoft.FSharp.Collections.FSharpList{``0})">
 <summary>
- Least-Squares fitting the points (x,y) to a line y : x -&gt; a+b*x,
- returning its best fitting parameters as (a, b) tuple.
+ Create a sparse vector from a float list.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.SparseVectorModule.ofArray``1(``0[])">
+<summary>
+ Create a sparse vector from a float array.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.SparseVectorModule.init``1(System.Int32,Microsoft.FSharp.Core.FSharpFunc{System.Int32,``0})">
+<summary>
+ Initialize a vector by calling a construction function for every element.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.SparseVectorModule.create``1(System.Int32,``0)">
+<summary>
+ Initialize an x-valued vector with the given dimension.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.SparseVectorModule.ofStorage``1(MathNet.Numerics.LinearAlgebra.Storage.SparseVectorStorage{``0})">
+<summary>
+ Create a vector that directly binds to a storage object.
+</summary>
+</member>
+<member name="T:MathNet.Numerics.LinearAlgebra.SparseVectorModule">
+<summary>
+ A module which helps constructing generic sparse vectors.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.DenseVectorModule.rangef(System.Double,System.Double,System.Double)">
+<summary>
+ Create a vector with evenly spaced entries: e.g. rangef -1.0 0.5 1.0 = [-1.0 -0.5 0.0 0.5 1.0]
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.DenseVectorModule.range(System.Int32,System.Int32,System.Int32)">
+<summary>
+ Create a vector with integer entries in the given range.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.DenseVectorModule.ofSeqi``2(System.Int32,``0)">
+<summary>
+ Create a vector with a given dimension from an indexed sequences of index, value pairs.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.DenseVectorModule.ofListi``1(System.Int32,Microsoft.FSharp.Collections.FSharpList{System.Tuple{System.Int32,``0}})">
+<summary>
+ Create a vector with a given dimension from an indexed list of index, value pairs.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.DenseVectorModule.ofSeq``2(``0)">
+<summary>
+ Create a vector from a float sequence.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.DenseVectorModule.ofList``1(Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+ Create a vector from a float list.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.DenseVectorModule.ofArray``1(``0[])">
+<summary>
+ Create a vector from a float array (by copying - use raw instead if no copy is needed).
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.DenseVectorModule.init``1(System.Int32,Microsoft.FSharp.Core.FSharpFunc{System.Int32,``0})">
+<summary>
+ Initialize a vector by calling a construction function for every element.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.DenseVectorModule.create``1(System.Int32,``0)">
+<summary>
+ Initialize an x-valued vector with the given dimension.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.DenseVectorModule.raw``1(``0[])">
+<summary>
+ Create a vector that directly binds to a raw storage array, without copying.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.DenseVectorModule.ofStorage``1(MathNet.Numerics.LinearAlgebra.Storage.DenseVectorStorage{``0})">
+<summary>
+ Create a vector that directly binds to a storage object.
+</summary>
+</member>
+<member name="T:MathNet.Numerics.LinearAlgebra.DenseVectorModule">
+<summary>
+ A module which helps constructing generic dense vectors.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.subInPlace``3(``0,``2)">
+<summary>
+ In place vector subtraction.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.addInPlace``3(``0,``2)">
+<summary>
+ In-place vector addition.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.insert``2(System.Int32,``0,``1)">
+<summary>
+ Creates a new vector and inserts the given value at the given index.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.scanBack``3(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``1}},``1,``2)">
+<summary>
+ Scans a vector in reverse order; like foldBack but returns the intermediate result.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.reduceBack``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``0,``0}},``1)">
+<summary>
+ Reduces a vector in reverse order: the result of this function will be f(v[1], ..., f(v[n-2], f(v[n-1],v[n]))...).
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.foldBack``3(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``1}},``1,``2)">
+<summary>
+ Fold all entries of a vector in reverse order.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.fold2SkipZeros``5(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,Microsoft.FSharp.Core.FSharpFunc{``2,``0}}},``0,``3,``4)">
+<summary>
+ Folds two vectors by applying a function to update the status for each element pair.
+ Zero-Zero value-pairs may be skipped (relevant mostly for sparse vectors).
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.fold2``5(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,Microsoft.FSharp.Core.FSharpFunc{``2,``0}}},``0,``3,``4)">
+<summary>
+ Folds two vectors by applying a function to update the status for each element pair.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.map2SkipZeros``3(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``0,``0}},``1,``2)">
+<summary>
+ Maps two vectors to a new vector by applying a function to every element pair.
+ Zero-Zero value-pairs may be skipped (relevant mostly for sparse vectors).
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.map2``3(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``0,``0}},``1,``2)">
+<summary>
+ Maps two vectors to a new vector by applying a function to every element pair.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.mapiSkipZeros``3(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,``1}},``2)">
+<summary>
+ Maps a vector to a new vector by applying a function to every element.
+ Zero-values may be skipped (relevant mostly for sparse vectors).
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.mapi``3(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,``1}},``2)">
+<summary>
+ Maps a vector to a new vector by applying a function to every element.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.mapSkipZeros``3(Microsoft.FSharp.Core.FSharpFunc{``0,``1},``2)">
+<summary>
+ Maps a vector to a new vector by applying a function to every element.
+ Zero-values may be skipped (relevant mostly for sparse vectors).
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.map``3(Microsoft.FSharp.Core.FSharpFunc{``0,``1},``2)">
+<summary>
+ Maps a vector to a new vector by applying a function to every element.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.mapiSkipZerosInPlace``2(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,``0}},``1)">
+<summary>
+ In-place mutation by applying a function to every element of the vector.
+ Zero-values may be skipped (relevant mostly for sparse vectors).
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.mapSkipZerosInPlace``2(Microsoft.FSharp.Core.FSharpFunc{``0,``0},``1)">
+<summary>
+ In-place mutation by applying a function to every element of the vector.
+ Zero-values may be skipped (relevant mostly for sparse vectors).
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.mapiInPlace``2(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,``0}},``1)">
+<summary>
+ In-place mutation by applying a function to every element of the vector.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.mapInPlace``2(Microsoft.FSharp.Core.FSharpFunc{``0,``0},``1)">
+<summary>
+ In-place mutation by applying a function to every element of the vector.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.foralliSkipZeros``2(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,System.Boolean}},``1)">
+<summary>
+ Checks whether all non-zero entries in the vector that satisfies a given position dependent predicate. Skipping zeros is efficient on sparse data.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.forallSkipZeros``2(Microsoft.FSharp.Core.FSharpFunc{``0,System.Boolean},``1)">
+<summary>
+ Checks whether all non-zero entries in the vector that satisfies a given predicate. Skipping zeros is efficient on sparse data.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.foralli``2(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,System.Boolean}},``1)">
+<summary>
+ Checks whether all entries in the vector that satisfies a given position dependent predicate.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.forall``2(Microsoft.FSharp.Core.FSharpFunc{``0,System.Boolean},``1)">
+<summary>
+ Checks whether all entries in the vector that satisfies a given predicate.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.existsiSkipZeros``2(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,System.Boolean}},``1)">
+<summary>
+ Checks whether there is a non-zero entry in the vector that satisfies a position dependent predicate. Skipping zeros is efficient on sparse data.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.existsSkipZeros``2(Microsoft.FSharp.Core.FSharpFunc{``0,System.Boolean},``1)">
+<summary>
+ Checks whether there is a non-zero entry in the vector that satisfies a predicate. Skipping zeros is efficient on sparse data.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.existsi``2(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,System.Boolean}},``1)">
+<summary>
+ Checks whether there is an entry in the vector that satisfies a position dependent predicate.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.exists``2(Microsoft.FSharp.Core.FSharpFunc{``0,System.Boolean},``1)">
+<summary>
+ Checks whether there is an entry in the vector that satisfies a predicate.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.reduceSkipZeros``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``0,``0}},``1)">
+<summary>
+ Reduce all non-zero entries of a vector. Skipping zeros is efficient on sparse data.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.reduce``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``0,``0}},``1)">
+<summary>
+ Reduce all entries of a vector.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.scaniSkipZeros``3(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``0}}},``0,``2)">
+<summary>
+ Scan all non-zero entries of a vector using a position dependent folding function. Skipping zeros is efficient on sparse data.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.scanSkipZeros``3(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``0}},``0,``2)">
+<summary>
+ Scan all non-zero entries of a vector. Skipping zeros is efficient on sparse data.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.scani``3(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``0}}},``0,``2)">
+<summary>
+ Scan all entries of a vector using a position dependent folding function.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.scan``3(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``0}},``0,``2)">
+<summary>
+ Scan all entries of a vector.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.foldiSkipZeros``3(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``0}}},``0,``2)">
+<summary>
+ Fold all non-zero entries of a vector using a position dependent folding function. Skipping zeros is efficient on sparse data.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.foldSkipZeros``3(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``0}},``0,``2)">
+<summary>
+ Fold all non-zero entries of a vector. Skipping zeros is efficient on sparse data.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.foldi``3(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``0}}},``0,``2)">
+<summary>
+ Fold all entries of a vector using a position dependent folding function.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.fold``3(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``0}},``0,``2)">
+<summary>
+ Fold all entries of a vector.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.iteriSkipZeros``2(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.Unit}},``1)">
+<summary>
+ Applies a function to all non-zero indexed elements of the vector. Skipping zeros is efficient on sparse data.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.iterSkipZeros``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.Unit},``1)">
+<summary>
+ Applies a function to all non-zero elements of the vector. Skipping zeros is efficient on sparse data.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.iteri``2(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.Unit}},``1)">
+<summary>
+ Applies a function to all indexed elements of the vector.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.iter``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.Unit},``1)">
+<summary>
+ Applies a function to all elements of the vector.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.toSeqiSkipZeros``2(``0)">
+<summary>
+ Transform a vector into an indexed sequence where zero-values are skipped. Skipping zeros is efficient on sparse data.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.toSeqSkipZeros``2(``0)">
+<summary>
+ Transform a vector into a sequence where zero-values are skipped. Skipping zeros is efficient on sparse data.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.toSeqi``2(``0)">
+<summary>
+ Transform a vector into an indexed sequence.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.toSeq``2(``0)">
+<summary>
+ Transform a vector into a sequence.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.toList``2(``0)">
+<summary>
+ Transform a vector into a list.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.toArray``2(``0)">
+<summary>
+ Transform a vector into an array.
+</summary>
+</member>
+<member name="T:MathNet.Numerics.LinearAlgebra.VectorModule">
+<summary>
+ A module which implements functional vector operations.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.MatrixExtensions.Matrix`1.SetSlice``1(MathNet.Numerics.LinearAlgebra.Matrix{``0},Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.Int32},System.Int32,MathNet.Numerics.LinearAlgebra.Vector{``0})">
+<summary>
+ Sets a column subvector using a specified row index and column range.
+ This method can be used via the x.[r1 .. r2, c] &lt;- v syntax (F#3.1)
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.MatrixExtensions.Matrix`1.SetSlice``1(MathNet.Numerics.LinearAlgebra.Matrix{``0},System.Int32,Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.Int32},MathNet.Numerics.LinearAlgebra.Vector{``0})">
+<summary>
+ Sets a row subvector using a specified row index and column range.
+ This method can be used via the x.[r, c1 .. c2] &lt;- v syntax (F#3.1)
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.MatrixExtensions.Matrix`1.GetSlice``1(MathNet.Numerics.LinearAlgebra.Matrix{``0},Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.Int32},System.Int32)">
+<summary>
+ Gets a column subvector using a specified row index and column range.
+ This method can be used via the x.[r1 .. r2, c] syntax (F#3.1)
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.MatrixExtensions.Matrix`1.GetSlice``1(MathNet.Numerics.LinearAlgebra.Matrix{``0},System.Int32,Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.Int32})">
+<summary>
+ Gets a row subvector using a specified row index and column range.
+ This method can be used via the x.[r, c1 .. c2] syntax (F#3.1)
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.MatrixExtensions.Matrix`1.SetSlice``1(MathNet.Numerics.LinearAlgebra.Matrix{``0},Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.Int32},MathNet.Numerics.LinearAlgebra.Matrix{``0})">
+<summary>
+ Sets a submatrix using a specified column range and
+ row range (all indices are optional)
+ This method can be used via the x.[r1 .. r2, c1 .. c2 ] &lt;- m syntax
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.MatrixExtensions.Matrix`1.GetSlice``1(MathNet.Numerics.LinearAlgebra.Matrix{``0},Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.Int32})">
+<summary>
+ Gets a submatrix using a specified column range and
+ row range (all indices are optional)
+ This method can be used via the x.[r1 .. r2, c1 .. c2 ] syntax
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.MatrixExtensions.matrix``1(Microsoft.FSharp.Collections.FSharpList{Microsoft.FSharp.Collections.FSharpList{``0}})">
+<summary>
+ Construct a dense matrix from a nested list of numbers.
+</summary>
+</member>
+<member name="T:MathNet.Numerics.LinearAlgebra.MatrixExtensions">
+<summary>
+ Module that contains implementation of useful F#-specific extension members for generic matrices
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.DiagonalMatrixModule.ofDiagArray2``1(System.Int32,System.Int32,``0[])">
+<summary>
+ Create a matrix with the array elements on the diagonal.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.DiagonalMatrixModule.ofDiagArray``1(``0[])">
+<summary>
+ Create a square matrix with the array elements on the diagonal.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.DiagonalMatrixModule.ofDiag2``1(System.Int32,System.Int32,MathNet.Numerics.LinearAlgebra.Vector{``0})">
+<summary>
+ Create a matrix with the vector elements on the diagonal.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.DiagonalMatrixModule.ofDiag``1(MathNet.Numerics.LinearAlgebra.Vector{``0})">
+<summary>
+ Create a square matrix with the vector elements on the diagonal.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.DiagonalMatrixModule.init2``1(System.Int32,System.Int32,Microsoft.FSharp.Core.FSharpFunc{System.Int32,``0})">
+<summary>
+ Initialize a matrix by calling a construction function for every element.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.DiagonalMatrixModule.init``1(System.Int32,Microsoft.FSharp.Core.FSharpFunc{System.Int32,``0})">
+<summary>
+ Initialize a square matrix by calling a construction function for every element.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.DiagonalMatrixModule.create2``1(System.Int32,System.Int32,``0)">
+<summary>
+ Create a matrix with the given dimension and set all diagonal values to x.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.DiagonalMatrixModule.create``1(System.Int32,``0)">
+<summary>
+ Create a square matrix with the given order and set all diagonal values to x.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.DiagonalMatrixModule.raw2``1(System.Int32,System.Int32,``0[])">
+<summary>
+ Create a matrix that directly binds to a raw storage array that represents the diagonal, without copying.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.DiagonalMatrixModule.raw``1(``0[])">
+<summary>
+ Create a square matrix that directly binds to a raw storage array that represents the diagonal, without copying.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.DiagonalMatrixModule.ofStorage``1(MathNet.Numerics.LinearAlgebra.Storage.DiagonalMatrixStorage{``0})">
+<summary>
+ Create a matrix that directly binds to a storage object.
+</summary>
+</member>
+<member name="T:MathNet.Numerics.LinearAlgebra.DiagonalMatrixModule">
+<summary>
+ A module which helps constructing generic diagonal matrices.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.stack``1(Microsoft.FSharp.Collections.FSharpList{MathNet.Numerics.LinearAlgebra.Matrix{``0}})">
+<summary>
+ Create a matrix by stacking a list of matrices vertically, the first matrix on the top.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.append``1(Microsoft.FSharp.Collections.FSharpList{MathNet.Numerics.LinearAlgebra.Matrix{``0}})">
+<summary>
+ Create a matrix by appending a list of matrices horizontally, the first matrix on the left.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofDiagArray2``1(System.Int32,System.Int32,``0[])">
+<summary>
+ Create a matrix with the array elements on the diagonal.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofDiagArray``1(``0[])">
+<summary>
+ Create a square matrix with the array elements on the diagonal.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofDiag2``1(System.Int32,System.Int32,MathNet.Numerics.LinearAlgebra.Vector{``0})">
+<summary>
+ Create a matrix with the vector elements on the diagonal.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofDiag``1(MathNet.Numerics.LinearAlgebra.Vector{``0})">
+<summary>
+ Create a square matrix with the vector elements on the diagonal.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofSeqi``2(System.Int32,System.Int32,``0)">
+<summary>
+ Create a matrix with a given dimension from an indexed sequences of row, column, value tuples.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofListi``1(System.Int32,System.Int32,Microsoft.FSharp.Collections.FSharpList{System.Tuple{System.Int32,System.Int32,``0}})">
+<summary>
+ Create a matrix with a given dimension from an indexed list of row, column, value tuples.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofColumnSeq2``2(System.Int32,System.Int32,``0)">
+<summary>
+ Create a matrix from a list of sequences. Every sequence in the master sequence specifies a column.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofColumnSeq``3(``0)">
+<summary>
+ Create a matrix from a list of sequences. Every sequence in the master sequence specifies a column.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofColumnList``1(Microsoft.FSharp.Collections.FSharpList{Microsoft.FSharp.Collections.FSharpList{``0}})">
+<summary>
+ Create a matrix from a list of float lists. Every list in the master list specifies a column.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofColumnArrays``1(``0[][])">
+<summary>
+ Create a matrix from a list of column arrays.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofColumns``1(Microsoft.FSharp.Collections.FSharpList{MathNet.Numerics.LinearAlgebra.Vector{``0}})">
+<summary>
+ Create a matrix from a list of column vectors.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofRowSeq2``2(System.Int32,System.Int32,``0)">
+<summary>
+ Create a matrix from a list of sequences. Every sequence in the master sequence specifies a row.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofRowSeq``3(``0)">
+<summary>
+ Create a matrix from a list of sequences. Every sequence in the master sequence specifies a row.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofRowList``1(Microsoft.FSharp.Collections.FSharpList{Microsoft.FSharp.Collections.FSharpList{``0}})">
+<summary>
+ Create a matrix from a list of float lists. Every list in the master list specifies a row.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofRowArrays``1(``0[][])">
+<summary>
+ Create a matrix from a list of row arrays.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofRows``1(Microsoft.FSharp.Collections.FSharpList{MathNet.Numerics.LinearAlgebra.Vector{``0}})">
+<summary>
+ Create a matrix from a list of row vectors.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofMatrixList2``1(Microsoft.FSharp.Collections.FSharpList{Microsoft.FSharp.Collections.FSharpList{MathNet.Numerics.LinearAlgebra.Matrix{``0}}})">
+<summary>
+ Create a matrix from a list of matrix lists forming a 2D grid.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofMatrixArray2``1(MathNet.Numerics.LinearAlgebra.Matrix{``0}[0:,0:])">
+<summary>
+ Create a matrix from a 2D array of matrices.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofArray2``1(``0[0:,0:])">
+<summary>
+ Create a matrix from a 2D array of floating point numbers.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.initDiag``1(System.Int32,System.Int32,Microsoft.FSharp.Core.FSharpFunc{System.Int32,``0})">
+<summary>
+ Initialize a matrix by calling a construction function for every diagonal element. All other values are zero.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.initColumns``1(System.Int32,Microsoft.FSharp.Core.FSharpFunc{System.Int32,MathNet.Numerics.LinearAlgebra.Vector{``0}})">
+<summary>
+ Initialize a matrix by calling a construction function for every column.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.initRows``1(System.Int32,Microsoft.FSharp.Core.FSharpFunc{System.Int32,MathNet.Numerics.LinearAlgebra.Vector{``0}})">
+<summary>
+ Initialize a matrix by calling a construction function for every row.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.init``1(System.Int32,System.Int32,Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{System.Int32,``0}})">
+<summary>
+ Initialize a matrix by calling a construction function for every element.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.diag2``1(System.Int32,System.Int32,``0)">
+<summary>
+ Create a matrix with the given dimension and set all diagonal values to x. All other values are zero.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.diag``1(System.Int32,``0)">
+<summary>
+ Create a matrix with the given dimension and set all diagonal values to x. All other values are zero.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.create``1(System.Int32,System.Int32,``0)">
+<summary>
+ Create a matrix with the given dimension and set all values to x. Note that a dense matrix would likely be more appropriate.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofStorage``1(MathNet.Numerics.LinearAlgebra.Storage.SparseCompressedRowMatrixStorage{``0})">
+<summary>
+ Create a matrix that directly binds to a storage object.
+</summary>
+</member>
+<member name="T:MathNet.Numerics.LinearAlgebra.SparseMatrixModule">
+<summary>
+ A module which helps constructing generic sparse matrices.
 </summary>
 </member>
 <member name="M:MathNet.Numerics.LinearAlgebra.DenseMatrixModule.stack``1(Microsoft.FSharp.Collections.FSharpList{MathNet.Numerics.LinearAlgebra.Matrix{``0}})">
@@ -908,174 +988,6 @@
 <member name="T:MathNet.Numerics.LinearAlgebra.DenseMatrixModule">
 <summary>
  A module which helps constructing generic dense matrices.
-</summary>
-</member>
-<member name="M:MathNet.Numerics.LinearAlgebra.DenseVectorModule.rangef(System.Double,System.Double,System.Double)">
-<summary>
- Create a vector with evenly spaced entries: e.g. rangef -1.0 0.5 1.0 = [-1.0 -0.5 0.0 0.5 1.0]
-</summary>
-</member>
-<member name="M:MathNet.Numerics.LinearAlgebra.DenseVectorModule.range(System.Int32,System.Int32,System.Int32)">
-<summary>
- Create a vector with integer entries in the given range.
-</summary>
-</member>
-<member name="M:MathNet.Numerics.LinearAlgebra.DenseVectorModule.ofSeqi``2(System.Int32,``0)">
-<summary>
- Create a vector with a given dimension from an indexed sequences of index, value pairs.
-</summary>
-</member>
-<member name="M:MathNet.Numerics.LinearAlgebra.DenseVectorModule.ofListi``1(System.Int32,Microsoft.FSharp.Collections.FSharpList{System.Tuple{System.Int32,``0}})">
-<summary>
- Create a vector with a given dimension from an indexed list of index, value pairs.
-</summary>
-</member>
-<member name="M:MathNet.Numerics.LinearAlgebra.DenseVectorModule.ofSeq``2(``0)">
-<summary>
- Create a vector from a float sequence.
-</summary>
-</member>
-<member name="M:MathNet.Numerics.LinearAlgebra.DenseVectorModule.ofList``1(Microsoft.FSharp.Collections.FSharpList{``0})">
-<summary>
- Create a vector from a float list.
-</summary>
-</member>
-<member name="M:MathNet.Numerics.LinearAlgebra.DenseVectorModule.ofArray``1(``0[])">
-<summary>
- Create a vector from a float array (by copying - use raw instead if no copy is needed).
-</summary>
-</member>
-<member name="M:MathNet.Numerics.LinearAlgebra.DenseVectorModule.init``1(System.Int32,Microsoft.FSharp.Core.FSharpFunc{System.Int32,``0})">
-<summary>
- Initialize a vector by calling a construction function for every element.
-</summary>
-</member>
-<member name="M:MathNet.Numerics.LinearAlgebra.DenseVectorModule.create``1(System.Int32,``0)">
-<summary>
- Initialize an x-valued vector with the given dimension.
-</summary>
-</member>
-<member name="M:MathNet.Numerics.LinearAlgebra.DenseVectorModule.raw``1(``0[])">
-<summary>
- Create a vector that directly binds to a raw storage array, without copying.
-</summary>
-</member>
-<member name="M:MathNet.Numerics.LinearAlgebra.DenseVectorModule.ofStorage``1(MathNet.Numerics.LinearAlgebra.Storage.DenseVectorStorage{``0})">
-<summary>
- Create a vector that directly binds to a storage object.
-</summary>
-</member>
-<member name="T:MathNet.Numerics.LinearAlgebra.DenseVectorModule">
-<summary>
- A module which helps constructing generic dense vectors.
-</summary>
-</member>
-<member name="M:MathNet.Numerics.LinearAlgebra.DiagonalMatrixModule.ofDiagArray2``1(System.Int32,System.Int32,``0[])">
-<summary>
- Create a matrix with the array elements on the diagonal.
-</summary>
-</member>
-<member name="M:MathNet.Numerics.LinearAlgebra.DiagonalMatrixModule.ofDiagArray``1(``0[])">
-<summary>
- Create a square matrix with the array elements on the diagonal.
-</summary>
-</member>
-<member name="M:MathNet.Numerics.LinearAlgebra.DiagonalMatrixModule.ofDiag2``1(System.Int32,System.Int32,MathNet.Numerics.LinearAlgebra.Vector{``0})">
-<summary>
- Create a matrix with the vector elements on the diagonal.
-</summary>
-</member>
-<member name="M:MathNet.Numerics.LinearAlgebra.DiagonalMatrixModule.ofDiag``1(MathNet.Numerics.LinearAlgebra.Vector{``0})">
-<summary>
- Create a square matrix with the vector elements on the diagonal.
-</summary>
-</member>
-<member name="M:MathNet.Numerics.LinearAlgebra.DiagonalMatrixModule.init2``1(System.Int32,System.Int32,Microsoft.FSharp.Core.FSharpFunc{System.Int32,``0})">
-<summary>
- Initialize a matrix by calling a construction function for every element.
-</summary>
-</member>
-<member name="M:MathNet.Numerics.LinearAlgebra.DiagonalMatrixModule.init``1(System.Int32,Microsoft.FSharp.Core.FSharpFunc{System.Int32,``0})">
-<summary>
- Initialize a square matrix by calling a construction function for every element.
-</summary>
-</member>
-<member name="M:MathNet.Numerics.LinearAlgebra.DiagonalMatrixModule.create2``1(System.Int32,System.Int32,``0)">
-<summary>
- Create a matrix with the given dimension and set all diagonal values to x.
-</summary>
-</member>
-<member name="M:MathNet.Numerics.LinearAlgebra.DiagonalMatrixModule.create``1(System.Int32,``0)">
-<summary>
- Create a square matrix with the given order and set all diagonal values to x.
-</summary>
-</member>
-<member name="M:MathNet.Numerics.LinearAlgebra.DiagonalMatrixModule.raw2``1(System.Int32,System.Int32,``0[])">
-<summary>
- Create a matrix that directly binds to a raw storage array that represents the diagonal, without copying.
-</summary>
-</member>
-<member name="M:MathNet.Numerics.LinearAlgebra.DiagonalMatrixModule.raw``1(``0[])">
-<summary>
- Create a square matrix that directly binds to a raw storage array that represents the diagonal, without copying.
-</summary>
-</member>
-<member name="M:MathNet.Numerics.LinearAlgebra.DiagonalMatrixModule.ofStorage``1(MathNet.Numerics.LinearAlgebra.Storage.DiagonalMatrixStorage{``0})">
-<summary>
- Create a matrix that directly binds to a storage object.
-</summary>
-</member>
-<member name="T:MathNet.Numerics.LinearAlgebra.DiagonalMatrixModule">
-<summary>
- A module which helps constructing generic diagonal matrices.
-</summary>
-</member>
-<member name="M:MathNet.Numerics.LinearAlgebra.MatrixExtensions.Matrix`1.SetSlice``1(MathNet.Numerics.LinearAlgebra.Matrix{``0},Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.Int32},System.Int32,MathNet.Numerics.LinearAlgebra.Vector{``0})">
-<summary>
- Sets a column subvector using a specified row index and column range.
- This method can be used via the x.[r1 .. r2, c] &lt;- v syntax (F#3.1)
-</summary>
-</member>
-<member name="M:MathNet.Numerics.LinearAlgebra.MatrixExtensions.Matrix`1.SetSlice``1(MathNet.Numerics.LinearAlgebra.Matrix{``0},System.Int32,Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.Int32},MathNet.Numerics.LinearAlgebra.Vector{``0})">
-<summary>
- Sets a row subvector using a specified row index and column range.
- This method can be used via the x.[r, c1 .. c2] &lt;- v syntax (F#3.1)
-</summary>
-</member>
-<member name="M:MathNet.Numerics.LinearAlgebra.MatrixExtensions.Matrix`1.GetSlice``1(MathNet.Numerics.LinearAlgebra.Matrix{``0},Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.Int32},System.Int32)">
-<summary>
- Gets a column subvector using a specified row index and column range.
- This method can be used via the x.[r1 .. r2, c] syntax (F#3.1)
-</summary>
-</member>
-<member name="M:MathNet.Numerics.LinearAlgebra.MatrixExtensions.Matrix`1.GetSlice``1(MathNet.Numerics.LinearAlgebra.Matrix{``0},System.Int32,Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.Int32})">
-<summary>
- Gets a row subvector using a specified row index and column range.
- This method can be used via the x.[r, c1 .. c2] syntax (F#3.1)
-</summary>
-</member>
-<member name="M:MathNet.Numerics.LinearAlgebra.MatrixExtensions.Matrix`1.SetSlice``1(MathNet.Numerics.LinearAlgebra.Matrix{``0},Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.Int32},MathNet.Numerics.LinearAlgebra.Matrix{``0})">
-<summary>
- Sets a submatrix using a specified column range and
- row range (all indices are optional)
- This method can be used via the x.[r1 .. r2, c1 .. c2 ] &lt;- m syntax
-</summary>
-</member>
-<member name="M:MathNet.Numerics.LinearAlgebra.MatrixExtensions.Matrix`1.GetSlice``1(MathNet.Numerics.LinearAlgebra.Matrix{``0},Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.Int32})">
-<summary>
- Gets a submatrix using a specified column range and
- row range (all indices are optional)
- This method can be used via the x.[r1 .. r2, c1 .. c2 ] syntax
-</summary>
-</member>
-<member name="M:MathNet.Numerics.LinearAlgebra.MatrixExtensions.matrix``1(Microsoft.FSharp.Collections.FSharpList{Microsoft.FSharp.Collections.FSharpList{``0}})">
-<summary>
- Construct a dense matrix from a nested list of numbers.
-</summary>
-</member>
-<member name="T:MathNet.Numerics.LinearAlgebra.MatrixExtensions">
-<summary>
- Module that contains implementation of useful F#-specific extension members for generic matrices
 </summary>
 </member>
 <member name="M:MathNet.Numerics.LinearAlgebra.MatrixModule.sumRowsBy``3(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{MathNet.Numerics.LinearAlgebra.Vector{``0},``1}},``2)">
@@ -1477,464 +1389,612 @@
  A module which implements functional matrix operations.
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.stack``1(Microsoft.FSharp.Collections.FSharpList{MathNet.Numerics.LinearAlgebra.Matrix{``0}})">
+<member name="M:MathNet.Numerics.ComplexExtensions.Complex32.CreatePolar.Static(System.Single,System.Single)">
 <summary>
- Create a matrix by stacking a list of matrices vertically, the first matrix on the top.
+ Create a complex number using magnitude/phase polar coordinates
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.append``1(Microsoft.FSharp.Collections.FSharpList{MathNet.Numerics.LinearAlgebra.Matrix{``0}})">
+<member name="M:MathNet.Numerics.ComplexExtensions.Complex32.Create.Static(System.Single,System.Single)">
 <summary>
- Create a matrix by appending a list of matrices horizontally, the first matrix on the left.
+ Create a complex number x+ij using rectangular coordinates
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofDiagArray2``1(System.Int32,System.Int32,``0[])">
+<member name="M:MathNet.Numerics.ComplexExtensions.Complex32.get_i(MathNet.Numerics.Complex32)">
 <summary>
- Create a matrix with the array elements on the diagonal.
+ The imaginary part of a complex number
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofDiagArray``1(``0[])">
+<member name="M:MathNet.Numerics.ComplexExtensions.Complex32.get_r(MathNet.Numerics.Complex32)">
 <summary>
- Create a square matrix with the array elements on the diagonal.
+ The real part of a complex number
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofDiag2``1(System.Int32,System.Int32,MathNet.Numerics.LinearAlgebra.Vector{``0})">
+<member name="M:MathNet.Numerics.ComplexExtensions.Complex.CreatePolar.Static(System.Double,System.Double)">
 <summary>
- Create a matrix with the vector elements on the diagonal.
+ Create a complex number using magnitude/phase polar coordinates
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofDiag``1(MathNet.Numerics.LinearAlgebra.Vector{``0})">
+<member name="M:MathNet.Numerics.ComplexExtensions.Complex.Create.Static(System.Double,System.Double)">
 <summary>
- Create a square matrix with the vector elements on the diagonal.
+ Create a complex number x+ij using rectangular coordinates
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofSeqi``2(System.Int32,System.Int32,``0)">
+<member name="M:MathNet.Numerics.ComplexExtensions.Complex.get_i(System.Numerics.Complex)">
 <summary>
- Create a matrix with a given dimension from an indexed sequences of row, column, value tuples.
+ The imaginary part of a complex number
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofListi``1(System.Int32,System.Int32,Microsoft.FSharp.Collections.FSharpList{System.Tuple{System.Int32,System.Int32,``0}})">
+<member name="M:MathNet.Numerics.ComplexExtensions.Complex.get_r(System.Numerics.Complex)">
 <summary>
- Create a matrix with a given dimension from an indexed list of row, column, value tuples.
+ The real part of a complex number
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofColumnSeq2``2(System.Int32,System.Int32,``0)">
+<member name="M:MathNet.Numerics.ComplexExtensions.complex32(System.Single,System.Single)">
 <summary>
- Create a matrix from a list of sequences. Every sequence in the master sequence specifies a column.
+ Constructs a single precision complex number from both the real and imaginary part.
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofColumnSeq``3(``0)">
+<member name="M:MathNet.Numerics.ComplexExtensions.complex(System.Double,System.Double)">
 <summary>
- Create a matrix from a list of sequences. Every sequence in the master sequence specifies a column.
+ Constructs a double precision complex number from both the real and imaginary part.
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofColumnList``1(Microsoft.FSharp.Collections.FSharpList{Microsoft.FSharp.Collections.FSharpList{``0}})">
+<member name="M:MathNet.Numerics.Complex32Module.acsch(MathNet.Numerics.Complex32)">
 <summary>
- Create a matrix from a list of float lists. Every list in the master list specifies a column.
+ Inverse Hyperbolic Cosecant
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofColumnArrays``1(``0[][])">
+<member name="M:MathNet.Numerics.Complex32Module.asech(MathNet.Numerics.Complex32)">
 <summary>
- Create a matrix from a list of column arrays.
+ Inverse Hyperbolic Secant
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofColumns``1(Microsoft.FSharp.Collections.FSharpList{MathNet.Numerics.LinearAlgebra.Vector{``0}})">
+<member name="M:MathNet.Numerics.Complex32Module.acoth(MathNet.Numerics.Complex32)">
 <summary>
- Create a matrix from a list of column vectors.
+ Inverse Hyperbolic Cotangent
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofRowSeq2``2(System.Int32,System.Int32,``0)">
+<member name="M:MathNet.Numerics.Complex32Module.atanh(MathNet.Numerics.Complex32)">
 <summary>
- Create a matrix from a list of sequences. Every sequence in the master sequence specifies a row.
+ Inverse Hyperbolic Tangent
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofRowSeq``3(``0)">
+<member name="M:MathNet.Numerics.Complex32Module.acosh(MathNet.Numerics.Complex32)">
 <summary>
- Create a matrix from a list of sequences. Every sequence in the master sequence specifies a row.
+ Inverse Hyperbolic Cosine
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofRowList``1(Microsoft.FSharp.Collections.FSharpList{Microsoft.FSharp.Collections.FSharpList{``0}})">
+<member name="M:MathNet.Numerics.Complex32Module.asinh(MathNet.Numerics.Complex32)">
 <summary>
- Create a matrix from a list of float lists. Every list in the master list specifies a row.
+ Inverse Hyperbolic Sine
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofRowArrays``1(``0[][])">
+<member name="M:MathNet.Numerics.Complex32Module.csch(MathNet.Numerics.Complex32)">
 <summary>
- Create a matrix from a list of row arrays.
+ Hyperbolic Cosecant
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofRows``1(Microsoft.FSharp.Collections.FSharpList{MathNet.Numerics.LinearAlgebra.Vector{``0}})">
+<member name="M:MathNet.Numerics.Complex32Module.sech(MathNet.Numerics.Complex32)">
 <summary>
- Create a matrix from a list of row vectors.
+ Hyperbolic Secant
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofMatrixList2``1(Microsoft.FSharp.Collections.FSharpList{Microsoft.FSharp.Collections.FSharpList{MathNet.Numerics.LinearAlgebra.Matrix{``0}}})">
+<member name="M:MathNet.Numerics.Complex32Module.coth(MathNet.Numerics.Complex32)">
 <summary>
- Create a matrix from a list of matrix lists forming a 2D grid.
+ Hyperbolic Cotangent
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofMatrixArray2``1(MathNet.Numerics.LinearAlgebra.Matrix{``0}[0:,0:])">
+<member name="M:MathNet.Numerics.Complex32Module.tanh(MathNet.Numerics.Complex32)">
 <summary>
- Create a matrix from a 2D array of matrices.
+ Hyperbolic Tangent
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofArray2``1(``0[0:,0:])">
+<member name="M:MathNet.Numerics.Complex32Module.cosh(MathNet.Numerics.Complex32)">
 <summary>
- Create a matrix from a 2D array of floating point numbers.
+ Hyperbolic Cosine
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.initDiag``1(System.Int32,System.Int32,Microsoft.FSharp.Core.FSharpFunc{System.Int32,``0})">
+<member name="M:MathNet.Numerics.Complex32Module.sinh(MathNet.Numerics.Complex32)">
 <summary>
- Initialize a matrix by calling a construction function for every diagonal element. All other values are zero.
+ Hyperbolic Sine
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.initColumns``1(System.Int32,Microsoft.FSharp.Core.FSharpFunc{System.Int32,MathNet.Numerics.LinearAlgebra.Vector{``0}})">
+<member name="M:MathNet.Numerics.Complex32Module.acsc(MathNet.Numerics.Complex32)">
 <summary>
- Initialize a matrix by calling a construction function for every column.
+ Arc Cosecant
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.initRows``1(System.Int32,Microsoft.FSharp.Core.FSharpFunc{System.Int32,MathNet.Numerics.LinearAlgebra.Vector{``0}})">
+<member name="M:MathNet.Numerics.Complex32Module.asec(MathNet.Numerics.Complex32)">
 <summary>
- Initialize a matrix by calling a construction function for every row.
+ Arc Secant
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.init``1(System.Int32,System.Int32,Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{System.Int32,``0}})">
+<member name="M:MathNet.Numerics.Complex32Module.acot(MathNet.Numerics.Complex32)">
 <summary>
- Initialize a matrix by calling a construction function for every element.
+ Arc Cotangent
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.diag2``1(System.Int32,System.Int32,``0)">
+<member name="M:MathNet.Numerics.Complex32Module.atan(MathNet.Numerics.Complex32)">
 <summary>
- Create a matrix with the given dimension and set all diagonal values to x. All other values are zero.
+ Arc Tangent
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.diag``1(System.Int32,``0)">
+<member name="M:MathNet.Numerics.Complex32Module.acos(MathNet.Numerics.Complex32)">
 <summary>
- Create a matrix with the given dimension and set all diagonal values to x. All other values are zero.
+ Arc Cosine
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.create``1(System.Int32,System.Int32,``0)">
+<member name="M:MathNet.Numerics.Complex32Module.asin(MathNet.Numerics.Complex32)">
 <summary>
- Create a matrix with the given dimension and set all values to x. Note that a dense matrix would likely be more appropriate.
+ Arc Sine
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.SparseMatrixModule.ofStorage``1(MathNet.Numerics.LinearAlgebra.Storage.SparseCompressedRowMatrixStorage{``0})">
+<member name="M:MathNet.Numerics.Complex32Module.csc(MathNet.Numerics.Complex32)">
 <summary>
- Create a matrix that directly binds to a storage object.
+ Cosecant
 </summary>
 </member>
-<member name="T:MathNet.Numerics.LinearAlgebra.SparseMatrixModule">
+<member name="M:MathNet.Numerics.Complex32Module.sec(MathNet.Numerics.Complex32)">
 <summary>
- A module which helps constructing generic sparse matrices.
+ Secant
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.SparseVectorModule.ofSeqi``2(System.Int32,``0)">
+<member name="M:MathNet.Numerics.Complex32Module.cot(MathNet.Numerics.Complex32)">
 <summary>
- Create a sparse vector with a given dimension from an indexed sequence of index, value pairs.
+ Cotangent
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.SparseVectorModule.ofListi``1(System.Int32,Microsoft.FSharp.Collections.FSharpList{System.Tuple{System.Int32,``0}})">
+<member name="M:MathNet.Numerics.Complex32Module.tan(MathNet.Numerics.Complex32)">
 <summary>
- Create a sparse vector with a given dimension from an indexed list of index, value pairs.
+ Tangent
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.SparseVectorModule.ofSeq``2(``0)">
+<member name="M:MathNet.Numerics.Complex32Module.cos(MathNet.Numerics.Complex32)">
 <summary>
- Create a sparse vector from a float sequence.
+ Cosine
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.SparseVectorModule.ofList``1(Microsoft.FSharp.Collections.FSharpList{``0})">
+<member name="M:MathNet.Numerics.Complex32Module.sin(MathNet.Numerics.Complex32)">
 <summary>
- Create a sparse vector from a float list.
+ Sine
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.SparseVectorModule.ofArray``1(``0[])">
+<member name="M:MathNet.Numerics.Complex32Module.sqrt(MathNet.Numerics.Complex32)">
 <summary>
- Create a sparse vector from a float array.
+ sqrt(x) and 0 &lt;= phase(x) &lt; pi
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.SparseVectorModule.init``1(System.Int32,Microsoft.FSharp.Core.FSharpFunc{System.Int32,``0})">
+<member name="M:MathNet.Numerics.Complex32Module.sqr(MathNet.Numerics.Complex32)">
 <summary>
- Initialize a vector by calling a construction function for every element.
+ sqr(x) is the square (power 2)
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.SparseVectorModule.create``1(System.Int32,``0)">
+<member name="M:MathNet.Numerics.Complex32Module.powf(System.Single,MathNet.Numerics.Complex32)">
 <summary>
- Initialize an x-valued vector with the given dimension.
+ pow(power,x) is the scalar power
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.SparseVectorModule.ofStorage``1(MathNet.Numerics.LinearAlgebra.Storage.SparseVectorStorage{``0})">
+<member name="M:MathNet.Numerics.Complex32Module.pow(MathNet.Numerics.Complex32,MathNet.Numerics.Complex32)">
 <summary>
- Create a vector that directly binds to a storage object.
+ pow(power,x) is the complex power
 </summary>
 </member>
-<member name="T:MathNet.Numerics.LinearAlgebra.SparseVectorModule">
+<member name="M:MathNet.Numerics.Complex32Module.log(System.Single,MathNet.Numerics.Complex32)">
 <summary>
- A module which helps constructing generic sparse vectors.
+ log(base,x) is log with custom base
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorExtensions.Vector`1.SetSlice``1(MathNet.Numerics.LinearAlgebra.Vector{``0},Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.Int32},MathNet.Numerics.LinearAlgebra.Vector{``0})">
+<member name="M:MathNet.Numerics.Complex32Module.log10(MathNet.Numerics.Complex32)">
 <summary>
- Sets a slice of a vector starting at a specified index
- and ending at a specified index (both indices are optional)
- This method can be used via the x.[start .. finish] &lt;- v syntax
+ log10(x) is common log (base 10)
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorExtensions.Vector`1.GetSlice``1(MathNet.Numerics.LinearAlgebra.Vector{``0},Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.Int32})">
+<member name="M:MathNet.Numerics.Complex32Module.ln(MathNet.Numerics.Complex32)">
 <summary>
- Gets a slice of a vector starting at a specified index
- and ending at a specified index (both indices are optional)
- This method can be used via the x.[start .. finish] syntax
+ ln(x) is natural log (base e)
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorExtensions.vector``1(Microsoft.FSharp.Collections.FSharpList{``0})">
+<member name="M:MathNet.Numerics.Complex32Module.exp(MathNet.Numerics.Complex32)">
 <summary>
- Construct a dense vector from a list of floating point numbers.
+ exp(x) = e^x
 </summary>
 </member>
-<member name="T:MathNet.Numerics.LinearAlgebra.VectorExtensions">
+<member name="M:MathNet.Numerics.Complex32Module.muls(MathNet.Numerics.Complex32,System.Single)">
 <summary>
- Module that contains implementation of useful F#-specific extension members for generic vectors
+ Multiply a complex number by a scalar
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.subInPlace``3(``0,``2)">
+<member name="M:MathNet.Numerics.Complex32Module.smul(System.Single,MathNet.Numerics.Complex32)">
 <summary>
- In place vector subtraction.
+ Multiply a scalar by a complex number
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.addInPlace``3(``0,``2)">
+<member name="M:MathNet.Numerics.Complex32Module.div(MathNet.Numerics.Complex32,MathNet.Numerics.Complex32)">
 <summary>
- In-place vector addition.
+ Complex division of two complex numbers
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.insert``2(System.Int32,``0,``1)">
+<member name="M:MathNet.Numerics.Complex32Module.mul(MathNet.Numerics.Complex32,MathNet.Numerics.Complex32)">
 <summary>
- Creates a new vector and inserts the given value at the given index.
+ Multiply two complex numbers
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.scanBack``3(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``1}},``1,``2)">
+<member name="M:MathNet.Numerics.Complex32Module.sub(MathNet.Numerics.Complex32,MathNet.Numerics.Complex32)">
 <summary>
- Scans a vector in reverse order; like foldBack but returns the intermediate result.
+ Subtract one complex number from another
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.reduceBack``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``0,``0}},``1)">
+<member name="M:MathNet.Numerics.Complex32Module.add(MathNet.Numerics.Complex32,MathNet.Numerics.Complex32)">
 <summary>
- Reduces a vector in reverse order: the result of this function will be f(v[1], ..., f(v[n-2], f(v[n-1],v[n]))...).
+ Add two complex numbers
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.foldBack``3(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``1}},``1,``2)">
+<member name="M:MathNet.Numerics.Complex32Module.conjugate(MathNet.Numerics.Complex32)">
 <summary>
- Fold all entries of a vector in reverse order.
+ The conjugate of a complex number, i.e. x-yi
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.fold2SkipZeros``5(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,Microsoft.FSharp.Core.FSharpFunc{``2,``0}}},``0,``3,``4)">
+<member name="M:MathNet.Numerics.Complex32Module.neg(MathNet.Numerics.Complex32)">
 <summary>
- Folds two vectors by applying a function to update the status for each element pair.
- Zero-Zero value-pairs may be skipped (relevant mostly for sparse vectors).
+ Unary negation of a complex number
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.fold2``5(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,Microsoft.FSharp.Core.FSharpFunc{``2,``0}}},``0,``3,``4)">
+<member name="M:MathNet.Numerics.Complex32Module.phase(MathNet.Numerics.Complex32)">
 <summary>
- Folds two vectors by applying a function to update the status for each element pair.
+ The polar-coordinate phase of a complex number
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.map2SkipZeros``3(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``0,``0}},``1,``2)">
+<member name="M:MathNet.Numerics.Complex32Module.magnitude(MathNet.Numerics.Complex32)">
 <summary>
- Maps two vectors to a new vector by applying a function to every element pair.
- Zero-Zero value-pairs may be skipped (relevant mostly for sparse vectors).
+ The polar-coordinate magnitude of a complex number
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.map2``3(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``0,``0}},``1,``2)">
+<member name="M:MathNet.Numerics.Complex32Module.imagPart(MathNet.Numerics.Complex32)">
 <summary>
- Maps two vectors to a new vector by applying a function to every element pair.
+ The imaginary part of a complex number
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.mapiSkipZeros``3(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,``1}},``2)">
+<member name="M:MathNet.Numerics.Complex32Module.realPart(MathNet.Numerics.Complex32)">
 <summary>
- Maps a vector to a new vector by applying a function to every element.
- Zero-values may be skipped (relevant mostly for sparse vectors).
+ The real part of a complex number
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.mapi``3(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,``1}},``2)">
+<member name="P:MathNet.Numerics.Complex32Module.pi">
 <summary>
- Maps a vector to a new vector by applying a function to every element.
+ pi
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.mapSkipZeros``3(Microsoft.FSharp.Core.FSharpFunc{``0,``1},``2)">
+<member name="P:MathNet.Numerics.Complex32Module.onei">
 <summary>
- Maps a vector to a new vector by applying a function to every element.
- Zero-values may be skipped (relevant mostly for sparse vectors).
+ The complex number 0+1i
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.map``3(Microsoft.FSharp.Core.FSharpFunc{``0,``1},``2)">
+<member name="P:MathNet.Numerics.Complex32Module.one">
 <summary>
- Maps a vector to a new vector by applying a function to every element.
+ The complex number 1+0i
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.mapiSkipZerosInPlace``2(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,``0}},``1)">
+<member name="P:MathNet.Numerics.Complex32Module.zero">
 <summary>
- In-place mutation by applying a function to every element of the vector.
- Zero-values may be skipped (relevant mostly for sparse vectors).
+ The complex number 0+0i
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.mapSkipZerosInPlace``2(Microsoft.FSharp.Core.FSharpFunc{``0,``0},``1)">
+<member name="M:MathNet.Numerics.Complex32Module.cis(System.Single)">
 <summary>
- In-place mutation by applying a function to every element of the vector.
- Zero-values may be skipped (relevant mostly for sparse vectors).
+ A complex of magnitude 1 and the given phase and , i.e. cis x = mkPolar 1.0 x
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.mapiInPlace``2(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,``0}},``1)">
+<member name="M:MathNet.Numerics.Complex32Module.mkPolar(System.Single,System.Single)">
 <summary>
- In-place mutation by applying a function to every element of the vector.
+ Create a complex number using magnitude/phase polar coordinates
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.mapInPlace``2(Microsoft.FSharp.Core.FSharpFunc{``0,``0},``1)">
+<member name="M:MathNet.Numerics.Complex32Module.mkRect(System.Single,System.Single)">
 <summary>
- In-place mutation by applying a function to every element of the vector.
+ Create a complex number using real and imaginary parts
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.foralliSkipZeros``2(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,System.Boolean}},``1)">
+<member name="M:MathNet.Numerics.ComplexModule.acsch(System.Numerics.Complex)">
 <summary>
- Checks whether all non-zero entries in the vector that satisfies a given position dependent predicate. Skipping zeros is efficient on sparse data.
+ Inverse Hyperbolic Cosecant
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.forallSkipZeros``2(Microsoft.FSharp.Core.FSharpFunc{``0,System.Boolean},``1)">
+<member name="M:MathNet.Numerics.ComplexModule.asech(System.Numerics.Complex)">
 <summary>
- Checks whether all non-zero entries in the vector that satisfies a given predicate. Skipping zeros is efficient on sparse data.
+ Inverse Hyperbolic Secant
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.foralli``2(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,System.Boolean}},``1)">
+<member name="M:MathNet.Numerics.ComplexModule.acoth(System.Numerics.Complex)">
 <summary>
- Checks whether all entries in the vector that satisfies a given position dependent predicate.
+ Inverse Hyperbolic Cotangent
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.forall``2(Microsoft.FSharp.Core.FSharpFunc{``0,System.Boolean},``1)">
+<member name="M:MathNet.Numerics.ComplexModule.atanh(System.Numerics.Complex)">
 <summary>
- Checks whether all entries in the vector that satisfies a given predicate.
+ Inverse Hyperbolic Tangent
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.existsiSkipZeros``2(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,System.Boolean}},``1)">
+<member name="M:MathNet.Numerics.ComplexModule.acosh(System.Numerics.Complex)">
 <summary>
- Checks whether there is a non-zero entry in the vector that satisfies a position dependent predicate. Skipping zeros is efficient on sparse data.
+ Inverse Hyperbolic Cosine
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.existsSkipZeros``2(Microsoft.FSharp.Core.FSharpFunc{``0,System.Boolean},``1)">
+<member name="M:MathNet.Numerics.ComplexModule.asinh(System.Numerics.Complex)">
 <summary>
- Checks whether there is a non-zero entry in the vector that satisfies a predicate. Skipping zeros is efficient on sparse data.
+ Inverse Hyperbolic Sine
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.existsi``2(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,System.Boolean}},``1)">
+<member name="M:MathNet.Numerics.ComplexModule.csch(System.Numerics.Complex)">
 <summary>
- Checks whether there is an entry in the vector that satisfies a position dependent predicate.
+ Hyperbolic Cosecant
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.exists``2(Microsoft.FSharp.Core.FSharpFunc{``0,System.Boolean},``1)">
+<member name="M:MathNet.Numerics.ComplexModule.sech(System.Numerics.Complex)">
 <summary>
- Checks whether there is an entry in the vector that satisfies a predicate.
+ Hyperbolic Secant
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.reduceSkipZeros``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``0,``0}},``1)">
+<member name="M:MathNet.Numerics.ComplexModule.coth(System.Numerics.Complex)">
 <summary>
- Reduce all non-zero entries of a vector. Skipping zeros is efficient on sparse data.
+ Hyperbolic Cotangent
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.reduce``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``0,``0}},``1)">
+<member name="M:MathNet.Numerics.ComplexModule.tanh(System.Numerics.Complex)">
 <summary>
- Reduce all entries of a vector.
+ Hyperbolic Tangent
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.scaniSkipZeros``3(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``0}}},``0,``2)">
+<member name="M:MathNet.Numerics.ComplexModule.cosh(System.Numerics.Complex)">
 <summary>
- Scan all non-zero entries of a vector using a position dependent folding function. Skipping zeros is efficient on sparse data.
+ Hyperbolic Cosine
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.scanSkipZeros``3(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``0}},``0,``2)">
+<member name="M:MathNet.Numerics.ComplexModule.sinh(System.Numerics.Complex)">
 <summary>
- Scan all non-zero entries of a vector. Skipping zeros is efficient on sparse data.
+ Hyperbolic Sine
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.scani``3(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``0}}},``0,``2)">
+<member name="M:MathNet.Numerics.ComplexModule.acsc(System.Numerics.Complex)">
 <summary>
- Scan all entries of a vector using a position dependent folding function.
+ Arc Cosecant
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.scan``3(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``0}},``0,``2)">
+<member name="M:MathNet.Numerics.ComplexModule.asec(System.Numerics.Complex)">
 <summary>
- Scan all entries of a vector.
+ Arc Secant
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.foldiSkipZeros``3(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``0}}},``0,``2)">
+<member name="M:MathNet.Numerics.ComplexModule.acot(System.Numerics.Complex)">
 <summary>
- Fold all non-zero entries of a vector using a position dependent folding function. Skipping zeros is efficient on sparse data.
+ Arc Cotangent
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.foldSkipZeros``3(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``0}},``0,``2)">
+<member name="M:MathNet.Numerics.ComplexModule.atan(System.Numerics.Complex)">
 <summary>
- Fold all non-zero entries of a vector. Skipping zeros is efficient on sparse data.
+ Arc Tangent
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.foldi``3(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``0}}},``0,``2)">
+<member name="M:MathNet.Numerics.ComplexModule.acos(System.Numerics.Complex)">
 <summary>
- Fold all entries of a vector using a position dependent folding function.
+ Arc Cosine
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.fold``3(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``0}},``0,``2)">
+<member name="M:MathNet.Numerics.ComplexModule.asin(System.Numerics.Complex)">
 <summary>
- Fold all entries of a vector.
+ Arc Sine
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.iteriSkipZeros``2(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.Unit}},``1)">
+<member name="M:MathNet.Numerics.ComplexModule.csc(System.Numerics.Complex)">
 <summary>
- Applies a function to all non-zero indexed elements of the vector. Skipping zeros is efficient on sparse data.
+ Cosecant
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.iterSkipZeros``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.Unit},``1)">
+<member name="M:MathNet.Numerics.ComplexModule.sec(System.Numerics.Complex)">
 <summary>
- Applies a function to all non-zero elements of the vector. Skipping zeros is efficient on sparse data.
+ Secant
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.iteri``2(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.Unit}},``1)">
+<member name="M:MathNet.Numerics.ComplexModule.cot(System.Numerics.Complex)">
 <summary>
- Applies a function to all indexed elements of the vector.
+ Cotangent
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.iter``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.Unit},``1)">
+<member name="M:MathNet.Numerics.ComplexModule.tan(System.Numerics.Complex)">
 <summary>
- Applies a function to all elements of the vector.
+ Tangent
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.toSeqiSkipZeros``2(``0)">
+<member name="M:MathNet.Numerics.ComplexModule.cos(System.Numerics.Complex)">
 <summary>
- Transform a vector into an indexed sequence where zero-values are skipped. Skipping zeros is efficient on sparse data.
+ Cosine
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.toSeqSkipZeros``2(``0)">
+<member name="M:MathNet.Numerics.ComplexModule.sin(System.Numerics.Complex)">
 <summary>
- Transform a vector into a sequence where zero-values are skipped. Skipping zeros is efficient on sparse data.
+ Sine
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.toSeqi``2(``0)">
+<member name="M:MathNet.Numerics.ComplexModule.sqrt(System.Numerics.Complex)">
 <summary>
- Transform a vector into an indexed sequence.
+ sqrt(x) and 0 &lt;= phase(x) &lt; pi
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.toSeq``2(``0)">
+<member name="M:MathNet.Numerics.ComplexModule.sqr(System.Numerics.Complex)">
 <summary>
- Transform a vector into a sequence.
+ sqr(x) is the square (power 2)
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.toList``2(``0)">
+<member name="M:MathNet.Numerics.ComplexModule.powf(System.Double,System.Numerics.Complex)">
 <summary>
- Transform a vector into a list.
+ pow(power,x) is the scalar power
 </summary>
 </member>
-<member name="M:MathNet.Numerics.LinearAlgebra.VectorModule.toArray``2(``0)">
+<member name="M:MathNet.Numerics.ComplexModule.pow(System.Numerics.Complex,System.Numerics.Complex)">
 <summary>
- Transform a vector into an array.
+ pow(power,x) is the complex power
 </summary>
 </member>
-<member name="T:MathNet.Numerics.LinearAlgebra.VectorModule">
+<member name="M:MathNet.Numerics.ComplexModule.log(System.Double,System.Numerics.Complex)">
 <summary>
- A module which implements functional vector operations.
+ log(base,x) is log with custom base
+</summary>
+</member>
+<member name="M:MathNet.Numerics.ComplexModule.log10(System.Numerics.Complex)">
+<summary>
+ log10(x) is common log (base 10)
+</summary>
+</member>
+<member name="M:MathNet.Numerics.ComplexModule.ln(System.Numerics.Complex)">
+<summary>
+ ln(x) is natural log (base e)
+</summary>
+</member>
+<member name="M:MathNet.Numerics.ComplexModule.exp(System.Numerics.Complex)">
+<summary>
+ exp(x) = e^x
+</summary>
+</member>
+<member name="M:MathNet.Numerics.ComplexModule.muls(System.Numerics.Complex,System.Double)">
+<summary>
+ Multiply a complex number by a scalar
+</summary>
+</member>
+<member name="M:MathNet.Numerics.ComplexModule.smul(System.Double,System.Numerics.Complex)">
+<summary>
+ Multiply a scalar by a complex number
+</summary>
+</member>
+<member name="M:MathNet.Numerics.ComplexModule.div(System.Numerics.Complex,System.Numerics.Complex)">
+<summary>
+ Complex division of two complex numbers
+</summary>
+</member>
+<member name="M:MathNet.Numerics.ComplexModule.mul(System.Numerics.Complex,System.Numerics.Complex)">
+<summary>
+ Multiply two complex numbers
+</summary>
+</member>
+<member name="M:MathNet.Numerics.ComplexModule.sub(System.Numerics.Complex,System.Numerics.Complex)">
+<summary>
+ Subtract one complex number from another
+</summary>
+</member>
+<member name="M:MathNet.Numerics.ComplexModule.add(System.Numerics.Complex,System.Numerics.Complex)">
+<summary>
+ Add two complex numbers
+</summary>
+</member>
+<member name="M:MathNet.Numerics.ComplexModule.conjugate(System.Numerics.Complex)">
+<summary>
+ The conjugate of a complex number, i.e. x-yi
+</summary>
+</member>
+<member name="M:MathNet.Numerics.ComplexModule.neg(System.Numerics.Complex)">
+<summary>
+ Unary negation of a complex number
+</summary>
+</member>
+<member name="M:MathNet.Numerics.ComplexModule.phase(System.Numerics.Complex)">
+<summary>
+ The polar-coordinate phase of a complex number
+</summary>
+</member>
+<member name="M:MathNet.Numerics.ComplexModule.magnitude(System.Numerics.Complex)">
+<summary>
+ The polar-coordinate magnitude of a complex number
+</summary>
+</member>
+<member name="M:MathNet.Numerics.ComplexModule.imagPart(System.Numerics.Complex)">
+<summary>
+ The imaginary part of a complex number
+</summary>
+</member>
+<member name="M:MathNet.Numerics.ComplexModule.realPart(System.Numerics.Complex)">
+<summary>
+ The real part of a complex number
+</summary>
+</member>
+<member name="P:MathNet.Numerics.ComplexModule.pi">
+<summary>
+ pi
+</summary>
+</member>
+<member name="P:MathNet.Numerics.ComplexModule.onei">
+<summary>
+ The complex number 0+1i
+</summary>
+</member>
+<member name="P:MathNet.Numerics.ComplexModule.one">
+<summary>
+ The complex number 1+0i
+</summary>
+</member>
+<member name="P:MathNet.Numerics.ComplexModule.zero">
+<summary>
+ The complex number 0+0i
+</summary>
+</member>
+<member name="M:MathNet.Numerics.ComplexModule.cis(System.Double)">
+<summary>
+ A complex of magnitude 1 and the given phase and , i.e. cis x = mkPolar 1.0 x
+</summary>
+</member>
+<member name="M:MathNet.Numerics.ComplexModule.mkPolar(System.Double,System.Double)">
+<summary>
+ Create a complex number using magnitude/phase polar coordinates
+</summary>
+</member>
+<member name="M:MathNet.Numerics.ComplexModule.mkRect(System.Double,System.Double)">
+<summary>
+ Create a complex number using real and imaginary parts
+</summary>
+</member>
+<member name="M:MathNet.Numerics.FitModule.linearFunc``1(Microsoft.FSharp.Collections.FSharpList{Microsoft.FSharp.Core.FSharpFunc{``0,System.Double}},``0[],System.Double[])">
+<summary>
+ Least-Squares fitting the points (x,y) to an arbitrary linear combination y : x -&gt; p0*f0(x) + p1*f1(x) + ... + pk*fk(x),
+ returning a function y&apos; for the best fitting combination.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.FitModule.linear``1(Microsoft.FSharp.Collections.FSharpList{Microsoft.FSharp.Core.FSharpFunc{``0,System.Double}},``0[],System.Double[])">
+<summary>
+ Least-Squares fitting the points (x,y) to an arbitrary linear combination y : x -&gt; p0*f0(x) + p1*f1(x) + ... + pk*fk(x),
+ returning its best fitting parameters as [p0, p1, p2, ..., pk] list.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.FitModule.polynomialFunc(System.Int32,System.Double[],System.Double[])">
+<summary>
+ Least-Squares fitting the points (x,y) to a k-order polynomial y : x -&gt; p0 + p1*x + p2*x^2 + ... + pk*x^k,
+ returning a function y&apos; for the best fitting polynomial.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.FitModule.polynomial(System.Int32,System.Double[],System.Double[])">
+<summary>
+ Least-Squares fitting the points (x,y) to a k-order polynomial y : x -&gt; p0 + p1*x + p2*x^2 + ... + pk*x^k,
+ returning its best fitting parameters as [p0, p1, p2, ..., pk] array, compatible with Evaluate.Polynomial.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.FitModule.multiDimFunc(System.Boolean,System.Double[][],System.Double[])">
+<summary>
+ Least-Squares fitting the points ((x0,x1,...,xk),y) to a linear surface y : X -&gt; p0*x0 + p1*x1 + ... + pk*xk,
+ returning a function y&apos; for the best fitting surface.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.FitModule.multiDim(System.Boolean,System.Double[][],System.Double[])">
+<summary>
+ Least-Squares fitting the points ((x0,x1,...,xk),y) to a linear surface y : X -&gt; p0*x0 + p1*x1 + ... + pk*xk,
+ returning its best fitting parameters as [p0, p1, p2, ..., pk] array.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.FitModule.lineFunc(System.Double[],System.Double[])">
+<summary>
+ Least-Squares fitting the points (x,y) to a line y : x -&gt; a+b*x,
+ returning a function y&apos; for the best fitting line.
+</summary>
+</member>
+<member name="M:MathNet.Numerics.FitModule.line(System.Double[],System.Double[])">
+<summary>
+ Least-Squares fitting the points (x,y) to a line y : x -&gt; a+b*x,
+ returning its best fitting parameters as (a, b) tuple.
 </summary>
 </member>
 <member name="M:MathNet.Numerics.Probability.returnM``1(``0)">
@@ -1976,66 +2036,6 @@
 <member name="M:MathNet.Numerics.QuaternionModule.norm(MathNet.Numerics.Quaternion)">
 <summary>
  Euclidean Norm
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Random.RandomModule.mrg32k3a">
-<summary>
- Creates a 32-bit combined multiple recursive generator with 2 components of order 3 pRNG with a robust seed
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Random.RandomModule.mcg31m1">
-<summary>
- Creates a Multiplicative congruential generator using a modulus of 2^31-1 and a multiplier of 1132489760 pRNG with a robust seed
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Random.RandomModule.mcg59">
-<summary>
- Creates a Multiplicative congruential generator using a modulus of 2^59 and a multiplier of 13^13 pRNG with a robust seed
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Random.RandomModule.palf">
-<summary>
- Creates a Parallel Additive Lagged Fibonacci pRNG with a robust seed
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Random.RandomModule.wh2006">
-<summary>
- Creates a Wichmann-Hill’s 2006 combined multiplicative congruential pRNG with a robust seed
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Random.RandomModule.wh1982">
-<summary>
- Creates a Wichmann-Hill’s 1982 combined multiplicative congruential pRNG with a robust seed
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Random.RandomModule.xorshift">
-<summary>
- Creates a multiply-with-carry Xorshift (Xn = a * Xn−3 + c mod 2^32) pRNG with a robust seed
-</summary>
-</member>
-<member name="P:MathNet.Numerics.Random.RandomModule.mersenneTwisterShared">
-<summary>
- Creates a Mersenne Twister 19937 pRNG with a robust seed
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Random.RandomModule.crypto">
-<summary>
- Creates a default .Net cryptographic system pRNG
-</summary>
-</member>
-<member name="P:MathNet.Numerics.Random.RandomModule.systemShared">
-<summary>
- Creates a default .Net system pRNG with a robust seed
-</summary>
-</member>
-<member name="M:MathNet.Numerics.Random.RandomModule.doubles(System.Int32)">
-<summary>
- Default sampling, efficient but without custom seed (uses robust seeds internally)
-</summary>
-</member>
-<member name="P:MathNet.Numerics.Random.RandomModule.shared">
-<summary>
- Returns the default random source, thread-safe and also thread-locally shared
 </summary>
 </member>
 </members>
