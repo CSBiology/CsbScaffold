@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>BioFSharp.BioDB</name></assembly>
+<members>
+<member name="M:BioFSharp.BioDB.EbiAPI.UniProteinDB.searchFeature2(Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.String})">
+<summary>
+ Search protein sequence features in UniProt
+</summary>
+</member>
+<member name="M:BioFSharp.BioDB.EbiAPI.UniProteinDB.searchFeature(Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.Int32},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.String})">
+<summary>
+ Search protein sequence features in UniProt
+</summary>
+</member>
+<member name="M:BioFSharp.BioDB.EbiAPI.UniProteinDB.getSeqFeatureByAccession(System.String,Microsoft.FSharp.Core.FSharpOption{System.String[]},Microsoft.FSharp.Core.FSharpOption{System.String[]})">
+<summary>
+ Get UniProt protein sequence features by accession
+</summary>
+</member>
+<member name="T:BioFSharp.BioDB.EbiAPI.UniProteinDB">
+<summary>
+ Access to the uniprot protein data base
+</summary>
+</member>
+<member name="T:BioFSharp.BioDB.EbiAPI.ProteinsAPIschema">
+<summary>
+Swagger.io Provider for www.ebi.ac.uk
+</summary>
+</member>
+<member name="T:BioFSharp.BioDB.FaToolDb.OntologyId">
+<summary>
+Represents the different ontologies used in the database
+</summary>
+</member>
+<member name="T:BioFSharp.BioDB.FaToolDb.FaToolData">
+<summary>Provides the types to access an OData service</summary><param name="ServiceUri">The Uri for the OData service</param><param name='LocalSchemaFile'>The local .csdl file for the service schema</param><param name='ForceUpdate'>Require that a direct connection to the service be available at design-time and force the refresh of the local schema file (default: true)</param><param name='ResolutionFolder'>The folder used to resolve relative file paths at compile-time (default: folder containing the project or script)</param><param name='DataServiceCollection'>Generate collections derived from DataServiceCollection (default: false)</param>
+</member>
+<member name="T:BioFSharp.BioDB.FaToolDb.Queries.OntologyTermQueryResult">
+<summary>
+Wrapper for the result of an ontologyTerm query
+</summary>
+</member>
+<member name="M:BioFSharp.BioDB.FaToolDb.Queries.getSynonyms(System.String)">
+<summary>
+returns synonyms for a query gene
+</summary>
+</member>
+<member name="M:BioFSharp.BioDB.FaToolDb.Queries.createOntologyMapFromQueryResults(Microsoft.FSharp.Core.FSharpFunc{System.String,System.String},BioFSharp.BioDB.FaToolDb.Queries.OntologyTermQueryResult[])">
+<summary>
+returns a map containing the ids of OntologyTermQueryResults mapping to themselfes with an option to change the formatting of the id string
+</summary>
+</member>
+<member name="M:BioFSharp.BioDB.FaToolDb.Queries.getOntologyterms(BioFSharp.BioDB.FaToolDb.OntologyId,System.String)">
+<summary>
+returns ontology terms and term ids the selected ontology for a query gene
+</summary>
+</member>
+<member name="T:BioFSharp.BioDB.FaToolDb.Queries">
+<summary>
+Contains preconstructed query functions for the FaTool Database
+</summary>
+</member>
+<member name="T:BioFSharp.BioDB.FaToolDb">
+<summary>
+Tools for the odata service FaTools available at http://iomiqsweb1.bio.uni-kl.de/Services/FaToolDbDataService.svc
+</summary>
+</member>
+</members>
+</doc>
