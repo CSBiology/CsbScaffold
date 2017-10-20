@@ -13,11 +13,11 @@ CsbScaffold comprises of two folders:
 
 
 projectName:
-* data         : Place to store the raw measurment data
+* data         : Place to store the raw measurement data
 * documents    : Documentation  
 * material     : Additional information (e.g. related publication)
 * presentation : Compiled information to present your work 
-* results      : Results that are produces during data processing
+* results      : Results that are produced during data processing
 * scripts      : (e.g. .fsx files)
 
 _______________
