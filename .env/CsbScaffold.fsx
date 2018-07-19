@@ -1,19 +1,19 @@
 //#I __SOURCE_DIRECTORY__
-// Include MathNet.Numerics
-#r ".lib/MathNet.Numerics.dll"
-#r ".lib/MathNet.Numerics.FSharp.dll"
+
+// Include FSharp.Stats
+#r ".lib/FSharp.Stats.dll"
 
 // Include Newtonsoft
 #r ".lib/Newtonsoft.Json.dll"
 
-// Include FSharp.Care and IO
-#r ".lib/FSharp.Care.dll"
-#r ".lib/FSharp.Care.IO.dll"
+// Include FSharpAux and FSharpAux.IO
+#r ".lib/FSharpAux.dll"
+#r ".lib/FSharpAux.IO.dll"
 
 // Include FSharp.Stats  
 #r ".lib/FSharp.Stats.dll"
 
-// Include BioFSharp and BioFSharp.Stats   
+// Include BioFSharp
 #r ".lib/BioFSharp.dll"
 #r ".lib/BioFSharp.IO.dll"
 #r ".lib/SwaggerProvider.Runtime.dll"
@@ -42,3 +42,4 @@
 //// Include Deedle (no #load allowed when working with intellisence)
 //#load "packages/Deedle/Deedle.fsx"
 //#load ".aux/DeedleExtensions.fsx"
+
