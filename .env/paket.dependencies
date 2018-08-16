@@ -3,3 +3,27 @@ source https://nuget.org/api/v2
 nuget Deedle
 nuget Accord.Statistics
 nuget Accord.MachineLearning
+
+nuget FSharp.Plotly
+
+git https://github.com/CSBiology/FSharpAux.git nuget Packages: /
+
+nuget FSharpAux
+nuget FSharpAux.IO
+
+git https://github.com/CSBiology/FSharp.Stats.git nuget Packages: /
+
+nuget FSharp.Stats
+nuget FSharp.Stats.MSF
+
+git https://github.com/CSBiology/BioFSharp.git nuget Packages: /
+
+nuget BioFSharp
+nuget BioFSharp.IO
+nuget BioFSharp.Stats
+nuget BioFSharp.BioDB
+nuget BioFSharp.Vis
+
+git https://github.com/CSBiology/FSharpGephiStreamer.git nuget Packages: /
+
+nuget FSharpGephiStreamer
