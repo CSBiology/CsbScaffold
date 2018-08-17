@@ -40,3 +40,7 @@
 //#load "packages/Deedle/Deedle.fsx"
 //#load ".aux/DeedleExtensions.fsx"
 
+// Include SQL Provider (https://fsprojects.github.io/SQLProvider/index.html) 
+#r "./packages/SQLProvider/lib/netstandard2.0/FSharp.Data.SqlProvider.dll"
+
+#r "netstandard"
