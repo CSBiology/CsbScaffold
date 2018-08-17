@@ -3,12 +3,12 @@
 #I "../.lib/"
 
 #r "Deedle/lib/net40/Deedle.dll"
-#r "FSharp.Care.dll"
+#r "./packages/FSharpAux/lib/netstandard2.0/FSharpAux.dll"
 
 namespace Deedle
 open Deedle
-open FSharp.Care
-open FSharp.Care.Collections
+open FSharpAux
+//open FSharpAux.Collections
 
 [<AutoOpen>]
 module Frame =

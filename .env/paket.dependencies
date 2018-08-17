@@ -4,6 +4,8 @@ nuget Deedle
 nuget Accord.Statistics
 nuget Accord.MachineLearning
 
+nuget SQLProvider
+
 nuget FSharp.Plotly
 
 git https://github.com/CSBiology/FSharpAux.git nuget Packages: /
