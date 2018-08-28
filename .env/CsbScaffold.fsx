@@ -29,16 +29,17 @@
 //#r ".lib/MzLite.Processing.dll"
 //#r ".lib/FsMzLite.dll"
 
-// // Include Accord
-// #r "packages/Accord/lib/net45/Accord.dll"
-// #r "packages/Accord.Statistics/lib/net45/Accord.Statistics.dll"
-// #r "packages/Accord.MachineLearning/lib/net45/Accord.MachineLearning.dll"
+// Include Accord
+#r "packages/Accord/lib/netstandard2.0/Accord.dll"
+#r "packages/Accord.Math/lib/netstandard2.0/Accord.Math.dll"
+#r "packages/Accord.Statistics/lib/netstandard2.0/Accord.Statistics.dll"
+#r "packages/Accord.MachineLearning/lib/netstandard2.0/Accord.MachineLearning.dll"
 
 
 
-//// Include Deedle (no #load allowed when working with intellisence)
-//#load "packages/Deedle/Deedle.fsx"
-//#load ".aux/DeedleExtensions.fsx"
+// Include Deedle (no #load allowed when working with intellisence)
+#load "packages/Deedle/Deedle.fsx"
+#load ".aux/DeedleExtensions.fsx"
 
 // Include SQL Provider (https://fsprojects.github.io/SQLProvider/index.html) 
 #r "./packages/SQLProvider/lib/netstandard2.0/FSharp.Data.SqlProvider.dll"
