@@ -2,7 +2,7 @@
 # ===================================================
 # Exclude everything but .env and empty projectName
 # ===================================================
-/*
+/* 
 !.gitattributes
 !.gitignore
 !README.md
@@ -10,7 +10,7 @@
 # NuGet Packages Directory
 .env/packages/
 !projectName
-
+!init.cmd
 
 
 
