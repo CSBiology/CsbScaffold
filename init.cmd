@@ -15,7 +15,7 @@ git checkout -b local
 
 powershell -Command "(gc .gitignore) -replace '\/\*\ ', '' | Out-File -encoding ASCII .gitignore"
 powershell -Command "(gc .gitignore) -replace '!.env', '.env/' | Out-File -encoding ASCII .gitignore"
-powershell -Command "(gc .gitignore) -replace '.env/packages/', '' | Out-File -encoding ASCII .gitignore"
+powershell -Command "(gc .gitignore) -replace '.env/packages/', 'projectName/' | Out-File -encoding ASCII .gitignore"
 powershell -Command "(gc .gitignore) -replace '!init.cmd', '' | Out-File -encoding ASCII .gitignore"
 git rm -r --cached .env
 git commit --message=init
