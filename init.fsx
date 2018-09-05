@@ -14,7 +14,7 @@ git "checkout --orphan projects"
 ///update .gitignore so it only tracks projects
 let replaceF text = 
     String.replace      "/* "               ""      text
-    |> String.replace   "!.env "            ".env"
+    |> String.replace   "!.env"            ".env"
     |> String.replace   ".env/packages/"    "projectName/"
     |> String.replace   "!init.cmd"         "init.cmd" 
     |> String.replace   "!init.fsx"         "init.fsx" 
