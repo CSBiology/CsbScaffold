@@ -21,7 +21,8 @@ projectName:
 * scripts      : (e.g. .fsx files)
 
 _______________
-to install type:
-cd .env
+### Setup
 
-.\\.paket\paket.exe
+To install run the **init.cmd**
+
+The installation will create a new local branch "projects". You should use this branch for scripting and version controlling your projects. Use the "master" branch only to make contributions to the Repository.
