@@ -11,7 +11,7 @@
 .env/packages/
 !projectName
 !init.cmd
-
+!init.fsx
 
 
 

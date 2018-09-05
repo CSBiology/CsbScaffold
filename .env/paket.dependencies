@@ -29,3 +29,5 @@ nuget BioFSharp.Vis
 git https://github.com/CSBiology/FSharpGephiStreamer.git nuget Packages: /
 
 nuget FSharpGephiStreamer
+
+nuget FAKE
