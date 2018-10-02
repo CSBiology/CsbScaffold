@@ -4,14 +4,13 @@
 open Fake
 open FSharpAux
 
+
+try 
+
 let source = __SOURCE_DIRECTORY__
 
 let git = Fake.Tools.Git.CommandHelper.runGitCommand source
-
-///create new working branch "projects" with no history
-git "checkout --orphan projects"
-
-///update .gitignore so it only tracks projects
+    
 let replaceF text = 
     String.replace      "/* "               ""      text
     |> String.replace   "!.env"            ".env"
@@ -19,8 +18,17 @@ let replaceF text =
     |> String.replace   ".env/packages/"    ""
     |> String.replace   "!init.cmd"         "init.cmd" 
     |> String.replace   "!init.fsx"         "init.fsx" 
-Fake.IO.File.applyReplace replaceF (source + @"\.gitignore")
 
-///commiting made changes
-git "rm -r --cached .env"
-git "commit -a -m \"Initial Commit\""
+let branches = Fake.Tools.Git.Branches.getLocalBranches source
+
+if not (List.contains "projects" branches) then       
+    ///create new working branch "projects" with no history
+    git "checkout --orphan projects" |> ignore
+    ///update .gitignore so it only tracks projects
+    Fake.IO.File.applyReplace replaceF (source + @"\.gitignore")
+    ///commiting made changes
+    git "rm -r --cached .env" |> ignore
+    git "commit -a -m \"Initial Commit\"" |> ignore
+
+with 
+| err -> printfn "%s" err.Message

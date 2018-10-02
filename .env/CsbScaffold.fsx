@@ -17,6 +17,7 @@
 // Include BioFSharp
 #r "./packages/BioFSharp/lib/netstandard2.0/BioFSharp.dll"
 #r "./packages/BioFSharp.IO/lib/net45/BioFSharp.IO.dll"
+#r "./packages/BioFSharp.ImgP/lib/net45/BioFSharp.ImgP.dll"
 #r "./packages/SwaggerProvider/lib/net45/SwaggerProvider.Runtime.dll"
 #r "./packages/BioFSharp.BioDB/lib/net45/BioFSharp.BioDB.dll"
 #r "./packages/BioFSharp.Stats/lib/net45/BioFSharp.Stats.dll"

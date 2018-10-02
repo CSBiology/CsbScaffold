@@ -22,6 +22,7 @@ git https://github.com/CSBiology/BioFSharp.git nuget Packages: /
 
 nuget BioFSharp
 nuget BioFSharp.IO
+nuget BioFSharp.ImgP
 nuget BioFSharp.Stats
 nuget BioFSharp.BioDB
 nuget BioFSharp.Vis
