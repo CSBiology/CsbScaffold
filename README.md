@@ -1,9 +1,24 @@
 # CsbScaffold
 
-This project provides you with the prototypical folder structure for an organized data analysis project.
+CsbScaffold is meant to simplify F# data analysis using the CSBiology libraries.
 
+It is easy to setup and provides you with a prototypical folder structure for an organized data analysis project. 
+
+_______________
+### Setup
+Prerequisites: 
+* git cli has to be installed
+* fake cli has to be installed
+
+After downloading just run the **init.cmd**.
+
+This will download the packages and create a new local branch "projects" (if you have cloned the library). You should use this branch for scripting and version controlling your projects. Use the "master" branch only to make contributions to the Repository.
+
+_______________
+### Usage
 Start by renaming the projectName folder to the partcular project name.
-In order to include different projects dublicate the folder projectName in place 
+In order to include different projects duplicate the folder projectName in place.
+
 CsbScaffold comprises of two folders:  
 
 .env:
@@ -19,10 +34,3 @@ projectName:
 * presentation : Compiled information to present your work 
 * results      : Results that are produced during data processing
 * scripts      : (e.g. .fsx files)
-
-_______________
-### Setup
-
-To install run the **init.cmd**
-
-The installation will create a new local branch "projects". You should use this branch for scripting and version controlling your projects. Use the "master" branch only to make contributions to the Repository.
