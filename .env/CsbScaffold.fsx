@@ -36,7 +36,8 @@
 #r "packages/Accord.Statistics/lib/netstandard2.0/Accord.Statistics.dll"
 #r "packages/Accord.MachineLearning/lib/netstandard2.0/Accord.MachineLearning.dll"
 
-
+//Include FSharpGephiSreamer
+#r "./packages/FSharpGephiStreamer/lib/netstandard2.0/FSharpGephiStreamer.dll"
 
 // Include Deedle (no #load allowed when working with intellisence)
 #load "packages/Deedle/Deedle.fsx"
@@ -44,5 +45,7 @@
 
 // Include SQL Provider (https://fsprojects.github.io/SQLProvider/index.html) 
 #r "./packages/SQLProvider/lib/netstandard2.0/FSharp.Data.SqlProvider.dll"
+
+
 
 #r "netstandard"
