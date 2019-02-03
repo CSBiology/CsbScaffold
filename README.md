@@ -7,10 +7,12 @@ It is easy to setup and provides you with a prototypical folder structure for an
 _______________
 ### Setup
 Prerequisites: 
-* git cli has to be installed
-* fake cli has to be installed
+* git cli has to be installed: https://git-scm.com/download/win
+* fake cli has to be installed:
+  * install dotnet SDK and .net framework dev pack: https://dotnet.microsoft.com/download 
+  * install fake cli: 
 
-After downloading just run the **init.cmd**.
+After installing the prerequisites above, open a console, navigat to the root folder and run the **init.cmd**.
 
 This will download the packages and create a new local branch "projects" (if you have cloned the library). You should use this branch for scripting and version controlling your projects. Use the "master" branch only to make contributions to the Repository.
 
