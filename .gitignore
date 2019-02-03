@@ -10,6 +10,7 @@
 # NuGet Packages Directory
 .env/packages/
 !projectName
+!dataEvaluation
 !init.cmd
 !init.fsx
 
