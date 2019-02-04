@@ -11,7 +11,7 @@ Prerequisites:
 
 # How to set up the environment for our tasks
 
-This simple guide will set you up for the tasks we have prepared for you on the second day. After finishing it, you will have installed Visual studio code, .NetCore SDK & .Net Framework, and the F# runtime environment.
+This simple guide will set you up for the tasks we have prepared for you. After finishing it, you will have installed Visual studio code, .NetCore SDK & .Net Framework, and the F# runtime environment.
 
 </br>
 
