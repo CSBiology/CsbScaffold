@@ -3,51 +3,40 @@
 #load "../../.env/CsbScaffold.fsx"
 #I @"../../.env/.aux/"
 
-
-open FSharp.Plotly
-let x = [0. .. 0.001 .. 12.65]
-let y = x |> List.map sin
-
-Chart.Spline(x,y)
-|> Chart.withTitle("Simple line plot showing sin(x)")
-|> Chart.withX_AxisStyle("x",Showline=true,Showgrid=false)
-|> Chart.withY_AxisStyle("y",Showline=true,Showgrid=false)
-|> Chart.SaveHtmlAs(@"C:\Users\Kevin\source\repos\CSBlog\Charts\Plotly\ExamplePlot1.html")
 open FSharp.Stats
+open FSharp.Plotly
 
-//generation of normal distributions
-let gauss1 = Distributions.Continuous.normal 3. 2.0
-let gauss2 = Distributions.Continuous.normal 3. 0.5
+//Task 1.1 Generate a continuous normal distribution with mean = 3.0 and standard deviation = 2.0 and bind it to the name gauss1. (explore the Distributions.Continuous module)
 
-//get a sample of normal distributions (n=1)
-gauss1.Sample()
+//Task 1.2 Get a random n=1-sample of gauss1 with gauss1.Sample()
 
-//generates samples of sampleSize and distribution
+//Task 1.3 Describe what the following function does. What does it take/give?
+//
 let sampleFrom (distribution:Distributions.Distribution<float,float>) sampleSize =
-    Vector.init sampleSize (fun x -> distribution.Sample())
+    Array.init sampleSize (fun x -> distribution.Sample())
 
-//example of 'sampleFrom'
-sampleFrom gauss1 50
+//Task 1.4 Apply the funcion 'sampleFrom' to gauss1 and a sample size you like.
+//Hint: Use the Chart.Histogram function for visualization.
 
-//calculates mean of sample
-let meanOfSample distribution sampleSize =
-    sampleFrom distribution sampleSize
-    |> Seq.mean
+//Task 1.5 Define other distributions and name them gauss2 and gauss3.
 
-//example of 'meanOfSample'
-meanOfSample gauss1 7
-
-//1.1 define your own normal distribution with mean <> 3 and stDev < 0.8
-//1.2 write a function that takes a distribution and a sample size and reports the standard deviation
-//1.3 calculate means of different distributions and different sample sizes and compare them
+//Task 1.6 Create samples of the distributions and combine their Histograms.
 
 
+//Task 2.1 Define a function called 'meanOfSample' that takes a distribution and a sampleSize (see Task 1.3) and reports the mean of the sample. (explore the Seq module) 
+
+//Task 2.2 Define a function called 'stdDevOfSample' that takes a distribution and a sampleSize (see Task 1.3) and reports the standard deviation of the sample. (explore the Seq module) 
+
+//Task 2.3 Apply both previous defined functions to gauss1 and a sample size you like.
+
+//Task 2.4 Calculate means of different distributions and different sample sizes and compare them.
+//Hint1: You can make use of 'map' functions to test several sample sizes at once.
+//Hint2: Use FSharp.Plotly to visualise your results.
 
 
-//testing function 
-//2.1 add missing parameters
-Testing.TTest.twoSample 
+//Testing  
+//Task 3.1 Define two samples of gauss1 and gauss2 with sampleSize 10 and convert them into Vectors using 'Vector.ofArray'.
 
+//Task 3.2 Add the missing parameters
 
-//2.2 test samples of different distributions (regarding to p value) and mediate the sample size
-//Hint: You can make use of map functions to test several sample sizes at once
+//Task 3.3 Test samples of different distributions, mediate the sample size and compare the p values.
