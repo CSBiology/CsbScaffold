@@ -38,5 +38,6 @@ let sampleFrom (distribution:Distributions.Distribution<float,float>) sampleSize
 //Task 3.1 Define two samples of gauss1 and gauss2 with sampleSize 10 and convert them into Vectors using 'Vector.ofArray'.
 
 //Task 3.2 Add the missing parameters
+Testing.TTest.twoSample
 
 //Task 3.3 Test samples of different distributions, mediate the sample size and compare the p values.
