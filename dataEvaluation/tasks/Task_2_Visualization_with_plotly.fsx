@@ -37,6 +37,6 @@ open FSharp.Plotly.StyleParam
 //          - the grid inside the rturned axis is not shown.
 //          - the line of the returned axis is shown.
 //
-//          hint:   you can create a Linear axis using the LinearAxis.init function
+//          hint:   you can create a Linear axis using the LinearAxis.init function and use the withX_AxisStyle/withY_AxisStyle function to use the axis in your plot
 
 //Task7: use the xAxis and yAxis functions to create x and y axis for all plots you created so far.
