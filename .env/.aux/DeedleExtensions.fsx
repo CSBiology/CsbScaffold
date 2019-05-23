@@ -155,3 +155,34 @@ module Frame =
         // Combine column vectors a single vector & return results
         let newData = vectorbuilder.Build(newColumnIndex.AddressingScheme, colCmd, [| newData1; newData2 |])
         Frame(newRowIndex, newColumnIndex, newData, indexBuilder, vectorbuilder)
+
+    /// Applies the function f to the rowKeys of the frame and adds the result as a new column to the frame
+    let columnOfRowKeysBy (columnKey : 'C) (f : 'R -> 'T) (frame : Frame<'R,'C>) : Frame<'R,'C> =
+        let newColumn = 
+            frame.RowKeys
+            |> Seq.map f
+            |> Seq.zip frame.RowKeys
+            |> series
+        Frame.addCol columnKey newColumn frame
+
+    /// Adds the rowKeys as a new column to the frame
+    let columnOfRowKeys (columnKey : 'C) (frame : Frame<'R,'C>) : Frame<'R,'C> =
+        columnOfRowKeysBy columnKey id frame
+    
+    /// If the predicate returns false for a value, replaces the value with missing
+    let filter (predicate : 'R -> 'C -> 'a -> bool) (frame : Frame<'R,'C>) : Frame<'R,'C> =
+        frame
+        |> Frame.map (fun r c a -> 
+            if predicate r c a then 
+                OptionalValue a
+            else 
+                OptionalValue.Missing)
+
+    /// If the predicate returns false for a value, replaces the value with missing
+    let filterValues (predicate : 'a -> bool) (frame : Frame<'R,'C>) : Frame<'R,'C> =
+        frame
+        |> Frame.mapValues (fun a -> 
+            if predicate a then 
+                OptionalValue a
+            else 
+                OptionalValue.Missing)
