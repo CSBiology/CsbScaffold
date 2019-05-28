@@ -67,7 +67,7 @@ module Frame =
 
         //Return new index
         LinearIndexBuilder.Instance.Create(newKeys,None)
-  
+
     /// Create transformation on indices/vectors representing the align operation
     let private createAlignTransformation (keyFunc1 : 'RowKey1 -> 'SharedKey) (keyFunc2 : 'RowKey2 -> 'SharedKey) (thisIndex:IIndex<_>) (otherIndex:IIndex<_>) thisVector otherVector =
         let combinedIndex = combineIndexBy keyFunc1 keyFunc2 thisIndex otherIndex
@@ -75,6 +75,19 @@ module Frame =
         let rowCmd2 = reindexBy (fun (a,b,c) -> c) combinedIndex otherIndex otherVector
         combinedIndex,rowCmd1,rowCmd2
 
+    /// Create transformation on indices/vectors representing the expand operation
+    let private createExpandTransformation (expandF : 'R -> 'RS seq) (index : IIndex<'R>) (vector : VectorConstruction) = 
+        ///new Keys * old Keys 
+        let newKeys = 
+            index.Keys
+            |> Seq.collect (fun r -> expandF r |> Seq.map (fun rs -> rs,r))
+        let keyFunc = 
+            let m = newKeys |> Map.ofSeq
+            fun rs -> m.[rs]
+        let newIndex = LinearIndexBuilder.Instance.Create(newKeys |> Seq.map fst,None)
+        let rowCmd = reindexBy keyFunc newIndex index vector
+        newIndex,rowCmd
+        
     
     let distinctRowValues colName (df:Frame<int,_>) = 
         df
@@ -133,6 +146,7 @@ module Frame =
     ///
     /// The columns of the joined frames must not overlap and their rows are aligned and multiplied
     /// by the shared key. The keyFuncs are used to map the rowKeys of the two frames to a shared key. 
+    /// The resulting keys will result from the intersection of the shared Keys.
     ///
     /// The key of the resulting frame will be a triplet of shared key and the two input keys.
     let align (keyFunc1 : 'RowKey1 -> 'SharedKey) (keyFunc2 : 'RowKey2 -> 'SharedKey) (frame1 : Frame<'RowKey1, 'TColumnKey>) (frame2 : Frame<'RowKey2, 'TColumnKey>) =  
@@ -141,8 +155,8 @@ module Frame =
         let index2 = frame2.RowIndex
         let indexBuilder = LinearIndexBuilder.Instance
         let vectorbuilder = ArrayVector.ArrayVectorBuilder.Instance
-        let data1 = frame1.GetFrameData().Columns |> Seq.map snd |> Seq.toArray |> vectorbuilder.Create
-        let data2 = frame2.GetFrameData().Columns |> Seq.map snd |> Seq.toArray |> vectorbuilder.Create
+        let data1 = frame1.GetFrameData().Columns |> Seq.map snd |> ``F# Vector extensions``.Vector.ofValues
+        let data2 = frame2.GetFrameData().Columns |> Seq.map snd |> ``F# Vector extensions``.Vector.ofValues
         // Intersect mapped row indices and get transformations to apply to input vectors
         let newRowIndex, rowCmd1, rowCmd2 = 
           createAlignTransformation keyFunc1 keyFunc2 index1 index2 (Vectors.Return 0) (Vectors.Return 0)
@@ -186,3 +200,77 @@ module Frame =
                 OptionalValue a
             else 
                 OptionalValue.Missing)
+    
+    /// Creates a new data frame that contains only those columns of the original 
+    /// data frame which contain at least one value.
+    let dropEmptyRows (frame:Frame<'R, 'C>) = 
+        //Get needed transformation objects and data form the Frame
+        let indexBuilder =  LinearIndexBuilder.Instance
+        let vectorbuilder = ArrayVector.ArrayVectorBuilder.Instance
+        let data = frame.GetFrameData().Columns |> Seq.map snd |> ``F# Vector extensions``.Vector.ofValues
+
+        // Create a combined vector that has 'true' for rows which have some values
+        let hasSomeFlagVector = 
+            Frame.rows frame
+            |> Series.map (fun _ s -> Series.valuesAll s |> Seq.exists (fun opt -> opt.IsSome))
+            |> Series.values
+            |> ``F# Vector extensions``.Vector.ofValues
+
+        // Collect all rows that have at least some values
+        let newRowIndex, cmd = 
+            indexBuilder.Search( (frame.RowIndex, Vectors.Return 0), hasSomeFlagVector, true)
+        let newData = data.Select(transformColumn vectorbuilder newRowIndex.AddressingScheme cmd)
+        Frame<_, _>(newRowIndex, frame.ColumnIndex, newData, indexBuilder, vectorbuilder)        
+
+    /// Creates a new data frame that contains only those columns of the original 
+    /// data frame which contain at least one value.
+    let dropEmptyCols (frame:Frame<'R, 'C>) = 
+        //Get needed transformation objects and data form the Frame
+        let indexBuilder =  LinearIndexBuilder.Instance
+        let vectorbuilder = ArrayVector.ArrayVectorBuilder.Instance
+        let data = frame.GetFrameData().Columns |> Seq.map snd |> ``F# Vector extensions``.Vector.ofValues
+
+        let newColKeys, newData =
+            [| for KeyValue(colKey, addr) in frame.ColumnIndex.Mappings do
+                match data.GetValue(addr) with
+                | OptionalValue.Present(vec) when vec.ObjectSequence |> Seq.exists (fun opt -> opt.HasValue) ->
+                    yield colKey, vec :> IVector
+                | _ -> () |] |> Array.unzip
+        let colIndex = indexBuilder.Create(Deedle.Internal.ReadOnlyCollection.ofArray newColKeys, None)
+        Frame(frame.RowIndex, colIndex, vectorbuilder.Create(newData), indexBuilder, vectorbuilder )
+            
+    /// Creates a Frame where each row is mapped to multiple rows based on the input function.
+    let expandRowsByKey (expandF : 'R -> 'RS seq) (frame : Frame<'R,'C>) : Frame<'RS,'C> =
+        //Get needed transformation objects and data form the Frame
+        let index = frame.RowIndex
+        let indexBuilder = LinearIndexBuilder.Instance
+        let vectorbuilder = ArrayVector.ArrayVectorBuilder.Instance
+        let data = frame.GetFrameData().Columns |> Seq.map snd |> ``F# Vector extensions``.Vector.ofValues
+        //expand rows via collection of function results
+        let newRowIndex, rowCmd = 
+          createExpandTransformation expandF index (Vectors.Return 0)
+
+        // Apply transformation to both data vectors
+        let newData = data.Select(transformColumn vectorbuilder newRowIndex.AddressingScheme rowCmd)
+        // Combine column vectors a single vector & return results
+        Frame(newRowIndex, frame.ColumnIndex, newData, indexBuilder, vectorbuilder)
+ 
+    /// Creates a Frame where each row is mapped to multiple rows based on the input function. The input function takes the rowkey and the value of the given column at this rowkey and returns new keys.
+    let expandRowsByColumn (column : 'C) (expandF : 'R -> 'V -> 'RS seq) (frame : Frame<'R,'C>) : Frame<'RS,'C> =
+        //Get needed transformation objects and data form the Frame
+        let index = frame.RowIndex
+        let indexBuilder = LinearIndexBuilder.Instance
+        let vectorbuilder = ArrayVector.ArrayVectorBuilder.Instance
+        let data = frame.GetFrameData().Columns |> Seq.map snd |> ``F# Vector extensions``.Vector.ofValues
+        /// The column over which the rows are expanded
+        let column = frame.GetColumn column
+        let expandF r = expandF r (column.Get r)
+                   
+        //expand rows via collection of function results
+        let newRowIndex, rowCmd = 
+          createExpandTransformation expandF index (Vectors.Return 0)
+
+        // Apply transformation to both data vectors
+        let newData = data.Select(transformColumn vectorbuilder newRowIndex.AddressingScheme rowCmd)
+        // Combine column vectors a single vector & return results
+        Frame(newRowIndex, frame.ColumnIndex, newData, indexBuilder, vectorbuilder)
