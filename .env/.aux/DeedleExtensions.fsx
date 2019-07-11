@@ -2,8 +2,9 @@
 #I "../packages"
 #I "../.lib/"
 
-#r "Deedle/lib/net40/Deedle.dll"
-#r "./../packages/FSharpAux/lib/netstandard2.0/FSharpAux.dll"
+#r "netstandard"
+#r "Deedle/lib/netstandard2.0/Deedle.dll"
+#r "FSharpAux/lib/netstandard2.0/FSharpAux.dll"
 
 namespace Deedle
 open Deedle
