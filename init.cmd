@@ -3,7 +3,7 @@ cls
 
 cd .env 
 .paket\paket.exe init
-.paket\paket.exe install
+.paket\paket.exe update
 if errorlevel 1 (
   exit /b %errorlevel%
 )
