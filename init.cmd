@@ -1,8 +1,10 @@
 @echo off
 cls
+cd .env
 
-.env\.paket\paket.exe init
-.env\.paket\paket.exe install
+.paket\paket.exe init
+.paket\paket.exe install
+
 if errorlevel 1 (
   exit /b %errorlevel%
 )
