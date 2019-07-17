@@ -12,7 +12,7 @@ Prerequisites:
 
 After downloading just run the **init.cmd**.
 
-This will download the packages and create a new local branch "projects" (if you have cloned the library). You should use this branch for scripting and version controlling your projects. Use the "master" branch only to make contributions to the Repository.
+This will download the packages.
 
 _______________
 ### Usage
