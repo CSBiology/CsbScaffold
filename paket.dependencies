@@ -1,0 +1,61 @@
+generate_load_scripts true
+source https://api.nuget.org/v3/index.json
+
+storage: none
+strategy:max
+
+framework: netstandard2.0
+
+nuget System.IO.Compression.ZipFile
+nuget Microsoft.OpenApi
+nuget Microsoft.OpenApi.Readers
+nuget Docker.DotNet
+nuget SharpZipLib
+nuget System.Buffers
+nuget DynamicInterop 
+
+group Cloud
+    framework: netstandard2.0
+    storage: none
+    strategy:max
+    source https://api.nuget.org/v3/index.json
+    nuget AWSSDK.Core
+    nuget AWSSDK.Extensions.NETCore.Setup
+    nuget AWSSDK.Lambda
+    nuget AWSSDK.S3
+    nuget AWSSDK.SimpleNotificationService
+    nuget NEST
+
+group CSB
+    framework: netstandard2.0
+    storage: none
+    strategy:max
+    source https://api.nuget.org/v3/index.json
+    nuget FSharp.Plotly
+    nuget FSharpAux
+    nuget FSharpAux.IO
+    nuget FSharp.Stats
+    nuget FSharp.Stats.MSF
+    nuget FSharpGephiStreamer
+
+    nuget BioFSharp                 prerelease
+    nuget BioFSharp.BioContainers   prerelease
+    nuget BioFSharp.IO              prerelease
+    nuget BioFSharp.Stats           prerelease
+    nuget BioFSharp.ML              prerelease
+    nuget BioFSharp.BioDB           prerelease
+    nuget BioFSharp.Vis             prerelease
+
+group DataScience
+    framework: netstandard2.0
+    storage: none
+    strategy:max
+    source https://api.nuget.org/v3/index.json
+    nuget Deedle
+    nuget Accord.Statistics
+    nuget Accord.MachineLearning
+    nuget SQLProvider
+    nuget RProvider
+    nuget Deedle.RPlugin
+    nuget R.NET.Community
+    
